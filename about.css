@@ -1,12 +1,16 @@
 #BGApic{
 
-    position: fixed;
+    position:initial;
     animation: fadein 500ms;
-  
+  size: initial;
+   mask-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
 }
 
 .BGA{
-position:center;
+
     width: 100%;
     height: 100%;
     margin: 0;
@@ -54,8 +58,9 @@ position:50% 50% ;
     font-weight: 500;
     position:50% 50% ;
 }
-body{
+body , html{
 
+        height: 100%;
     margin-top: 0%;
     margin-right: 0%;
     margin-bottom: 0%;
