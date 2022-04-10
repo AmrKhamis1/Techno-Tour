@@ -21,14 +21,14 @@
   
 }
 .con{
-    position:initial;
+    
     animation: fadein 500ms;
   size: initial;
    mask-repeat: initial;
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    position: 100%  100%;
+    position: center;
     height: 100%;
     width: 100%;
   size: 100%;
