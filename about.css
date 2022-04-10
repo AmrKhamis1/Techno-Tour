@@ -1,15 +1,20 @@
+#BGApic{
+
+    position: fixed;
+    animation: fadein 500ms;
+  
+}
+
 .BGA{
 
-background-size: cover;
-margin-top: 0%;
-margin-right: 0%;
-margin-bottom: 0%;
-margin-left: 0%;
-height: 100%;
-width: 100%;;
-position: fixed;
-background-image: url("backgrund2.png");
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+  
 }
 .con{
     position: 100%  100%;
@@ -48,4 +53,17 @@ position:50% 50% ;
 .font4{
     font-weight: 500;
     position:50% 50% ;
+}
+body{
+
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    -webkit-font-smoothing: antialiased;
+    position:sticky;
 }
