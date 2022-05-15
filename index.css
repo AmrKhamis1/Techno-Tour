@@ -20,10 +20,11 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
 
+  background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+  
     
 }
 .CONTACT{
