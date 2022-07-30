@@ -22,53 +22,66 @@
     background-position: center;
 }
 .con{
-    position:center;
-  font-size: 100%;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    position: fixed;
+font: 100%;
+    font-display:center;
+ font-size: cover;
 
-  size: 100% 100%;
-    position:sticky;
+  size: 100%;
     height: 100%;
-    width: 100%;
-  position:initial;
-  
+    width: 100%;  
 
 }
+
 .font1{
+    font-size: 100%;
     font-weight:900 ;
-    position:initial;
+    height: 30px;
 }
 .font2{
     font-weight:900 ;
-    position:initial;
+    height: 30px;
 }
 .font3{
     font-weight:900 ;
-    position:initial;
+    height: 30px;
 }
 .par1{
-font-weight: 500;
-pposition:initial;
+    width: 400px;
+    border:0.05cm;
+    border-color: aqua;
+    border-style:ridge;
 }
 .par2{
-    font-weight: 500;
-    position:initial;
+  width: 400px;
+    border:0.05cm;
+    border-color: aqua;
+    border-style:ridge;
 }
 .par3{
-    font-weight: 500;
-    position:initial;
+    width: 400px;
+    border:0.05cm;
+    border-color: aqua;
+    border-style:ridge;
 }
 .par4{
-    font-weight: 500;
-    position:initial;
+    width: 400px;
+    border:0.05cm;
+    border-color: aqua;
+    border-style:ridge;
+
 }
 .font4{
-    font-weight: 500;
-    position:initial;
+    font-weight: 900;
+    height: 30px;
 }
-body , html{
- font-size: 100%;
-
-        height: 100%;
+body,html{
+    width: 100%;
+height: 100%;
     margin-top: 0%;
     margin-right: 0%;
     margin-bottom: 0%;
@@ -79,4 +92,5 @@ body , html{
     padding-right: 0;
     -webkit-font-smoothing: antialiased;
     position:initial;
+
 }
