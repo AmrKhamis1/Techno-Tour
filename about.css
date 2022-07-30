@@ -23,7 +23,8 @@
 }
 .con{
     position:center;
- 
+  font-size: 100%;
+
   size: 100% 100%;
     position:sticky;
     height: 100%;
@@ -65,6 +66,7 @@ pposition:initial;
     position:initial;
 }
 body , html{
+ font-size: 100%;
 
         height: 100%;
     margin-top: 0%;
