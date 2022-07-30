@@ -17,21 +17,17 @@
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
-
-  
 }
 .con{
     position:center;
-    animation: fadein 500ms;
-  size: 100%;
-   mask-repeat: initial;
-    background-attachment: fixed;
-    background-origin: initial;
-    background-clip: initial;
-    position: 100%  100%;
+ 
+  size: 100% 100%;
+    position:sticky;
     height: 100%;
     width: 100%;
-  size: 100%;
+  position:initial;
+  
+
 }
 .font1{
     font-weight:900 ;
