@@ -7,6 +7,8 @@
     background-attachment: fixed;
     background-origin: initial;
     background-clip: initial;
+    background-position: center;
+
 }
 
 .BGA{
@@ -17,6 +19,7 @@
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .con{
     position:center;
