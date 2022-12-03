@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="shortcut icon" type="image/x-icon" href="tour website design pro\techno tour pro copy2.png" />
+      <link rel="stylesheet" href="CSS\login.css">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Login</title>
+   </head>
+   <body>
+      <header id="header-style">
+         <!--website logo -->
+         <a href="home.html" id="logo">
+         <img class="logo-img" src="techno tour website design pro\web site logo.png" alt="..">
+         </a>
+         <!--header menu -->
+         <ol >
+            <li><a title="home page" href="home.html" class="links">Home</a></li>
+            <li><a title="countact us" href="contact us.html" class="links">Contact Us</a></li>
+            <li><a title="about us" href="about us.html" class="links">About Us</a></li>
+            <!--pre and preclear founction to display a brief about the corses choice (JS) -->
+            <li id="corses"  onmouseover="bri()" onmouseout="briclear()">
+               <a href="what's new.html" class="links">What's New</a>
+               <div id="brief"> See What Is Happening Now</div>
+            </li>
+         </ol>
+         <!--search and login-->
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
+         </div>
+         <a href="login.html" class="login-logo">login <img class="login-logo-img" src="techno tour website design pro\login.png" alt="..">
+         </a>
+      </header>
+      <!--sign in (JS)-->
+      <div id="container">
+         <img  src="techno tour website design pro\techno tour pro copy2.png" alt=".."style="width: 7%;">
+         <img src="techno tour website design pro\techno tour login logo.png" alt=".."style="width: 15%;"><br>
+         <form class="form">
+            <div id="form1">
+               <center><label>Enter Your Email</label></center>
+               <br>
+               <center><input title="your email" id="in1-1" class="in1" type="email"></center>
+               <br>
+               <center> <label>Enter The Password</label></center>
+               <br>
+               <center> <input title="your password" id="in2-1" class="in1" type="password"></center>
+               <br> 
+               <center>
+                  <p id="worning" style="color: red; height: fit-content; display: none;">password or email not valid please try again.</p>
+               </center>
+               <center> <button id="conta" onclick="submeitt()"  type="button" >Containue</button></center>
+               <center><font>No Email</font></center>
+               <center> <button onclick="window.scrollTo(0,1000);" id="SU"  type="button">Sign Up</button></center>
+            </div>
+         </form>
+      </div>
+      <br><br><br><br>
+      <!--sign up-->
+      <div id="container_2">
+         <form class="form" action="">
+            <h2 id="done"></h2>
+            <div id="form2">
+               <div id="first"> <label>first name</label>
+                  <input id="in1-2" class="in2" type="text">
+                  <label>last name</label>
+                  <input id="in2-2" class="in2" type="text">
+               </div>
+               <label for="ays"></label>
+               <div id="student_dr">
+                  <label>are you student or doctor ?</label><br> <br>
+                  <!-- stuon and dron is a fuction to switch between on and off rather it is dr or student (JS)-->
+                  <label for="student">student <input id="in3-2" onclick="stuon()" value="student" class="in2" type="radio"></label> 
+                  <label for="dr">Dr <input id="in4-2" onclick="dron()" value="dr" class="in2" type="radio"></label> 
+               </div>
+               <br>
+               <div id="email-pass">
+                  <label>Enter your Email</label>
+                  <input title="your email" id="in5-2" class="in2" type="email">
+                  <label>Enter your Password</label>
+                  <!--check is a function to check the strength of the password (JS)-->
+                  <input title="your password" id="in6-2" onkeyup="check()" onkeydown="check()" onkeypress="check()" class="in2" type="password">
+                  <p id="strong" style=" 
+                     font-family: 'Segoe UI Semibold','Calibri','Tahoma';
+                     font-size: small; height: 8px;
+                     margin-left: 33vw;" ></p>
+               </div>
+               <!--singupinfo is a function to submit the values of the user input information and store it in localstorage for now in code (JS)-->
+               <div id="bouttons"><button id="submit" onclick="singupinfo()" type="button" >Submit</button>
+                  <button onclick="window.scrollTo(0,0);" type="button" id="SU">Sign in</button>
+               </div>
+            </div>
+         </form>
+      </div>
+      <script src="JS\login js.js"></script>
+   </body>
+</html>
