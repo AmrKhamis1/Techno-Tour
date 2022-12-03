@@ -153,6 +153,7 @@ body{
   .logo-img{
     width: 15vw;
  margin-left: 5%;
+	  cursor:pointr;
   }
   .user-logo,.search-logo-img{
     width: 1vw;
