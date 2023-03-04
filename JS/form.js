@@ -1,3 +1,16 @@
+function login(){
+    var form1=document.getElementById("form11");
+    var form2=document.getElementById("form22");
+    form1.style.display="flex";
+    form2.style.display="none";
+}
+function signup(){
+    var form1=document.getElementById("form11");
+    var form2=document.getElementById("form22");
+    form1.style.display="none";
+    form2.style.display="flex";
+}
+
 function form1(){
     var possitions=document.getElementById("positions");
     var possition=document.getElementById("position"); 
