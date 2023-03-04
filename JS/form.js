@@ -1,17 +1,19 @@
+function form1(){
+    var possitions=document.getElementById("positions");
+    var possition=document.getElementById("position"); 
+    let fname=document.getElementById('fname');
+    let lname=document.getElementById('lname');
+    let name =document.getElementById("name");
+        name.value=fname.value +" "+lname.value;
+        possition.value=possitions.value;
+    }
 
-setInterval(
-    function(){
-var fname=document.getElementById('fname');
-var lname=document.getElementById('lname');
-var email=document.getElementById('email');
-var password=document.getElementById('password');
-var name =document.getElementById("name");
-var vpassword =document.getElementById("vpassword");
-var possitions=document.getElementById("positions");
-var possition=document.getElementById("position"); 
-var worning =document.getElementById('Worning'); 
+    var email=document.getElementById('email');
+
  //********** strong password function *****************************************************************************************************/
+function form2(){
 
+    var password=document.getElementById('password');
     let pass_input =password.value;
     let massage_output = document.getElementById("strong");
     let symbols = '!@#$%^&*()?/>.<,;\\|[]{}+=-_~`';
@@ -59,11 +61,20 @@ var worning =document.getElementById('Worning');
         massage_output.style.color = "red";
         massage_output.style.fontSize="10px";
     }
+}
+ function form3(){
+    var vpassword =document.getElementById("vpassword");
+    var worning =document.getElementById('Worning'); 
+    let pass_input = document.getElementById('password').value;  
+    if(vpassword.value==pass_input){
+        worning.innerHTML="  &#10004";
+        worning.style.color="rgb(0, 255, 42)";
+        worning.style.fontSize="13px";
+    }else{
+        worning.innerHTML="  &#10006";
+        worning.style.color="red";
+        worning.style.fontSize="13px";
 
+    }
 
-        name.value=fname.value +" "+lname.value;
-        possition.value=possitions.value;
-    },
-    1000
-);
-
+}

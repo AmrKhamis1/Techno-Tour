@@ -1,8 +1,8 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="stylesheet" href="CSS/form.css">        
+    <script src="JS/form.js"></script>
     <title>Form</title>
 </head>
 <body>
@@ -13,24 +13,26 @@
              <div id="form1">
                 <h1>SignUp</h1>
             <label for="fname">First Name</label>
-            <input id="fname" type="text" class="input-text" required>
+            <input id="fname" onkeyup="form1();" type="text" class="input-text" required>
             <label for="lname">Last Name</label >
-            <input id="lname" type="text" class="input-text" required>
+            <input id="lname" onkeyup="form1();" type="text" class="input-text" required>
             <label for="email">Email</label>
             <input id="email" type="email" class="input-text" required>
-            <label for="password">Password <span id="strong">| <span></label>
-            <input id="password" type="password" class="input-text" required>
-            <label for="vpassword">Verify Password<p id="Worning"></p></label>
-            <input id="vpassword" type="password" class="input-text" required>
+            <label for="password" >Password <span id="strong">| <span></label>
+            <input id="password" onkeyup="form2();" type="password" class="input-text" required>
+            <label for="vpassword" >Verify Password<span id="Worning"></span></label>
+            <input id="vpassword" onkeyup="form3();" type="password" class="input-text" required>
             <label for="photos">Add Your photo:</label>
             <input name="photos" type="file" id="photos">
         </div>
             <div id="form2">
             <label for="positions">Choose Your position</label>
-            <select name="positions" id="positions">
+            <select onchange="form1();" name="positions" id="positions">
                 <option value="Dr">Dr</option>
                 <option value="Assisstant">Assisstant</option>
                 <option value="Student">Student</option>
+                <option value="Technical">Technical</option>
+                <option value="External">External</option>
             </select>
             <label for="name">Your Name</label>
             <input id="name" type="text" disabled>
@@ -50,10 +52,8 @@
             <input id="position" type="text" disabled>
             <button type="submit" name="submit">Done</button>
         </div>
-        
         </form>
         <img id="smoke" src="techno tour website design pro/smoke04.gif" alt="">
-        <script src="JS/form.js"></script>
 </body>
 
 </html> 
