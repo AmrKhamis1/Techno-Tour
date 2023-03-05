@@ -265,7 +265,15 @@ height: 100%;
 	}
 
 }
+@keyframes anime {
+	0%{ opacity: 0;
+	}
 
+	100%{
+   opacity: 0;
+	}
+
+}
 #main-nct {
 	animation: sll 1000ms;
 	background-size: 100%;
@@ -278,7 +286,7 @@ height: 100%;
 }
 
 .main-img {
-	animation: sll 0s;
+  animation: anime 1000ms;
 	opacity: 0;
 	color: aliceblue;
 	font-size: 2vw;
@@ -296,6 +304,7 @@ height: 100%;
 }
 
 #images {
+  animation: anime 1000ms;
 	height: 100%;
 	margin-top: 8%;
 }

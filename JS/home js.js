@@ -14,13 +14,13 @@ let cube = document.getElementById("cube");
 let bage1 = document.getElementById("bage1");
 let mainnct=document.getElementById("main-nct");
 let bage2 = document.getElementById("bage2");
-document.onload(function home(){
+function home(){
    bage1.style.display="block";
    bage2.style.display="none";
 
-});
+}
 
-
+window.location()
 function main(){
    bage1.style.display="none";
    bage2.style.display="block";
