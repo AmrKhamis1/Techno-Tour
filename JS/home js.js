@@ -20,7 +20,6 @@ function home(){
 
 }
 
-window.location()
 function main(){
    bage1.style.display="none";
    bage2.style.display="block";
