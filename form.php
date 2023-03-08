@@ -38,7 +38,7 @@
         </div>
             <div id="form2">
             <label for="positions">Choose Your position</label>
-            <select onchange="form1();" name="positions" id="positions">
+            <select onchange="form1();" name="positions" id="positions" required>
                 <option value="Dr">Dr</option>
                 <option value="Assisstant">Assisstant</option>
                 <option value="Student">Student</option>
