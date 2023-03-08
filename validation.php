@@ -1,30 +1,37 @@
 <?php
-if (empty($_POST["fname"]))
+$fname=$_POST["fname"];
+$lname=$_POST["lname"];
+$email=$_POST["email"];
+$password= $_POST["password"];
+$vpassword= $_POST["vpassword"];
+$position=$_POST["positions"];
+
+if (empty($fname) || empty($lname))
 {
-    die("This field is require");
+    echo "This field is require";
 }
-if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
+if (! filter_var($email, FILTER_VALIDATE_EMAIL))
 {
-       die("invalid email");
+       echo "invalid email format";
 }
-if (strlen( $_POST["password"])< 8)
+if (strlen($password)< 8)
 {
-    die("Password must be more then 8 char");
+    echo "Password must be more then 8 char";
 }
-elseif(! preg_match("/[a-zA-Z]/",$_POST["password"]))
+elseif(! preg_match("/[a-zA-Z]/",$password))
 {
-    die("must conntain one letter");
+    echo "must conntain one letter";
 }
-if ($_POST["password"] !== $_POST["vpassword"])
+if ($password !== $vpassword)
 {
-    die("Must be match");
+    echo "Must be match";
 }
 print_r($_POST);
-$password_encrypt=password_hash($_POST["password"], PASSWORD_DEFAULT);
+$password_encrypt=password_hash($password, PASSWORD_DEFAULT);
 var_dump($password_encrypt);
-$connection=require __DIR__."/database.php";
+$connection=include_once "database.php"  ;
 $insert=$connection->prepare("INSERT INTO user_data (fname,lname,email,password_hash,position)
 VALUES (?,?,?,?,?)");
-$insert->bind_param("sssss",$_POST["fname"],$_POST["lname"],$_POST["email"],$password_encrypt,$_POST["positions"]);
+$insert->bind_param("sssss",$fname,$lname,$email,$password_encrypt,$position);
 $insert->execute();
 ?>

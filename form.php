@@ -8,31 +8,31 @@
 <body onload="animation();">
     <div id="container">
     </div>
-    <form id="form11" action="form.php" method="post">
+    <form id="form11" action="validation.php" method="post">
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
         <br>
         <label for="login-email">Email</label>
-        <input id="login-email" type="email" class="input-text input-text1" required>
+        <input id="login-email" name="login-email" type="email" class="input-text input-text1" required>
         <label for="login-password" style="margin-top: 30px;" >Password</label>
-        <input id="login-password" type="password" class="input-text input-text1" required>
+        <input id="login-password" name="login-password" type="password" class="input-text input-text1" required>
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
     </form>
-    <form style="display: none;" id="form22" action="form.php" method="post" enctype="multipart/form-data">
+    <form style="display: none;" id="form22" action="validation.php" method="post" >
 
              <div id="form1">
                 <h1>SignUp</h1>
             <label for="fname">First Name</label>
-            <input id="fname" onkeyup="form1();" type="text" class="input-text input-text2" required>
+            <input id="fname" onkeyup="form1();" name="fname" type="text" class="input-text input-text2" required>
             <label for="lname">Last Name</label >
-            <input id="lname" onkeyup="form1();" type="text" class="input-text input-text2" required>
+            <input id="lname" onkeyup="form1();" name="lname" type="text" class="input-text input-text2" required>
             <label for="email">Email</label>
-            <input id="email" type="email" class="input-text input-text2" required>
+            <input id="email" name="email" type="email" class="input-text input-text2" required>
             <label for="password" >Password <span id="strong">| <span></label>
-            <input id="password" onkeyup="form2();" type="password" class="input-text input-text2" required>
+            <input id="password" name="password" onkeyup="form2();" type="password" class="input-text input-text2" required>
             <label for="vpassword" >Verify Password<span id="Worning"></span></label>
-            <input id="vpassword" onkeyup="form3();" type="password" class="input-text input-text2" required>
+            <input id="vpassword" name="vpassword" onkeyup="form3();" type="password" class="input-text input-text2" required>
             <label for="photos">Add Your photo:</label>
             <input name="photos" type="file" id="photos">
         </div>
@@ -67,5 +67,4 @@
         </form>
         <img id="smoke" src="techno tour website design pro/smoke04.gif" alt="">
 </body>
-
 </html> 
