@@ -1,0 +1,101 @@
+*{
+    font-family: Source Sans Pro, 'Roboto',Arial, Helvetica, sans-serif;
+}
+body{
+    padding: 0%;
+    margin: 0%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#container{
+    padding: 0%;
+    margin:0 ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:radial-gradient(rgb(111, 111, 111),rgb(2, 0, 52));
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#form22{
+    z-index: 1;
+    color: black;
+    overflow:hidden;
+    animation: form 900ms;
+    border-radius: 30px;
+    display: flex;
+    height: 60%;
+    width: 50%;
+    filter: blur(0px);
+    background-color:rgb(255, 255, 255);
+}
+.a{
+    padding-left: 10%;
+    display: flex;
+    position: fixed;
+    padding-top: 10px;
+    flex-direction: column;
+}
+.a label{
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500 bold;
+}
+.a input{
+    border: 0;
+    border-bottom:1px ;
+    border-color: black;
+    border-style: solid;
+    width: 100px;
+    transition: all 300ms;
+}
+.a input:hover{
+    width: 150px;
+}
+.a input:focus{
+    width: 150px;
+}
+.b{
+    padding-left: 50%;
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column; 
+    padding-top: 10%;
+}
+.b label{
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500 bold;
+}
+.b input{
+    border: 0;
+    border-bottom:1px ;
+    border-color: black;
+    border-style: solid;
+    width: 100px;
+    transition: all 300ms;
+}
+.b input:hover{
+    width: 150px;
+}
+.b input:focus{
+    width: 150px;
+}
+.done{
+    height: 30px;
+    margin-top: 20%;
+    border: 2px;
+    border-color: black,wheat;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+}
+.done:hover{
+    color: white;
+    background-color: black;
+}
