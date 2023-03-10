@@ -10,8 +10,8 @@
 <body>
 <div id="container">
     </div>
-    <form  id="Booking" action="Booking.php" method="post" enctype="multipart/form-data">
-                <div class="form-left">
+    <form  id="form22" action="Booking.php" method="post" enctype="multipart/form-data">
+                <div class="a">
                     <h1>Rooms Booking</h1>
                     <label for="b_title">Booking Title</label>
                     <input id="b_title"  type="text" required>
@@ -26,18 +26,18 @@
                     <input id="b_end" type="time" required>
 
                     <label for="b_duration">Duration</label>
-                    <input id="b_duration" type="number" min="1" required>
+                    <input id="b_duration" type="number" required>
                 </div>
 
-                <div class="form-right">
+                <div class="b">
                     <label for="b_attendees">Total number of attendees</label>
-                    <input id="b_attendees" type="number" min="1" required>
+                    <input id="b_attendees" type="number" required>
 
                     <label for="b_external_attendees">Number of External Attendees</label>
-                    <input id="b_external_attendees" type="number" min="1" required>
+                    <input id="b_external_attendees" type="number" required>
 
                     <label for="b_Num_rooms">Number of rooms</label>
-                    <input id="b_Num_rooms" type="number" min="1" required>
+                    <input id="b_Num_rooms" type="number" required>
                     <br>
                     <br>
                     <input type="submit" value="Done" id="done" class="done">
