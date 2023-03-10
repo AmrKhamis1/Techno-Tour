@@ -22,7 +22,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
 }
-#form22{
+#Booking{
     z-index: 1;
     color: black;
     overflow:hidden;
@@ -34,61 +34,54 @@ body{
     filter: blur(0px);
     background-color:rgb(255, 255, 255);
 }
-.a{
+.form-left{
     padding-left: 10%;
     display: flex;
     position: fixed;
     padding-top: 10px;
     flex-direction: column;
 }
-.a label{
+.form-left label{
     font-size: 20px;
     padding: 10px 0;
     font-weight: 500 bold;
 }
-.a input{
+.form-left input{
     border: 0;
     border-bottom:1px ;
     border-color: black;
     border-style: solid;
-    width: 100px;
+    width: 150px;
     transition: all 300ms;
 }
-.a input:hover{
-    width: 150px;
+.form-left input:focus{
+    outline: none;
 }
-.a input:focus{
-    width: 150px;
-}
-.b{
+.form-right{
     padding-left: 50%;
     display: flex;
     padding-top: 10px;
     flex-direction: column; 
     padding-top: 10%;
 }
-.b label{
+.form-right label{
     font-size: 20px;
-    padding: 10px 0;
+    padding: 15px 0;
     font-weight: 500 bold;
 }
-.b input{
+.form-right input{
     border: 0;
     border-bottom:1px ;
     border-color: black;
     border-style: solid;
-    width: 100px;
+    width: 150px;
     transition: all 300ms;
 }
-.b input:hover{
-    width: 150px;
-}
-.b input:focus{
-    width: 150px;
+.form-right input:focus{
+    outline: none;
 }
 .done{
     height: 30px;
-    margin-top: 20%;
     border: 2px;
     border-color: black,wheat;
     border-style: solid;
