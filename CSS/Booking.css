@@ -80,15 +80,17 @@ body{
 .form-right input:focus{
     outline: none;
 }
-.done{
+#done{
+    align-self: center;
+    width: 175px;
     height: 30px;
     border: 2px;
-    border-color: black,wheat;
+    border-color: black;
     border-style: solid;
     border-radius: 20px;
     background-color: white;
 }
-.done:hover{
+#done:hover{
     color: white;
     background-color: black;
 }
