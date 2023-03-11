@@ -81,6 +81,7 @@ body{
     outline: none;
 }
 #done{
+    align-self: center;
     width: 175px;
     height: 30px;
     border: 2px;

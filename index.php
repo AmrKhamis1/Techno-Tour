@@ -28,7 +28,7 @@
       </header>
       <div id="bage1" >
 
-      <main>
+      <main style="display:flex;flex-direction:column;">
          <div class="hero">
             
                <img src="techno tour website design pro/background light theme3.png" class="bg-img" style="size:cover;">
@@ -50,10 +50,21 @@
                      <font style="color:white;font-size:40px;text-align:center;" class="hero-header">
                      <span style="color:">THE BEST BOOKING GUIDE</span><br> 
                      FOR DOCTORS,ASSISTANTS,STUDENTS <br>
-                     AND EXTERNAL USERS IN NCTU.
+                     AND EXTERNAL USERS IN NCTU.<br>
+                     <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
+                     “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
+                     </span>
                      </font>
-         </div>            
+                     
 
+         </div>            
+         <div id="hero-section">
+         <img src="techno tour website design pro/labs/networking lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/IT lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/electric lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/physics lab2.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/physics lab1.jpg" class="img-gal" width="280px">
+         </div>
       </main>
    </div>
    <div id="bage2">
@@ -78,7 +89,7 @@
       <div id="cont-home">
          <div class="container">
             <div id="cube">
-               <!--************************** face one  ***************************************************************-->
+               <!--************************** face 1  ***************************************************************-->
                <div id="f1" class="face">
                   <div id="row1">
                      <div id="a106"  class="rooms">A106</div>
@@ -93,7 +104,7 @@
                      <div id="a102" class="rooms">A102</div>
                   </div>
                </div>
-               <!--************************** face tow  ***************************************************************-->
+               <!--************************** face 2  ***************************************************************-->
                <div id="f2" class="face">
                   <div id="row1">
                      <div id="a207" class="rooms">A207</div>
