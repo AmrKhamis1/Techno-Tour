@@ -1,13 +1,18 @@
 <?php
-$host="127.0.0.1:3309";
-$username="root";
-$password="";
-$db="technotour";
+// Create connection to database 
+//main file 
 
-$connection=new mysqli($host,$username,$password,$db);
-if($connection->connect_errno)
-{
-    echo "error connecting to DB";
+//host=localhost -->php my admin
+//database name amrdb
+//charset=utf8
+//name = root
+//password=""
+$conn = new PDO("mysql:host=localhost;dbname=technotour;charset=utf8;", "root","");
+// Check connection
+if ($conn) {
+    echo "";
+}else{
+    echo "not connect";
 }
-return $connection;
+
 ?>

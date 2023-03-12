@@ -1,3 +1,18 @@
+<?php 
+include_once "database.php";
+if(empty($_GET['id'])){
+   $id=NULL;
+   $fname="login";
+   }else{
+       $id=$_GET['id'];
+       $getuser = $conn->prepare("select * from mempers where id='$id'");
+       $getuser->execute();
+       $getuser = $getuser->fetch(PDO::FETCH_ASSOC);
+       $fname=$getuser['fname'];
+   }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -22,7 +37,7 @@
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
          <div class="user-logo"><a href="form.php" id="login-logo" >
-         demo
+         <?php echo $fname; ?>
          </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
         
       </header>

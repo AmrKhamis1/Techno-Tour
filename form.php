@@ -1,3 +1,19 @@
+<?php 
+$err=NULL;
+$login=NULL;
+if(empty($_GET['err'])){
+$err=NULL;
+}else{
+$err=$_GET['err'];
+}
+if(empty($_GET['login'])){
+    $login=NULL;
+    }else{
+        $id=$_GET['id'];
+    header("Location:index.php?id=$id");
+    }
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +24,10 @@
 <body onload="animation();">
     <div id="container">
     </div>
-    <form id="form11" action="validation.php" method="post">
+    <form id="form11" action="mempers/login.php" method="post">
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
+        <p><?php if($err=="err"){echo "password or email not valid!";}?></p>
         <br>
         <label for="login-email">Email</label>
         <input id="login-email" name="login-email" type="email" class="input-text input-text1" required>
@@ -19,10 +36,32 @@
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
     </form>
-    <form style="display: none;" id="form22" action="validation.php" method="post" >
+    <form style="display: none;" id="form22" action="mempers/signup.php" method="post" >
 
              <div id="form1">
                 <h1>SignUp</h1>
+                <?php
+                $err=NULL;
+                if(empty($_GET['err'])){
+                    $err=NULL;
+                }else{
+                    $err=$_GET['err'];
+                }
+                
+                if($err=="empty"){
+                     echo "<script>window.alert('All filds are required !')</script>";
+                }else if($err=="email"){
+                    echo "<script>window.alert('Email format not correct !')</script>";
+                }else if($err=="password"){
+                    echo "<script>window.alert('Password low lenth !')</script>";
+                }else if($err=="vpassword"){
+                    echo "<script>window.alert('Password Verify not match !')</script>";
+                }else if($err=="password2"){
+                    echo "<script>window.alert('Password not strong yet !')</script>";
+                }else if($err=="no"){
+                    echo "<script>window.alert('done now you are a memper of TechnoTour !')</script>";
+                }
+                ?>
             <label for="fname">First Name</label>
             <input id="fname" onkeyup="form1();" name="fname" type="text" class="input-text input-text2" required>
             <label for="lname">Last Name</label >
@@ -38,7 +77,7 @@
         </div>
             <div id="form2">
             <label for="positions">Choose Your position</label>
-            <select onchange="form1();" name="positions" id="positions" required>
+            <select onchange="form1();" name="position" id="positions" required>
                 <option value="Dr">Dr</option>
                 <option value="Assisstant">Assisstant</option>
                 <option value="Student">Student</option>
