@@ -57,7 +57,7 @@ else if (strlen($password)< 8)
 {
    $pass_error= "Must conntain one letter";
 }
-if(empty($password))
+if(empty($vpassword))
 {
     $vpass_error= "This field is require";
 }
