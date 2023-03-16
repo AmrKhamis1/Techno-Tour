@@ -9,7 +9,7 @@
 <body onload="animation();">
     <div id="container">
     </div>
-    <!--<form id="form11" action="validation.php" method="post" >
+    <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" >
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
         <br>
@@ -19,26 +19,21 @@
         <input id="login-password" name="login-password" type="password" class="input-text input-text1" required>
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
-    </form>-->
+    </form>
     <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
 
              <div id="form1">
                 <h1>SignUp</h1>
-            <label for="fname">First Name</label>
+            <label for="fname">First Name <span class="errors"><?php echo $flname ;?></span></label>
             <input id="fname" onkeyup="form1();" name="fname" type="text" class="input-text input-text2"  required>
-            <p class="error flname" ><?php echo $flname ;?></p>
-            <label for="lname">Last Name</label >
+            <label for="lname">Last Name <span class="errors"><?php echo $flname ;?></span></label>
             <input id="lname" onkeyup="form1();" name="lname" type="text" class="input-text input-text2" required>
-            <p class="error flname" ><?php echo $flname ;?></p>
-            <label for="email">Email</label>
+            <label for="email">Email <span class="errors"><?php echo $email_error ;?></span></label>
             <input id="email" name="email" type="email" class="input-text input-text2" required>
-            <p class="error email_error" ><?php echo $email_error ;?></p>
-            <label for="password" >Password <span id="strong">| <span></label>
+            <label for="password" >Password <span class="errors"><?php echo $pass_error;?><span></label>
             <input id="password" name="password" onkeyup="form2();" type="password" class="input-text input-text2" required>
-            <p class="error pass_error " ><?php echo $pass_error ;?></p>
-            <label for="vpassword" >Verify Password<span id="Worning"></span></label>
+            <label for="vpassword" >Verify Password <span class="errors"><?php echo $vpass_error ;?></span></label>
             <input id="vpassword" name="vpassword" onkeyup="form3();" type="password" class="input-text input-text2" required>
-            <p class="error vpass_error"><?php echo $vpass_error ;?></p>
             <label for="photos">Add Your photo:</label>
             <input name="photos" type="file" id="photos">
         </div>

@@ -28,48 +28,64 @@ $check="SELECT email FROM members WHERE email='$email'";
 $resl=mysqli_query($connection,$check);
 $row=mysqli_num_rows($resl);
 //validation on the user data 
-if (empty($fname) || empty($lname))
-{
+if (empty($fname) || empty($lname)){
     $flname="This field is require";
+    $fl=0;
+}else{
+    $fl=1;
 }
-if(empty($email))
-{
+if(empty($email)){
     $email_error= "This field is require";
+    $em=0;
 }
-else if (! filter_var($email, FILTER_VALIDATE_EMAIL))
-{
+else if (! filter_var($email, FILTER_VALIDATE_EMAIL)){
       $email_error= "Invalid email format";
+      $em=0;
 }
 else if ($row>0)
 {
       $email_error= "This email already exists";
+      $em=0;
+
+}else{
+    $em=1;
 }
  if(empty($password))
 {
     $pass_error= "This field is require";
+    $ps=0;
 }
 else if (strlen($password)< 8)
 {
    $pass_error= "Password must be more then 8 char";
+   $ps=0;
 }
 
  else if(! preg_match("/[a-zA-Z]/",$password))
 {
    $pass_error= "Must conntain one letter";
+   $ps=0;
 }
-if(empty($password))
+else{
+    $ps=1;
+}
+if(empty($vpassword))
 {
     $vpass_error= "This field is require";
+    $vps=0;
 }
 else if ($password != $vpassword)
 {
     $vpass_error= "Must be match";
+    $vps=0;
+}else{
+    $vps=1;
 }
 //if none of the above is empty then it will insert the user data into the members table and display the message
-if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !empty($vpassword))
+if ($fl==1 && $em==1 && $ps==1 && $vps==1)
 {
 $succ="Done now you are a member of TechnoTour!";
-$insert=$connection->prepare("INSERT INTO members (fname,lname,email,password_hash,position)
+$insert=$connection->prepare("INSERT INTO members(fname,lname,email,password,position)
 VALUES (?,?,?,?,?)");
 $insert->bind_param("sssss",$fname,$lname,$email,$password_encrypt,$position);
 $insert->execute();

@@ -51,7 +51,7 @@ body{
     overflow:hidden;
     animation: form 900ms;
     border-radius: 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -195,5 +195,9 @@ p{
 .buttons2:hover{
     color: white;
     background-color: black;
+}
+.errors{
+    color:red;
+    font-size:10px;
 }
 
