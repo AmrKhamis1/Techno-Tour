@@ -35,7 +35,7 @@ if (empty($fname) || empty($lname)){
     $fl=1;
 }
 if(empty($email)){
-    $email_error= "This field is require";
+    $email_error= "email field is require";
     $em=0;
 }
 else if (! filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -52,7 +52,7 @@ else if ($row>0)
 }
  if(empty($password))
 {
-    $pass_error= "This field is require";
+    $pass_error= "password field is require";
     $ps=0;
 }
 else if (strlen($password)< 8)
@@ -71,7 +71,7 @@ else{
 }
 if(empty($vpassword))
 {
-    $vpass_error= "This field is require";
+    $vpass_error= "Verifcation field is require";
     $vps=0;
 }
 else if ($password != $vpassword)
