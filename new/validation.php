@@ -1,5 +1,5 @@
 <?php
-include_once "database.php";
+include_once "databasemysqli.php";
 //initialize all the variables in this code
 $fname=null;
 $lname=null;
@@ -85,7 +85,7 @@ else if ($password != $vpassword)
 if ($fl==1 && $em==1 && $ps==1 && $vps==1)
 {
 $succ="Done now you are a member of TechnoTour!";
-$insert=$connection->prepare("INSERT INTO members(fname,lname,email,password,position)
+$insert=$connection->prepare("INSERT INTO members(fname,lname,email,passwordd,position)
 VALUES (?,?,?,?,?)");
 $insert->bind_param("sssss",$fname,$lname,$email,$password_encrypt,$position);
 $insert->execute();

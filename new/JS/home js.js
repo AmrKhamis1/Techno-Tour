@@ -25,7 +25,6 @@ function main(){
    bage2.style.display="block";
 
 }
-
 function uni(){
    window.location.assign("index.html");
 }

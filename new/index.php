@@ -1,53 +1,84 @@
+<?php 
+include_once "databasemysqli.php";
+if(empty($_GET['id'])){
+   $id=NULL;
+   $fname="login";
+   }else{
+       $id=$_GET['id'];
+       $getuser = $conn->prepare("select * from mempers where id='$id'");
+       $getuser->execute();
+       $getuser = $getuser->fetch(PDO::FETCH_ASSOC);
+       $fname=$getuser['fname'];
+   }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon">
+      <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon">  
       <link rel="stylesheet" href="CSS\Home.css">
       <title>TecnoTour</title>
    </head>
    <body >      
       <header id="header-style">
-         <img class="logo-img" onclick="home()" src="techno tour website design pro\web site logo2.png" alt="..">
+         <img class="logo-img" onclick="home()" src="techno tour website design pro\web site logo3.png" alt="..">
+         <img src="techno tour website design pro\NCT logo3.png" style="margin-left:50px;"  width="0px" alt="">
          <ul >
-            <li><a title="home page" onclick="home()" class="links">Home</a></li>
-            <li><a title="countact us" href="contact us.php" class="links">Contact Us</a></li>
-            <li><a title="about us" href="about us.php" class="links">About Us</a> </li>
-            <li><a title="what's new" href="what's new.php" class="links">What's New</a></li>
+            <li><a onclick="home()" class="links">Home</a></li>
+            <li><a href="booking.php" class="links">Booking</a></li>
+            <li><a href="what's new.php" class="links">What's New</a></li>
+            <li><a href="contact us.php" class="links">Contact Us</a></li>
+            <li><a href="about us.php" class="links">About Us</a> </li>
          </ul>
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
-         <div class="user-logo"><a href="form.php" id="login-logo" style="text-decoration: none;color: #000756; margin-right:5px ;">
-         demo
+         <div class="user-logo"><a href="form.php" id="login-logo" >
+         <?php echo $fname; ?>
          </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
         
       </header>
       <div id="bage1" >
 
-      <main>
+      <main style="display:flex;flex-direction:column;">
          <div class="hero">
-            <div class="hero-description">
-               <img src="techno tour website design pro/background light theme.png" class="bg-video" style="size:cover;">
-               <div class="hero-main">
-                  <center><img src="techno tour website design pro\NCT logo3.png" style="top:0 ;"  width="250px" alt=""></center>
-               </div>
+            
+               <img src="techno tour website design pro/background light theme3.png" class="bg-img" style="size:cover;">
                <div id="hero-text2">
                   <div class="hero-text">
-                     <font class="hero-header">
-                     <span style="color:aqua ">NCT UNIVERSITY TOUR</span><br> THE BEST GUIDE FOR DOCTORS AND ASSISTANTS.
+                     <font style="color:black;font-size:35px;margin-left:30px;" class="hero-header">
+                     &nbspNCT UNIVERSITY
                      </font>
-                  </div>
-                  <div id="btn" style="margin-left: -5%;">
-                     <div id="btn1">
-                        <button type="button" onclick="main()" id="NCT-button" class="tour-button">
-                        THE UNIVERSITY
-                        </button>
-                     </div>
+                     <img src="techno tour website design pro/NCT logo3.png" width="200px" style="margin-left:45px;">         
+                     <div id="btn">
+                         <div id="btn1">
+                         <button type="button" onclick="main()" id="NCT-button" class="tour-button">
+                         THE UNIVERSITY
+                         </button>
+                         </div>
+                      </div>
                   </div>
                </div>
-            </div>
+                     <font style="color:white;font-size:40px;text-align:center;" class="hero-header">
+                     <span style="color:">THE BEST BOOKING GUIDE</span><br> 
+                     FOR DOCTORS,ASSISTANTS,STUDENTS <br>
+                     AND EXTERNAL USERS IN NCTU.<br>
+                     <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
+                     “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
+                     </span>
+                     </font>
+                     
+
+         </div>            
+         <div id="hero-section">
+         <img src="techno tour website design pro/labs/networking lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/IT lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/electric lab.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/physics lab2.jpg" class="img-gal" width="280px">
+         <img src="techno tour website design pro/labs/physics lab1.jpg" class="img-gal" width="280px">
          </div>
       </main>
    </div>
@@ -73,7 +104,7 @@
       <div id="cont-home">
          <div class="container">
             <div id="cube">
-               <!--************************** face one  ***************************************************************-->
+               <!--************************** face 1  ***************************************************************-->
                <div id="f1" class="face">
                   <div id="row1">
                      <div id="a106"  class="rooms">A106</div>
@@ -88,7 +119,7 @@
                      <div id="a102" class="rooms">A102</div>
                   </div>
                </div>
-               <!--************************** face tow  ***************************************************************-->
+               <!--************************** face 2  ***************************************************************-->
                <div id="f2" class="face">
                   <div id="row1">
                      <div id="a207" class="rooms">A207</div>
