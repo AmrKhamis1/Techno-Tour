@@ -1,16 +1,11 @@
 <?php 
 include_once "databasemysqli.php";
-if(empty($_GET['id'])){
-   $id=NULL;
-   $fname="login";
-   }else{
-       $id=$_GET['id'];
-       $getuser = $conn->prepare("select * from mempers where id='$id'");
-       $getuser->execute();
-       $getuser = $getuser->fetch(PDO::FETCH_ASSOC);
-       $fname=$getuser['fname'];
-   }
-
+session_start();
+if(isset($_SESSION["id"])){
+   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
+   $result=mysqli_query($connection,$sql);
+   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +32,12 @@ if(empty($_GET['id'])){
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
          <div class="user-logo"><a href="form.php" id="login-logo" >
-         <?php echo $fname; ?>
+         <?php 
+         if(isset($getuser)):?>
+         <p><?php echo $getuser["fname"]?></p>
+         <?php else:?>
+            <p><?php echo "login"?></p>
+         <?php endif;?>
          </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
         
       </header>
