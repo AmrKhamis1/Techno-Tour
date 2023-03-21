@@ -1,4 +1,5 @@
-<?php include_once "validation.php"; ?>
+<?php include_once "validation.php";
+include_once "login.php";?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +10,14 @@
 <body onload="animation();">
     <div id="container">
     </div>
-    <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" >
+    <form id="form11" action="login.php" method="post" novalidate>
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
+        <?php echo $ema_pass;?>
         <br>
-        <label for="login-email">Email</label>
+        <label for="login-email">Email<span class="errors"><?php echo $error ;?></span></label>
         <input id="login-email" name="login-email" type="email" class="input-text input-text1" required>
-        <label for="login-password" style="margin-top: 30px;" >Password</label>
+        <label for="login-password" style="margin-top: 30px;" >Password<span class="errors"><?php echo $error ;?></span></label>
         <input id="login-password" name="login-password" type="password" class="input-text input-text1" required>
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
