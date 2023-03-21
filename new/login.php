@@ -1,20 +1,26 @@
 <?php
-
-include_once "database.php";
-
+include_once "databasemysqli.php";  
+$ema_pass=null;
+$error=null;
+if($_SERVER['REQUEST_METHOD']=='POST')
+{
 $email=$_POST['login-email'];
 $password=$_POST['login-password'];
-$getuser = $conn->prepare("select * from mempers where email='$email'");
-$getuser->execute();
-$getuser = $getuser->fetch(PDO::FETCH_ASSOC);
-$password2=$getuser['password'];
+if (empty($email) || empty($password)){
+    $error="This field is require";
+    }
+$sql="SELECT * FROM members WHERE email='$email'";
+$result=mysqli_query($connection,$sql);
+$getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
 $id=$getuser['id'];
-if($getuser['email']==$email && password_verify($password,$password2)){
-    header("Location:".$_SERVER['HTTP_REFERER']."?id=$id&login=logedin");
-    exit();
+if($getuser){
+if($getuser['email']==$email && password_verify($password,$getuser["passwordd"])){
+    session_start();
+    $_SESSION["id"]=$id;
+    header("Location:index.php");
+   die();
 }else{
-    header("Location:".$_SERVER['HTTP_REFERER']."?err=err");
-    exit();
-}
+    $ema_pass="invalid email or password";
+}}}
 
 ?>
