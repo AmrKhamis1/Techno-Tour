@@ -5,52 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/about_us.css">
+  <script href="JS/home js.js"></script>
   <title>About Us</title>
 </head>
-<body>
-<div class="container">
-  </div>
-    <header id="header-style">
-      <a href="index.php"><img class="logo-img" src="techno tour website design pro\web site logo2.png" alt="LOGO"></a>
-      <ul >
-         <li><a title="home page" href="index.php" class="links">Home</a></li>
-         <li><a title="countact us" href="contact us.php" class="links">Contact Us</a></li>
-         <li><a title="about us" href="about us.php" class="links">About Us</a> </li>
-         <li><a title="what's new" href="what's new.php" class="links">What's New</a></li>
-      </ul>
-      <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
-      </div>
-      <div class="user-logo"><a href="form.php" id="login-logo" style="text-decoration: none;color: #000756; margin-right:5px ;">
-      demo
-      </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
-   </header>
+<body>  
+  <header id="header-style">
+         <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo3.png" alt="..">
+        <div id="menu-bar" onclick="menu_open();">&#9776</div><ul id="ul">
+            <li><a onclick="window.location.assign('index.php');" class="links">Home</a></li>
+            <li><a href="booking.php" class="links">Booking</a></li>
+            <li><a href="what's new.php" class="links">What's New</a></li>
+            <li><a href="contact us.php" class="links">Contact Us</a></li>
+            <li><a href="about us.php" class="links">About Us</a> </li>
+            <li style="background-color:#000635;color:#edeefa;width:20px;text-align:center;"></li>
+         </ul>  <div id="menu-bar2" onclick="close_menu();">X</div>
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
+         </div>
+         <div class="user-logo"><a href="form.php" id="login-logo" >login
+         </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
+        <script src="JS/home res.js"></script>
+      </header>
     <div class="aboutus" id="aboutus">
-      <h1>About Us</h1>
+      <h3>About Us</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis cumque delectus obcaecati earum unde quasi accusamus consequatur ducimus blanditiis,
          facilis nesciunt aut iure magni amet officia ipsum pariatur voluptatibus.</p>
-      <button type="button"  id="contactus">
-        <a href="contact us.php">Contact Us Now</a>
-      </button>
+      <button type="button" onclick="window.location.assign('contact us.php');"  id="contactus"> Contact Us Now </button>
     </div>
     <div class="team">
-      <h1>Our Team</h1>
-      <div class="adel">
+      <h3>Meet our Team :</h3>
+      <br>
+      <div class="members adel">
         <img src="techno tour website design pro/adel.jpg" alt="Adel">
         <p>Adel Sherif</p>
       </div>
-      <div class="amr">
+      <div class="members amr">
         <img src="techno tour website design pro/amr.jpg" alt="Amr">
         <p>Amr Khames</p>
       </div>
-      <div class="ahmed">
+      <div class="members ahmed">
         <img src="techno tour website design pro/ahmed.jpg" alt="Ahmed">
         <p>Ahmed Hosny</p>
       </div>
-      <div class="sara">
+      <div class="members sara">
         <img src="techno tour website design pro/sara.jpg" alt="Sara">
         <p>Sara Magdy</p>
       </div>
-      <div class="shahd">
+      <div class="members shahd">
         <img src="techno tour website design pro/shahd.jpg" alt="Shahd">
         <p>Shahd Abo Elkaramat</p>
       </div>

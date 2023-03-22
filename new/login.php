@@ -14,7 +14,7 @@ $result=mysqli_query($connection,$sql);
 $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
 $id=$getuser['id'];
 if($getuser){
-if($getuser['email']==$email && password_verify($password,$getuser["passwordd"])){
+if($getuser['email']==$email && password_verify($password,$getuser["password"])){
     session_start();
     $_SESSION["id"]=$id;
     header("Location:index.php");

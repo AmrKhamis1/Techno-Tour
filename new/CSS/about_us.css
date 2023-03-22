@@ -5,136 +5,159 @@
     scroll-behavior: smooth;
 }
 body{
-    background:radial-gradient(rgb(111, 111, 111),rgb(2, 0, 52));
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position:initial;
-    mask-repeat: initial;
-    background-attachment: fixed;
-    position: relative;
-    height: 100%;
+  scroll-behavior: smooth;
+  background-color:#edeefa;
+  background-attachment: fixed;
+  width: 100vw;
+  height: fit-content;
+  display:inline;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+@keyframes sll2 {
+  0% {transform:translateY(-10vh);}
+  100%  {transform: translateY(0vh);}
 }
 
 header{
-    animation: sll2 1s ;
-    justify-content:space-between;
-    width: 100%;
-    height:10vh;
-    align-items: center;
-    display:flex;
-    flex-direction: row;
-    position: fixed;
-    background:linear-gradient(rgb(225, 222, 234),rgb(98, 97, 132));
-    top: 0;
-    box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
-    z-index:1 ;
-  }  
-  ul,li{
-    justify-content: space-between;
-    display: inline-block;
-    margin-left: 5%;    
-  }
-  ul{
-    width: 100%;
-    height: fit-content;
-  }
-  .links{
-    margin: 0;
-    text-decoration: none;
-    font-family: 'Open Sans','Helvetica','sans-serif';
-    color:rgb(4, 0, 27);
-    font-size: 1.2vw;
-	  cursor:pointer;
-  }
-  .links:hover{
-    color: black;
-    border: 0;
-    border-bottom:1px ;
-    border-style:solid;
-    border-color:black ;
-    padding-bottom:3px ;
-  }
-  .user-logo{
-    color: #000756;
-    border: none;
-    margin-right: 5vw;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    justify-content: baseline;
-    display: flex;
-    font-family: 'Open Sans','Helvetica','sans-serif';
-    font-size: larger;
-  }
-  .login-logo-img{
-    color: #000756;
-
-    width:20px ;
-    display: flex;
-  }
-  .search-logo{
-    margin: 0;
-    margin-right: 2%;
-    font-family: 'Open Sans','Helvetica','sans-serif';
-    color: #000756;
-    font-size: 1.2vw;
-    width: 35vw;
-    margin-top: 1vh;  
+  animation: sll2 1s ;
+  justify-content:space-between;
+  width: 100vw;
+  height:10vh;
+  align-items: center;
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+  background-color:#edeefa;
+  top: 0;
+  box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
+  z-index:1 ;
+  
+}  
+ul,li{
+  justify-content: space-between;
+  display: inline-block;
+  margin-left: 5%;    
 }
-  .search{
-    transition: 100ms;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    border-bottom:1px ;
-    border-style:groove;
-    color: rgb(4, 0, 27);
-    padding-bottom:3px ;
-    width:5vw ;
-    color: rgb(4, 0, 27);
-    margin-left: 5vw;
-    margin-right: 0px ;
-    font-size: 0.8vmax;
-    font-family:'Open Sans','Helvetica','sans-serif';
-    
-  }
-  .search:focus,.search:hover{
-    width: 10vw;
-    border: 0;
-    outline: 0;    
-    border-bottom:1px ;
-    border-style:groove;
-    border-color: rgb(4, 0, 27);
-    padding-bottom:3px ;
-    margin: 0;
-    transform: scale(10vw,0);
-  }
-  .logo-img{
-    width: 15vw;
-    margin-left: 5%;
-	  cursor:pointer;
-  }
-  .user-logo,.search-logo-img{
-    width: 1vw;
-  }
+ul{
+  width: 100%;
+  height: fit-content;
+}
+.links{
+  margin: 0;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 200;
+  color:#000635;
+  font-size: 1.2vw;
+  cursor:pointer;
+  border: 0;
+  border-bottom:0px ;
+  transition: all 200ms;
+}
+.links:hover{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000635;
+  border-bottom:1px ;
+  border-style:solid;
+  border-color:black ;
+  padding-bottom:4px ;
+    }
+.user-logo{
+  color: #000635;
+  border: none;
+  margin-right: 5vw;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  justify-content: baseline;
+  align-items:normal;
+  display: flex;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: larger;
+}
+#login-logo{
+  color: #000635;    
+  text-decoration: none;
+  margin-right: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.login-logo-img{
+  color: #000635;
+  width:20px ;
+  display: flex;
+}
+.search-logo{
+  margin: 0;
+  margin-right: 2%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 200;
+  color: #000635;
+  letter-spacing: 1px;
+  font-size: 1.2vw;
+  width: 35vw;
+  margin-top: 1vh;  
+}
+.search{
+  transition: 100ms;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  border-bottom:1px ;
+  border-style:solid;
+  color: rgb(4, 0, 27);
+  padding-bottom:3px ;
+  width:5vw ;
+  color: rgb(4, 0, 27);
+  margin-left: 5vw;
+  margin-right: 0px ;
+  font-size: 0.8vmax;    
+}
+.search:focus,.search:hover{
+  width: 10vw;
+  border: 0;
+  outline: 0;    
+  border-bottom:1px ;
+   border-style:groove;
+   border-color: rgb(4, 0, 27);
+   padding-bottom:3px ;
+   margin: 0;
+   transform: scale(10vw,0);
+}
+.logo-img{
+  width: 15vw;
+   margin-left: 5%;
+  cursor:pointer;
+}
+.user-logo,.search-logo-img{
+  width: 1vw; 
+
+}
+#menu-bar{
+  display: none;
+}
+#menu-bar2{
+  display: none;
+}
 .aboutus{
-    background:linear-gradient( rgb(30, 17, 61),rgb(98, 97, 132));
+    background-color: rgb(30, 17, 61);
     position: absolute;
-    color:wheat;
+    color: white;
     width: 500px;
     height: 300px;
     font-size: 20px;
     margin: 200px 0 0 150px;
-    box-shadow: rgba(18, 18, 18, 0.3) 10px 20px 10px 20px;
     border-radius: 2rem;
     animation-name: about;
     animation-duration: 1s;
 }
-.aboutus h1{
+.aboutus h3{
     color: white;
     margin: 20px;
 }
@@ -142,26 +165,22 @@ header{
     margin-left: 15px;
 }
 .aboutus button{
-    margin:40px 0 0 50%;
+    margin:25px 0 0 50%;
     width: 200px;
     height: 40px;
     border: 2px;
-    border-color: wheat;
+    border-color: white;
+    color: white;
     border-style: solid;
     border-radius: 20px;
     background-color: transparent;
     font-size: 15px;
     font-weight: 300;
+    transition: all 200ms;
 }
-.aboutus button a{
-  text-decoration: none;
-  color: black;
-}
-.aboutus button a:hover{
-  color: white;
-}
-.aboutus button:hover{
-    background-color: rgb(39, 26, 79);
+.aboutus button:hover,.aboutus button a:hover{
+    color:#000635;
+    background-color: rgb(255, 255, 255);
 }
 .team{
     margin-top: 8%;
@@ -169,13 +188,11 @@ header{
     color: white;
     font-size: 20px;
     overflow: visible;
-    position: absolute;
+    position: fixed;
   }
-.team h1{
-    margin: 0 0 30px 110px;
-    box-shadow: rgba(18, 18, 18, 0.3) 5px 10px 5px 0px;
-    background-color:transparent;
-    color: rgb(183, 137, 195);
+.team h3{
+    background-color:rgba(0, 0, 0, 0);
+    color: rgb(30, 17, 61);
     width: 200px;
     border-radius: 2rem;
     text-align: center;
@@ -183,70 +200,49 @@ header{
     animation-duration: 2s;
 }
 .team img{
-    height: 125px;
-    width: 125px;
+    height: 120px;
+    width: 120px;
     border-radius: 100%;
 }
 .team div{
     position: absolute;
     background-color: transparent;
     text-align: center;
+    border-radius: 100%;
+    border: 2px;
+    border-style: solid;
+    border-color: #000635;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+
 }
 .adel{
-  animation-name: team ;
-  animation-duration: 3s;
+  transition: all 200ms;
+
 }
 .amr{
     margin: 150px;
-    animation-name: team ;
-    animation-duration: 3s;
+    transition: all 200ms;
 
-}
+    }
 .shahd{
     margin-left: 300px;
-    animation-name: team ;
-    animation-duration: 3s;
+    transition: all 200ms;
 
 }
 .ahmed{
     margin-top: 300px;
-    animation-name: team ;
-    animation-duration: 3s;
+    transition: all 200ms;
 
 }
 .sara{
     margin:300px 0 0 300px;
-    animation-name: team ;
-    animation-duration: 3s;
+    transition: all 200ms;
 
 }
-.adel:hover{
-  box-shadow: wheat 0px 0px 5px 5px;
-  width: 150px;
-}
-.shahd:hover{
-  box-shadow: wheat 0px 0px 5px 5px;
-  width: 150px;
-}
-.sara:hover{
-  box-shadow: wheat 0px 0px 5px 5px;
-  width: 150px;
-}
-.ahmed:hover{
-  box-shadow: wheat 0px 0px 5px 5px;
-  width: 150px;
-}
-.amr:hover{
-  box-shadow: wheat 0px 0px 5px 5px;
-  width: 150px;
-}
-
-@keyframes team {
-  0%{opacity: 0%; top: 150px;}
-  25%{opacity: 25%; }
-  50%{opacity: 50%; }
-  75%{opacity: 75%; top: 75px; }
-  100%{opacity: 100%; }
+.members:hover{
+  box-shadow: rgb(0, 0, 0,30%) 0px 0px 20px;
 }
 @keyframes anime {
   0%{opacity: 0%; top: 100px;}

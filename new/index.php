@@ -33,11 +33,12 @@ if(isset($_SESSION["id"])){
          </div>
          <div class="user-logo"><a href="form.php" id="login-logo" >
          <?php 
-         if(isset($getuser)):?>
-         <p><?php echo $getuser["fname"]?></p>
-         <?php else:?>
-            <p><?php echo "login"?></p>
-         <?php endif;?>
+         if(isset($getuser)){
+         echo $getuser["fname"];
+         }else{
+         echo "login";
+           }
+          ?>
          </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
         
       </header>
