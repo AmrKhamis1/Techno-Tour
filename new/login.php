@@ -23,6 +23,7 @@ if($getuser['email']==$email && password_verify($password,$getuser["password"]))
 }
 else{
     $ema_pass="invalid email or password";
+    $not_succ="login();";
 }
 }
 

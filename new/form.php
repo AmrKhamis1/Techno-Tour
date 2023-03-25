@@ -1,4 +1,5 @@
 <?php
+ $not_succ=null;
  include_once "validation.php";
  include_once "login.php";
  ?>
@@ -9,7 +10,8 @@
     <script src="JS/form.js"></script>
     <title>Form</title>
 </head>
-<body onload="animation();">
+
+<body onload="<?php echo $not_succ;?>">
     <div id="container">
     </div>
     <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
