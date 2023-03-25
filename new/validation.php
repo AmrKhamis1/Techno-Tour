@@ -14,7 +14,7 @@ $pass_error=null;
 $vpass_error=null;
 $succ=null;
 //check if the user submit the form or not
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(isset($_POST['signup-submit'])){
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $email=$_POST['email'];
@@ -85,7 +85,7 @@ else if ($password != $vpassword)
 if ($fl==1 && $em==1 && $ps==1 && $vps==1)
 {
 $succ="Done now you are a member of TechnoTour!";
-$insert=$connection->prepare("INSERT INTO members(fname,lname,email,passwordd,position)
+$insert=$connection->prepare("INSERT INTO members(fname,lname,email,password,position)
 VALUES (?,?,?,?,?)");
 $insert->bind_param("sssss",$fname,$lname,$email,$password_encrypt,$position);
 $insert->execute();

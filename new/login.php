@@ -2,7 +2,7 @@
 include_once "databasemysqli.php";  
 $ema_pass=null;
 $error=null;
-if($_SERVER['REQUEST_METHOD']=='POST')
+if(isset($_POST['login-submit']))
 {
 $email=$_POST['login-email'];
 $password=$_POST['login-password'];

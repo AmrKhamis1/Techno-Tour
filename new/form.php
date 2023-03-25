@@ -1,6 +1,7 @@
 <?php
  include_once "validation.php";
-include_once "login.php";?>
+ include_once "login.php";
+ ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
