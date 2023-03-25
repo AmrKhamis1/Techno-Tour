@@ -12,15 +12,18 @@ if (empty($email) || empty($password)){
 $sql="SELECT * FROM members WHERE email='$email'";
 $result=mysqli_query($connection,$sql);
 $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
-$id=$getuser['id'];
+
 if($getuser){
 if($getuser['email']==$email && password_verify($password,$getuser["password"])){
+    $id=$getuser["id"];
     session_start();
     $_SESSION["id"]=$id;
     header("Location:index.php");
-   die();
-}else{
+}
+}
+else{
     $ema_pass="invalid email or password";
-}}}
+}
+}
 
 ?>

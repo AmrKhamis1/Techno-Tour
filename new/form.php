@@ -12,10 +12,10 @@
 <body onload="animation();">
     <div id="container">
     </div>
-    <form id="form11" action="login.php" method="post" novalidate>
+    <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
-        <?php echo $ema_pass;?>
+       <p> <?php echo $ema_pass;?></p>
         <br>
         <label for="login-email">Email<span class="errors"><?php echo $error ;?></span></label>
         <input id="login-email" name="login-email" type="email" class="input-text input-text1" required>
