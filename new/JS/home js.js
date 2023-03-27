@@ -28,7 +28,6 @@ function main(){
 function uni(){
    window.location.assign("index.html");
 }
-/*****************************  details of every room fun  ****************************** */
 
 /************************ scroll up fun **************************** */
 window.onscroll = function () {
@@ -36,14 +35,13 @@ window.onscroll = function () {
 };
 
 function scrooling() {
-   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       up.style.display = "flex";
    } else {
       up.style.display = "none";
    }
 
 }
-
 function scrollup() {
    window.scrollTo(0, 0);
 }

@@ -51,30 +51,29 @@ if(isset($_SESSION["id"])){
                <img src="techno tour website design pro/background light theme3.png" class="bg-img" style="size:cover;">
                <div id="hero-text2">
                   <div class="hero-text">
-                     <font style="color:black;font-size:35px;margin-left:30px;" class="hero-header">
-                     &nbspNCT UNIVERSITY
-                     </font>
-                     <img src="techno tour website design pro/NCT logo3.png" width="200px" style="margin-left:45px;">         
                      <div id="btn">
                          <div id="btn1">
-                         <button type="button" onclick="window.location.assign('rooms.php');" id="NCT-button" class="tour-button">
-                         THE UNIVERSITY
-                         </button>
+
                          </div>
                       </div>
                   </div>
                </div>
-                     <font style="color:white;font-size:40px;text-align:center;" class="hero-header">
-                     <span style="color:">THE BEST BOOKING GUIDE</span><br> 
+                     <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
+                     THE BEST BOOKING GUIDE
                      FOR DOCTORS,ASSISTANTS,STUDENTS <br>
                      AND EXTERNAL USERS IN NCTU.<br>
                      <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
                      “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
-                     </span>
+                     </span>                         
+                     <br>
+                     <button type="button" onclick="window.location.assign('rooms.php');" id="NCT-button" class="tour-button">
+                          Rooms
+                         </button>
                      </font>
                      
 
-         </div>            
+         </div> 
+         <br><br>           
          <div id="hero-section">
          <img src="techno tour website design pro/labs/networking lab.jpg" class="img-gal" width="280px">
          <img src="techno tour website design pro/labs/IT lab.jpg" class="img-gal" width="280px">
@@ -83,6 +82,22 @@ if(isset($_SESSION["id"])){
          <img src="techno tour website design pro/labs/physics lab1.jpg" class="img-gal" width="280px">
          </div>
       </main>
+   </div>
+   <br><br>
+   <div id="bage2">
+   <br>
+                        <img src="techno tour website design pro/NCT logo.png" width="500px"> 
+                        <br><br><br>
+                    <div id="building-div"> <img id="building" src="techno tour website design pro/NCT building.png"  alt="uni-photo">  </div> 
+      <p id="about-uni">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut<br>
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br>
+           nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis<br>
+             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div id="u-contact"> 
+         <a href="http://nctu.edu.eg" style="font-family: Impact;text-decoration: none;color:white;">NCTU</a>
+       <img onclick="window.location.assign('https://www.facebook.com/nctu.edu.eg/');" src="techno tour website design pro/facebook.png" style="cursor: pointer;" width="30px"> 
+      </div>
    </div>
    <div id="scrollup" onclick="scrollup();">Up</div>
    </body>
