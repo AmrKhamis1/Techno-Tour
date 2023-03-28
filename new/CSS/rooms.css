@@ -78,9 +78,9 @@ body{
 
 .container {
 	margin: auto;
-	width: 800px;
+	width: 680px;
 	height: 60%;
-	perspective: 1000px;
+	perspective: 3000px;
 	bottom: 0;
 	position: relative;
 	margin-bottom: 0;
@@ -157,8 +157,8 @@ body{
 
 #cube {
 	transform-style: preserve-3d;
-	width: 100%;
-	height: 100%;
+	width: 120%;
+	height: 120%;
     bottom: 0;
 	position: relative;
 	transition: all 1s;

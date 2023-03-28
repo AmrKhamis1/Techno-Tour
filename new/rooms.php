@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -38,7 +38,6 @@
          <div id="f-btn2" onclick="floor2();" class="fbtn">Floor 2</div>
          <div id="f-btn3" onclick="floor3();" class="fbtn">Floor 3</div>
          <div id="f-btn4" onclick="floor4();" class="fbtn">Floor 4</div>
-         
       </div>
 <div id="cont-home">
          <div class="container">

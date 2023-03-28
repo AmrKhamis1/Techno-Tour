@@ -12,8 +12,8 @@ $room_num=null;
 $done=null;
 $mess=null;
 //check if the user submit the form or not
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-$b_tittle=$_POST['b_tittle'];
+if(isset($_POST['done'])){
+$b_tittle=$_POST['b_title'];
 $b_date=$_POST['b_date'];
 $b_start=$_POST['b_start'];
 $b_end=$_POST['b_end'];
@@ -31,7 +31,7 @@ else
     $f1=1;
     $done="Your booking is done";
     $insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,datee,duration,total_atten,total_external,no_room)
-    VALUES ('$b_tittle','$_start','$b_end','$b_date','$duration','$b_atte','$b_exte','$room_num')");
+    VALUES (?,?,?,?,?)");
     $insert2->execute();
 }
 }

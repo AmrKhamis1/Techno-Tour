@@ -23,7 +23,7 @@
     margin-left: 5%;    
   }
   ul{
-    width: 100%;
+    width: 80%;
     height: fit-content;
   }
   .links{
@@ -46,6 +46,10 @@
     border-style:solid;
     border-color:black ;
     padding-bottom:4px ;
+      }
+      #logout{
+        margin-right: 50px;
+        cursor: pointer;
       }
   .user-logo{
     color: #000635;
@@ -90,7 +94,7 @@
     border: 0;
     border-bottom:1px ;
     border-style:groove;
-    color: rgb(4, 0, 27);
+    border-color: rgb(4, 0, 27);
     padding-bottom:3px ;
     width:5vw ;
     color: rgb(4, 0, 27);

@@ -23,22 +23,18 @@ if(isset($_SESSION["id"])){
       <header id="header-style">
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo3.png" alt="..">
          <img src="techno tour website design pro\NCT logo3.png" style="margin-left:50px;"  width="0px" alt="">
-         <?php 
-         echo"<ul>";
-         if(isset($getuser)){
-         echo "<li><a href=index.php class='links'>".'Home'."</a></li>".
-         "<li><a href='contact us.php' class='links'>".'Contact Us'."</a></li>".
-         "<li><a href='about us.php' class='links'>".'About Us'."</a> </li>".
-         "<li><a href='whats new.php' class='links'>".'What\'s New'."</a></li>".
-         "<li ><a href=booking.php class='links'>".'Booking'."</a></li>";
-         }else{
-            echo "<li><a href=index.php class='links'>".'Home'."</a></li>".
-            "<li><a href='contact us.php' class='links'>".'Contact Us'."</a></li>".
-            "<li><a href='about us.php' class='links'>".'About Us'."</a> </li>".
-            "<li style=display:none;><a href='whats new.php' class='links'>".'What\'s New'."</a></li>".
-            "<li style=display:none;><a href=booking.php class='links'>".'Booking'."</a></li>";
-           }echo"</ul>";
-          ?>
+         <ul >
+            <li><a href="index.php" class="links">Home</a></li>
+            <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
+            <li><a href="what's new.php" class="links">What's New</a></li>
+            <li><a href="contact us.php" class="links">Contact Us</a></li>
+            <li><a href="about us.php" class="links">About Us</a> </li>
+         </ul>
+         <?php if(isset($getuser)){echo "
+         <form method='post'>
+            <button name='logout' style='background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+            </form>
+            ";} ?>
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
          <div class="user-logo"><a href="form.php" id="login-logo" >
@@ -75,15 +71,9 @@ if(isset($_SESSION["id"])){
                      “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
                      </span>                         
                      <br>
-                     <?php
-                     if(isset($getuser)){
-                        echo  "<button type='button' onclick='window.location.assign(`rooms.php`);' id='NCT-button' class='tour-button'
-                        >".' Rooms'."</button>";
-                            }else{
-                              echo  "<button type='button' onclick='window.location.assign(`rooms.php`);' id='NCT-button' class='tour-button'
-                              style='display:none;'>".' Rooms'."</button>";
-                             }
-                             ?>
+                     <button type="button" onclick="window.location.assign('rooms.php');" id="NCT-button" class="tour-button">
+                          Rooms
+                         </button>
                      </font>
                      
 
