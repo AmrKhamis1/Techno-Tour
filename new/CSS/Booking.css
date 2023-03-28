@@ -94,3 +94,7 @@ body{
     color: white;
     background-color: black;
 }
+.errors{
+    color:red;
+    font-size:10px;
+}

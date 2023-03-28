@@ -28,7 +28,6 @@ function main(){
 function uni(){
    window.location.assign("index.html");
 }
-/*****************************  details of every room fun  ****************************** */
 
 /************************ scroll up fun **************************** */
 window.onscroll = function () {
@@ -36,14 +35,13 @@ window.onscroll = function () {
 };
 
 function scrooling() {
-   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       up.style.display = "flex";
    } else {
       up.style.display = "none";
    }
 
 }
-
 function scrollup() {
    window.scrollTo(0, 0);
 }
@@ -68,8 +66,7 @@ function prev() {
 
 /********************  floors fun  *********************************** */
 function floor1() {
-   window.scrollTo(0, 700);
-   cube.style.transform = "rotateY(360deg)" || "rotateY(0deg)";
+   cube.style.transform = "rotateX(360deg)" || "rotateX(0deg)";
    f_btn1.style.opacity = "100%";
    f_btn2.style.opacity = "20%";
    f_btn3.style.opacity = "20%";
@@ -78,10 +75,7 @@ function floor1() {
 }
 
 function floor2() {
-
-
-   window.scrollTo(0, 700);
-   cube.style.transform = "rotateY(270deg)" || "rotateY(-90deg)";
+   cube.style.transform = "rotateX(270deg)" || "rotateX(-90deg)";
    f_btn1.style.opacity = "20%";
    f_btn2.style.opacity = "100%";
    f_btn3.style.opacity = "20%";
@@ -89,8 +83,7 @@ function floor2() {
 }
 
 function floor3() {
-   window.scrollTo(0, 700);
-   cube.style.transform = "rotateY(180deg)" || "rotateY(-180deg)";
+   cube.style.transform = "rotateX(180deg)" || "rotateX(-180deg)";
    f_btn1.style.opacity = "20%";
    f_btn2.style.opacity = "20%";
    f_btn3.style.opacity = "100%";
@@ -98,8 +91,7 @@ function floor3() {
 }
 
 function floor4() {
-   window.scrollTo(0, 700);
-   cube.style.transform = "rotateY(90deg)" || "rotateY(-270deg)";
+   cube.style.transform = "rotateX(90deg)" || "rotateX(-270deg)";
    f_btn1.style.opacity = "20%";
    f_btn2.style.opacity = "20%";
    f_btn3.style.opacity = "20%";

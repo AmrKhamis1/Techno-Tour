@@ -1,0 +1,175 @@
+* {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	z-index: -1;
+}
+
+#scrollup {
+	scroll-behavior: smooth;
+	cursor: pointer;
+	font: bold 20px "Rubik";
+	display: none;
+	align-items: center;
+	justify-content: center;
+	color: #edeefa;
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	right: 0;
+	background-color: #006d92;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin-bottom: 5%;
+	margin-right: 3%;
+
+}
+
+body{
+    scroll-behavior: smooth;
+	background-size: cover;
+	background-position: center;
+    background-attachment: fixed;
+    width: fit-content;
+    height: fit-content;
+    display:inline;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .bage{
+	width: 100vw;
+	height: 90vh;
+	margin-top: 10vh;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+  }
+  #f-btns {
+	height: 40vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-evenly;
+
+}
+
+.fbtn {
+	opacity: 1;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #040027;
+	background-color: #c2c3d2;
+	height: 60px;
+	width: 100px;
+	margin-left: 9vw;
+	border: solid;
+	border-color: #040027;
+	border-width: 2px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+  #cont-home {
+    display: block;
+	width: 100vw;
+	height: 90vh;
+	margin-top: 20vh;
+}
+
+.container {
+	margin: auto;
+	width: 990px;
+	height: 60%;
+	perspective: 6000px;
+	bottom: 0;
+	position: relative;
+	margin-bottom: 0;
+}
+
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#f2 {
+	transform: rotateX(90deg) translateZ(243px) translateY(20px);
+}
+#f4 {
+	transform:rotateX(270deg) translateZ(242px)  translateY(-20px);
+}
+#f1 {
+	transform: rotateX(0deg) translateZ(263px);
+}
+#f3 {	
+	transform: rotateZ(0deg)  rotateX(180deg) translateZ(224px);
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+	background-color: #040027;
+	border: none;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+}
+
+#row1,
+#row2 {
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rooms {
+	position: relative;
+	color: #040027;
+	font-family: 'Helvetica', 'sans-serif';
+	width: 130px;
+	height: 130px;
+	background-color: #c2c3d2;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	transition: 200ms;
+	transform: scale(90%, 90%);
+	cursor: pointer;
+}
+
+.rooms:hover {
+	transform: scale(1, 1);
+	z-index: 2;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 1px 1px;
+
+}
+
+#cube {
+	transform-style: preserve-3d;
+	width: 120%;
+	height: 120%;
+    bottom: 0;
+	position: relative;
+	transition: all 1s;
+	transform: rotateY(360deg);
+}

@@ -12,12 +12,12 @@ $room_num=null;
 $done=null;
 $mess=null;
 //check if the user submit the form or not
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-$b_tittle=$_POST['b_tittle'];
+if(isset($_POST['done'])){
+$b_tittle=$_POST['b_title'];
 $b_date=$_POST['b_date'];
 $b_start=$_POST['b_start'];
 $b_end=$_POST['b_end'];
-$duration=$_POST['duration'];
+$duration=$_POST['b_duration'];
 $b_atte=$_POST['b_atte'];
 $b_exte=$_POST['b_exte'];
 $room_num=$_POST['room_num'];
@@ -29,15 +29,10 @@ if (empty($b_tittle) || empty($b_date) || empty($b_start) || empty($b_end) || em
 else
 {
     $f1=1;
-}
-//if none of the above is empty then it will insert the user data into the members table and display the message
-if ($fl==1)
-{
     $done="Your booking is done";
-$insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,datee,duration,total_atten,total_external,no_room)
-VALUES (?,?,?,?,?)");
-$insert2->bind_param("siiiiiii",$b_tittle,$b_start,$b_end,$b_date,$duration,$b_atte,$b_exte,$room_num);
-$insert2->execute();
+    $insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,datee,duration,total_atten,total_external,no_room)
+    VALUES (?,?,?,?,?)");
+    $insert2->execute();
 }
 }
 ?>

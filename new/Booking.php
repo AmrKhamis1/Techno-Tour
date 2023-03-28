@@ -14,34 +14,34 @@
     <form  id="Booking" action="Booking.php" method="post" novalidate>
                 <div class="form-left">
                     <h1>Rooms Booking</h1>
-                    <label for="b_title">Booking Title <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_title"  type="text" required>
+                    <label for="b_title">Booking Title <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_title" name="b_title" type="text" required>
 
-                    <label for="b_date">Date <span class="errors"><?php echo $mess ;?></span></label >
-                    <input id="b_date" type="date" required>
+                    <label for="b_date">Date <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label >
+                    <input id="b_date" name="b_date" type="date" required>
 
-                    <label for="b_start">Start Time <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_start" type="time" required>
+                    <label for="b_start">Start Time <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_start" name="b_start" type="time" required>
 
-                    <label for="b_end">End Time <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_end" type="time" required>
+                    <label for="b_end">End Time <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_end" name="b_end" type="time" required>
 
-                    <label for="b_duration">Duration <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_duration" type="number" min="1" required>
+                    <label for="b_duration">Duration <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_duration" name="b_duration" type="number" min="1" required>
                 </div>
 
                 <div class="form-right">
-                    <label for="b_attendees">Total number of attendees <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_attendees" type="number" min="1" required>
+                    <label for="b_attendees">Total number of attendees <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_attendees" name="b_atte" type="number" min="1" required>
 
-                    <label for="b_external_attendees">Number of External Attendees <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_external_attendees" type="number" min="1" required>
+                    <label for="b_external_attendees">Number of External Attendees <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_external_attendees" type="number" name="b_exte" min="1" required>
 
-                    <label for="b_Num_rooms">Number of rooms <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_Num_rooms" type="number" min="1" required>
+                    <label for="b_Num_rooms">Number of rooms <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_Num_rooms" name="room_num" type="text"  required>
                     <br>
                     <br>
-                    <input type="submit" value="Done" id="done" class="done">
+                    <input type="submit" value="Done" id="done" name="done" class="done">
                     <p class="errors"><?php echo $done ;?></p>
         </div>
 </body>
