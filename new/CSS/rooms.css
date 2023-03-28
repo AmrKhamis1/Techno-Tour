@@ -35,7 +35,8 @@
 
 body{
     scroll-behavior: smooth;
-    background-color:#edeefa;
+	background-size: cover;
+	background-position: center;
     background-attachment: fixed;
     width: fit-content;
     height: fit-content;
@@ -46,10 +47,21 @@ body{
     flex-direction: column;
     overflow: hidden;
   }
-  #f-btns {
-    margin-top: 15vh;
+  .bage{
+	width: 100vw;
+	height: 90vh;
+	margin-top: 10vh;
 	display: flex;
-	margin-left: 5vw;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+  }
+  #f-btns {
+	height: 40vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-evenly;
+
 }
 
 .fbtn {
@@ -68,19 +80,20 @@ body{
 	border-color: #040027;
 	border-width: 2px;
 	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
   #cont-home {
     display: block;
 	width: 100vw;
-	height: 70vh;
+	height: 90vh;
+	margin-top: 20vh;
 }
 
 .container {
 	margin: auto;
-	width: 680px;
+	width: 990px;
 	height: 60%;
-	perspective: 3000px;
+	perspective: 6000px;
 	bottom: 0;
 	position: relative;
 	margin-bottom: 0;
@@ -92,21 +105,17 @@ body{
 	height: 100%;
 }
 
-#top {
-	transform: rotateX(90deg) translateZ(150px);
-}
-
 #f2 {
-	transform: rotateY(90deg) translateZ(400px);
+	transform: rotateX(90deg) translateZ(243px) translateY(20px);
 }
 #f4 {
-	transform: rotateY(-90deg) translateZ(400px);
+	transform:rotateX(270deg) translateZ(242px)  translateY(-20px);
 }
 #f1 {
-	transform: rotateX(0deg) translateZ(400px);
+	transform: rotateX(0deg) translateZ(263px);
 }
 #f3 {	
-	transform: rotateZ(180deg) rotateX(180deg) translateZ(400px);
+	transform: rotateZ(0deg)  rotateX(180deg) translateZ(224px);
 }
 
 #f1,

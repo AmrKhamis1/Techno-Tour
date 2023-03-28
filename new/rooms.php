@@ -1,3 +1,12 @@
+<?php 
+include_once "databasemysqli.php";
+session_start();
+if(isset($_SESSION["id"])){
+   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
+   $result=mysqli_query($connection,$sql);
+   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -9,17 +18,22 @@
       <link rel="stylesheet" href="CSS\header.css">
       <title>Rooms</title>
    </head>
-   <body >      
-      <header id="header-style">
+   <body onload="floor1();" style="background-image: url('techno tour website design pro/NCT building4.png');">      
+   <header id="header-style">
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo3.png" alt="..">
          <img src="techno tour website design pro\NCT logo3.png" style="margin-left:50px;"  width="0px" alt="">
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
-            <li><a href="booking.php" class="links">Booking</a></li>
+            <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
             <li><a href="what's new.php" class="links">What's New</a></li>
             <li><a href="contact us.php" class="links">Contact Us</a></li>
             <li><a href="about us.php" class="links">About Us</a> </li>
          </ul>
+         <?php if(isset($getuser)){echo "
+         <form method='post'>
+            <button name='logout' style='background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+            </form>
+            ";} ?>
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
          <div class="user-logo"><a href="form.php" id="login-logo" >
@@ -31,8 +45,9 @@
            }
           ?>
          </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
+        
       </header>
-      
+      <div class="bage">
       <div id="f-btns">
          <div id="f-btn1" onclick="floor1();" class="fbtn">Floor 1</div>
          <div id="f-btn2" onclick="floor2();" class="fbtn">Floor 2</div>
@@ -110,6 +125,7 @@
                <!--************************** buttom  ***************************************************************-->
                <div id="bottom" class="face"></div>
             </div>
+         </div>
          </div>
         </body>
         <script src="JS/home js.js"></script>
