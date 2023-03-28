@@ -35,7 +35,7 @@
                     <input id="b_attendees" name="b_atte" type="number" min="1" required>
 
                     <label for="b_external_attendees">Number of External Attendees <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_external_attendees" type="number" min="1" required>
+                    <input id="b_external_attendees" type="number" name="b_exte" min="1" required>
 
                     <label for="b_Num_rooms">Number of rooms <span class="errors"><?php echo $mess ;?></span></label>
                     <input id="b_Num_rooms" name="b_exte" type="text"  required>
