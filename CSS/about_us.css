@@ -3,24 +3,23 @@
     margin: 0;
     scroll-behavior: smooth;
 }
-.container{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
 body{
-    background:radial-gradient(rgb(111, 111, 111),rgb(2, 0, 52));
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    mask-repeat: initial;
-    background-attachment: fixed;
-    position: relative;
-    height: 100%;
+  scroll-behavior: smooth;
+  background-color:#edeefa;
+  background-attachment: fixed;
+  width: 100vw;
+  height: fit-content;
+  display:inline;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  overflow-x: hidden;
 }
-
+@keyframes sll2 {
+  0% {transform:translateY(-10vh);}
+  100%  {transform: translateY(0vh);}
+}
 header{
   animation: sll2 1s ;
   justify-content:space-between;
@@ -115,82 +114,75 @@ header{
   }
   .logo-img{
     width: 15vw;
-    margin-left: 100px;
+    margin-left: 50px;
 	  cursor:pointer;
   }
   .user-logo,.search-logo-img{
     width: 1vw;
   }
 .aboutus{
-    background:linear-gradient( rgb(30, 17, 61),rgb(98, 97, 132));
-    position: absolute;
-    color:wheat;
-    width: 500px;
-    height: 300px;
-    font-size: 20px;
-    margin: 200px 0 0 150px;
-    box-shadow: rgba(18, 18, 18, 0.3) 5px 10px 5px 10px;
-    border-radius: 2rem;
-    animation-name: about;
-    animation-duration: 1s;
+  background-color: rgb(30, 17, 61);
+  position: absolute;
+  color: white;
+  width: 500px;
+  height: 300px;
+  font-size: 20px;
+  margin: 200px 0 0 150px;
+  border-radius: 2rem;
+  animation-name: about;
+  animation-duration: 1s;
 }
-.aboutus h1{
+.aboutus h3{
     color: white;
     margin: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .aboutus p{
     margin-left: 15px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: wheat;
+    font-weight: 900;
 }
 .aboutus button{
-    margin:40px 0 0 50%;
-    width: 200px;
-    height: 40px;
-    border: 2px;
-    border-color: wheat;
-    border-style: solid;
-    border-radius: 20px;
-    background-color: transparent;
-    font-size: 15px;
-    font-weight: 300;
-}
-.aboutus button a{
-  text-decoration: none;
-  color: black;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.aboutus button a:hover{
+  margin:25px 0 0 50%;
+  width: 200px;
+  height: 40px;
+  border: 2px;
+  border-color: white;
   color: white;
+  border-style: solid;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 300;
+  transition: all 200ms;
 }
-.aboutus button:hover{
-    background-color: rgb(39, 26, 79);
-}
+.aboutus button a:hover,button:hover{
+  color:#000635;
+  background-color: rgb(255, 255, 255);}
 .team{
     margin-top: 7%;
     margin-left:55%;
     color: white;
     overflow: visible;
-    position: absolute;
+    position: fixed;
     text-align: center;
   }
 .team h1{
     margin: 0 0 30px 150px;
-    box-shadow: rgba(18, 18, 18, 0.3) 5px 10px 5px 0px;
+    box-shadow: rgba(18, 18, 18, 0.3) 0px 0px 20px;
     background-color:transparent;
-    color: white;
-    border-radius: 1rem;
+    color: rgb(30, 17, 61);
+    border-radius: 10px;
     text-align: center;
     animation-name: anime ;
     animation-duration: 2s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 200px;
 }
 .team img{
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .team div{
     display: flex;
@@ -203,40 +195,43 @@ header{
     width: 190px;
     border-radius: 50%;
     overflow: hidden;
+    border: 2px;
+    border-style: solid;
+    border-color: #000635;
 }
 .team div h2{
-  font-size: 15px;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 20px;
+  width: 100px;
+  color: rgb(30, 17, 61);
 }
 .adel{
-  box-shadow: wheat  0px 0px 3px 3px;
+  transition: all 200ms;
   cursor: pointer;
   animation-name: team ;
   animation-duration: 3s;
   width: 175px;
 }
 .amr{
-    box-shadow: wheat  0px 0px 3px 3px;
     margin: 150px ;
     animation-name: team ;
     animation-duration: 3s;
     cursor: pointer;
 }
 .shahd{
-    box-shadow: wheat  0px 0px 3px 3px;
     margin-left: 300px;
     animation-name: team ;
     animation-duration: 3s;
     cursor: pointer;
 }
 .ahmed{
-    box-shadow: wheat  0px 0px 3px 3px;
     margin-top: 300px;
     animation-name: team ;
     animation-duration: 3s;
     cursor: pointer;
 }
 .sara{
-    box-shadow: wheat  0px 0px 3px 3px;
     margin:300px 0 0 300px;
     animation-name: team ;
     animation-duration: 3s;
@@ -246,8 +241,8 @@ header{
 .amr:hover,
 .ahmed:hover,
 .sara:hover,
-.shahd:hover{box-shadow: black  0px 0px 5px 5px;}
-@keyframes team {
+.shahd:hover{box-shadow: rgb(0, 0, 0,30%) 0px 0px 20px;}
+@keyframes team{
   0%{opacity: 0%; }
   25%{opacity: 25%; }
   50%{opacity: 50%; }
@@ -318,27 +313,29 @@ header{
 #popup-title-Skills{
   display: block;
   width: 150px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 27px;
   color: white;
   border-bottom: 3px dashed;
 }
 #popup-subject-row{
-  display: flex;
-  flex-direction:row;
   margin: 8px 0 5px 0px;
   width: 100%;
 }
 #popup-subject-name{
   color: white;
-  width: 30%;
+  width: 40%;
   text-align: center;
   font-size: 20px;
+  font-weight: 600;
+  
 }
 #popup-subject-body{
   display: flex;
   width: 70%;
   height: 30px;
+  align-items: center;
+  margin-bottom: 5px
 }
 #popup-contact{
   display: none;
@@ -354,7 +351,7 @@ header{
 #popup-contact-title{
   display: block;
   width: 175px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 27px;
   color: white;
   align-self: center;
@@ -363,13 +360,14 @@ header{
 }
 #popup-contact-row{
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 #popup-contact-row p{
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   width: 70%;
-  margin-left: 20px;
+  margin-left: 10px;
+  font-weight: 600;
 }
 #popup-contact-row a{
   color: white;
@@ -397,7 +395,7 @@ section.show-shahd .container{  opacity: 50%; }
   position: absolute;
   cursor: pointer;
 }
-#close:hover{background-color: wheat;}
+#close:hover{background-color: white;}
 /*------------Adel Popup----------*/
 #popup-adel-body{
   height: 100%;
@@ -413,7 +411,7 @@ section.show-adel #popup-adel-body{
   pointer-events: auto;
  }
 /*************Adel Skills*************/
-#popup-adel-html{
+#popup-adel-skill1{
   display: block;
   margin-top: 5px;
   width: 100%;
@@ -423,70 +421,66 @@ section.show-adel #popup-adel-body{
   height: 17px;
   color: white;
 }
-#popup-adel-css{
+#popup-adel-skill2{
   display: block;
   margin-top: 5px;
-  width:90%;
+  width:80%;
   background-color: rgb(197, 62, 62) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-adel-c{
+#popup-adel-skill3{
   display: block;
   margin-top: 5px;
-  width: 70%;
+  width: 90%;
   background-color: orange ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-adel-js{
+#popup-adel-skill4{
   display: block;
   margin-top: 5px;
-  width: 60%;
+  width: 80%;
   background-color: rgba(0, 215, 235, 0.704) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-adel-python{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(1, 209, 88, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
 /*--------Adel Contact-----------*/
-#popup-adel-whatsapp{
-  color: green;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-}
 #popup-adel-facebook{
-  color: rgb(23, 23, 195);
+  color: rgb(0 ,0 ,255);
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-adel-phone{
   color: yellowgreen;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-adel-gmail{
   color: red;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
+}
+#popup-adel-insta{
+  color: rgb(255, 149, 0);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+#popup-adel-linkedin{
+  color: rgb(0, 119, 255);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
 /*------------Amr Popup----------*/
 #popup-amr-body{
@@ -502,80 +496,67 @@ section.show-amr #popup-amr-body{
   pointer-events: auto;
  } 
  /*************Amr Skills ***************/
-#popup-amr-html{
+#popup-amr-skill1{
   display: block;
   margin-top: 5px;
-  width: 100%;
+  width: 70%;
   background-color: rgba(51, 12, 224, 0.871) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-amr-css{
+#popup-amr-skill2{
   display: block;
   margin-top: 5px;
-  width:90%;
+  width:95%;
   background-color: rgb(197, 62, 62) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-amr-c{
+#popup-amr-skill3{
   display: block;
   margin-top: 5px;
-  width: 70%;
+  width: 60%;
   background-color: orange ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-amr-js{
-  display: block;
-  margin-top: 5px;
-  width: 60%;
-  background-color: rgba(0, 215, 235, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-amr-python{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(1, 209, 88, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
+
 /*--------------Amr Contact-------------*/
 #popup-amr-whatsapp{
   color: green;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-amr-facebook{
-  color: rgb(23, 23, 195);
+  color: rgb(0, 0, 255);
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-amr-phone{
   color: yellowgreen;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-amr-gmail{
   color: red;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
+}
+#popup-amr-linkedin{
+  color: rgb(0, 119, 255);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
 /*------------Ahmed Popup----------*/
 #popup-ahmed-body{
@@ -591,7 +572,7 @@ section.show-ahmed #popup-ahmed-body{
   pointer-events: auto;
  } 
  /*************Ahmed Skills ***************/
-#popup-ahmed-html{
+#popup-ahmed-skill1{
   display: block;
   margin-top: 5px;
   width: 100%;
@@ -601,37 +582,37 @@ section.show-ahmed #popup-ahmed-body{
   height: 17px;
   color: white;
 }
-#popup-ahmed-css{
+#popup-ahmed-skill2{
   display: block;
   margin-top: 5px;
-  width:90%;
+  width:100%;
   background-color: rgb(197, 62, 62) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-ahmed-c{
+#popup-ahmed-skill3{
   display: block;
   margin-top: 5px;
-  width: 70%;
-  background-color: orange ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-ahmed-js{
-  display: block;
-  margin-top: 5px;
-  width: 60%;
+  width: 100%;
   background-color: rgba(0, 215, 235, 0.704) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-ahmed-python{
+#popup-ahmed-skill4{
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  background-color: orange ;
+  border-radius: 40px;
+  text-align: right;
+  height: 17px;
+  color: white;
+}
+#popup-ahmed-skill5{
   display: block;
   margin-top: 5px;
   width: 100%;
@@ -642,29 +623,29 @@ section.show-ahmed #popup-ahmed-body{
   color: white;
 }
 /*--------------Ahmed Contact-------------*/
-#popup-ahmed-whatsapp{
-  color: green;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-}
 #popup-ahmed-facebook{
-  color: rgb(23, 23, 195);
+  color: rgb(0, 0 ,255);
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-ahmed-phone{
   color: yellowgreen;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-ahmed-gmail{
   color: red;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
+}
+#popup-ahmed-insta{
+  color: rgb(255, 149, 0);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
 /*------------Sara Popup----------*/
 #popup-sara-body{
@@ -680,47 +661,47 @@ section.show-sara #popup-sara-body{
   pointer-events: auto;
  } 
  /*************Sara Skills ***************/
-#popup-sara-html{
+#popup-sara-skill1{
   display: block;
   margin-top: 5px;
-  width: 100%;
+  width: 95%;
   background-color: rgba(51, 12, 224, 0.871) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-sara-css{
+#popup-sara-skill2{
   display: block;
   margin-top: 5px;
-  width:90%;
+  width:70%;
   background-color: rgb(197, 62, 62) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-sara-c{
+#popup-sara-skill3{
   display: block;
   margin-top: 5px;
-  width: 70%;
+  width: 87%;
   background-color: orange ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-sara-js{
+#popup-sara-skill4{
   display: block;
   margin-top: 5px;
-  width: 60%;
+  width: 100%;
   background-color: rgba(0, 215, 235, 0.704) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-sara-python{
+#popup-sara-skill5{
   display: block;
   margin-top: 5px;
   width: 100%;
@@ -731,29 +712,29 @@ section.show-sara #popup-sara-body{
   color: white;
 }
 /*--------------sara Contact-------------*/
-#popup-sara-whatsapp{
-  color: green;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-}
 #popup-sara-facebook{
-  color: rgb(23, 23, 195);
+  color: rgb(0 ,0 ,255);
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-sara-phone{
   color: yellowgreen;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-sara-gmail{
   color: red;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
+}
+#popup-sara-insta{
+  color: rgb(255, 149, 0);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
 /*------------Shahd Popup----------*/
 #popup-shahd-body{
@@ -769,27 +750,27 @@ section.show-shahd #popup-shahd-body{
   pointer-events: auto;
  } 
  /*************shahd Skills ***************/
-#popup-shahd-html{
+ #popup-shahd-skill1{
   display: block;
   margin-top: 5px;
-  width: 100%;
+  width: 90%;
   background-color: rgba(51, 12, 224, 0.871) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-shahd-css{
+#popup-shahd-skill2{
   display: block;
   margin-top: 5px;
-  width:90%;
+  width:70%;
   background-color: rgb(197, 62, 62) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-shahd-c{
+#popup-shahd-skill3{
   display: block;
   margin-top: 5px;
   width: 70%;
@@ -799,17 +780,17 @@ section.show-shahd #popup-shahd-body{
   height: 17px;
   color: white;
 }
-#popup-shahd-js{
+#popup-shahd-skill4{
   display: block;
   margin-top: 5px;
-  width: 60%;
+  width: 100%;
   background-color: rgba(0, 215, 235, 0.704) ;
   border-radius: 40px;
   text-align: right;
   height: 17px;
   color: white;
 }
-#popup-shahd-python{
+#popup-shahd-skill5{
   display: block;
   margin-top: 5px;
   width: 100%;
@@ -820,27 +801,27 @@ section.show-shahd #popup-shahd-body{
   color: white;
 }
 /*--------------Shahd Contact-------------*/
-#popup-shahd-whatsapp{
-  color: green;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-}
 #popup-shahd-facebook{
-  color: rgb(23, 23, 195);
+  color: rgb(0 ,0 ,255);
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-shahd-phone{
   color: yellowgreen;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
 }
 #popup-shahd-gmail{
   color: red;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 600;
+}
+#popup-shahd-insta{
+  color: rgb(255, 149, 0);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
 }
