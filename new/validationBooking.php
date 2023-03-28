@@ -13,7 +13,7 @@ $done=null;
 $mess=null;
 //check if the user submit the form or not
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-$b_tittle=$_POST['b_title'];
+$b_tittle=$_POST['b_tittle'];
 $b_date=$_POST['b_date'];
 $b_start=$_POST['b_start'];
 $b_end=$_POST['b_end'];
