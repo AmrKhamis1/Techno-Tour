@@ -26,7 +26,7 @@ else{
     $not_succ="login();";
 }
 }
-elseif(isset($_POST['logout']))
+if(isset($_POST['logout']))
 {
     session_start();
     session_unset();
