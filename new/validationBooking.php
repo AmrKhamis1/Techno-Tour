@@ -29,15 +29,10 @@ if (empty($b_tittle) || empty($b_date) || empty($b_start) || empty($b_end) || em
 else
 {
     $f1=1;
-}
-//if none of the above is empty then it will insert the user data into the members table and display the message
-if ($fl==1)
-{
     $done="Your booking is done";
-$insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,datee,duration,total_atten,total_external,no_room)
-VALUES (?,?,?,?,?)");
-$insert2->bind_param("siiiiiii",$b_tittle,$b_start,$b_end,$b_date,$duration,$b_atte,$b_exte,$room_num);
-$insert2->execute();
+    $insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,datee,duration,total_atten,total_external,no_room)
+    VALUES (?,?,?,?,?)");
+    $insert2->execute();
 }
 }
 ?>
