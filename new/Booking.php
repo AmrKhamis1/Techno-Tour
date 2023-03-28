@@ -15,7 +15,7 @@
                 <div class="form-left">
                     <h1>Rooms Booking</h1>
                     <label for="b_title">Booking Title <span class="errors"><?php echo $mess ;?></span></label>
-                    <input id="b_title" name="b_title" type="text" required>
+                    <input id="b_title" name="b_tittle" type="text" required>
 
                     <label for="b_date">Date <span class="errors"><?php echo $mess ;?></span></label >
                     <input id="b_date" name="b_date" type="date" required>
