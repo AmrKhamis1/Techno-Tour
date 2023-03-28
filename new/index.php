@@ -1,5 +1,6 @@
 <?php 
 include_once "databasemysqli.php";
+include_once "login.php";
 session_start();
 if(isset($_SESSION["id"])){
    $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
