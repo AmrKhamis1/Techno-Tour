@@ -1,3 +1,13 @@
+<?php 
+include_once "databasemysqli.php";
+include_once "login.php";
+session_start();
+if(isset($_SESSION["id"])){
+   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
+   $result=mysqli_query($connection,$sql);
+   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +15,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/about_us.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
   <title>About Us</title>
 </head>
 <body>
+
 <section><!---That Main Section Have All Page--->
   <!--------------Start Page Container----------------->
   <div class="container" id="container">
     <!--------------Start Header----------------->
-    <header id="header-style">
-      <a href="index.php"><img class="logo-img" src="techno tour website design pro\web site logo2.png" alt="LOGO"></a>
-      <ul >
-         <li><a title="home page" href="index.php" class="links">Home</a></li>
-         <li><a title="countact us" href="contact us.php" class="links">Contact Us</a></li>
-         <li><a title="about us" href="about us.php" class="links">About Us</a> </li>
-         <li><a title="what's new" href="what's new.php" class="links">What's New</a></li>
-      </ul>
-      <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
-      </div>
-      <div class="user-logo"><a href="form.php" id="login-logo" style="text-decoration: none;color: #000756; margin-right:5px ;">
-      demo
-      </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
-   </header>
+      <header id="header-style">
+         <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
+         <ul >
+            <li><a href="index.php" class="links">Home</a></li>
+            <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
+            <li><a href="what's new.php" class="links">What's New</a></li>
+            <li><a href="contact us.php" class="links">Contact Us</a></li>
+            <li><a href="about us.php" class="links">About Us</a> </li>
+         </ul>
+         <?php if(isset($getuser)){echo "
+         <form method='post'>
+            <button name='logout' style='background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+            </form>
+            ";} ?>
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
+         </div>
+         <div class="user-logo"><a href="form.php" id="login-logo" >
+         <?php 
+         if(isset($getuser)){
+         echo $getuser["fname"];
+         }else{
+         echo "login";
+           }
+          ?>
+         </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
+        
+      </header>
    <!--------------End Header----------------->
    <!--------------Start About us contain----------------->
     <div class="aboutus" id="aboutus">
@@ -40,23 +68,23 @@
       <h1>Techno-Tour Team</h1>
       <div class="adel" id="adel">
         <img src="techno tour website design pro/adel.jpg" alt="Adel">
-        <h2>Adel Sherif</h2>
+        <h2 class="names">Adel Sherif</h2>
       </div>
       <div class="amr" id="amr">
         <img src="techno tour website design pro/amr.jpg" alt="Amr">
-        <h2>Amr Khames</h2>
+        <h2 class="names">Amr Khames</h2>
       </div>
       <div class="ahmed" id="ahmed">
         <img src="techno tour website design pro/ahmed.jpeg" alt="Ahmed">
-        <h2>Ahmed Hosny</h2>
+        <h2 class="names">Ahmed Hosny</h2>
       </div>
       <div class="sara" id ="sara">
         <img src="techno tour website design pro/sara.jpeg" alt="Sara">
-        <h2>Sara Magdy</h2>
+        <h2 class="names">Sara Magdy</h2>
       </div>
       <div class="shahd" id="shahd">
         <img src="techno tour website design pro/shahd.jpeg" alt="Shahd">
-        <h2>Shahd Abo Elkaramat</h2>
+        <h2 class="names">Shahd Abo Elkaramat</h2>
       </div>
     </div>
        <!--------------Start Team contain----------------->

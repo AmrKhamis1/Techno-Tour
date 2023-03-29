@@ -81,6 +81,7 @@ body{
 	border-width: 2px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	border-right: 0;
 }
   #cont-home {
     display: block;

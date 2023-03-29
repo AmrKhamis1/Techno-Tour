@@ -23,15 +23,15 @@
     margin-left: 5%;    
   }
   ul{
-    width: 80%;
+    width: 90%;
     height: fit-content;
   }
   .links{
     margin: 0;
     text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
-    font-weight: 200;
+    font-weight: 700;
     color:#000635;
     font-size: 1.2vw;
 	  cursor:pointer;
@@ -40,11 +40,8 @@
     transition: all 200ms;
   }
   .links:hover{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000635;
-    border-bottom:1px ;
-    border-style:solid;
-    border-color:black ;
+    font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #1f30af;
     padding-bottom:4px ;
       }
       #logout{
@@ -60,9 +57,9 @@
     height: 20px;
     justify-content: baseline;
     display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
-    font-weight: 200;
+    font-weight: 700;
     font-size: larger;
   }
   #login-logo{
@@ -79,8 +76,8 @@
   .search-logo{
     margin: 0;
     margin-right: 2%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 200;
+    font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
     color: #000635;
     letter-spacing: 1px;
     font-size: 1.2vw;
@@ -89,7 +86,7 @@
 }
   .search{
     transition: 100ms;
-    font-weight: 600;
+    font-weight: 700;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     border-bottom:1px ;

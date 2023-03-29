@@ -16,110 +16,6 @@ body{
   flex-direction: column;
   overflow-x: hidden;
 }
-@keyframes sll2 {
-  0% {transform:translateY(-10vh);}
-  100%  {transform: translateY(0vh);}
-}
-header{
-  animation: sll2 1s ;
-  justify-content:space-between;
-  width: 100vw;
-  height:10vh;
-  align-items: center;
-  display:flex;
-  flex-direction: row;
-  position: fixed;
-  background-color:#edeefa;
-  top: 0;
-  box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
-  }  
-  ul,li{
-    justify-content: space-between;
-    display: inline-block;
-    margin-left: 5%;    
-    
-  }
-  ul{
-    width: 100%;
-    height: fit-content;
-  }
-  .links{
-    margin: 0;
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(4, 0, 27);
-    font-size: 1.2vw;
-	  cursor:pointer;
-  }
-  .links:hover{
-    color: black;
-    border: 0;
-    border-bottom:1px ;
-    border-style:solid;
-    border-color:black ;
-    padding-bottom:3px ;
-  }
-  .user-logo{
-    color: #000756;
-    border: none;
-    margin-right: 5vw;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    justify-content: baseline;
-    display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: larger;
-  }
-  .login-logo-img{
-    color: #000756;
-    width:20px ;
-    display: flex;
-  }
-  .search-logo{
-    margin: 0;
-    margin-right: 2%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000756;
-    font-size: 1.2vw;
-    width: 35vw;
-    margin-top: 1vh;  
-}
-  .search{
-    transition: 100ms;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    border-bottom:1px ;
-    border-style:groove;
-    color: rgb(4, 0, 27);
-    padding-bottom:3px ;
-    width:5vw ;
-    color: rgb(4, 0, 27);
-    margin-left: 5vw;
-    margin-right: 0px ;
-    font-size: 0.8vmax;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-  }
-  .search:focus,.search:hover{
-    width: 10vw;
-    border: 0;
-    outline: 0;    
-    border-bottom:1px ;
-    border-style:groove;
-    border-color: rgb(4, 0, 27);
-    padding-bottom:3px ;
-    margin: 0;
-    transform: scale(10vw,0);
-  }
-  .logo-img{
-    width: 15vw;
-    margin-left: 50px;
-	  cursor:pointer;
-  }
-  .user-logo,.search-logo-img{
-    width: 1vw;
-  }
 .aboutus{
   background-color: rgb(30, 17, 61);
   position: absolute;
@@ -135,10 +31,14 @@ header{
 .aboutus h3{
     color: white;
     margin: 20px;
+    font-family: "Maven Pro",'Courier New', Courier, monospace;
+    font-weight: 400;
+
 }
 .aboutus p{
+  font-family: "Open sans",'Courier New', Courier, monospace;
     margin-left: 15px;
-    font-weight: 900;
+    font-weight: 200;
 }
 .aboutus button{
   margin:25px 0 0 50%;
@@ -167,22 +67,18 @@ header{
   }
 .team h1{
     margin: 0 0 30px 150px;
-    box-shadow: rgba(18, 18, 18, 0.3) 0px 0px 20px;
     background-color:transparent;
     color: rgb(30, 17, 61);
-    border-radius: 10px;
     text-align: center;
     animation-name: anime ;
     animation-duration: 2s;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
 }
 .team img{
-    height: 125px;
-    width: 125px;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 .team div{
     display: flex;
@@ -201,10 +97,27 @@ header{
 }
 .team div h2{
   font-weight: 900;
-  font-style: italic;
+  font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20px;
-  width: 100px;
-  color: rgb(30, 17, 61);
+}
+.names{
+  color: rgba(0, 0, 0, 0.0);
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transition: all 400ms;
+}
+.names:hover{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.397);
+
 }
 .adel{
   transition: all 200ms;
