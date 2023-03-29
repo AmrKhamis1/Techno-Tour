@@ -94,6 +94,7 @@ if(isset($_SESSION["id"])){
    <br><br>
    <div id="bage2">
    <br>
+   <div id="particles-js"></div>
                         <img src="techno tour website design pro/NCT logo.png" width="500px"> 
                         <br><br><br>
                     <div id="building-div"> <img id="building" src="techno tour website design pro/NCT building.png"  alt="uni-photo">  </div> 
@@ -110,5 +111,6 @@ if(isset($_SESSION["id"])){
    <div id="scrollup" onclick="scrollup();">Up</div>
    </body>
    <script src="JS/home js.js"></script>
-
+   <script type="text/javascript" src="JS/particles.js"></script>
+    <script type="text/javascript" src="JS/app.js"></script>
 </html>

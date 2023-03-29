@@ -41,9 +41,8 @@ background-color: #edeefa;
 
 body{
     scroll-behavior: smooth;
-    background-color:#edeefa;
-    background-image: linear-gradient(#edeefa,#040027);
-    background: linear-gradient(180deg, #edeefa 0%,#040027 50%);
+    background-color:#040027;
+
     background-attachment: fixed;
     width: fit-content;
     height: fit-content;
@@ -51,6 +50,7 @@ body{
     align-items: center;
     padding: 0;
     margin: 0;
+    position: absolute;
     flex-direction: column;
     overflow-x: hidden;
   }
@@ -137,6 +137,13 @@ align-items: center;
 justify-content: center;
 height: 110vh;
 width: 100%;
+}
+#particles-js{
+position: absolute;
+mix-blend-mode:color-dodge;
+z-index: -1;
+width: 100vw;
+height: 140vh;
 }
 .hero-header{
     text-transform: uppercase;
