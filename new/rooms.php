@@ -23,7 +23,7 @@ if(isset($_SESSION["id"])){
       <title>Rooms</title>
    </head>
    <body onload="floor1();">      
-   <header id="header-style">
+   <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
@@ -32,14 +32,16 @@ if(isset($_SESSION["id"])){
             <li><a href="contact us.php" class="links">Contact Us</a></li>
             <li><a href="about us.php" class="links">About Us</a> </li>
          </ul>
-         <?php if(isset($getuser)){echo "
-         <form method='post'>
-            <button name='logout' style='background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
-            </form>
-            ";} ?>
+
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
          </div>
-         <div class="user-logo"><a href="form.php" id="login-logo" >
+         <div class="user-logo"><a <?php
+          if(isset($getuser)){
+            echo "onclick='logout_show();'";
+            }else{
+            echo "href='form.php'";
+              }
+         ?> id="login-logo" >
          <?php 
          if(isset($getuser)){
          echo $getuser["fname"];
@@ -47,8 +49,14 @@ if(isset($_SESSION["id"])){
          echo "login";
            }
           ?>
-         </a><img class="login-logo-img" src="techno tour website design pro\login.png" alt=".."></div>
-        
+         </a><img class="login-logo-img" onclick="logout_show();" src="techno tour website design pro\login.png" alt=".."></div>
+         <?php if(isset($getuser)){echo "
+         <form method='post' id='out_form'>            
+
+            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+
+            </form>
+            ";} ?>
       </header>
       <div class="bage">
       <div id="f-btns">
@@ -132,5 +140,6 @@ if(isset($_SESSION["id"])){
          </div>
         </body>
         <script src="JS/home js.js"></script>
+        <script src="JS/header.js"></script>
 
         </html>
