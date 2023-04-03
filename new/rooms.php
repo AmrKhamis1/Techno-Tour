@@ -20,9 +20,30 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
+      
       <title>Rooms</title>
    </head>
-   <body onload="floor1();">      
+   <body>    
+   
+   <div id='add-event'>
+       <div id='exit' onclick='event_display();'>×</div>
+       <div id='show' style='color:white;'>
+
+       </div>
+ </div>
+ <!-- php code for all rooms -->
+ <?php
+ echo "<script>  window.onload=function(){rooms=document.getElementsByClassName('rooms');";
+ for($i=0;$i<37;$i++){
+    echo "
+    rooms[".$i."].addEventListener('click', function(){
+      show_room_det(this.innerHTML);
+    });
+    ";
+ }
+ echo "}</script>";
+
+ ?>
    <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
@@ -141,5 +162,5 @@ if(isset($_SESSION["id"])){
         </body>
         <script src="JS/home js.js"></script>
         <script src="JS/header.js"></script>
-
+        <script src="JS/rooms.js"></script>
         </html>

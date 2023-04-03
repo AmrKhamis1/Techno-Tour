@@ -48,6 +48,38 @@ body{
     flex-direction: column;
     overflow: hidden;
   }
+  #add-event{
+    z-index: 2;
+    display:none;
+    position: fixed;
+    margin-bottom:31%;
+    background-color: rgba(0, 0, 0, 0.353);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#exit{
+    position: absolute;
+    border-radius: 5px;
+    font-size: 50px;
+    color: white;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    text-align: center;
+    height: fit-content;
+    transition: all 300ms;
+    cursor: pointer;
+}
+#exit:hover{
+    
+background-color: rgba(0, 0, 0, 0.533);
+
+
+}
+
   .bage{
 	width: 100vw;
 	height: 90vh;
