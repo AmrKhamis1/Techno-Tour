@@ -23,6 +23,10 @@ if($getuser['email']==$email && password_verify($password,$getuser["password"]))
 }
     $id=$getuser["id"];
     session_start();
+    
+$cookie_name ='user';
+$cookie_value = $id;
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
     $_SESSION["id"]=$id;
     header("Location:index.php"); 
      
@@ -35,9 +39,12 @@ else{
 }
 if(isset($_POST['logout']))
 {
+    $cookie_name ='user';
+    setcookie( $cookie_name,NULL, time() - (86400 * 30),"/");
     session_start();
     session_unset();
     session_destroy();
+    
 }
 
 ?>
