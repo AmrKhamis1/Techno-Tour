@@ -27,10 +27,9 @@ if(isset($_SESSION["id"])){
    
    <div id='add-event'>
        <div id='exit' onclick='event_display();'>×</div>
-       <div id='show' style='color:white;'>
+       <div id='show' style='color:white;'></div>
+   </div>
 
-       </div>
- </div>
  <!-- php code for all rooms -->
  <?php
  echo "<script>  window.onload=function(){rooms=document.getElementsByClassName('rooms');";
