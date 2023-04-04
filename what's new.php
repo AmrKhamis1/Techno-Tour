@@ -8,7 +8,7 @@
 </head>
 <body>
     <center><h1 id="user"></h1></center>
-    <center><h1>What's new are Coming Soon</h1></center>
+    <center><h1>What's new is Coming Soon</h1></center>
     <style>
         *{
             padding: 0;
