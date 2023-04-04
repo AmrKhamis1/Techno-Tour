@@ -7,6 +7,10 @@ if(isset($_SESSION["id"])){
    $result=mysqli_query($connection,$sql);
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
 }
+if(isset($_COOKIE['email']) && isset($_COOKIE['pass']))
+{
+   header("Location:index.php"); 
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +32,22 @@ if(isset($_SESSION["id"])){
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
-            <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
-            <li><a href="what's new.php" class="links">What's New</a></li>
-            <li><a href="contact us.php" class="links">Contact Us</a></li>
-            <li><a href="about us.php" class="links">About Us</a> </li>
+            <?php if(isset($getuser)){ 
+                   if($getuser['position']=="Technical"){echo  "<li><a href='what's new.php' class='links'>What's New</a></li>
+                   <li><a href='contact us.php'class='links'>Contact Us</a></li>
+                   <li><a href='about us.php' class='links'>About Us</a> </li>";} 
+                   else{
+                     echo "<li><a href='booking.php' class='links'>Booking</a></li>
+                     <li><a href='what's new.php' class='links'>What's New</a></li>
+                     <li><a href='contact us.php' class='links'>Contact Us</a></li>
+                     <li><a href='about us.php'class='links'>About Us</a> </li>";
+                   }}else{
+                     echo "<li><a href='what's new.php' class='links'>What's New</a></li>
+                     <li><a href='contact us.php' class='links'>Contact Us</a></li>
+                     <li><a href='about us.php'class='links'>About Us</a> </li>";
+                   } ?>
+
+       
          </ul>
 
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
