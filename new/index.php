@@ -1,17 +1,25 @@
 <?php 
 include_once "databasemysqli.php";
 include_once "login.php";
-  if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
-   session_start();
+  session_start();
+   if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
    $_SESSION["id"]=$_COOKIE['user'];
    $sql="SELECT*FROM members WHERE id={$_COOKIE['user']}";
    $result=mysqli_query($connection,$sql);
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
   }else{
-   session_start();
+  if(isset($_SESSION["id"])){
+   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
+   $result=mysqli_query($connection,$sql);
+   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+  }
+  else{
+   $getuser=NULL;
    session_unset();
    session_destroy();
   }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,9 +102,13 @@ include_once "login.php";
                      “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
                      </span>                         
                      <br>
-                     <button type="button" onclick="window.location.assign('rooms.php');" id="NCT-button" class="tour-button">
+                     <?php
+                     if(isset($getuser)){
+                    echo "<button type='button' onclick='window.location.assign(`rooms.php`);' id='NCT-button' class='tour-button'>
                           Rooms
-                         </button>
+                         </button>";
+                        }
+                         ?>
                      </font>
                      
 
