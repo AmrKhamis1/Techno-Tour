@@ -16,17 +16,15 @@ $result=mysqli_query($connection,$sql);
 $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
 if($getuser){
 if($getuser['email']==$email && password_verify($password,$getuser["password"])){
-    if(isset($_POST['save']))
+  $id=$getuser["id"];
+if(isset($_POST['remember']))
 {
-    setcookie("email",$email,365*24*60,"/");
-    setcookie("pass",$password,365*24*60,"/");
-}
-    $id=$getuser["id"];
-    session_start();
-    
 $cookie_name ='user';
 $cookie_value = $id;
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+}
+    
+    session_start();
     $_SESSION["id"]=$id;
     header("Location:index.php"); 
      

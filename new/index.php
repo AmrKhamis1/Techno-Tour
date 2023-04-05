@@ -1,16 +1,18 @@
 <?php 
 include_once "databasemysqli.php";
 include_once "login.php";
-
-   if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL) {
+  if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
    session_start();
    $_SESSION["id"]=$_COOKIE['user'];
    $sql="SELECT*FROM members WHERE id={$_COOKIE['user']}";
    $result=mysqli_query($connection,$sql);
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+  }else{
+   session_start();
+   session_unset();
+   session_destroy();
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
