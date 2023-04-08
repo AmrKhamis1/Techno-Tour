@@ -23,7 +23,7 @@ if(isset($_SESSION["id"])){
 </head>
 <body>
 
-<section><!---That Main Section Have All Page--->
+<section class="aboutus"><!---Start aBout Us Section--->
   <!--------------Start Page Container----------------->
   <div class="container" id="container">
     <!--------------Start Header----------------->
@@ -64,7 +64,7 @@ if(isset($_SESSION["id"])){
       </header>
    <!--------------End Header----------------->
    <!--------------Start About us contain----------------->
-    <div class="aboutus" id="aboutus">
+    <div class="aboutus-p" id="aboutus-p">
       <h3>About Us</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis cumque delectus obcaecati earum unde quasi accusamus consequatur ducimus blanditiis,
          facilis nesciunt aut iure magni amet officia ipsum pariatur voluptatibus.</p>
@@ -95,7 +95,7 @@ if(isset($_SESSION["id"])){
         <h2 class="names">Shahd Abo Elkaramat</h2>
       </div>
     </div>
-       <!--------------Start Team contain----------------->
+       <!--------------END Team contain----------------->
   </div>
     <!--------------End Page Container----------------->
 
@@ -135,16 +135,8 @@ if(isset($_SESSION["id"])){
         <p><a href="https://www.facebook.com/profile.php?id=100008321981890">Adel Sherif</a> </p>
       </span>
       <span id="popup-contact-row">
-        <span id="popup-adel-phone"><img src="techno tour website design pro/phone.png" alt="">Phone: </span>
-        <p>01283048731</p>
-      </span>
-      <span id="popup-contact-row">
         <span id="popup-adel-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
         <p><a href="Os6225091@Gmail.com">Os6225091@Gmail.com</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-adel-insta"><img src="techno tour website design pro/insta.jpg" alt="">Instagram: </span>
-        <p><a href="https://instagram.com/adel_sherif.10?igshid=ZDdkNTZiNTM=">adel_sherif.10</a> </p>
       </span>
       <span id="popup-contact-row">
         <span id="popup-adel-linkedin"><img src="techno tour website design pro/linkedin.png" alt="">Linkedin: </span>
@@ -186,15 +178,11 @@ if(isset($_SESSION["id"])){
       </span>
       <span id="popup-contact-row">
         <span id="popup-amr-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
-        <p><a href="khamisamr90@gmail.com">khamisamr90@gmail.com</a> </p>
+        <p><a href="khamisamr90@gmail.com">khamisamr90<br>@gmail.com</a> </p>
       </span>
       <span id="popup-contact-row">
         <span id="popup-amr-linkedin"><img src="techno tour website design pro/linkedin.png" alt="">Linkedin: </span>
         <p><a href="https://www.linkedin.com/in/amr-khamis-51041622a">amr-khamis</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-amr-phone"><img src="techno tour website design pro/phone.png" alt="">Phone: </span>
-        <p>01021477040</p>
       </span>
     </span>
   </div></center>
@@ -239,16 +227,8 @@ if(isset($_SESSION["id"])){
         <p><a href="https://www.facebook.com/profile.php?id=100041003527060&mibextid=ZbWKwL">Ahmed Hosny</a> </p>
       </span>
       <span id="popup-contact-row">
-        <span id="popup-ahmed-phone"><img src="techno tour website design pro/phone.png" alt="">Phone: </span>
-        <p>01030140949</p>
-      </span>
-      <span id="popup-contact-row">
         <span id="popup-ahmed-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
         <p><a href="ahmedhosnikassab@gmail.com">ahmedhosni@gmail.com</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-ahmed-insta"><img src="techno tour website design pro/insta.jpg" alt="">Instagram: </span>
-        <p><a href="https://www.instagram.com/ahmdhosny3/">ahmdhosny3</a> </p>
       </span>
     </span>
   </div></center>
@@ -293,16 +273,8 @@ if(isset($_SESSION["id"])){
         <p><a href="https://www.facebook.com/sara.magdy.92167789?mibextid=LQQJ4d">Sara Magdy</a> </p>
       </span>
       <span id="popup-contact-row">
-        <span id="popup-amr-phone"><img src="techno tour website design pro/phone.png" alt="">Phone: </span>
-        <p>01151557760</p>
-      </span>
-      <span id="popup-contact-row">
         <span id="popup-sara-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
-        <p><a href="saramagdyy77@gmail.com">saramagdyy77@gmail.com</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-sara-insta"><img src="techno tour website design pro/insta.jpg" alt="">Instagram: </span>
-        <p><a href="https://instagram.com/sarah_magdy30?igshid=YmMyMTA2M2Y=">sarah_magdy30</a> </p>
+        <p><a href="saramagdyy77@gmail.com">saramagdyy77<br>@gmail.com</a> </p>
       </span>
     </span>
   </div></center>
@@ -347,16 +319,8 @@ if(isset($_SESSION["id"])){
         <p><a href="https://www.facebook.com/shoody.karam?mibextid=LQQJ4d">Shahd Karam</a> </p>
       </span>
       <span id="popup-contact-row">
-        <span id="popup-amr-phone"><img src="techno tour website design pro/phone.png" alt="">Phone: </span>
-        <p>01025235093</p>
-      </span>
-      <span id="popup-contact-row">
         <span id="popup-sara-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
-        <p><a href="Shahdkaram18@gmail.com">Shahdkaram18@gmail.com</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-sara-insta"><img src="techno tour website design pro/insta.jpg" alt="">Instagram: </span>
-        <p><a href="https://instagram.com/shahd_aboelkramat?igshid=YmMyMTA2M2Y=">shahd_aboelkramat</a> </p>
+        <p><a href="Shahdkaram18@gmail.com">Shahdkaram18<br>@gmail.com</a> </p>
       </span>
     </span>
   </div></center>
@@ -366,7 +330,23 @@ if(isset($_SESSION["id"])){
                 <!-------------------------------End pop up pages----------------------------->
 
 </section>
-<!---End The Main Section Have All Page--->
+<!---Start aBout Project Section--->
+<section class="about-project">
+  <div class="about-project-body-paragraph">
+      <div class="about-project-paragraph">
+        <center><h1>About The Project</h1></center>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt molestias accusamus quisquam! Autem nostrum itaque voluptatem quam dolore quisquam laboriosam neque. Doloribus et commodi non vel amet deserunt, perspiciatis quaerat porro molestiae autem, neque aut quidem est?</p>
+      </div>
+  </div>
+  <div class="project-photos">
+      <div class="photo" id="photo1"><img src="techno tour website design pro/NCT building.png" alt=""></div>
+      <div class="photo" id="photo2"><img src="techno tour website design pro/NCT building.png" alt=""></div>
+      <div class="photo" id="photo3"><img src="techno tour website design pro/NCT building.png" alt=""></div>
+      <div class="photo" id="photo4"><img src="techno tour website design pro/NCT building.png" alt=""></div>
+      <div class="photo" id="photo5"><img src="techno tour website design pro/NCT building.png" alt=""></div>
+   </div>
+</section>
+<!---End aBout Project Section--->
 </body>
 <script src="JS/header.js"></script>
 <!-------------------------------Start  pop up pages Js----------------------------->
