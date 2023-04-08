@@ -1,0 +1,22 @@
+* {
+    color: black;
+}
+.contain{
+    background-color: white;
+    height: 800px;
+    width: 800px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.contain .head{
+    text-align: center;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+p{
+    text-align: left;
+    color: black;
+}
+/* table{
+    border: 1px solid grey;
+} */

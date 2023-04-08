@@ -20,11 +20,15 @@
        <p> <?php echo $ema_pass;?></p>
         <br>
         <label for="login-email">Email<span class="errors"><?php echo $error ;?></span></label>
-        <input id="login-email" name="login-email" type="email" class="input-text input-text1" required>
+        <input id="login-email" name="login-email" type="email" class="input-text input-text1"  required />
         <label for="login-password" style="margin-top: 30px;" >Password<span class="errors"><?php echo $error ;?></span></label>
-        <input id="login-password" name="login-password" type="password" class="input-text input-text1" required>
+        
+        <input id="login-password" name="login-password" type="password" class="input-text input-text1" required />
+        <label for="remember" style='font-size:10px;'> Remember Me</label>
+        <input type="checkbox" name="remember" />
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
+        
     </form>
     <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
 

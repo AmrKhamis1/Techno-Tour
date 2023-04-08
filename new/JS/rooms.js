@@ -1,4 +1,3 @@
-
 function event_display(){
     let add_event = document.getElementById('add-event');
     if(add_event.style.display=="flex"){
