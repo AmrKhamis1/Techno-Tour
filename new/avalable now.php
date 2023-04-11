@@ -13,8 +13,8 @@ include 'cheking rooms function.php';
                     $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
                     $result=mysqli_query($connection,$sql);
                     $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
-                if($getuser['position']!="Dr"){
-                    echo $rooms."<font class='available'>".$available2."</font>
+                    if($getuser['position']!="Dr" || $getuser['position']!="Assisstant"){
+                      echo $rooms."<font class='available'>".$available2."</font>
                     <div class='about'>
                     </div>";
                 }else{
