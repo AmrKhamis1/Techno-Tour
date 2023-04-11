@@ -1,4 +1,28 @@
-<?php include_once "validationBooking.php";?>
+<?php include_once "validationBooking.php";
+include_once "databasemysqli.php";  
+session_start();
+
+   if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
+    $_SESSION["id"]=$_COOKIE['user'];
+    $sql="SELECT*FROM members WHERE id={$_COOKIE['user']}";
+    $result=mysqli_query($connection,$sql);
+    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+ 
+   }
+           if(isset($_SESSION["id"])){
+            $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
+            $result=mysqli_query($connection,$sql);
+            $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+            echo $getuser['id'];
+           }
+     if(isset($getuser)){ 
+        if(($getuser['position']=="Dr" || $getuser['position']=="Assisstant") && isset($_GET['Room_Name'])){
+
+                header("Location:booking_dr_ass.php?Room_Name=".$_GET['Room_Name']."&id=".$getuser['id']);
+            
+        }}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +61,8 @@
                     <label for="b_external_attendees">Number of External Attendees <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
                     <input id="b_external_attendees" type="number" name="b_exte" min="1" required>
 
-                    <label for="b_Num_rooms">Number of rooms <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
-                    <input id="b_Num_rooms" name="room_num" type="text"  required>
+                    <label for="b_Num_rooms">Room Number <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
+                    <input id="b_Num_rooms" name="room_num" type="text" value='<?php echo $_GET['Room_Name'];?>' required>
                     <br>
                     <br>
                     <input type="submit" value="Done" id="done" name="done" class="done">

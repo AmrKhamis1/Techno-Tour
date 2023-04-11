@@ -1,22 +1,69 @@
-* {
-    color: black;
-}
+
 .contain{
+    color: black;
     background-color: white;
-    height: 800px;
-    width: 800px;
+    height: 90vh;
+    width: 1050px;
     border-radius: 20px;
     padding: 10px;
 }
 .contain .head{
+    color: black;
     text-align: center;
     margin-top: 5px;
     padding-left: 10px;
+    border-radius: 20px;
+
 }
 p{
     text-align: left;
     color: black;
 }
-/* table{
-    border: 1px solid grey;
-} */
+ table{
+    border: 1px solid rgb(255, 255, 255);
+    border-spacing:0;
+    background-color: #f1f1f1;
+    border: 0px;
+    width: 100%;
+    height: fit-content;
+    margin-top: 5vh;
+} 
+td,tr{
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: 600;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+td{
+    height: 30px;
+    width: 100px;
+}
+tr:first-child td:first-child{
+    border-top-left-radius: 10px;
+}
+tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+tr:first-child td:last-child{
+    border-top-right-radius: 10px;
+}
+tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+tr:first-child,tr:first-child td{
+    font-size: medium;
+    background-color: #000635;
+    color: white;
+    border-color: white;
+    font-weight: 500;
+
+}
+tr td:first-child{
+    font-size: medium;
+    background-color: #000635;
+    color: white;
+    border-color: white;
+    font-weight: 500;
+
+}

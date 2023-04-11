@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2023 at 08:37 PM
+-- Generation Time: Apr 11, 2023 at 12:32 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,17 +37,9 @@ CREATE TABLE `booking` (
   `total_atten` int(11) DEFAULT NULL,
   `total_external` int(11) DEFAULT NULL,
   `no_room` varchar(30) DEFAULT NULL,
-  `timetable_id` int(11) DEFAULT NULL,
   `room_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `booking`
---
-
-INSERT INTO `booking` (`id`, `b_tittle`, `start_time`, `end_time`, `date`, `duration`, `total_atten`, `total_external`, `no_room`, `timetable_id`, `room_id`, `user_id`) VALUES
-(1, 'study', '09:00:00', '03:00:00', '2023-04-03', 3, 100, 40, 'A105', 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -61,13 +53,6 @@ CREATE TABLE `chat` (
   `user2_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `chat`
---
-
-INSERT INTO `chat` (`id`, `user1_id`, `user2_id`) VALUES
-(1, 1, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -75,8 +60,8 @@ INSERT INTO `chat` (`id`, `user1_id`, `user2_id`) VALUES
 --
 
 CREATE TABLE `dr_ass` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
+  `id` int(20) NOT NULL,
+  `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -84,9 +69,18 @@ CREATE TABLE `dr_ass` (
 --
 
 INSERT INTO `dr_ass` (`id`, `name`) VALUES
-(10, 'dr/ghada'),
-(11, 'dr/amany'),
-(20, 'eng/hossam');
+(1, 'dr/ ghada'),
+(2, 'dr/ amany'),
+(3, 'dr/ rasha stohy'),
+(4, 'dr/ Osama'),
+(5, 'dr/ Maged'),
+(6, 'dr/ marwa'),
+(7, 'dr/ sahar'),
+(8, 'eng/ hossam'),
+(9, 'eng/ rana'),
+(10, 'eng/ marwa'),
+(11, 'eng/ gehad'),
+(12, 'eng/ somaia');
 
 -- --------------------------------------------------------
 
@@ -99,7 +93,7 @@ CREATE TABLE `members` (
   `fname` varchar(30) DEFAULT NULL,
   `lname` varchar(30) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `password` varchar(200) DEFAULT NULL,
+  `password` varchar(700) DEFAULT NULL,
   `position` varchar(30) DEFAULT NULL,
   `image` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -109,8 +103,8 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `fname`, `lname`, `email`, `password`, `position`, `image`) VALUES
-(1, 'sara', 'magdy', 'saramagdy3@gmail.com', 'sara1234', 'student', ''),
-(2, 'shahd', 'karam', 'shahdkaram2@gmail.com', 'shahd1234', 'student', '');
+(4, 'amr', 'khamis', 'amr@gmail.com', '$2y$10$IDy9NsF19LwodbdzuHWo0ORxEAOYs6eyurjhjph/00QxvMZe2iICy', 'Dr', ''),
+(5, 'amr2', 'amr2', 'amr2@gmail.com', '$2y$10$mol0v4McLYfN8lNz9PAzn.veY1b10IZDLvKTyMfVPHcnEOFTZKekS', 'Technical', '');
 
 -- --------------------------------------------------------
 
@@ -126,13 +120,6 @@ CREATE TABLE `message` (
   `message` varchar(1000) DEFAULT NULL,
   `date_time` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `message`
---
-
-INSERT INTO `message` (`id`, `chat_id`, `from_id`, `to_id`, `message`, `date_time`) VALUES
-(1, 1, 1, 2, 'hello!', '2023-04-03 23:26:47');
 
 -- --------------------------------------------------------
 
@@ -155,8 +142,43 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `r_no`, `pc_no`, `projector`, `condetioner`, `fixed_pc`, `broken_pc`) VALUES
-(2, 'A105', 30, 'good', 'broken', 20, 10),
-(3, 'A102', 0, 'good', 'good', 0, 0);
+(41, 'A105', 0, 'good', 'broken', 0, 0),
+(42, 'A102', 0, 'good', 'good', 0, 0),
+(43, 'A101', 0, 'good', 'good', 0, 0),
+(44, 'A103', 0, 'good', 'good', 0, 0),
+(45, 'A104', 0, 'good', 'good', 0, 0),
+(46, 'A106', 0, 'good', 'good', 0, 0),
+(47, 'A107', 0, 'good', 'good', 0, 0),
+(48, 'A108', 0, 'good', 'good', 0, 0),
+(49, 'A201', 10, 'good', 'good', 10, 0),
+(50, 'A202', 10, 'good', 'good', 10, 0),
+(51, 'A203', 10, 'good', 'good', 10, 0),
+(52, 'A204', 0, 'good', 'good', 0, 0),
+(53, 'A205', 0, 'good', 'good', 0, 0),
+(54, 'A206', 0, 'good', 'good', 0, 0),
+(55, 'A207', 0, 'good', 'good', 0, 0),
+(56, 'A208', 0, 'good', 'good', 0, 0),
+(57, 'A209', 0, 'good', 'good', 0, 0),
+(58, 'A210', 0, 'good', 'good', 0, 0),
+(59, 'A301', 10, 'good', 'good', 10, 0),
+(60, 'A302', 10, 'good', 'good', 10, 0),
+(61, 'A303', 10, 'good', 'good', 10, 0),
+(62, 'A304', 0, 'good', 'good', 0, 0),
+(63, 'A305', 0, 'good', 'good', 0, 0),
+(64, 'A306', 0, 'good', 'good', 0, 0),
+(65, 'A307', 0, 'good', 'good', 0, 0),
+(66, 'A308', 0, 'good', 'good', 0, 0),
+(67, 'A309', 0, 'good', 'good', 0, 0),
+(68, 'A310', 0, 'good', 'good', 0, 0),
+(69, 'A401', 10, 'good', 'good', 10, 0),
+(70, 'A402', 10, 'good', 'good', 10, 0),
+(71, 'A403', 10, 'good', 'good', 10, 0),
+(72, 'A404', 0, 'good', 'good', 0, 0),
+(73, 'A405', 0, 'good', 'good', 0, 0),
+(74, 'A406', 0, 'good', 'good', 0, 0),
+(75, 'A407', 0, 'good', 'good', 0, 0),
+(76, 'A408', 0, 'good', 'good', 0, 0),
+(77, 'A409', 0, 'good', 'good', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -170,7 +192,7 @@ CREATE TABLE `time_table` (
   `start_time` time DEFAULT NULL,
   `end_time` time DEFAULT NULL,
   `weekday` varchar(30) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
+  `user_id` int(20) DEFAULT NULL,
   `sub_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -179,8 +201,24 @@ CREATE TABLE `time_table` (
 --
 
 INSERT INTO `time_table` (`id`, `room_id`, `start_time`, `end_time`, `weekday`, `user_id`, `sub_name`) VALUES
-(1, 3, '09:00:00', '09:50:00', 'sun', 10, 'java'),
-(2, 2, '09:00:00', '09:50:00', 'sun', 11, 'database');
+(3, 41, '09:00:00', '10:40:00', 'Sun', 1, 'C programming'),
+(4, 41, '10:50:00', '12:30:00', 'Sun', 2, 'intro to iot'),
+(6, 41, '09:00:00', '10:40:00', 'Mon', 5, 'Math 2'),
+(7, 41, '01:00:00', '02:40:00', 'Tue', 4, 'Cyber Security'),
+(9, 41, '11:40:00', '12:30:00', 'Wed', 4, 'MS Office'),
+(10, 41, '01:00:00', '02:40:00', 'Wed', 2, 'English 2'),
+(11, 42, '09:00:00', '10:40:00', 'Sun', 2, 'Data Structure'),
+(12, 42, '10:50:00', '11:40:00', 'Sun', 3, 'Web Programming 2'),
+(13, 42, '09:00:00', '10:40:00', 'Mon', 6, 'CCNA R&S 1'),
+(14, 42, '10:50:00', '11:40:59', 'Mon', 1, 'Java Programming 1'),
+(15, 42, '09:00:00', '09:50:00', 'Wed', 2, 'Database Programming'),
+(16, 43, '09:00:00', '10:40:00', 'Mon', 1, 'Advanced Programming In C++'),
+(17, 43, '10:50:00', '11:40:00', 'Mon', 6, 'Mobile Programming 1'),
+(18, 43, '11:40:00', '01:30:00', 'Mon', 3, 'S/W Engineerings'),
+(19, 43, '09:00:00', '10:40:00', 'Tue', 8, 'Network Programming'),
+(20, 43, '10:50:00', '12:30:00', 'Tue', 4, 'Embedded System'),
+(21, 43, '09:00:00', '10:40:00', 'Wed', 6, 'Algorithm'),
+(22, 43, '01:00:00', '01:50:00', 'Sun', 3, 'Big Data & Analytics');
 
 --
 -- Indexes for dumped tables
@@ -192,7 +230,6 @@ INSERT INTO `time_table` (`id`, `room_id`, `start_time`, `end_time`, `weekday`, 
 ALTER TABLE `booking`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
-  ADD KEY `timetable_id` (`timetable_id`,`room_id`),
   ADD KEY `room_id` (`room_id`);
 
 --
@@ -236,9 +273,7 @@ ALTER TABLE `rooms`
 --
 ALTER TABLE `time_table`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `room_id` (`room_id`,`user_id`,`sub_name`),
-  ADD KEY `period_id` (`sub_name`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `room_id` (`room_id`,`user_id`,`sub_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -257,10 +292,16 @@ ALTER TABLE `chat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `dr_ass`
+--
+ALTER TABLE `dr_ass`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -272,13 +313,13 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `time_table`
 --
 ALTER TABLE `time_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
@@ -289,8 +330,7 @@ ALTER TABLE `time_table`
 --
 ALTER TABLE `booking`
   ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`),
-  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`),
-  ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`timetable_id`) REFERENCES `time_table` (`id`);
+  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`);
 
 --
 -- Constraints for table `chat`
