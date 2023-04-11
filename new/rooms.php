@@ -26,9 +26,8 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>Rooms</title>
-
    </head>
-   <body>    
+   <body background="techno tour website design pro\NCT building4.png">    
    <div id='add-event'>
        <div id='exit' onclick='show();'>×</div>
        <div id='show' style='color:white;'></div>
@@ -41,9 +40,8 @@ if(isset($_SESSION["id"])){
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
             <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
-            <li><a href="what's new.php" class="links">What's New</a></li>
-            <li><a href="contact us.php" class="links">Contact Us</a></li>
-            <li><a href="about us.php" class="links">About Us</a> </li>
+            <li><a href="what's new.php" class="links">Broadcast</a></li>
+            <li><a href="about us.php" class="links">About</a> </li>
          </ul>
 
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">

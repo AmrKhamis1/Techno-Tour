@@ -177,6 +177,7 @@ background-color: rgba(0, 0, 0, 0.533);
 
 .rooms {
 	border:2px solid #0000;
+	background-color: #e0ca00;
 	border-radius:20px;
 	position: relative;
 	color: white;
@@ -184,6 +185,8 @@ background-color: rgba(0, 0, 0, 0.533);
 	width: 130px;
 	height: 130px;
 	background-color: #c2c3d2;
+	background-position: center;
+	background-size: cover;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
@@ -192,19 +195,20 @@ background-color: rgba(0, 0, 0, 0.533);
 	font-size: 20px;
 	font-weight: 700;
 	cursor: pointer;
-    transition: all 500ms;
+    transition: all 200ms;
 	overflow: hidden;
-	    background-image: linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389));
+	background-image: linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389));
 
 }
 
 .rooms:hover {
-	border:2px solid #0000;
 	border-radius:20px;
     animation: border;
 	animation-timing-function: linear;
 	animation-duration: 2000ms;
 	animation-iteration-count: infinite;
+	box-shadow:  rgba(255, 255, 255,0.6)  0 0 0px 2px;
+
 }
 .about{
 	color: rgb(57, 57, 57) ;

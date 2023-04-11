@@ -22,7 +22,6 @@
                         <td>4:30 - 5:20</td>
                     </tr>
                     <?php
-                      
                     function days_sub($day){
                         include "databasemysqli.php";
                         $RoomNum=$_GET['room_number'];
@@ -32,17 +31,24 @@
                         $room =$id['id'];
                         $sql="SELECT * FROM time_table WHERE room_id='$room'";
                         $result = $connection->query($sql);
-                        $duration_start=['09:00:00','09:50:00','10:50:00','11:40:00','01:00:00','01:50:00','02:50:00','03:40:00','04:30:00'];
-                        $duration_end=['09:50:00','10:40:00','11:40:00','12:30:00','01:50:00','02:40:00','03:40:00','04:30:00','05:20:00'];
+                        $duration=['1','2','3','4','5','6','7','8','9'];
                         $sub_in_day=["","","","","","","","","","",""];
+                        $book=["","","","","","","","","","",""];
                          while($row=$result->fetch_assoc()){
                           if($row['weekday']==$day){
                             for($i=0;$i<9;$i++){
-                                if($row['start_time']==$duration_start[$i]){
-                                    for($j=0;$j<9;$j++){
-                                    if($row['end_time']==$duration_end[$j]){
-                                      $sub_in_day[$i]=$row['sub_name'];    
-                                      $sub_in_day[$i+1]=$row['sub_name'];
+                                if($row['start_time']==$duration[$i]){
+                                   if($row['book']==1){
+                                        $book[$i]="#e0ca00";
+                                      }else{
+                                        $book[$i]="rgb(230,0, 0)";
+                                      }
+                                    for($j=$i;$j<9;$j++){
+                                    if($row['end_time']==$duration[$j]){
+                                      $sub_in_day[$i]=$row['sub_name']; 
+                                      $sub_in_day[$i+1]=$row['sub_name'];   
+                                      $sub_in_day[$j]=$row['sub_name'];
+                                     
                                     }else{
                                    $sub_in_day[$i]=$row['sub_name'];
                                }
@@ -52,18 +58,24 @@
                           }
                         }
       
-                      }                  for($i=0;$i<9;$i++){
+                      }                  
+                      
+                      
+                      for($i=0;$i<9;$i++){
                                             if($sub_in_day[$i]==$sub_in_day[$i+1] && $sub_in_day[$i]!=""){
                                                 if($sub_in_day[$i+1]==$sub_in_day[$i+2] && $sub_in_day[$i+1]!=""){
-                                                  echo "<td colspan='3'>".$sub_in_day[$i]."</td>"; 
+
+                                                  echo "<td style='background-color:".$book[$i].";' colspan='3'>".$sub_in_day[$i]."</td>"; 
                                                   $i+=2;
                                                 }else{
-                                                  echo "<td colspan='2'>".$sub_in_day[$i]."</td>"; 
+                                                  echo "<td style='background-color:".$book[$i].";' colspan='2'>".$sub_in_day[$i]."</td>"; 
                                                   $i++;
                                                 }
                                                 
+                                            }else if($sub_in_day[$i]!=""){
+                                                echo "<td style='background-color:".$book[$i].";'>".$sub_in_day[$i]."</td>"; 
                                             }else{
-                                                echo "<td>".$sub_in_day[$i]."</td>"; 
+                                              echo "<td style='background-color:rgb(0, 230, 0);'>".$sub_in_day[$i]."</td>"; 
                                             }
 
                                              }
@@ -84,23 +96,56 @@
                 </table>
             </div>
             <hr>
+<?php
+                     include "databasemysqli.php";
+                     $RoomNum=$_GET['room_number'];
+            $sql="SELECT * FROM rooms WHERE r_no='$RoomNum'";
+            $result=mysqli_query($connection,$sql);
+            $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+?>
             <div class="detail">
-                <p>Number of avilable PCs :</p>
-                <p>Number of avilable Chairs : </p>
-                <p>Projector's State : </p>
+                <p style='font-weight: 600;'>Number of avilable PCs :
+                <?php
+                 echo " "."<span style='font-weight: 700;font-size:large;'>".$getuser['pc_no']."</span>";
+                 ?></p>
+                <p style='font-weight: 600;'>Projector's State : <?php 
+                if($getuser['projector']=='good'){
+                    echo " <span style='color:rgb(0,200,0);font-weight: 700;font-size:large;'>".$getuser['projector']."</span>";
+                }else{
+                  echo " <span style='color:rgb(255,0,0);font-weight: 700;font-size:large;'>".$getuser['projector']."</span>";
+                }
+                 ?>
+                 
+                </p>
             </div>
             <hr>
-            <div class="button">
-                <form action="#">
-                    <label>Report for : </label>
-			            <select name="department">
-				            <option value="1">Not Enough Chairs</option>
-				            <option value="2">Pc is not working</option>
-				            <option value="3">projector down</option>
-				            <option value="4">All of the above</option>
-				            <option value="5">Something else</option>
-			        </select>
+            <?php
+            session_start();
+            $sql="SELECT * FROM members WHERE id={$_SESSION['id']}";
+            $result=mysqli_query($connection,$sql);
+            $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+            if(isset($getuser)){
+              if($getuser['position']=="Dr" || $getuser['position']=="Assisstant" || $getuser['position']=="Technical"){
+              echo "
+              <div class='button'>
+              <form action=''>
+                  <label>Report for : </label>
+                <select name='department'>
+                  <option value='1'>Not Enough Chairs</option>
+                  <option value='2'>Pc is not working</option>
+                  <option value='3'>projector down</option>
+                  <option value='4'>All of the above</option>
+                  <option value='5'>Something else</option>
+            </select>
+               <button type='submit'>Send</button>
+              </form>
+          </div>
+              ";
+              }else{
+                echo ""; 
 
-                </form>
-            </div>
+            }
+            }
+            ?>
+
         </div>

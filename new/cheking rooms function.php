@@ -1,13 +1,12 @@
 <?php
-function rooms() {
+function rooms($RoomNum) {
                 include "databasemysqli.php";
                 $day=date('d');
                 $month=date('m');
                 $year=date("y");
                 $today = mktime(0, 0, 0, $month, $day, $year);
                 $dayOfWeek = date('D', $today);
-                $RoomNum=$_GET['Room_Num'];
-                $rooms=substr($RoomNum, 3);
+                $rooms=$RoomNum;
                 $sql="SELECT * FROM time_table INNER JOIN rooms ON time_table.room_id = rooms.id WHERE rooms.r_no='$rooms' and weekday='$dayOfWeek';";
                 $result = $connection->query($sql);
                 $i=0;

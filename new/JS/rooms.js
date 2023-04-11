@@ -8,9 +8,9 @@ function show(){
       add_event.style.display="flex";
     }
   }
-  var xmlhttp = new XMLHttpRequest();
+  
 function event_display(x){
-
+var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 //check if the state of network is ok (200)....200 in network state means ok
 if (this.readyState == 4 && this.status == 200) {
@@ -48,8 +48,12 @@ function available_colors() {
     xhr.send();
   }
 }
-setInterval(available(),1000);
-setInterval(available_colors(),1000);
+function all(){
+  available_colors();
+  available();
+}
+setInterval(all,60000);
+all();
 
 function show_book(x){
   var book=document.getElementById('book_button'+x);

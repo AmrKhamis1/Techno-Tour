@@ -1,18 +1,19 @@
 <?php 
-include_once "databasemysqli.php";
 include_once "login.php";
+function getuser($user){
+   include "databasemysqli.php";
+   $sql="SELECT*FROM members WHERE id={$user}";
+   $result=mysqli_query($connection,$sql);
+   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+   return $getuser;
+}
   session_start();
    if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
    $_SESSION["id"]=$_COOKIE['user'];
-   $sql="SELECT*FROM members WHERE id={$_COOKIE['user']}";
-   $result=mysqli_query($connection,$sql);
-   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
-
+   $getuser=getuser($_SESSION["id"]);
   }else{
   if(isset($_SESSION["id"])){
-   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
-   $result=mysqli_query($connection,$sql);
-   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+   $getuser=getuser($_SESSION["id"]);
   }
   else{
    $getuser=NULL;
@@ -40,14 +41,14 @@ include_once "login.php";
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
-                        <?php if(isset($getuser)){ 
-                   if($getuser['position']!="Technical"){
-                     echo "<li><a href='booking.php' class='links'>Booking</a></li>";
-                  } 
-                  } ?>
-            <li><a href="what's new.php" class='links'>What's New</a></li>
-            <li><a href='contact us.php' class='links'>Contact Us</a></li>
-            <li><a href='about us.php'class='links'>About Us</a> </li>
+            <?php if(isset($getuser)){ 
+                     if($getuser['position']!="Technical"){
+                          echo "<li><a href='booking.php' class='links'>Booking</a></li>";
+                     }
+                  }
+            ?>
+            <li><a href="what's new.php" class="links">Broadcast</a></li>
+            <li><a href="about us.php" class="links">About</a> </li>
 
 
        

@@ -1,8 +1,8 @@
 <?php
-include 'cheking rooms function.php';
+include_once 'cheking rooms function.php';
 $RoomNum=$_GET['Room_Num'];
 $rooms=substr($RoomNum, 3);
-$available2 = rooms();
+$available2 = rooms($rooms);
 
 if($available2=='closed now'){
     echo "rgba(255, 255,255,30%)";
