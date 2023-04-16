@@ -66,35 +66,35 @@ function prev() {
 
 /********************  floors fun  *********************************** */
 function floor1() {
-   cube.style.transform = "rotateX(360deg)" || "rotateX(0deg)";
+   cube.style.transform = "rotateX(360deg)";
    f_btn1.style.opacity = "100%";
-   f_btn2.style.opacity = "20%";
-   f_btn3.style.opacity = "20%";
-   f_btn4.style.opacity = "20%";
+   f_btn2.style.opacity = "50%";
+   f_btn3.style.opacity = "50%";
+   f_btn4.style.opacity = "50%";
 
 }
 
 function floor2() {
-   cube.style.transform = "rotateX(270deg)" || "rotateX(-90deg)";
-   f_btn1.style.opacity = "20%";
+   cube.style.transform = "rotateX(270deg)";
+   f_btn1.style.opacity = "50%";
    f_btn2.style.opacity = "100%";
-   f_btn3.style.opacity = "20%";
-   f_btn4.style.opacity = "20%";
+   f_btn3.style.opacity = "50%";
+   f_btn4.style.opacity = "50%";
 }
 
 function floor3() {
-   cube.style.transform = "rotateX(180deg)" || "rotateX(-180deg)";
-   f_btn1.style.opacity = "20%";
-   f_btn2.style.opacity = "20%";
+   cube.style.transform = "rotateX(180deg)";
+   f_btn1.style.opacity = "50%";
+   f_btn2.style.opacity = "50%";
    f_btn3.style.opacity = "100%";
-   f_btn4.style.opacity = "20%";
+   f_btn4.style.opacity = "50%";
 }
 
 function floor4() {
-   cube.style.transform = "rotateX(90deg)" || "rotateX(-270deg)";
-   f_btn1.style.opacity = "20%";
-   f_btn2.style.opacity = "20%";
-   f_btn3.style.opacity = "20%";
+   cube.style.transform = "rotateX(90deg)";
+   f_btn1.style.opacity = "50%";
+   f_btn2.style.opacity = "50%";
+   f_btn3.style.opacity = "50%";
    f_btn4.style.opacity = "100%";
 }
 /**************************************************** */

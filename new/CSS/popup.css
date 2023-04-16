@@ -79,3 +79,60 @@ tr td:first-child{
     font-weight: 700;
     font-family: "Maven Pro",Arial, sans-serif;
 }
+#lable_number{
+    width: fit-content;
+    height: fit-content;
+    font-family: "Maven Pro",Arial, sans-serif;
+    color: black;
+}
+.button form  label{
+    font-family: "Maven Pro",Arial, sans-serif;
+    color: black;
+}
+#report_det{
+    display: inline-block;
+    width: fit-content;
+    height: 30px;
+}
+#else{
+    display: none;
+}
+#report_button{
+    height: 20px;
+    width: 100px;
+    margin-top: 1%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+}
+#report_button:hover{
+    color: white;
+    background-color: black;
+}
+
+ select{
+    margin: 10px 0px;
+    margin-right: 10px;
+    background-color: white;
+    color: #000635;;
+    cursor: pointer;
+    
+ height: 30px;
+ outline: none;
+ border: 1px;
+ border-color: #000000;
+ border-style: solid;
+ border-radius: 5px;
+ }
+ select:hover{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+ }
+  select option {
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: 1px;
+    border-radius: 10px;
+    background-color:black;
+  }

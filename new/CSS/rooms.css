@@ -36,10 +36,13 @@
 
 body{
     scroll-behavior: smooth;
-	background-size: cover;
-	background-position: center;
+	background-size: 0%;
+	background-image: url('http://localhost//test/Techno-Tour-main/new/techno tour website design pro/NCT building2.png');
+	background-position: top;
     background-attachment: fixed;
-	background-color: #424261;
+	
+	background-repeat: no-repeat;
+	background-color: #e3e3ff;
     width: fit-content;
     height: fit-content;
     display:inline;
@@ -91,6 +94,8 @@ background-color: rgba(0, 0, 0, 0.533);
 	align-items: center;
   }
   #f-btns {
+	position: fixed;
+	right: 0;
 	height: 40vh;
 	display: flex;
 	flex-direction: column-reverse;
@@ -118,14 +123,18 @@ background-color: rgba(0, 0, 0, 0.533);
 	border-right: 0;
 }
   #cont-home {
+	
     display: block;
-	width: 100vw;
-	height: 90vh;
-	margin-top: 20vh;
+	width: 0vw;
+	height: 0vh;
+	margin-top: 35vh;
+	
 }
 
 .container {
-	margin: auto;
+	position: fixed;
+	
+	margin-left: 10vw;
 	width: 990px;
 	height: 60%;
 	bottom: 0;
@@ -136,8 +145,8 @@ background-color: rgba(0, 0, 0, 0.533);
 .face {
 	position: absolute;
 	width: 100%;
-	height: 100%;
-
+	height: 106%;
+	transform-origin: 50% 50% 50%;
 }
 
 #f2 {
@@ -165,6 +174,8 @@ background-color: rgba(0, 0, 0, 0.533);
 	display: flex;
 	flex-direction: column;
 	position: absolute;
+	overflow: hidden;
+
 }
 
 #row1,
@@ -237,13 +248,14 @@ background-color: rgba(0, 0, 0, 0.533);
 }
 
 #cube {
+
 	transform-style: preserve-3d;
 	width: 120%;
 	height: 120%;
     bottom: 0;
 	position: relative;
 	transition: all 500ms;
-	transform: rotateY(360deg);
+	transform: rotateY(0deg);
 }
 .available{
 	

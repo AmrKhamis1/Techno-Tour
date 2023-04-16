@@ -1,22 +1,39 @@
 <?php
-                 $date = $_GET['date'];
-                $start=DateTime::createFromFormat('H:i:s',$_GET['start']);
-                $end=DateTime::createFromFormat('H:i:s',$_GET['end']);
-                $sql="SELECT `room_id`,`end_date`,`start_time`,`end_time` FROM time_table ;";
-                $avalable=[];
-                $result = $connection->query($sql);
-                if ($result->num_rows > 0) {
-                while($row=$result->fetch_assoc()){
-                     
-                }
-            } 
+include "databasemysqli.php";
 
-            $check_time = DateTime::createFromFormat('H:i:s', '12:30:00');
-            
-            if ($check_time >= $start_time && $check_time <= $end_time) {
-                echo "The check time is between the start time and end time";
-            } else {
-                echo "The check time is not between the start time and end time";
+$date=$_GET['date'];
+$start=$_GET['start'];
+$end=$_GET['end'];
+list($year, $month,$day) = explode("-", $date);
+$day_num = mktime(0, 0, 0,$month ,$day,$year);
+$dayOfWeek = date('D', $day_num);
+$roomss = ["A106", "A105", "A104", "A103", "A108", "A107", "A101", "A102", "A207", "A206", "A205", "A204", "A203", "A210", "A209", "A208", "A201", "A202", "A307", "A306", "A305", "A304", "A303", "A310", "A309", "A308", "A301", "A302", "A407", "A406", "A405", "A404", "A403", "A409", "A408", "A401", "A402"];
+for($i=0;$i<37;$i++){
+$sql="SELECT * FROM rooms WHERE r_no='".$roomss[$i]."';";
+$result=mysqli_query($connection,$sql);
+$id=mysqli_fetch_array($result,MYSQLI_ASSOC);
+$sql2="SELECT * FROM time_table WHERE room_id='".$id['id']."' and weekday='$dayOfWeek';";
+$result2 = $connection->query($sql2);
+ if ($result2->num_rows > 0) {
+  $count=0;
+     while($row=$result2->fetch_assoc()){
+       if(($start >=$row['start_time']&&$start <=$row['end_time']) || ($end >=$row['start_time']&&$end <=$row['end_time']) ||($start <=$row['start_time']&&$end <=$row['end_time']) || ($end ==$row['end_time'] || $start ==$row['start_time'])){
+        $count+=1 ;
             }
-
-                ?>
+    }
+    if($count>0){
+      continue;
+    }else{
+      $ava=$roomss[$i];
+    }
+    
+}else{
+  
+  $ava=$roomss[$i];
+}
+      
+$new.= "<option value='".$ava."'>".$ava."</option>";
+    
+  }
+echo $new;
+ ?>

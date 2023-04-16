@@ -44,7 +44,7 @@
                                         $book[$i]="rgb(230,0, 0)";
                                       }
                                     for($j=$i;$j<9;$j++){
-                                    if($row['end_time']==$duration[$j]){
+                                    if($row['end_time']==$duration[$j] && $j!=$i){
                                       $sub_in_day[$i]=$row['sub_name']; 
                                       $sub_in_day[$i+1]=$row['sub_name'];   
                                       $sub_in_day[$j]=$row['sub_name'];
@@ -95,6 +95,7 @@
                     ?>
                 </table>
             </div>
+            
             <hr>
 <?php
                      include "databasemysqli.php";
@@ -129,15 +130,20 @@
               echo "
               <div class='button'>
               <form action=''>
-                  <label>Report for : </label>
-                <select name='department'>
-                  <option value='1'>Not Enough Chairs</option>
-                  <option value='2'>Pc is not working</option>
-                  <option value='3'>projector down</option>
-                  <option value='4'>All of the above</option>
-                  <option value='5'>Something else</option>
+                  <label for='department'>Report for : </label>
+                  <select id='department' onchange='reports();' name='department'>
+                  <option value='1' selected>Pc is not working</option>
+                  <option value='2'>projector down</option>
+                  <option value='3'>All of the above</option>
+                  <option value='4'>Something else</option>
             </select>
-               <button type='submit'>Send</button>
+            <div id='report_det'>
+            <script></script>
+            <lable for='number_of' id='lable_number'>Number Of PCs : </lable>
+            <input type='number' name='number_of' id='number_of' value='1' min='1'>
+            <input type='text' name='else' id='else' placeholder='type your report'>
+            </div>
+               <button id='report_button' name='report_done' type='submit'>Send</button>
               </form>
           </div>
               ";
@@ -147,5 +153,10 @@
             }
             }
             ?>
+      <div class='reports'>
+        
+      </div>
+      <script>
 
+      </script>
         </div>

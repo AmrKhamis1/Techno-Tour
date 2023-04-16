@@ -26,10 +26,12 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>Rooms</title>
+      <script src="JS/rooms.js"></script>
+
    </head>
-   <body background="techno tour website design pro\NCT building4.png">    
+   <body>    
    <div id='add-event'>
-       <div id='exit' onclick='show();'>×</div>
+       <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
    </div>
 
@@ -156,5 +158,7 @@ if(isset($_SESSION["id"])){
         </body>
         <script src="JS/home js.js"></script>
         <script src="JS/header.js"></script>
-        <script src="JS/rooms.js"></script>
+        <style id='animation'>
+         
+        </style>
         </html>
