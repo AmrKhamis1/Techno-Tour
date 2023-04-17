@@ -46,23 +46,6 @@ function scrollup() {
    window.scrollTo(0, 0);
 }
 
-let p = 360;
-let rotate = 360;
-function next() {
-    if(p==90){
-      p=450
-    }
-    p -= 90;
-    cube.style.transform = "rotateY("+p+"deg)";
-}
-
-function prev() {
-    if(p==360){
-        p=0
-      }
-    p += 90;
-    cube.style.transform = "rotateY("+p+"deg)";
-}
 
 /********************  floors fun  *********************************** */
 function floor1() {

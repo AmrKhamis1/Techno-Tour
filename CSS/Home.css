@@ -37,7 +37,6 @@ body{
     scroll-behavior: smooth;
     background-color:#040027;
     background-image: linear-gradient(#edeefa,#040027);
-    background: linear-gradient(180deg, #edeefa 0%,#040027 50%);
     background-attachment: fixed;
     width: fit-content;
     height: fit-content;

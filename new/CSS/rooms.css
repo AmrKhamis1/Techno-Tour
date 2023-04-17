@@ -37,10 +37,9 @@
 body{
     scroll-behavior: smooth;
 	background-size: 0%;
-	background-image: url('http://localhost//test/Techno-Tour-main/new/techno tour website design pro/NCT building2.png');
+	background-image:url('../techno tour website design pro/NCT building3.png');
 	background-position: top;
     background-attachment: fixed;
-	
 	background-repeat: no-repeat;
 	background-color: #e3e3ff;
     width: fit-content;
@@ -52,6 +51,15 @@ body{
     flex-direction: column;
     overflow: hidden;
   }
+  @keyframes  ani_thebody {
+	 0% {background-size: 123%;}
+	 70% {background-size: 123%;}
+	 100% {background-size: 250%;}
+	}
+  body{
+	animation:ani_thebody 3000ms ;
+	background-size: 250%;
+}
   #add-event{
     z-index: 2;
     display:none;
@@ -93,6 +101,11 @@ background-color: rgba(0, 0, 0, 0.533);
 	justify-content: center;
 	align-items: center;
   }
+@keyframes  ani_thebuttons {
+	0%{height: 0px;}
+	40% {height: 0px;}
+	70% {height: 40vh;}
+   }
   #f-btns {
 	position: fixed;
 	right: 0;
@@ -100,8 +113,9 @@ background-color: rgba(0, 0, 0, 0.533);
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: space-evenly;
-
-}
+	overflow: hidden;
+    animation: ani_thebuttons 4000ms ;
+}  
 
 .fbtn {
 	opacity: 1;
@@ -121,19 +135,25 @@ background-color: rgba(0, 0, 0, 0.533);
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-right: 0;
+	
 }
+@keyframes  ani_therooms {
+	0%{margin-top: -10vh; transform: scale(0);}
+	70% {margin-top: -10vh; transform: scale(0);}
+	100% {margin-top: 35vh;transform: scale(1);}
+   }
+
   #cont-home {
-	
+	margin: 0;
     display: block;
-	width: 0vw;
-	height: 0vh;
 	margin-top: 35vh;
-	
+	height:90vh;
+	width:100vw;
+	animation: ani_therooms 3000ms;
 }
 
 .container {
 	position: fixed;
-	
 	margin-left: 10vw;
 	width: 990px;
 	height: 60%;
@@ -145,21 +165,20 @@ background-color: rgba(0, 0, 0, 0.533);
 .face {
 	position: absolute;
 	width: 100%;
-	height: 106%;
-	transform-origin: 50% 50% 50%;
+	height: 100%;
 }
 
 #f2 {
-	transform: rotateX(90deg) translateZ(243px) translateY(20px);
+	transform: rotateX(90deg) translateZ(242px);
 }
 #f4 {
-	transform:rotateX(270deg) translateZ(242px)  translateY(-20px);
+	transform: rotateX(-90deg) translateZ(242px);
 }
 #f1 {
-	transform: rotateX(0deg) translateZ(263px);
+	transform: rotateX(0deg) translateZ(242px);
 }
 #f3 {	
-	transform: rotateZ(0deg)  rotateX(180deg) translateZ(224px);
+	transform: rotateY(180deg) translateZ(242px) rotateZ(180deg);
 }
 
 #f1,
@@ -174,7 +193,7 @@ background-color: rgba(0, 0, 0, 0.533);
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	overflow: hidden;
+	backface-visibility: hidden;
 
 }
 
@@ -187,8 +206,7 @@ background-color: rgba(0, 0, 0, 0.533);
 }
 
 .rooms {
-	border:2px solid #0000;
-	background-color: #e0ca00;
+	border:2px solid #040027;
 	border-radius:20px;
 	position: relative;
 	color: white;
@@ -213,13 +231,7 @@ background-color: rgba(0, 0, 0, 0.533);
 }
 
 .rooms:hover {
-	border-radius:20px;
-    animation: border;
-	animation-timing-function: linear;
-	animation-duration: 2000ms;
-	animation-iteration-count: infinite;
-	box-shadow:  rgba(255, 255, 255,0.6)  0 0 0px 2px;
-
+	border-color: rgba(255, 255, 255,0.6);
 }
 .about{
 	color: rgb(57, 57, 57) ;
@@ -246,16 +258,20 @@ background-color: rgba(0, 0, 0, 0.533);
 .book_button:hover{
 	background-color: aliceblue;color: rgb(57, 57, 57);
 }
-
+@keyframes  ani_thecube {
+	0%{transform: rotateX(1000deg);}
+	40%{transform: rotateX(1000deg);}
+	100% {transform: rotateX(0deg);}
+   }
 #cube {
-
 	transform-style: preserve-3d;
 	width: 120%;
 	height: 120%;
     bottom: 0;
 	position: relative;
 	transition: all 500ms;
-	transform: rotateY(0deg);
+	transform: rotateX(360deg);
+	animation: ani_thecube 3000ms;
 }
 .available{
 	

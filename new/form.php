@@ -1,7 +1,7 @@
 <?php
  $not_succ=null;
  include_once "validation.php";
- include_once "login.php";
+ include_once "form/login.php";
  ?>
 <html lang="en">
 <head>
@@ -26,6 +26,7 @@
         <input id="login-password" name="login-password" type="password" class="input-text input-text1" required />
         <label for="remember" style='font-size:10px;'> Remember Me</label>
         <input type="checkbox" name="remember" />
+        <a  href='forget.php'>Forget Password ?</a>
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
         
@@ -77,6 +78,5 @@
             <button class="buttons2" type="button" onclick="login();" name="login-button">Login</button>
         </div>
         </form>
-        <img id="smoke" src="techno tour website design pro/smoke04.gif" alt="">
 </body>
 </html> 

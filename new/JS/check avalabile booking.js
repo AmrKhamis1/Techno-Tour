@@ -10,7 +10,7 @@ function available(date,start,end) {
         x.innerHTML = this.responseText;
       }
     }
-    xhr.open("GET", "check avalabile booking.php?date="+date+"&start="+start+"&end="+end, true);
+    xhr.open("GET", "booking/check avalabile booking.php?date="+date+"&start="+start+"&end="+end, true);
     xhr.send();
   }
 } 

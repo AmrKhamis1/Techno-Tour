@@ -1,5 +1,5 @@
 <?php
-include_once "databasemysqli.php";
+include_once "database/databasemysqli.php";
 //initialize all the variables in this code
 $fname=null;
 $lname=null;
@@ -86,14 +86,13 @@ else if ($password != $vpassword)
 //if none of the above is empty then it will insert the user data into the members table and display the message
 if($fl==1 && $em==1 && $ps==1 && $vps==1)
 {
-$succ="Done now you are a member of TechnoTour!";
-$insert=$connection->prepare("INSERT INTO members(fname,lname,email,password,position)
-VALUES (?,?,?,?,?)");
-$insert->bind_param("sssss",$fname,$lname,$email,$password_encrypt,$position);
-$insert->execute();
-}
+$verification_code = rand(100000, 999999);
+$v_encrypt=password_hash($verification_code, PASSWORD_DEFAULT);
+include_once 'form/send email.php';
+header("Location:form/verification.php?fname=".$fname."&email=".$email."&lname=".$lname."&password=".$password_encrypt."&position=".$position."&v=".$v_encrypt);
 if($fl==0 || $em==0 || $ps==0 || $vps==0){
     $not_succ="signup();";
+}
 }
 }
 ?>

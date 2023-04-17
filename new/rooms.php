@@ -1,6 +1,7 @@
 <?php 
-include_once "databasemysqli.php";
-include 'login.php';
+
+include_once "database/databasemysqli.php";
+include 'form/login.php';
 session_start();
 if(isset($_SESSION["id"])){
    $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
@@ -26,10 +27,8 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>Rooms</title>
-      <script src="JS/rooms.js"></script>
-
    </head>
-   <body>    
+   <body class='body'>    
    <div id='add-event'>
        <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
@@ -156,6 +155,7 @@ if(isset($_SESSION["id"])){
          </div>
          </div>
         </body>
+        <script src="JS/rooms.js"></script>
         <script src="JS/home js.js"></script>
         <script src="JS/header.js"></script>
         <style id='animation'>

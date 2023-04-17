@@ -1,7 +1,7 @@
 <?php 
-include_once "login.php";
+include "form/login.php";
 function getuser($user){
-   include "databasemysqli.php";
+   include "database/databasemysqli.php";
    $sql="SELECT*FROM members WHERE id={$user}";
    $result=mysqli_query($connection,$sql);
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);

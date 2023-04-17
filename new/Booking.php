@@ -1,8 +1,8 @@
 <?php 
 
-include "databasemysqli.php";  
+include "database/databasemysqli.php";  
 session_start();
-include_once "validationBooking.php";
+include_once "booking/validationBooking.php";
    if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
     $_SESSION["id"]=$_COOKIE['user'];
     $sql="SELECT*FROM members WHERE id={$_COOKIE['user']}";
