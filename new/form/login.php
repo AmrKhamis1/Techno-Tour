@@ -38,11 +38,12 @@ else{
 if(isset($_POST['logout']))
 {
     $cookie_name ='user';
+
     setcookie( $cookie_name,NULL, time() - (86400 * 30),"/");
     session_start();
     session_unset();
     session_destroy();
-    
+    header("Location:../index.php"); 
 }
 
 ?>

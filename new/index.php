@@ -1,5 +1,5 @@
 <?php 
-include "form/login.php";
+
 function getuser($user){
    include "database/databasemysqli.php";
    $sql="SELECT*FROM members WHERE id={$user}";
@@ -75,10 +75,8 @@ function getuser($user){
           ?>
          </a><img class="login-logo-img" onclick="logout_show();" src="techno tour website design pro\login.png" alt=".."></div>
          <?php if(isset($getuser)){echo "
-         <form method='post' id='out_form'>            
-
+         <form method='post' action='form/login.php' id='out_form'>            
             <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
-
             </form>
             ";} ?>
       </header>
