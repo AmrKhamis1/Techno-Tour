@@ -1,9 +1,0 @@
-
-CREATE TABLE `mempers` (
-  `id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `fname` varchar(25) NOT NULL,
-  `lname` varchar(25) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `password` varchar(200) NOT NULL,
-  `position` varchar(25) NOT NULL
-);

@@ -15,7 +15,7 @@
     background-color:#edeefa;
     top: 0;
     box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
-    z-index:1 ;
+    z-index:2 ;
   }  
   ul,li{
     justify-content: space-between;

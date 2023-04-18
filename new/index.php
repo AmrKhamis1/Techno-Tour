@@ -31,12 +31,14 @@ function getuser($user){
       <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon">  
       <link rel="stylesheet" href="CSS\Home.css">
       <link rel="stylesheet" href="CSS\header.css">
+      <link rel="stylesheet" href="CSS\index.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>TecnoTour</title>
    </head>
-   <body>      
+   <body>  
+   <div id="particles-js"></div>    
       <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
@@ -80,28 +82,19 @@ function getuser($user){
             </form>
             ";} ?>
       </header>
+      <div id='news'><a>news asdas asdas asdas</a> <a> news 2 asdasd asdasd asdas</a></div>
       <div id="bage1" >
 
       <main style="display:flex;flex-direction:column;">
          <div class="hero">
             
-               <img src="techno tour website design pro/background light theme3.png" class="bg-img" style="size:cover;">
-               <div id="hero-text2">
-                  <div class="hero-text">
-                     <div id="btn">
-                         <div id="btn1">
-
-                         </div>
-                      </div>
-                  </div>
-               </div>
-                     <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
+          
+         <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
                      THE BEST BOOKING GUIDE
                      FOR DOCTORS,ASSISTANTS,STUDENTS <br>
-                     AND EXTERNAL USERS IN NCTU.<br>
-                     <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
-                     “Life is my university, and I hope to graduate <br> from it with some distinction.” ~ Louisa May Alcott
-                     </span>                         
+                   AND EXTERNAL USERS IN NCTU.
+                     <br>
+                     <img src="techno tour website design pro/NCT logo.png" width="500px">
                      <br>
                      <?php
                      if(isset($getuser)){
@@ -111,31 +104,91 @@ function getuser($user){
                         }
                          ?>
                      </font>
-                     
-
+                     <section class="scrollable-section">
+  <div class="photo-grid">
+    <div class="photo-container">
+      <img src="https://via.placeholder.com/300" alt="Photo 1" class="photo">
+      <div class="overlay">
+        <p>Text Overlay for Photo 1</p>
+      </div>
+      <div class="read-here">
+        <a href="#">Read Here</a>
+      </div>
+    </div>
+    <div class="photo-container">
+      <img src="https://via.placeholder.com/300" alt="Photo 2" class="photo">
+      <div class="overlay">
+        <p>Text Overlay for Photo 2</p>
+      </div>
+      <div class="read-here">
+        <a href="#">Read Here</a>
+      </div>
+    </div>
+    <div class="photo-container">
+      <img src="https://via.placeholder.com/300" alt="Photo 3" class="photo">
+      <div class="overlay">
+        <p>Text Overlay for Photo 3</p>
+      </div>
+      <div class="read-here">
+        <a href="#">Read Here</a>
+      </div>
+    </div>
+    <div class="photo-container">
+      <img src="https://via.placeholder.com/300" alt="Photo 4" class="photo">
+      <div class="overlay">
+        <p>Text Overlay for Photo 4</p>
+      </div>
+      <div class="read-here">
+        <a href="#">Read Here</a>
+      </div>
+    </div>
+    <div class="photo-container">
+      <img src="https://via.placeholder.com/300" alt="Photo 5" class="photo">
+      <div class="overlay">
+        <p>Text Overlay for Photo 5</p>
+      </div>
+      <div class="read-here">
+        <a href="#">Read Here</a>
+      </div>
+    </div>
+  </div>
+</section>
          </div> 
-         <br><br>           
-         <div id="hero-section">
-         <img src="techno tour website design pro/labs/networking lab.jpg" class="img-gal" width="280px">
-         <img src="techno tour website design pro/labs/IT lab.jpg" class="img-gal" width="280px">
-         <img src="techno tour website design pro/labs/electric lab.jpg" class="img-gal" width="280px">
-         <img src="techno tour website design pro/labs/physics lab2.jpg" class="img-gal" width="280px">
-         <img src="techno tour website design pro/labs/physics lab1.jpg" class="img-gal" width="280px">
-         </div>
+         
+         <br><br> 
       </main>
    </div>
-   <br><br>
+   <br><br>                     
+                     <div id='about-det'>
+                           <div id='about-ex'>x</div>
+                            <div id='detailes'><img style='width:100vw;'  src='techno tour website design pro/details.png'></div>
+                           <div id='about-det-1' class='about-dets'>
+                              <font class='building_det'>Building (A)</font>
+                              <font class='building_det'>Fourth Floor</font>
+                              <font class='building_det'>Second Floor</font>
+                              <font class='building_det'>Staff 99+</font>
+                              <font class='building_det'>Programs 6</font>
+                           </div>
+                           <div id='about-det-2' class='about-dets'>
+                           <font class='building_det2'>Meeting Floor</font>
+                              <font class='building_det2'>Third Floor</font>
+                              <font class='building_det2'>First Floor</font>
+                           </div>
+                     </div>  
    <div id="bage2">
    <br>
-   <div id="particles-js"></div>
-                        <img src="techno tour website design pro/NCT logo.png" width="500px"> 
+         
+
+                     <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
+                     <span style='font-weight: 900;'>“</span> Life is my university, and I hope to graduate from it with some distinction. <span style='font-weight: 900;'>”</span> <br><center>~ Louisa May Alcott</center>
+                     </span>   
                         <br><br><br>
+
                     <div id="building-div"> <img id="building" src="techno tour website design pro/NCT building.png"  alt="uni-photo">  </div> 
-      <p id="about-uni">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut<br>
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br>
-           nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis<br>
-             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p id="about-uni">Technological universities are an extension of the path of technical education students,which works to <br>
+          provide them with practical and scientific skills to keep pace with the requirements of <br>
+           the local and international labor market, through the technological programs that operate <br>
+            in the faculties of the university.</p>
       <div id="u-contact"> 
          <a href="http://nctu.edu.eg" style="font-family: Impact;text-decoration: none;color:white;">NCTU</a>
        <img onclick="window.location.assign('https://www.facebook.com/nctu.edu.eg/');" src="techno tour website design pro/facebook.png" style="cursor: pointer;" width="30px"> 
@@ -145,6 +198,7 @@ function getuser($user){
    </body>
    <script src="JS/home js.js"></script>
    <script src="JS/header.js"></script>
+   <script src="JS/index.js"></script>
    <script type="text/javascript" src="JS/particles.js"></script>
     <script type="text/javascript" src="JS/app.js"></script>
 </html>
