@@ -1,7 +1,11 @@
 <html>
+    <head>
+    <link rel="stylesheet" href="../CSS/forget pass.css"> 
+    <title>new password</title>
+    </head>
     <body>
-        <form action="" method="post">
-            <label for="">New password</label>
+        <form id='form1' action="" method="post">
+            <label for="">Add Your New password</label><br>
             <input type="password" name="new" required><br>
             <button type="submit" name="done">Change</button>
 </form>
@@ -9,6 +13,7 @@
     <?php
     include "../database/databasemysqli.php";
     include "change.php";
+    
     if(isset($_POST['done']))
     {
         session_start();

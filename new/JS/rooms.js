@@ -88,18 +88,19 @@ function all(){
   available_colors();
   available();
 }
+
+ 
 window.onload=function(){
   book_out_dated();
   setInterval(all,60000);
   all();
+setTimeout(()=>{
+document.getElementById('header-style').style.display='flex';
+document.getElementsByClassName('body')[0].style.opacity='1';
 
-  const box = document.querySelector('.body');
+},1000);
   
-  box.classList.add('animate');
-  box.addEventListener('load',()=>{
-    box.classList.add('animate');
-  });
-
+  floor1();
 }  
 
 
@@ -117,5 +118,42 @@ function hide_book(x){
   }
 } 
 
+let cube = document.getElementById("cube");
+let f_btn1 = document.getElementById("f-btn1");
+let f_btn2 = document.getElementById("f-btn2");
+let f_btn3 = document.getElementById("f-btn3");
+let f_btn4 = document.getElementById("f-btn4");
 
+function floor1() {
+  cube.style.transform = "rotateX(360deg)";
+  f_btn1.style.opacity = "100%";
+  f_btn2.style.opacity = "50%";
+  f_btn3.style.opacity = "50%";
+  f_btn4.style.opacity = "50%";
+
+}
+
+function floor2() {
+  cube.style.transform = "rotateX(270deg)";
+  f_btn1.style.opacity = "50%";
+  f_btn2.style.opacity = "100%";
+  f_btn3.style.opacity = "50%";
+  f_btn4.style.opacity = "50%";
+}
+
+function floor3() {
+  cube.style.transform = "rotateX(180deg)";
+  f_btn1.style.opacity = "50%";
+  f_btn2.style.opacity = "50%";
+  f_btn3.style.opacity = "100%";
+  f_btn4.style.opacity = "50%";
+}
+
+function floor4() {
+  cube.style.transform = "rotateX(90deg)";
+  f_btn1.style.opacity = "50%";
+  f_btn2.style.opacity = "50%";
+  f_btn3.style.opacity = "50%";
+  f_btn4.style.opacity = "100%";
+}
 

@@ -26,7 +26,7 @@
         <input id="login-password" name="login-password" type="password" class="input-text input-text1" required />
         <label for="remember" style='font-size:10px;'> Remember Me</label>
         <input type="checkbox" name="remember" />
-        <a  href='forget_password/forget.php'>Forget Password ?</a>
+        <a id='forget'  href='forget_password/forget.php'>Forget Password ?</a>
         <button class="buttons1" type="submit" name="login-submit">Done</button>
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
         

@@ -1,30 +1,12 @@
-let f1 = document.getElementById("f1");
-let f2 = document.getElementById("f2");
-let f3 = document.getElementById("f3");
-let f4 = document.getElementById("f4");
-let f_btn1 = document.getElementById("f-btn1");
-let f_btn2 = document.getElementById("f-btn2");
-let f_btn3 = document.getElementById("f-btn3");
-let f_btn4 = document.getElementById("f-btn4");
+
 let user = document.getElementById("login-logo");
 let up = document.getElementById("scrollup");
 let close = document.getElementById("close-det");
 let det = document.getElementById("det");
-let cube = document.getElementById("cube");
 let bage1 = document.getElementById("bage1");
 let mainnct=document.getElementById("main-nct");
 let bage2 = document.getElementById("bage2");
-function home(){
-   bage1.style.display="block";
-   bage2.style.display="none";
 
-}
-
-function main(){
-   bage1.style.display="none";
-   bage2.style.display="block";
-
-}
 function uni(){
    window.location.assign("index.html");
 }
@@ -45,39 +27,3 @@ function scrooling() {
 function scrollup() {
    window.scrollTo(0, 0);
 }
-
-
-/********************  floors fun  *********************************** */
-function floor1() {
-   cube.style.transform = "rotateX(360deg)";
-   f_btn1.style.opacity = "100%";
-   f_btn2.style.opacity = "50%";
-   f_btn3.style.opacity = "50%";
-   f_btn4.style.opacity = "50%";
-
-}
-
-function floor2() {
-   cube.style.transform = "rotateX(270deg)";
-   f_btn1.style.opacity = "50%";
-   f_btn2.style.opacity = "100%";
-   f_btn3.style.opacity = "50%";
-   f_btn4.style.opacity = "50%";
-}
-
-function floor3() {
-   cube.style.transform = "rotateX(180deg)";
-   f_btn1.style.opacity = "50%";
-   f_btn2.style.opacity = "50%";
-   f_btn3.style.opacity = "100%";
-   f_btn4.style.opacity = "50%";
-}
-
-function floor4() {
-   cube.style.transform = "rotateX(90deg)";
-   f_btn1.style.opacity = "50%";
-   f_btn2.style.opacity = "50%";
-   f_btn3.style.opacity = "50%";
-   f_btn4.style.opacity = "100%";
-}
-/**************************************************** */

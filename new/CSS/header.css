@@ -9,7 +9,7 @@
     width: 100vw;
     height:10vh;
     align-items: center;
-    display:flex;
+    display:none;
     flex-direction: row;
     position: fixed;
     background-color:#edeefa;

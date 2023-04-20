@@ -1,6 +1,14 @@
 <?php
                 
   function getCurrentIndex() {
+    $month=date('m');
+    $day=date('d');
+    $year=date("y");
+    $today = mktime(0, 0, 0,$month ,$day,$year);
+    $dayOfWeek = date('D', $today);
+    if($dayOfWeek=='Fri' || $dayOfWeek=='Sat'){
+        return 0;
+    }
     $duration_start=['09:00','09:50','10:50','11:40','01:00','01:50','02:50','03:40','04:30'];
     $duration_end=['09:50','10:40','11:40','12:30','01:50','02:40','03:40','04:30','05:20'];
     $duration_out=['10:40','10:50','12:30','01:00','02:40','02:50'];
@@ -32,12 +40,14 @@ for($i=0;$i<5;$i+=2){
                 return $i+1;   
                         }            
                     }
+
  return 0;          
  }
 
 function rooms($RoomNum) {
 include "../database/databasemysqli.php";
 $duration_now =(int) getCurrentIndex(); 
+
 if($duration_now==0){
 $available="Closed Now";
 }else if($duration_now==10){
@@ -50,6 +60,7 @@ $day=date('d');
 $year=date("y");
 $today = mktime(0, 0, 0,$month ,$day,$year);
 $dayOfWeek = date('D', $today);
+
 $sql="SELECT id FROM rooms WHERE r_no='$RoomNum';";
 $result=mysqli_query($connection,$sql);
 $id=mysqli_fetch_array($result,MYSQLI_ASSOC);

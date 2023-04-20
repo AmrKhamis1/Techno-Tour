@@ -27,14 +27,15 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>Rooms</title>
-   </head>
-   <body class='body'>    
+   </head>  
+
+   <body class='body'>   
+ 
    <div id='add-event'>
        <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
-   </div>
+   </div> 
 
- <!-- php code for all rooms -->
 
    <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
@@ -65,7 +66,7 @@ if(isset($_SESSION["id"])){
          <?php if(isset($getuser)){echo "
          <form method='post' id='out_form'>            
 
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout2.png' id='logout' title='log out' width='23px'></button>
 
             </form>
             ";} ?>
@@ -77,6 +78,14 @@ if(isset($_SESSION["id"])){
          <div id="f-btn3" onclick="floor3();" class="fbtn">Floor 3</div>
          <div id="f-btn4" onclick="floor4();" class="fbtn">Floor 4</div>
       </div>
+      <div id='head' ><div  id='head-info' style='text-align:center;'> Click On Rooms For More <br>Information</div> 
+      <div  id='head-info'>Rooms For Building (A)</div>
+      <div  id='color-map'>
+         <div style='display:inline-block;background-color:rgb(230, 0, 0);width:10px;height: 10px;border-radius:50%; '></div> Unbookable Duration<br>
+         <div style='display:inline-block;background-color:rgb(0, 230, 0);width:10px;height: 10px;border-radius:50%; '></div> Avalable Duration<br>
+        <div style='display:inline-block;background-color:#e0ca00;width:10px;height: 10px;border-radius:50%; '></div> A Booked Duration <br>
+        <div style='display:inline-block;background-color:#363642;width:10px;height: 10px;border-radius:50%; '></div> A Cloesd UNI Duration
+      </div></div>
 <div id="cont-home">
          <div class="container">
             <div id="cube">
@@ -154,11 +163,8 @@ if(isset($_SESSION["id"])){
             </div>
          </div>
          </div>
+
         </body>
         <script src="JS/rooms.js"></script>
-        <script src="JS/home js.js"></script>
-        <script src="JS/header.js"></script>
-        <style id='animation'>
-         
-        </style>
+      <script src="JS/header.js"></script>
         </html>

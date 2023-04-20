@@ -53,7 +53,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Reset password';
-    $mail->Body    = 'To reset your password click <a href="http://localhost/technotour/Techno-Tour/new/forget_password/new pass.php?code='.$rand.'">here
+    $mail->Body    = 'To reset your password click <a href="http://localhost/test/Techno-Tour-main/new/forget_password/new pass.php?code='.$rand.'">here
     </a>';
     $sql="SELECT email FROM members WHERE email='$email'";
     $check=mysqli_query($connection,$sql);
@@ -62,10 +62,10 @@ try {
         $st="UPDATE members SET code='$rand' WHERE email='$email'";
         $ex=mysqli_query($connection,$st);
       $mail->send();
-      echo 'Message has been sent, Check your email';
+      $sucss= 'Message has been sent, Check your email';
 
     }
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    
 }
 ?>

@@ -44,7 +44,7 @@ body{
 	background-color: #e3e3ff;
     width: fit-content;
     height: fit-content;
-    display:inline;
+    display:block;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -57,13 +57,17 @@ body{
 	 100% {background-size: 250%;}
 	}
   body{
-	animation:ani_thebody 3000ms ;
+	opacity: 0;
+	display: block;
+	animation:ani_thebody 2000ms ;
 	background-size: 250%;
+	transition: all 1000ms;
 }
+
   #add-event{
-    z-index: 2;
     display:none;
-    position: fixed;
+	position: fixed;
+    z-index: 3;
     margin-bottom:31%;
     background-color: rgba(0, 0, 0, 0.353);
     width: 100vw;
@@ -114,12 +118,12 @@ background-color: rgba(0, 0, 0, 0.533);
 	flex-direction: column-reverse;
 	justify-content: space-evenly;
 	overflow: hidden;
-    animation: ani_thebuttons 4000ms ;
+    animation: ani_thebuttons 3000ms ;
 }  
 
 .fbtn {
 	opacity: 1;
-	font-family: Source Sans Pro;
+	font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -135,11 +139,33 @@ background-color: rgba(0, 0, 0, 0.533);
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-right: 0;
-	
+	color: #363642;
 }
+@keyframes  ani_thehead {
+	0%{opacity: 0;}
+	70% {opacity: 0;}
+	100% {opacity: 1;}
+   }
+#head{
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	margin-top:12vh ;
+	width: 80vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	animation: ani_thehead 2000ms;
+
+}
+
+
 @keyframes  ani_therooms {
 	0%{margin-top: -10vh; transform: scale(0);}
-	70% {margin-top: -10vh; transform: scale(0);}
+	80% {margin-top: -10vh; transform: scale(0);}
 	100% {margin-top: 35vh;transform: scale(1);}
    }
 
@@ -149,7 +175,7 @@ background-color: rgba(0, 0, 0, 0.533);
 	margin-top: 35vh;
 	height:90vh;
 	width:100vw;
-	animation: ani_therooms 3000ms;
+	animation: ani_therooms 2400ms;
 }
 
 .container {
@@ -271,7 +297,7 @@ background-color: rgba(0, 0, 0, 0.533);
 	position: relative;
 	transition: all 500ms;
 	transform: rotateX(360deg);
-	animation: ani_thecube 3000ms;
+	animation: ani_thecube 2400ms;
 }
 .available{
 	

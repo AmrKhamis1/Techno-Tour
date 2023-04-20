@@ -28,6 +28,9 @@ $cookie_value = $id;
     $_SESSION["id"]=$id;
     header("Location:./index.php"); 
      
+}else{
+    $ema_pass="invalid email or password";
+    $not_succ="login();";
 }
 }
 else{

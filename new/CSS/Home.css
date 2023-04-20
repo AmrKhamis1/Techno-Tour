@@ -100,7 +100,9 @@ body{
   font-size: medium;
   letter-spacing: 1px;
   width: 240px;
-  border: 0;
+  border:2px;
+  border-style: solid;
+  border-color: #000635;
   border-radius: 5px;
   color: #000635;
   background-color: #ffffff;
@@ -109,6 +111,8 @@ body{
   cursor: pointer;
 }
 #NCT-button:hover{
+  color: #ffffff;
+  background-color: #000635;
   box-shadow: rgb(0 0 0 / 20%) 6px 10px 20px;
 }
 

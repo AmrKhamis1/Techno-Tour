@@ -32,12 +32,16 @@ function getuser($user){
       <link rel="stylesheet" href="CSS\Home.css">
       <link rel="stylesheet" href="CSS\header.css">
       <link rel="stylesheet" href="CSS\index.css">
+
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <title>TecnoTour</title>
    </head>
    <body>  
+   <div id="loading-screen">
+  <img id='logo-intro' src="techno tour website design pro\inner logo.png" width='70px' alt="" srcset="">
+      </div> 
    <div id="particles-js"></div>    
       <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
@@ -80,19 +84,13 @@ function getuser($user){
             </form>
             ";} ?>
       </header>
-      <div id='news'><a>news asdas asdas asdas</a> <a> news 2 asdasd asdasd asdas</a></div>
       <div id="bage1" >
 
       <main style="display:flex;flex-direction:column;">
          <div class="hero">
-            
-          
+          <img src="techno tour website design pro/NCT logo.png" width="500px">
          <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
-                     THE BEST BOOKING GUIDE
-                     FOR DOCTORS,ASSISTANTS,STUDENTS <br>
-                   AND EXTERNAL USERS IN NCTU.
-                     <br>
-                     <img src="techno tour website design pro/NCT logo.png" width="500px">
+                     THE BEST BOOKING GUIDE <br>FOR DOCTORS,ASSISTANTS,STUDENTS AND EXTERNAL USERS IN NCTU.
                      <br>
                      <?php
                      if(isset($getuser)){
@@ -195,8 +193,8 @@ function getuser($user){
    <div id="scrollup" onclick="scrollup();">Up</div>
    </body>
    <script src="JS/home js.js"></script>
-   <script src="JS/header.js"></script>
-   <script src="JS/index.js"></script>
+      <script src="JS/header.js"></script>
+       <script src="JS/index.js"></script>
    <script type="text/javascript" src="JS/particles.js"></script>
     <script type="text/javascript" src="JS/app.js"></script>
 </html>
