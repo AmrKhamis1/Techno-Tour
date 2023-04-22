@@ -38,11 +38,14 @@ background-color: #edeefa;
 	margin-right: 3%;
 
 }
-
+#bage1{
+  height: 90vh;
+  width: 100vw;
+  margin-top: 10vh;
+}
 body{
     scroll-behavior: smooth;
     background-color:#040027;
-    background-attachment: fixed;
     width: fit-content;
     height: fit-content;
     display:inline;
@@ -138,7 +141,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-height: 110vh;
+height: 150vh;
 width: 100%;
 }
 #particles-js{
@@ -146,7 +149,7 @@ position: absolute;
 mix-blend-mode:color-dodge;
 z-index: -1;
 width: 100vw;
-height: 210vh;
+height: 271vh;
 }
 .hero-header{
     text-transform: uppercase;
@@ -164,17 +167,17 @@ height: 210vh;
   display: flex;
 align-items: center;
 justify-content: center;
-  height: 400px;
+  height: 600px;
   width:1300px;
   
 }
 #building{
- max-width:900px;
+width:900px;
  transition: all 500ms;
  cursor: pointer;
 }
 #building:hover{
-  max-width:1000px;
+width:950px;
 }
 #u-contact{
   display: flex;

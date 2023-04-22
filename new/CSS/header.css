@@ -23,7 +23,7 @@
     margin-left: 5%;    
   }
   ul{
-    width: 90%;
+    width: 40%;
     height: fit-content;
   }
   .links{
@@ -68,16 +68,17 @@
     cursor: pointer;
     color: #000635;
     border: none;
-    margin-right: 5vw;
     border-radius: 100%;
-    width: 20px;
+    width: fit-content;
     height: 20px;
+    margin-right: 2%;
     justify-content: baseline;
     display: flex;
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
     font-weight: 700;
     font-size: larger;
+    align-items: center;
   }
   #login-logo{
     color: #000635;    
@@ -86,19 +87,18 @@
     cursor: pointer;
   }
   .login-logo-img{
-    color: #000635;
-    width:20px ;
+    width:30px ;
     display: flex;
   }
   .search-logo{
     margin: 0;
-    margin-right: 2%;
+    margin-right: 0;
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 700;
     color: #000635;
     letter-spacing: 1px;
     font-size: 1.2vw;
-    width: 35vw;
+    width: fit-content;
     margin-top: 1vh;  
 }
   .search{
@@ -114,25 +114,24 @@
     color: rgb(4, 0, 27);
     margin-left: 5vw;
     margin-right: 0px ;
-    font-size: 0.8vmax;    
+    font-size: 0.8vmax;   
+    outline: 0;
+     
   }
   .search:focus,.search:hover{
-    width: 10vw;
-    border: 0;
-    outline: 0;    
-    border-bottom:1px ;
-     border-style:groove;
-     border-color: rgb(4, 0, 27);
-     padding-bottom:3px ;
-     margin: 0;
-     transform: scale(10vw,0);
+    width: 8vw;
+    margin-left: 2vw;
+    transform: scale(8vw,0);
   }
   .logo-img{
     width: 15vw;
      margin-left: 5%;
 	  cursor:pointer;
   }
-  .user-logo,.search-logo-img{
+.search-logo-img{
     width: 1vw; 
 
+  }
+  .user-logo{
+    width: fit-content; 
   }

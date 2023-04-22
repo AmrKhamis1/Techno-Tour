@@ -31,7 +31,7 @@
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
         
     </form>
-    <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
+    <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post"  enctype="multipart/form-data" novalidate>
 
              <div id="form1">
                 <h1>SignUp</h1>

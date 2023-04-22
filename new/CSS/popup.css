@@ -2,7 +2,8 @@
 .contain{
     color: black;
     background-color: white;
-    height: 90vh;
+    height: 80vh;
+    margin-bottom: 70px;
     width: 1050px;
     border-radius: 20px;
     padding: 10px;

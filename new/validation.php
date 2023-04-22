@@ -13,7 +13,7 @@ $email_error=null;
 $pass_error=null;
 $vpass_error=null;
 $succ=null;
-
+$image=null;
 //check if the user submit the form or not
 if(isset($_POST['signup-submit'])){
 $fname=$_POST['fname'];
@@ -22,6 +22,8 @@ $email=$_POST['email'];
 $password= $_POST['password'];
 $vpassword= $_POST['vpassword'];
 $position=$_POST['positions'];
+
+$image=file_get_contents($_FILES["photos"]["tmp_name"]);
 //hashing the password
 $password_encrypt=password_hash($password, PASSWORD_DEFAULT);
 //retrieving the email form database
@@ -83,13 +85,16 @@ else if ($password != $vpassword)
     $vps=1;
 }
 
+
 //if none of the above is empty then it will insert the user data into the members table and display the message
 if($fl==1 && $em==1 && $ps==1 && $vps==1)
 {
 $verification_code = rand(100000, 999999);
 $v_encrypt=password_hash($verification_code, PASSWORD_DEFAULT);
 include_once 'form/send email.php';
-header("Location:form/verification.php?fname=".$fname."&email=".$email."&lname=".$lname."&password=".$password_encrypt."&position=".$position."&v=".$v_encrypt);
+header("Location:verification.php?fname=".$fname."&email=".$email."&lname=".$lname."&password=".$password_encrypt."&position=".$position."&v=".$v_encrypt);
+$myfile = fopen("photos/".$email." photo.png", "w");
+fwrite($myfile,$image);
 if($fl==0 || $em==0 || $ps==0 || $vps==0){
     $not_succ="signup();";
 }

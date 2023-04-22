@@ -41,14 +41,20 @@ if(isset($_SESSION["id"])){
          <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
          <ul >
             <li><a href="index.php" class="links">Home</a></li>
-            <?php if(isset($getuser)){ echo "<li><a href='booking.php' class='links'>Booking</a></li>";} ?>
+            <?php if(isset($getuser)){ 
+                     if($getuser['position']!="Technical"){
+                          echo "<li><a href='booking.php' class='links'>Booking</a></li>";
+                     }
+                  }
+            ?>
             <li><a href="what's new.php" class="links">Broadcast</a></li>
             <li><a href="about us.php" class="links">About</a> </li>
          </ul>
 
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src='techno tour website design pro\search.png' alt="..">
          </div>
-         <div class="user-logo"><a <?php
+         <div class="user-logo"><a 
+         <?php
           if(isset($getuser)){
             echo "onclick='logout_show();'";
             }else{
@@ -62,12 +68,18 @@ if(isset($_SESSION["id"])){
          echo "login";
            }
           ?>
-         </a><img class="login-logo-img" onclick="logout_show();" src="techno tour website design pro\login.png" alt=".."></div>
+         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
+         <?php
+          if(isset($getuser)){
+                echo "src='photos\\".$getuser['image']."'";
+         }else{
+          echo "src='techno tour website design pro\login.png'";
+         }
+         ?> alt=".."></div></div>
+
          <?php if(isset($getuser)){echo "
-         <form method='post' id='out_form'>            
-
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout2.png' id='logout' title='log out' width='23px'></button>
-
+         <form method='post' action='form/login.php' id='out_form'>            
+            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
             </form>
             ";} ?>
       </header>

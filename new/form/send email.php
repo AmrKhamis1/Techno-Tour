@@ -8,7 +8,6 @@ require './mailer/src/SMTP.php';
 require './mailer/src/Exception.php';
 
 $mail = new PHPMailer(true);
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;  
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';

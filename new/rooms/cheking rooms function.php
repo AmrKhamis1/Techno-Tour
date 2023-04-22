@@ -31,12 +31,12 @@ for($i = 0; $i < 9; $i++){
     $end_time[$i]=($h3[$i]*60)+$m3[$i];   
 }
 for($i=0;$i<5;$i+=2){
-    if($check_time > $out_time[$i] && $check_time < $out_time[$i+1]){
+    if($check_time >= $out_time[$i] && $check_time <= $out_time[$i+1]){
        return 10;
     }
 }
  for ($i = 0; $i < 9; $i++) {    
-         if ($check_time >= $start_time[$i] && $check_time < $end_time[$i]) {
+         if ($check_time >= $start_time[$i] && $check_time <= $end_time[$i]) {
                 return $i+1;   
                         }            
                     }
@@ -71,15 +71,26 @@ if ($result->num_rows > 0) {
     while($row=$result->fetch_assoc()){
             $subject = $row['sub_name'];
             $lec = $row['user_id'];
-            $sql2="SELECT * FROM dr_ass WHERE id=$lec";
+            $sql2="SELECT * FROM members WHERE id=$lec";
             $res=mysqli_query($connection,$sql2);
             $id=mysqli_fetch_array($res,MYSQLI_ASSOC);
-            $lec=$id['name'];
+            $lec=$id['fname'];
+            
             if($row['book']==1){
-                $available = $lec . "<br><span style='font-size:14px;font-weight: 500;font-family:Cairo;border-radius: 10px;background-color:#e0ca00;width:70%;color:black;'>" . $subject . "</span>";   
+                if($id['position']=="Dr" || $id['position']=="Assisstant"){
+                    $available = $id['position']." : ".$lec . "<br><span style='font-size:14px;font-weight: 500;font-family:Cairo;border-radius: 10px;background-color:#e0ca00;width:70%;color:black;'>" . $subject . "</span>";   
+
+                }else{
+                    $available = $lec . "<br><span style='font-size:14px;font-weight: 500;font-family:Cairo;border-radius: 10px;background-color:#e0ca00;width:70%;color:black;'>" . $subject . "</span>";   
+                }
+            }else{
+                if($id['position']=="Dr" || $id['position']=="Assisstant"){
+                    $available = $id['position']." : ".$lec . "<br><span style='font-size:14px;font-weight: 500;font-family:Cairo;'>" . $subject . "</span>";   
+               
             }else{
                 $available = $lec . "<br><span style='font-size:14px;font-weight: 500;font-family:Cairo;'>" . $subject . "</span>";   
             }
+        }
             
     }
 }else{

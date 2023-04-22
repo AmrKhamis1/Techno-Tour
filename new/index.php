@@ -60,7 +60,7 @@ function getuser($user){
        
          </ul>
 
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src="techno tour website design pro\search.png" alt="..">
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src='techno tour website design pro\search.png' alt="..">
          </div>
          <div class="user-logo"><a 
          <?php
@@ -77,7 +77,15 @@ function getuser($user){
          echo "login";
            }
           ?>
-         </a><img class="login-logo-img" onclick="logout_show();" src="techno tour website design pro\login.png" alt=".."></div>
+         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
+         <?php
+          if(isset($getuser)){
+                echo "src='photos\\".$getuser['image']."'";
+         }else{
+          echo "src='techno tour website design pro\login.png'";
+         }
+         ?> alt=".."></div></div>
+
          <?php if(isset($getuser)){echo "
          <form method='post' action='form/login.php' id='out_form'>            
             <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
@@ -88,9 +96,8 @@ function getuser($user){
 
       <main style="display:flex;flex-direction:column;">
          <div class="hero">
-          <img src="techno tour website design pro/NCT logo.png" width="500px">
          <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
-                     THE BEST BOOKING GUIDE <br>FOR DOCTORS,ASSISTANTS,STUDENTS AND EXTERNAL USERS IN NCTU.
+                     THE BEST BOOKING GUIDE <br>FOR DOCTORS,ASSISTANTS,<br>STUDENTS AND EXTERNAL USERS IN NCTU.
                      <br>
                      <?php
                      if(isset($getuser)){
@@ -172,15 +179,22 @@ function getuser($user){
                            </div>
                      </div>  
    <div id="bage2">
-   <br>
-         
+    <div id='out-links'>
+      <img src="techno tour website design pro/NCT logo3.png" alt="">
+      <img src="techno tour website design pro/useful-3.png" alt="">
+      <img src="techno tour website design pro/useful-4.png" alt="">
+      <img src="techno tour website design pro/useful-2.png" alt="">
+    </div>
+    <div id="techno-tour-notify">
+      <div>In relation to the technological orientation of the world in general and <br>
+         Egypt in particular, the Techno Tour team decided to start this project to make the New Cairo University <br>
+         technological room system more easy, flexible and fast to meet the requests of visitors outside and inside the university. <br>
+           This is basically a student project, nothing more, so do not expect it to simulate reality by 100%</div> 
+       <div><img src="techno tour website design pro/techno tour pro copy.png" width='300px' alt=""></div>
 
-                     <span style="color:white;font-size:20px;font-family:Roboto,sans-serif;font-weight:600;">
-                     <span style='font-weight: 900;'>“</span> Life is my university, and I hope to graduate from it with some distinction. <span style='font-weight: 900;'>”</span> <br><center>~ Louisa May Alcott</center>
-                     </span>   
-                        <br><br><br>
-
-                    <div id="building-div"> <img id="building" src="techno tour website design pro/NCT building.png"  alt="uni-photo">  </div> 
+    </div>
+<br><br>
+                    <div id="building-div"> <img id="building" src="techno tour website design pro/NCT building.png" alt="uni-photo">  </div> 
       <p id="about-uni">Technological universities are an extension of the path of technical education students,which works to <br>
           provide them with practical and scientific skills to keep pace with the requirements of <br>
            the local and international labor market, through the technological programs that operate <br>
@@ -188,6 +202,7 @@ function getuser($user){
       <div id="u-contact"> 
          <a href="http://nctu.edu.eg" style="font-family: Impact;text-decoration: none;color:white;">NCTU</a>
        <img onclick="window.location.assign('https://www.facebook.com/nctu.edu.eg/');" src="techno tour website design pro/facebook.png" style="cursor: pointer;" width="30px"> 
+       <a href="mailto:info@nctu.edu.eg"><img src="techno tour website design pro/email.png" style="cursor: pointer;"  width="30px" alt=""></a>
       </div>
    </div>
    <div id="scrollup" onclick="scrollup();">Up</div>

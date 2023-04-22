@@ -116,6 +116,29 @@
     filter: brightness(80%);
     }  
 
+  #out-links{
+    background-color: #edeefa;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #out-links img{
+    width:150px;
+  }
+
+  #techno-tour-notify{
+    font-size: large;
+    margin-top: 10%;
+    background-color: #edeefa;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
     #about-det{
       background-color: rgba(0, 0, 0, 0.412);
