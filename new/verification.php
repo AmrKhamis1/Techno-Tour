@@ -6,10 +6,8 @@
  $password=$_GET['password'];
  $position=$_GET['position'];
  $v=$_GET['v'];
- $myfile = fopen("photo.txt", "r");
- $image=fread($myfile,filesize("photo.txt"));
 if(empty($fname) || empty($lname)||empty($email)||empty($password) || empty($v)){
-    header("Location:./index.php");
+    header("Location:index.php");
     exit;
 }
 
