@@ -82,7 +82,7 @@ function getuser($user){
           if(isset($getuser)){
                 echo "src='photos\\".$getuser['image']."'";
          }else{
-          echo "src='techno tour website design pro\login.png'";
+          echo "src='techno tour website design pro\login.png' style='width:20px;'";
          }
          ?> alt=".."></div></div>
 
