@@ -21,6 +21,7 @@ var ex = document.getElementById('about-ex');
 
 building.addEventListener('click',()=>{
 about.style.display='flex';
+window.scrollTo(0, 2500);
 });
 ex.addEventListener('click',()=>{
     about.style.display='none';

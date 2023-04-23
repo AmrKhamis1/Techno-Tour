@@ -1,0 +1,147 @@
+
+.contain{
+    color: white;
+    background-color: #313243;
+    height: 80vh;
+    margin-bottom: 70px;
+    width: 1050px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.contain .head{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+p{
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+ table{
+    border: 1px solid #0b0b0b;
+    border-spacing:0;
+    background-color: #313243;
+    border: 0px;
+    width: 100%;
+    height: fit-content;
+    margin-top: 5vh;
+} 
+td,tr{
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: 600;
+    border: 1px solid #0b0b0b;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px  #000000;
+
+}
+td{
+    height: 30px;
+    width: 100px;
+}
+tr:first-child td:first-child{
+    border-top-left-radius: 10px;
+}
+tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+tr:first-child td:last-child{
+    border-top-right-radius: 10px;
+}
+tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+tr:first-child,tr:first-child td{
+    font-size: medium;
+    background-color: #000635;
+    color: white;
+    border-color: #0b0b0b;
+    font-weight: 500;
+
+}
+tr td:first-child{
+    font-size: medium;
+    background-color: #000635;
+    color: white;
+    border-color: #0b0b0b;
+    font-weight: 500;
+
+}
+.detail p{
+    font-family: "Maven Pro",Arial, sans-serif;
+
+}
+.head{
+    color:#ffffff;
+    font-weight: 700;
+    font-family: "Maven Pro",Arial, sans-serif;
+}
+#lable_number{
+    width: fit-content;
+    height: fit-content;
+    font-family: "Maven Pro",Arial, sans-serif;
+    color: black;
+}
+.button form  label{
+    font-family: "Maven Pro",Arial, sans-serif;
+    color: black;
+}
+#report_det{
+    display: inline-block;
+    width: fit-content;
+    height: 30px;
+}
+#number_of{
+    outline: none;
+    border-style: solid;
+    border-color: #000635;
+    background-color: #000000;
+    color: white;
+}
+#else{
+    display: none;
+}
+#report_button{
+    height: 20px;
+    width: 100px;
+    margin-top: 1%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    background-color: #0b0b0b;
+}
+#report_button:hover{
+    color: #0b0b0b;
+    background-color: white;
+}
+
+ select{
+    margin: 10px 0px;
+    margin-right: 10px;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+ height: 30px;
+ outline: none;
+ border: 1px;
+ border-color: #0b0b0b;
+ border-style: solid;
+ border-radius: 5px;
+ }
+ select:hover{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
+ }
+  select option {
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: 1px;
+    border-radius: 10px;
+    background-color:black;
+  }

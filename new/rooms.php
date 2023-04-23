@@ -20,12 +20,10 @@ if(isset($_SESSION["id"])){
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon">  
-      <link rel="stylesheet" href="CSS\rooms.css">
-      <link rel="stylesheet" href="CSS\header.css">
-      <link rel="stylesheet" href="CSS\popup.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
+      <?php include "dark_light/dark_light rooms.php";?>
       <title>Rooms</title>
    </head>  
 
@@ -38,20 +36,23 @@ if(isset($_SESSION["id"])){
 
 
    <header id="header-style" >
-         <img class="logo-img" onclick="window.location.assign('index.php');" src="techno tour website design pro\web site logo2.png" alt="..">
+         <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >
-            <li><a href="index.php" class="links">Home</a></li>
+            <li><a href="index.php?theme=<?php echo $theme2;?>" class="links">Home</a></li>
             <?php if(isset($getuser)){ 
                      if($getuser['position']!="Technical"){
                           echo "<li><a href='booking.php' class='links'>Booking</a></li>";
                      }
                   }
             ?>
-            <li><a href="what's new.php" class="links">Broadcast</a></li>
-            <li><a href="about us.php" class="links">About</a> </li>
-         </ul>
+            <li><a href="broadcast.php?theme=<?php echo $theme2;?>" class="links">Broadcast</a></li>
+            <li><a href="about us.php?theme=<?php echo $theme2;?>" class="links">About</a> </li>
 
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src='techno tour website design pro\search.png' alt="..">
+
+       
+         </ul>
+          <div style='height: 12px;'><a href="rooms.php?theme=<?php echo $theme?>"><img src=<?php echo $theme_logo; ?> width='18px' alt=""></a></div>
+         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src=<?php echo $search;?> alt="..">
          </div>
          <div class="user-logo"><a 
          <?php
@@ -71,15 +72,19 @@ if(isset($_SESSION["id"])){
          </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
          <?php
           if(isset($getuser)){
+            if($getuser['image']!=NULL){
                 echo "src='photos\\".$getuser['image']."'";
+             } else{
+              echo "src=".$login." style='width:20px;'";
+              }
          }else{
-          echo "src='techno tour website design pro\login.png' style='width:20px;'";
+          echo "src=".$login." style='width:20px;'";
          }
          ?> alt=".."></div></div>
 
          <?php if(isset($getuser)){echo "
          <form method='post' action='form/login.php' id='out_form'>            
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\logout.png' id='logout' title='log out' width='23px'></button>
+            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\\".$logout."' id='logout' title='log out' width='23px'></button>
             </form>
             ";} ?>
       </header>

@@ -1,0 +1,252 @@
+#loading-screen {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(30, 29, 33);
+	z-index: 9999;
+  transition: all 500ms;
+  }
+  @keyframes  intro {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	20% {opacity: 0;}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	50% {opacity: 1;}
+	60% {opacity: 0;}
+	70% {opacity: 1;}
+	80% {opacity: 0;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+   }
+  #loading-screen #logo-intro {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation:intro 6000ms ;
+	transform: translate(-50%, -50%);
+  }
+/* Style for the section element */
+.scrollable-section {
+    background-color: rgba(0, 25, 49, 0);
+    align-self: center;
+    width: 100%;
+    white-space: nowrap;
+  }
+  
+  /* Style for the photo grid */
+  .photo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Style for the photo container */
+  .photo-container {
+    display: inline-block;
+    width: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+  }
+  
+  /* Style for the photo */
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s;
+  }
+  
+  /* Style for the text overlay */
+  .overlay p {
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Style for the read here link */
+  .read-here {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    }
+    
+    /* Style for the read here link text */
+    .read-here a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    
+    /* Style for the photo container on hover */
+    .photo-container:hover .overlay {
+    opacity: 1;
+    }
+    
+    .photo-container:hover .read-here {
+    opacity: 1;
+    }
+    
+    .photo-container:hover img {
+    filter: brightness(80%);
+    }  
+
+  #out-links{
+    background-color: #1d1f2c;
+    color: #fff;
+    width: 100%;
+    height: 200px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #out-links img{
+    width:150px;
+  }
+
+  #techno-tour-notify{
+    font-size: large;
+    margin-top: 10%;
+    background-color: #1d1f2c;
+    color: #fff;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+    #about-det{
+      background-color: rgba(0, 0, 0, 0.412);
+      width: 100vw;
+      height: 90vh;
+      margin-top: 10vh;
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0;
+      z-index: 3;
+      transition: all 1000ms;
+    }
+    .about-dets{
+        width: 30vw;
+        height: 100%;
+        background-color: black;
+    }
+    #about-ex{
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        z-index: 4;
+        border-radius: 5px;
+        font-size: 30px;
+        color: white;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        text-align: center;
+        height: fit-content;
+        transition: all 300ms;
+        cursor: pointer;
+    }
+    #about-ex:hover{
+    background-color: rgba(31, 0, 115, 0.533);
+    }
+    @keyframes  ani_det {
+        0% { width: 0%;}
+        100% { width: 100%;}
+       }
+    #detailes{
+        align-self: center;
+        position: fixed;
+        z-index: 2;
+        overflow: hidden;
+        width: 100%;
+        animation: ani_det 2000ms;
+    }
+    @keyframes  ani_det1 {
+        0% { margin-left: -30vw;}
+        100% { margin-left: 0vw;}
+       }   
+    @keyframes  ani_det2 {
+            0% { margin-right: -30vw;}
+            100% { margin-right: 0vw;}
+       }
+       #about-det-1{
+          animation: ani_det1 1000ms;
+       }
+       #about-det-2{
+        animation: ani_det2 1000ms;
+       }
+
+
+    .building_det,.building_det2{
+        font-family:  "Maven Pro",Impact;
+        font-size: 25px;
+        display: block;
+        width: 100%;
+    }
+    .building_det:nth-child(1){
+      margin-top: 8vh;
+      margin-left: 37vh;
+      
+    }
+    .building_det:nth-child(2){
+        margin-top: 7vh;
+        margin-left: 35vh;
+      
+    }  .building_det:nth-child(3){
+        margin-top: 22vh;
+        margin-left: 22vh;
+      
+    }  .building_det:nth-child(4){
+        margin-top: 6vh;
+        margin-left: 25vh;
+      
+    }  .building_det:nth-child(5){
+        margin-top: 6vh;
+        margin-left: 23vh;
+      
+    }
+    .building_det2:nth-child(1){
+        margin-top: 15vh;
+        margin-left: 15vh;
+        
+      }
+      .building_det2:nth-child(2){
+          margin-top: 1vh;
+          margin-left: 5vh;
+        
+      }  .building_det2:nth-child(3){
+          margin-top: 25vh;
+          margin-left: 5vh;
+        
+      }

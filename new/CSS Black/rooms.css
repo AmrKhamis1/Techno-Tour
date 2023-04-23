@@ -1,0 +1,315 @@
+* {
+	scroll-behavior: smooth;
+	text-size-adjust: 100%;
+}
+
+::-webkit-scrollbar {
+
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	z-index: -1;
+}
+
+#scrollup {
+	scroll-behavior: smooth;
+	cursor: pointer;
+	font: bold 20px "Rubik";
+	display: none;
+	align-items: center;
+	justify-content: center;
+	color: #edeefa;
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	right: 0;
+	background-color: #006d92;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin-bottom: 5%;
+	margin-right: 3%;
+
+}
+
+body{
+    scroll-behavior: smooth;
+	background-size: 0%;
+	background-image:url('../techno tour website design pro/NCT building3 dark.png');
+	background-position: top;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-color:#191823;
+    width: fit-content;
+    height: fit-content;
+    display:block;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  @keyframes  ani_thebody {
+	 0% {background-size: 123%;}
+	 70% {background-size: 123%;}
+	 100% {background-size: 250%;}
+	}
+  body{
+	opacity: 0;
+	display: block;
+	animation:ani_thebody 2000ms ;
+	background-size: 250%;
+	transition: all 1000ms;
+}
+
+  #add-event{
+    display:none;
+	position: fixed;
+    z-index: 3;
+    margin-bottom:31%;
+    background-color: rgba(0, 0, 0, 0.353);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#exit{
+    position: absolute;
+    border-radius: 5px;
+    font-size: 50px;
+    color: white;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    text-align: center;
+    height: fit-content;
+    transition: all 300ms;
+    cursor: pointer;
+}
+#exit:hover{
+    
+background-color: rgba(0, 0, 0, 0.533);
+
+
+}
+
+  .bage{
+	width: 100vw;
+	height: 90vh;
+	margin-top: 10vh;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+  }
+@keyframes  ani_thebuttons {
+	0%{height: 0px;}
+	40% {height: 0px;}
+	70% {height: 40vh;}
+   }
+  #f-btns {
+	position: fixed;
+	right: 0;
+	height: 40vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-evenly;
+	overflow: hidden;
+    animation: ani_thebuttons 3000ms ;
+}  
+
+.fbtn {
+	opacity: 1;
+	font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #040027;
+	background-color: #c2c3d2;
+	height: 60px;
+	width: 100px;
+	margin-left: 9vw;
+	border: solid;
+	border-color: #040027;
+	border-width: 2px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-right: 0;
+	color: #363642;
+}
+@keyframes  ani_thehead {
+	0%{opacity: 0;}
+	70% {opacity: 0;}
+	100% {opacity: 1;}
+   }
+#head{
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	color: white;
+	margin-top:12vh ;
+	width: 80vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	animation: ani_thehead 2000ms;
+
+}
+
+
+@keyframes  ani_therooms {
+	0%{margin-top: -10vh; transform: scale(0);}
+	80% {margin-top: -10vh; transform: scale(0);}
+	100% {margin-top: 35vh;transform: scale(1);}
+   }
+
+  #cont-home {
+	margin: 0;
+    display: block;
+	margin-top: 35vh;
+	height:90vh;
+	width:100vw;
+	animation: ani_therooms 2400ms;
+}
+
+.container {
+	position: fixed;
+	margin-left: 10vw;
+	width: 990px;
+	height: 60%;
+	bottom: 0;
+	position: relative;
+	margin-bottom: 0;
+}
+
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#f2 {
+	transform: rotateX(90deg) translateZ(242px);
+}
+#f4 {
+	transform: rotateX(-90deg) translateZ(242px);
+}
+#f1 {
+	transform: rotateX(0deg) translateZ(242px);
+}
+#f3 {	
+	transform: rotateY(180deg) translateZ(242px) rotateZ(180deg);
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+	background-color: #040027;
+	border: none;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	backface-visibility: hidden;
+
+}
+
+#row1,
+#row2 {
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rooms {
+	border:2px solid #040027;
+	border-radius:20px;
+	position: relative;
+	color: white;
+	font-family: 'Helvetica', 'sans-serif';
+	width: 130px;
+	height: 130px;
+	background-color: #c2c3d2;
+	background-position: center;
+	background-size: cover;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+    transition: all 200ms;
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389));
+
+}
+
+.rooms:hover {
+	border-color: rgba(255, 255, 255,0.6);
+}
+.about{
+	color: rgb(57, 57, 57) ;
+	height: 40%;
+	font-size: small;
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+}
+.book_button{
+	margin-bottom: -200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 3px;
+	width: 70px;
+	height: 20px;
+	background-color: rgb(57, 57, 57);
+	color: white;
+	transition: all 300ms
+}
+.book_button:hover{
+	background-color: aliceblue;color: rgb(57, 57, 57);
+}
+@keyframes  ani_thecube {
+	0%{transform: rotateX(1000deg);}
+	40%{transform: rotateX(1000deg);}
+	100% {transform: rotateX(0deg);}
+   }
+#cube {
+	transform-style: preserve-3d;
+	width: 120%;
+	height: 120%;
+    bottom: 0;
+	position: relative;
+	transition: all 500ms;
+	transform: rotateX(360deg);
+	animation: ani_thecube 2400ms;
+}
+.available{
+	
+	color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 50%;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 800;
+}

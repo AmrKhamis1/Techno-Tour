@@ -43,7 +43,7 @@ include_once "booking/validationBooking.php";
                     <label for="b_title">Book Title <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
                     <input id="b_title" name="b_title" type="text" required>
                     <label for="b_date">Date <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label >
-                    <input id="b_date" name="b_date" type="date" onclick='check();' required>
+                    <input id="b_date" name="b_date" type="date" onchange='check();' onclick='check();' required>
                     <label for="b_start">Beginning of The Duration <span class="errors" style="color:red;font-size:10px;"><?php echo $mess ;?></span></label>
                     <select  class='b_b' id="b_start" name="b_start" onclick='check();duration();' required> 
                         <option value='1'>1 (9 - 9:50)</option>
