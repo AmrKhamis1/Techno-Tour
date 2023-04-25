@@ -4,8 +4,14 @@
   
          if(isset($getuser)){
             echo "
-            <div id='profile'> 
-            <div id='profile_photo'><img src='photos\\".$getuser['image']."'></div>
+            <div id='profile'> ";
+            if($getuser==NULL){
+               echo  "<div id='profile_photo'><img src='photos\\".$getuser['image']."'></div>";
+            }else{
+               echo  "<div id='profile_photo'><img src='techno tour website design pro\unknown.png'></div>";
+            }
+            
+           echo "
             <div style='font-size:20px; text-transform: capitalize;' id='profile_name'>".$getuser["fname"]." ".$getuser["lname"]."</div>
             <p style='font-size:13px;'>".$getuser["email"]."</p>
             <hr style='width:100%;'>
@@ -16,7 +22,8 @@
             </form>
             </div>
             
-            ";}
+            ";
+         }
            
            ?>
 
