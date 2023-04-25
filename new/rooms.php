@@ -28,13 +28,13 @@ if(isset($_SESSION["id"])){
    </head>  
 
    <body class='body'>   
- 
+ <?php include "profile.php";?> 
    <div id='add-event'>
        <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
    </div> 
 
-
+    
    <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >
@@ -57,7 +57,7 @@ if(isset($_SESSION["id"])){
          <div class="user-logo"><a 
          <?php
           if(isset($getuser)){
-            echo "onclick='logout_show();'";
+            echo "onclick='logout_show2();'";
             }else{
             echo "href='form.php'";
               }
@@ -69,7 +69,7 @@ if(isset($_SESSION["id"])){
          echo "login";
            }
           ?>
-         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
+         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show2();"          
          <?php
           if(isset($getuser)){
             if($getuser['image']!=NULL){
@@ -81,12 +81,6 @@ if(isset($_SESSION["id"])){
           echo "src=".$login." style='width:20px;'";
          }
          ?> alt=".."></div></div>
-
-         <?php if(isset($getuser)){echo "
-         <form method='post' action='form/login.php' id='out_form'>            
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\\".$logout."' id='logout' title='log out' width='23px'></button>
-            </form>
-            ";} ?>
       </header>
       <div class="bage">
       <div id="f-btns">

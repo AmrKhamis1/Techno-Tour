@@ -34,6 +34,7 @@ function getuser($user){
 </head>
 <body>
 <div id='container'>
+<?php include "profile.php"; ?>  
 <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >
@@ -80,15 +81,9 @@ function getuser($user){
           echo "src=".$login." style='width:20px;'";
          }
          ?> alt=".."></div></div>
-
-         <?php if(isset($getuser)){echo "
-         <form method='post' action='form/login.php' id='out_form'>            
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\\".$logout."' id='logout' title='log out' width='23px'></button>
-            </form>
-            ";} ?>
       </header>
 
 </div>
 </body>
-
+<script src="JS/header.js"></script>
 </html>

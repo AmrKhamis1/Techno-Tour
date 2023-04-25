@@ -40,6 +40,7 @@ body{
     margin-top: 5vh;
     border: 5px solid transparent;
     border-radius: 30px;
+    border-top-width: 0;
     border-image: linear-gradient(#00000000,#2d0dc9,#2d0dc9,#00000000) 0.1% round;
     -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);;
 

@@ -40,7 +40,8 @@ function getuser($user){
    <div id="loading-screen">
   <img id='logo-intro' src="techno tour website design pro\<?php echo $loading;?>" width='70px'>
       </div> 
-   <div id="particles-js"></div>    
+   <div id="particles-js"></div>
+   <?php include "profile.php"; ?>    
       <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >
@@ -88,11 +89,7 @@ function getuser($user){
          }
          ?> alt=".."></div></div>
 
-         <?php if(isset($getuser)){echo "
-         <form method='post' action='form/login.php' id='out_form'>            
-            <button name='logout' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'><img src='techno tour website design pro\\".$logout."' id='logout' title='log out' width='23px'></button>
-            </form>
-            ";} ?>
+         
       </header>
       <div id="bage1" >
 

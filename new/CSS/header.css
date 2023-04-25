@@ -44,27 +44,8 @@
     color: #1f30af;
     padding-bottom:4px ;
       }
-      #logout{
-        cursor: pointer;
-      }
-      #out_form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
-        margin-top: 17vh;
-        margin-right: 1vw;
-        right: 0;
-        border-radius: 10px;
-        overflow: hidden;
-        position: absolute;
-        width: 35px;
-        height: 0px;
-        background-color: #090b1800;
-        transition: all 300ms;
-
-      }
   .user-logo{
+    user-select: none;
     cursor: pointer;
     color: #000635;
     border: none;
@@ -134,4 +115,88 @@
   }
   .user-logo{
     width: fit-content; 
+  }
+
+  /****************** profile */
+
+
+  #profile{
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-top: -65vh;
+    margin-right: 1vw;
+    right: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    width: 200px;
+    height: 400px;
+    background-color: #18182a;
+    transition: all 300ms;
+
+  }
+  #profile_photo{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+  }
+  #profile_photo img{
+    width: 100px;
+  }
+  #change_photo,#change_photo a{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+  }
+  #change_name, #change_name a{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+  #change_photo a,#change_name a{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #out_form, #out_form button{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+  }
+  #out_form button{    
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  #change_photo,#change_name,#out_form{
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    background-color: #282b43;
+    transition: all 300ms;
+  }
+  #change_photo:hover,#change_name:hover,#out_form:hover{
+    background-color: #19181d;
+
   }

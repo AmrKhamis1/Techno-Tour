@@ -20,7 +20,7 @@
             $photo1="'techno tour website design pro\\techno tour pro copy light.png'";
             $photo2="'techno tour website design pro\\techno tour pro copy2 light.png'";
             $theme_logo="'techno tour website design pro\dark_light light.png'";
-            $logout="logout.png";
+            $logout="logout2.png";
             $loading="inner logo.png";
           }else{
             $theme='b';
@@ -36,7 +36,7 @@
             $photo1="'techno tour website design pro\\techno tour pro copy.png'";
             $photo2="'techno tour website design pro\\techno tour pro copy2.png'";
             $theme_logo="'techno tour website design pro\dark_light.png'";
-            $logout="logout2.png";
+            $logout="logout.png";
             $loading="inner logo2.png";
           }
       }else{
@@ -53,7 +53,7 @@
         $photo1="'techno tour website design pro\\techno tour pro copy.png'";
         $photo2="'techno tour website design pro\\techno tour pro copy2.png'";
         $theme_logo="'techno tour website design pro\dark_light.png'";
-        $logout="logout2.png";
+        $logout="logout.png";
         $loading="inner logo2.png";
       }
       ?> 

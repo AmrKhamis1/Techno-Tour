@@ -144,10 +144,12 @@ width: 100%;
 }
 #particles-js{
 position: absolute;
-mix-blend-mode:color-dodge;
+mix-blend-mode:difference;
+background-color: black;
 z-index: -1;
 width: 100vw;
 height: 363vh;
+opacity: 0.8;
 }
 .hero-header{
     text-transform: uppercase;

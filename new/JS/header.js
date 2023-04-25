@@ -1,10 +1,16 @@
-let logout=document.getElementById('out_form');
-function logout_show(){
-    if(logout.style.height=="35px"){
-        logout.style.height="0px";
+let logout=document.getElementById('profile');
+function logout_show2(){
+    if(logout.style.marginTop=="1vh"){
+        logout.style.marginTop="-60vh";
     }else{
-        logout.style.height="35px";
+        logout.style.marginTop="1vh";
     }
-
 }
 
+function logout_show(){
+    if(logout.style.marginTop=="11vh"){
+        logout.style.marginTop="-60vh";
+    }else{
+        logout.style.marginTop="11vh";
+    }
+}
