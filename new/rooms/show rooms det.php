@@ -103,11 +103,12 @@
             $sql="SELECT * FROM rooms WHERE r_no='$RoomNum'";
             $result=mysqli_query($connection,$sql);
             $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+            $room_id=$getuser['id'];
 ?>
             <div class="detail">
                 <p style='font-weight: 600;'>Number of avilable PCs :
                 <?php
-                 echo " "."<span style='font-weight: 700;font-size:large;'>".$getuser['pc_no']."</span>";
+                 echo " "."<span style='font-weight: 700;font-size:large;'>".$getuser['fixed_pc']."</span>";
                  ?></p>
                 <p style='font-weight: 600;'>Projector's State : <?php 
                 if($getuser['projector']=='good'){
@@ -129,7 +130,7 @@
               if($getuser['position']=="Dr" || $getuser['position']=="Assisstant" || $getuser['position']=="Technical"){
               echo "
               <div class='button'>
-              <form action=''>
+              <form method='post' action='report.php'>
                   <label for='department'>Report for : </label>
                   <select id='department' onchange='reports();' name='department'>
                   <option value='1' selected>Pc is not working</option>
@@ -138,7 +139,7 @@
                   <option value='4'>Something else</option>
             </select>
             <div id='report_det'>
-            <script></script>
+            <input type='text' name='room_id' style='display:none;' value='". $room_id."'>
             <lable for='number_of' id='lable_number'>Number Of PCs : </lable>
             <input type='number' name='number_of' id='number_of' value='1' min='1'>
             <input type='text' name='else' id='else' placeholder='type your report'>
