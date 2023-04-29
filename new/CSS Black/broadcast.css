@@ -36,11 +36,102 @@ body{
     background-color:#191823;
     width: 90vw;
     overflow: hidden;
-    height: 200vh;
+    height: fit-content;
     margin-top: 5vh;
+    margin-bottom: 3vh;
     border: 2px solid transparent;
     border-radius: 30px;
     border-top-width: 0;
     border-image: linear-gradient(#00000000,#2d0dc9,#2d0dc9,#00000000) 0.1% round;
     -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+}
+
+#posts{
+  justify-content:space-evenly;
+  margin-left: 5%;
+  display: flex;
+  height:auto;
+  flex-direction: column-reverse;
+  justify-content: baseline;
+  align-items: baseline;
+  width: 70%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.post_div{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color:#1d1f2c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 750px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 650px;
+}
+.user_post{
+  align-self: flex-start;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.user_photo{
+  margin-left: 40px;
+  width:40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.user_name{
+  width: 200px;
+  color: white;
+  font-family:  "Maven Pro", sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+  font-size: medium;
+}
+.div_cap{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  word-break: break-all;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: smaller;
+  justify-content: space-between;
+}
+.caption_post{
+  color: white;
+  word-break: break-all;
+  width: 100%;
+}
+.date_time{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: 700;
+  color: #858585;
+  align-self: flex-end;
+  text-align: end;
+  margin-left: 360px;
+}
+#post{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color:#1d1f2c ;
+  margin-top: 10vh;
+  right: 0;
 }

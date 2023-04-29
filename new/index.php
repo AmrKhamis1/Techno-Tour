@@ -108,51 +108,29 @@ function getuser($user){
                      </font>
                      <section class="scrollable-section">
   <div class="photo-grid">
-    <div class="photo-container">
-      <img src="https://via.placeholder.com/300" alt="Photo 1" class="photo">
-      <div class="overlay">
-        <p>Text Overlay for Photo 1</p>
+    <?php
+      $count=3;
+      include "broadcast show.php";
+      for($i=0;$i<$count;$i++){
+        if(isset($caption[$i])){
+
+        
+            echo "
+                <div class='photo-container'>
+      <img src='photos_broadcast/".$image[$i]."' alt='Photo 1' class='photo'>
+      <div class='overlay'>
+        <p>".$caption[$i]."</p>
       </div>
-      <div class="read-here">
-        <a href="#">Read Here</a>
+      <div class='read-here'>
+        <a href='broadcast.php'>Read Here</a>
       </div>
-    </div>
-    <div class="photo-container">
-      <img src="https://via.placeholder.com/300" alt="Photo 2" class="photo">
-      <div class="overlay">
-        <p>Text Overlay for Photo 2</p>
-      </div>
-      <div class="read-here">
-        <a href="#">Read Here</a>
-      </div>
-    </div>
-    <div class="photo-container">
-      <img src="https://via.placeholder.com/300" alt="Photo 3" class="photo">
-      <div class="overlay">
-        <p>Text Overlay for Photo 3</p>
-      </div>
-      <div class="read-here">
-        <a href="#">Read Here</a>
-      </div>
-    </div>
-    <div class="photo-container">
-      <img src="https://via.placeholder.com/300" alt="Photo 4" class="photo">
-      <div class="overlay">
-        <p>Text Overlay for Photo 4</p>
-      </div>
-      <div class="read-here">
-        <a href="#">Read Here</a>
-      </div>
-    </div>
-    <div class="photo-container">
-      <img src="https://via.placeholder.com/300" alt="Photo 5" class="photo">
-      <div class="overlay">
-        <p>Text Overlay for Photo 5</p>
-      </div>
-      <div class="read-here">
-        <a href="#">Read Here</a>
-      </div>
-    </div>
+    </div> 
+            
+            ";
+          }
+      }
+    ?>
+  
   </div>
 </section>
          </div> 

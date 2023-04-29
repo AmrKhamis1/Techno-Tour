@@ -5,7 +5,7 @@
          if(isset($getuser)){
             echo "
             <div id='profile'> ";
-            if($getuser==NULL){
+            if($getuser!=NULL){
                echo  "<div id='profile_photo'><img src='photos\\".$getuser['image']."'></div>";
             }else{
                echo  "<div id='profile_photo'><img src='techno tour website design pro\unknown.png'></div>";

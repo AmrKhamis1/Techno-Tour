@@ -7,6 +7,7 @@ function getuser($user){
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
    return $getuser;
 }
+include "broadcast_post.php";
   session_start();
    if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
    $_SESSION["id"]=$_COOKIE['user'];
@@ -21,6 +22,7 @@ function getuser($user){
    session_destroy();
   }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,14 @@ function getuser($user){
 </head>
 <body>
 <div id='container'>
-<?php include "profile.php"; ?>  
+<?php include "profile.php"; 
+include "broadcast_post.php";
+?>  
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" id='post'>
+<input id="caption" name="caption" type="text" placeholder="What's new ?" required>
+<input id="post_image" name="post_image" type="file">
+<button type="submit" name='post'>Post</button>
+</form>
 <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >
@@ -83,7 +92,43 @@ function getuser($user){
          ?> alt=".."></div></div>
       </header>
 
+  
+      <div id='posts'> 
+           <?php
+                      $count=10;
+                      include "broadcast show.php";
+                      for($i=0;$i<$count;$i++){
+                        if(isset($caption[$i])){
+                          
+                          echo "
+                          <div class='post_div'>
+                             <div class='user_post'>
+                             <div class='user_photo'>";
+                             if($user_photo[$i]!=''){
+                            echo "<img src='photos/".$user_photo[$i]."' width='50px'>";
+                             }else{
+                              echo "<img src='techno tour website design pro\unknown.png' width='50px'>";
+                             }
+                           echo  "</div>
+                             <div class='user_name'>
+                             ".$user_name[$i]."</div>
+                             <div class='date_time'>".$time[$i]."<br>".$date[$i]."</div>
+                             </div>
+                             <div class='div_cap'>
+                             <div class='caption_post'>".$caption[$i]."</div>
+                             
+                             </div>
+                             <div class='post_image'><img src='posts/".$image[$i]."' height='400px'></div>
+                          </div>
+                          ";
+
+
+                        }}
+           ?>
+      </div>
+
 </div>
+
 </body>
 <script src="JS/header.js"></script>
 </html>
