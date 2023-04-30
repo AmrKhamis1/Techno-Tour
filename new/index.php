@@ -96,7 +96,7 @@ function getuser($user){
       <main style="display:flex;flex-direction:column;">
          <div class="hero">
          <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
-                     THE BEST BOOKING GUIDE FOR<br> DOCTORS,ASSISTANTS,STUDENTS<br> AND EXTERNAL USERS IN NCTU.
+                     THE BEST BOOKING GUIDE FOR DOCTORS,ASSISTANTS,<br> STUDENTS AND EXTERNAL USERS IN NCTU.
                      <br>
                      <?php
                      if(isset($getuser)){
@@ -109,7 +109,7 @@ function getuser($user){
                      <section class="scrollable-section">
   <div class="photo-grid">
     <?php
-      $count=3;
+      $count=4;
       include "broadcast show.php";
       for($i=0;$i<$count;$i++){
         if(isset($caption[$i])){
@@ -117,12 +117,12 @@ function getuser($user){
         
             echo "
                 <div class='photo-container'>
-      <img src='photos_broadcast/".$image[$i]."' alt='Photo 1' class='photo'>
+      <img src='posts/".$image[$i]."' alt='Photo 1' class='photo'>
       <div class='overlay'>
-        <p>".$caption[$i]."</p>
+        <p>".substr($caption[$i],0,150)."...</p>
       </div>
       <div class='read-here'>
-        <a href='broadcast.php'>Read Here</a>
+        <a href='broadcast.php?theme=".$theme2."'>Read Here</a>
       </div>
     </div> 
             

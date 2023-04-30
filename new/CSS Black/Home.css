@@ -98,7 +98,7 @@ body{
 
 #NCT-button{
   font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   font-size: medium;
   letter-spacing: 1px;
   width: 200px;
@@ -114,7 +114,7 @@ body{
 #NCT-button:hover{
   color: #ffffff;
   background-color: #1a1c27;
-  box-shadow: rgb(0 0 0 / 20%) 6px 10px 20px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 20px;
 }
 
 #hero-section{
@@ -150,8 +150,9 @@ width: 100vw;
 height: 367vh;
 }
 .hero-header{
-    text-transform: uppercase;
-    font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  font-family: 'Roboto',"Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 600;
 }
 #about-uni{
   font-family:'Times New Roman', Times, serif;

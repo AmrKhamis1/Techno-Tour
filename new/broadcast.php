@@ -7,7 +7,8 @@ function getuser($user){
    $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
    return $getuser;
 }
-include "broadcast_post.php";
+$getuser=NULL;
+
   session_start();
    if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
    $_SESSION["id"]=$_COOKIE['user'];
@@ -38,10 +39,18 @@ include "broadcast_post.php";
 <div id='container'>
 <?php include "profile.php"; 
 include "broadcast_post.php";
+if(isset($getuser)){ 
+  if($getuser['position']=="Dr" ){
+    echo "
+    <form action='' method='post' id='post' enctype='multipart/form-data'>
+  <textarea  rows='10' cols='30' id='caption' name='caption' type='text' placeholder=\"What's new ?\" required></textarea>
+<input id='post_image' name='post_image' type='file'>
+    ";
+  }}
 ?>  
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" id='post'>
-<input id="caption" name="caption" type="text" placeholder="What's new ?" required>
-<input id="post_image" name="post_image" type="file">
+
+
+
 <button type="submit" name='post'>Post</button>
 </form>
 <header id="header-style" >

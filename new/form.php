@@ -14,7 +14,7 @@
 <body onload="<?php echo $not_succ;?>">
     <div id="container">
     </div>
-    <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" novalidate>
+    <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
         <h1>Login</h1>
        <p> <?php echo $ema_pass;?></p>
@@ -31,7 +31,7 @@
         <button class="buttons1" type="button" onclick="signup();" name="signup-button">Sign Up</button>
         
     </form>
-    <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post"  enctype="multipart/form-data" novalidate>
+    <form id="form22" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post"  enctype="multipart/form-data">
 
              <div id="form1">
                 <h1>SignUp</h1>
