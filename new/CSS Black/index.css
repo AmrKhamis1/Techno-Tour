@@ -266,3 +266,39 @@
           margin-left: 5vh;
         
       }
+/***************animate every litter**************/
+@keyframes warp {
+  0% {
+    transform: scale3d(1,1,1);   
+   }
+  30% {
+    transform: scale3d(0.8,1.5,1.5);
+    color: dodgerblue;
+  }
+  70%{
+    transform: scale3d(0.8,1.7,1.7);
+    color: dodgerblue;
+  }
+  100% {
+    transform: scale3d(1,1,1); 
+}
+}
+@keyframes warp2 {
+    from{
+        transform: scale3d(0.8,1.7,1.7);
+        color: dodgerblue;
+    }
+ to{
+    transform: scale3d(1,1,1);
+    color: white;
+ }
+}
+.animate{
+display: inline-block;
+animation: warp2 500ms forwards;
+animation-timing-function: ease-in-out
+}
+.animate:hover{
+  animation: warp 500ms forwards;
+  animation-timing-function: ease-in-out;
+}

@@ -96,7 +96,35 @@ function getuser($user){
       <main style="display:flex;flex-direction:column;">
          <div class="hero">
          <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
-                     THE BEST BOOKING GUIDE FOR DOCTORS,ASSISTANTS,<br> STUDENTS AND EXTERNAL USERS IN NCTU.
+                <?php
+                $hero='THE BEST BOOKING GUIDE FOR DOCTORS,ASSISTANTS,';
+                $hero2='STUDENTS AND EXTERNAL USERS IN NCTU.';
+                for($i=0;$i<100;$i++){
+                  if(isset($hero[$i])){
+                    if($hero[$i]==' '){
+                      echo "<span class='animate'>&nbsp</span>";
+                    }else{
+                    echo "<span class='animate'>".$hero[$i]."</span>";}
+                  }else{
+                    break;
+                  }
+                  
+                }echo "<br>";
+                for($i=0;$i<100;$i++){
+                  if(isset($hero2[$i])){
+                    if($hero2[$i]==' '){
+                      echo "<span class='animate'>&nbsp</span>";
+                    }else{
+                    echo "<span class='animate'>".$hero2[$i]."</span>";
+                  }
+                  }else{
+                    break;
+                  }
+                  
+                } 
+              
+                ?>
+                     
                      <br>
                      <?php
                      if(isset($getuser)){
