@@ -1,10 +1,5 @@
-@keyframes sll2 {
-    0% {transform:translateY(-10vh);}
-    100%  {transform: translateY(0vh);}
-  }
 
   header{
-    animation: sll2 1s ;
     justify-content:space-between;
     width: 90vw;
     height:10vh;
@@ -55,21 +50,22 @@
        position: absolute;
        bottom: 0;
        left: 0;
+       right: 0;
        margin: auto;
        width: 0%;
        content: '.';
        color: transparent;
        background: #000635;
-       height: 1px;
+       height: 3px;
      }
      @keyframes links{
        0%{
          width: 0%;
-         height: 1px;
+         height: 3px;
        }
        60%{
          width: 100%;
-         height: 1px;
+         height: 3px;
        }
        100%{
          height: 100%;

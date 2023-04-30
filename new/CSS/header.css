@@ -34,12 +34,11 @@
     font-weight: 700;
     color:#000635;
     font-size: 1.2vw;
-    border-radius: 20px;
 	  cursor:pointer;
     border: 0;
     border-style: solid;
     border-color: #000635;
-     padding-left: 5px;
+    padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
     transition: all 300ms;
@@ -53,37 +52,38 @@
       a {
        position: relative;
      }
-      li a:after,
       li a:after {
        position: absolute;
        bottom: 0;
        left: 0;
+       right: 0;
        margin: auto;
        width: 0%;
        content: '.';
        color: transparent;
-       background: #000635;
-       height: 1px;
+       background-color: #000635;
+       height: 3px;
      }
      @keyframes links{
        0%{
-         width: 0%;
-         height: 1px;
+         width: 20%;
+         height: 3px;
        }
        60%{
          width: 100%;
-         height: 1px;
+         height: 3px;
+
        }
        100%{
+        width: 100%;
          height: 100%;
        }
      
      }
       li a:hover:after {
        z-index: -1;
-       animation: links 600ms;
-       width: 100%;
-       height: 100%;
+       animation: links 500ms forwards;
+
      }
   .user-logo{
     user-select: none;

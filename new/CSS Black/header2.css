@@ -50,6 +50,7 @@ li a, a {
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   margin: auto;
   width: 0%;
   content: '.';

@@ -271,11 +271,8 @@
   0% {
     transform: scale3d(1,1,1);   
    }
-  30% {
-    transform: scale3d(0.8,1.5,1.5);
-    color: dodgerblue;
-  }
-  70%{
+
+  50%{
     transform: scale3d(0.8,1.7,1.7);
     color: dodgerblue;
   }

@@ -154,6 +154,7 @@ opacity: 0.8;
 .hero-header{
     text-transform: uppercase;
     font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
 }
 #about-uni{
   font-family: 'Times New Roman', Times, serif;
