@@ -1,5 +1,5 @@
 <?php 
-
+include "database/databasemysqli.php";
 function getuser($user){
    include "database/databasemysqli.php";
    $sql="SELECT*FROM members WHERE id={$user}";
@@ -29,6 +29,11 @@ $getuser=NULL;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'><link rel="stylesheet" href="chat/style.css">
+<script src="chat/chat.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="chat/script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,14 +50,40 @@ if(isset($getuser)){
     <form action='' method='post' id='post' enctype='multipart/form-data'>
   <textarea  rows='10' cols='30' id='caption' name='caption' type='text' placeholder=\"What's new ?\" required></textarea>
 <input id='post_image' name='post_image' type='file'>
-    ";
-  }}
+    <button type='submit' name='post'>Post</button>
+</form>
+";
+  }
+}
+
+$sql="SELECT * FROM members WHERE position='Dr';";
+$result3 = $connection->query($sql);
+echo "<div id='DRs'>";
+if ($result3->num_rows > 0) {
+while($row=$result3->fetch_assoc()){
+echo "
+<div class='drs'>";
+if($row['image']==NULL || $row['image']==" "){
+  echo "<div class='drs_img'><img src='techno tour website design pro/unknown.png'></div>";
+
+}else{
+  echo "<div class='drs_img'><img src='photos/".$row['image']."'></div>";
+}
+
+echo "<div class='drs_name'>Dr/ ".$row['fname']." ".$row['lname']."</div>
+<div class='drs_chat' onclick='start_char(\"".$row['id']."\");'>Chat</div>
+</div>
+";
+
+}}
+echo "</div>";
+echo "<div id='show'></div>";
+
 ?>  
 
 
 
-<button type="submit" name='post'>Post</button>
-</form>
+
 <header id="header-style" >
          <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
          <ul >

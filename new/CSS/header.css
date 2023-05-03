@@ -1,10 +1,5 @@
-@keyframes sll2 {
-    0% {transform:translateY(-10vh);}
-    100%  {transform: translateY(0vh);}
-  }
 
   header{
-    animation: sll2 1s ;
     justify-content:space-between;
     width: 100vw;
     height:10vh;
@@ -46,14 +41,17 @@
   .links:hover{
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #edeefa;
-    padding-bottom:4px ;
+    border: 1px;
+    border-radius: 20px;
       }
       li a,
       a {
        position: relative;
      }
-      li a:after {
+     li a:after,
+     li a:after{
        position: absolute;
+       top: 1;
        bottom: 0;
        left: 0;
        right: 0;
@@ -62,16 +60,16 @@
        content: '.';
        color: transparent;
        background-color: #000635;
-       height: 3px;
+       height: 1px;
      }
      @keyframes links{
        0%{
          width: 20%;
-         height: 3px;
+         height: 1px;
        }
        60%{
          width: 100%;
-         height: 3px;
+         height: 1px;
 
        }
        100%{
@@ -82,7 +80,7 @@
      }
       li a:hover:after {
        z-index: -1;
-       animation: links 500ms forwards;
+       animation: links 600ms forwards;
 
      }
   .user-logo{

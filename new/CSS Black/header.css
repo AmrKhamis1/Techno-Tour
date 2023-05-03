@@ -1,10 +1,6 @@
-@keyframes sll2 {
-    0% {transform:translateY(-10vh);}
-    100%  {transform: translateY(0vh);}
-  }
+
 
   header{
-    animation: sll2 1s ;
     justify-content:space-between;
     width: 100vw;
     color: #ffffff;
@@ -52,8 +48,7 @@
     border: 1px;
     border-radius: 20px;
       }
-       li a,
- a {
+       li a,a {
   position: relative;
 }
  li a:after,

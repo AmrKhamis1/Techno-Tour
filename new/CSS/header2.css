@@ -16,6 +16,7 @@
   ul{
     width: 40%;
     height: fit-content;
+    margin-left: 0; 
   }
   .links{
     margin: 0;
@@ -39,7 +40,8 @@
   .links:hover{
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #edeefa;
-    padding-bottom:4px ;
+    border: 1px;
+    border-radius: 20px;
       }
       li a,
       a {
@@ -56,16 +58,16 @@
        content: '.';
        color: transparent;
        background: #000635;
-       height: 3px;
+       height: 1px;
      }
      @keyframes links{
        0%{
          width: 0%;
-         height: 3px;
+         height: 1px;
        }
        60%{
          width: 100%;
-         height: 3px;
+         height: 1px;
        }
        100%{
          height: 100%;
@@ -84,10 +86,10 @@
     color: #000635;
     border: none;
     border-radius: 100%;
-    width: fit-content;
+    width: 200px;
     height: 20px;
-    margin-right: 2%;
-    justify-content: baseline;
+    margin-right: 1%;
+    justify-content:flex-end;
     display: flex;
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
@@ -140,7 +142,7 @@
   }
   .logo-img{
     width: 15vw;
-     margin-left: 5%;
+    margin-left: 1%;
 	  cursor:pointer;
     transition: all 300ms;
     transform:scale(0.9);
@@ -162,9 +164,6 @@
 .search-logo-img{
     width: 1vw; 
 
-  }
-  .user-logo{
-    width: fit-content; 
   }
   /****************** profile */
 

@@ -83,11 +83,12 @@ tr td:first-child{
     width: fit-content;
     height: fit-content;
     font-family: "Maven Pro",Arial, sans-serif;
-    color: black;
+    color: white;
 }
 .button form  label{
     font-family: "Maven Pro",Arial, sans-serif;
-    color: black;
+    color: white;
+
 }
 #report_det{
     display: inline-block;
@@ -95,10 +96,11 @@ tr td:first-child{
     height: 30px;
 }
 #number_of{
+    border-radius: 5px;
     outline: none;
     border-style: solid;
     border-color: #000635;
-    background-color: #000000;
+    background-color: #00063561;
     color: white;
 }
 #else{
@@ -114,7 +116,7 @@ tr td:first-child{
     border-radius: 20px;
     color: white;
     font-weight: 500;
-    background-color: #0b0b0b;
+    background-color: #000635;
 }
 #report_button:hover{
     color: #0b0b0b;
@@ -124,7 +126,7 @@ tr td:first-child{
  select{
     margin: 10px 0px;
     margin-right: 10px;
-    background-color: #0b0b0b;
+    background-color: #00063561;
     color: #ffffff;
     font-weight: 500;
     cursor: pointer;

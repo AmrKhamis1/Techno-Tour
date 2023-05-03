@@ -187,3 +187,61 @@ input[id="post_image"]::file-selector-button:hover {
   color: white;
   background-color: black;
 }
+#DRs{
+  width: 345px;
+  height: 300px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: -2;
+  background-color: #edeefa;
+  margin-top: 50vh;
+  margin-right: 10vh;
+  right: 0;
+}
+.drs{
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.drs_img{
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.drs_img img{
+  width: 30px;
+  height: 30px;
+}
+.drs_name{
+overflow: hidden;
+font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+user-select: none;
+font-weight: 600;
+width: 70%;
+margin-left: 20px;
+}
+.drs_chat{
+  font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #001745;
+  font-weight: 600;
+  color: #fff;
+  width: 20%;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.drs_chat:hover{
+  background-color: #fff;
+  color: #001745;
+}
