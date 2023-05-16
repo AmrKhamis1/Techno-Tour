@@ -130,6 +130,10 @@ function floor1() {
   f_btn2.style.opacity = "50%";
   f_btn3.style.opacity = "50%";
   f_btn4.style.opacity = "50%";
+  f_btn1.style.transform = "scale(1.1)";
+  f_btn2.style.transform = "scale(1)";
+  f_btn3.style.transform = "scale(1)";
+  f_btn4.style.transform = "scale(1)";
 
 }
 
@@ -139,6 +143,10 @@ function floor2() {
   f_btn2.style.opacity = "100%";
   f_btn3.style.opacity = "50%";
   f_btn4.style.opacity = "50%";
+  f_btn1.style.transform = "scale(1)";
+  f_btn2.style.transform = "scale(1.1)";
+  f_btn3.style.transform = "scale(1)";
+  f_btn4.style.transform = "scale(1)";
 }
 
 function floor3() {
@@ -147,6 +155,10 @@ function floor3() {
   f_btn2.style.opacity = "50%";
   f_btn3.style.opacity = "100%";
   f_btn4.style.opacity = "50%";
+  f_btn1.style.transform = "scale(1)";
+  f_btn2.style.transform = "scale(1)";
+  f_btn3.style.transform = "scale(1.1)";
+  f_btn4.style.transform = "scale(1)";
 }
 
 function floor4() {
@@ -155,5 +167,9 @@ function floor4() {
   f_btn2.style.opacity = "50%";
   f_btn3.style.opacity = "50%";
   f_btn4.style.opacity = "100%";
+  f_btn1.style.transform = "scale(1)";
+  f_btn2.style.transform = "scale(1)";
+  f_btn3.style.transform = "scale(1)";
+  f_btn4.style.transform = "scale(1.1)";
 }
 

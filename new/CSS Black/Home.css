@@ -17,7 +17,11 @@ background-color: #edeefa;
   background: #000635; 
   border-radius: 10px;
 }
-
+.no-animation {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important; /* or any other initial state you desire */
+}
 #scrollup {
 	scroll-behavior: smooth;
 	cursor: pointer;
@@ -55,8 +59,85 @@ body{
     flex-direction: column;
     overflow-x: hidden;
   }
+  #building_img_2{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height:80vh;
+    right: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: -3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  }
+  #building_img_2 img{
+    height: 530px;
+    width: 1550px;
+    transform: scale(1.6);
+    animation: home 9s ease-in-out;
+  }
+  @keyframes home {
+    0%{
+      transform: scale(0.7);
+    }
+    100%{
+      transform: scale(1.6);
+    }
+  }
+  #home_open{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height:80vh;
+    right: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    background-color: #1918239c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  }
+  .home_open1,.home_open2{
+    position: absolute;
+    width: 20vw;
+    height: 100%;
+    background-color: #191823;
+  }
+  .home_open1{
+    left: 0;
+    animation: open1 7s ease-in-out;
+  }
+  .home_open2{
+    right: 0;
+    animation: open2 7s ease-in-out;
+
+  }
+  @keyframes open2 {
+    0%{
+      right: -20vw;
+    }
+    100%{
+      right: 0;
+    }
+  }
+  @keyframes open1 {
+    0%{
+      left: -20vw;
+    }
+    100%{
+      left: 0;
+    }
+  }
+  main{
+    background-color: #00000000;
+  }
   .hero{
-      height:85vh;
+      height:65vh;
       background-repeat: no-repeat;
       background-size: cover;
       background-position:center;
@@ -95,7 +176,27 @@ body{
     font-size: 35px;
     color:white;
 }
+@keyframes head-home {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+   }
+}
+#head-home{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 100;
+  background-color: #19182300;
+  height: 25vh;
+  animation: head-home 7s ease-in-out;
 
+}
 #NCT-button{
   font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 800;
@@ -145,9 +246,10 @@ width: 100%;
 #particles-js{
 position: absolute;
 mix-blend-mode:color-dodge;
-z-index: -1;
+z-index: -5;
 width: 100vw;
-height: 367vh;
+height: 267vh;
+margin-top: 100vh;
 }
 .hero-header{
   text-transform: uppercase;
@@ -155,8 +257,8 @@ height: 367vh;
   font-weight: 600;
 }
 #about-uni{
-  font-family:'Times New Roman', Times, serif;
-  word-spacing: 3px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  word-spacing: 1px;
   font-size: large;
   font-weight: 300;
   text-align: center;

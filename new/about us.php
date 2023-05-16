@@ -413,6 +413,9 @@ if(isset($_SESSION["id"])){
               section5.classList.remove("show-shahd");
             });
         });
+        window.onload=()=>{
+          document.getElementById('header-style').style.display='flex';
+        }
 </script>
 <!-------------------------------End pop up pages Js----------------------------->
 

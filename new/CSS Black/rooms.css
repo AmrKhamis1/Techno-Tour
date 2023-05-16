@@ -123,7 +123,7 @@ background-color: rgba(0, 0, 0, 0.533);
 
 .fbtn {
 	opacity: 1;
-	font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family:  "Maven Pro", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -134,12 +134,13 @@ background-color: rgba(0, 0, 0, 0.533);
 	width: 100px;
 	margin-left: 9vw;
 	border: solid;
-	border-color: #040027;
+	border-color: #4a4a4a00;
 	border-width: 2px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-right: 0;
 	color: #363642;
+	transition: all 500ms;
 }
 @keyframes  ani_thehead {
 	0%{opacity: 0;}
@@ -212,7 +213,7 @@ background-color: rgba(0, 0, 0, 0.533);
 #f2,
 #f3,
 #f4 {
-	background-color: #040027;
+	background-color: #141224fa;
 	border: none;
 	border-radius: 10px;
 	align-items: center;
@@ -233,7 +234,7 @@ background-color: rgba(0, 0, 0, 0.533);
 }
 
 .rooms {
-	border:2px solid #040027;
+	border:2px solid #04002700;
 	border-radius:20px;
 	position: relative;
 	color: white;

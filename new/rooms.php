@@ -28,60 +28,16 @@ if(isset($_SESSION["id"])){
    </head>  
 
    <body class='body'>   
- <?php include "profile.php";?> 
+ <?php include "profile.php";
+       include "header.php";
+ ?> 
    <div id='add-event'>
        <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
    </div> 
 
     
-   <header id="header-style" >
-         <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
-         <ul >
-            <li><a href="index.php?theme=<?php echo $theme2;?>" class="links">Home</a></li>
-            <?php if(isset($getuser)){ 
-                     if($getuser['position']!="Technical"){
-                          echo "<li><a href='booking.php' class='links'>Booking</a></li>";
-                     }
-                  }
-            ?>
-            <li><a href="broadcast.php?theme=<?php echo $theme2;?>" class="links">Broadcast</a></li>
-            <li><a href="about us.php?theme=<?php echo $theme2;?>" class="links">About</a> </li>
-
-
-       
-         </ul>
-          <div style='height: 12px;'><a href="rooms.php?theme=<?php echo $theme?>"><img src=<?php echo $theme_logo; ?> width='18px' alt=""></a></div>
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src=<?php echo $search;?> alt="..">
-         </div>
-         <div class="user-logo"><a 
-         <?php
-          if(isset($getuser)){
-            echo "onclick='logout_show2();'";
-            }else{
-            echo "href='form.php'";
-              }
-         ?> id="login-logo" >
-         <?php 
-         if(isset($getuser)){
-         echo $getuser["fname"];
-         }else{
-         echo "login";
-           }
-          ?>
-         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show2();"          
-         <?php
-          if(isset($getuser)){
-            if($getuser['image']!=NULL){
-                echo "src='photos\\".$getuser['image']."'";
-             } else{
-              echo "src=".$login." style='width:20px;'";
-              }
-         }else{
-          echo "src=".$login." style='width:20px;'";
-         }
-         ?> alt=".."></div></div>
-      </header>
+  
       <div class="bage">
       <div id="f-btns">
          <div id="f-btn1" onclick="floor1();" class="fbtn">Floor 1</div>

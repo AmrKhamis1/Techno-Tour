@@ -22,6 +22,7 @@ background-color: #edeefa;
 body{
     scroll-behavior: smooth;
     background-color:#040027;
+    background-image: linear-gradient(0deg,rgb(5, 45, 79),rgb(0, 26, 49));
     width: 100vw;
     height: fit-content;
     display:flex;
@@ -42,7 +43,7 @@ body{
     border: 3px solid transparent;
     border-radius: 30px;
     border-top-width: 0;
-    border-image: linear-gradient(#00000000,#1ac90d,#1ac90d,#00000000) 0.1% round;
+    border-image: linear-gradient(#00000000,#0077ff,#0077ff,#00000000) 0.1% round;
     -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 
 }
@@ -220,7 +221,6 @@ align-items: center;
 }
 .drs_img img{
   width: 30px;
-  height: 30px;
 }
 .drs_name{
 overflow: hidden;

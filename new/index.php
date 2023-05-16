@@ -1,27 +1,5 @@
 <?php 
-
-function getuser($user){
-   include "database/databasemysqli.php";
-   $sql="SELECT*FROM members WHERE id={$user}";
-   $result=mysqli_query($connection,$sql);
-   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
-   return $getuser;
-}
-  session_start();
-   if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
-   $_SESSION["id"]=$_COOKIE['user'];
-   $getuser=getuser($_SESSION["id"]);
-  }else{
-  if(isset($_SESSION["id"])){
-   $getuser=getuser($_SESSION["id"]);
-  }
-  else{
-   $getuser=NULL;
-   session_unset();
-   session_destroy();
-  }
-}
-
+include "session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,63 +19,22 @@ function getuser($user){
   <img id='logo-intro' src="techno tour website design pro\<?php echo $loading;?>" width='70px'>
       </div> 
    <div id="particles-js"></div>
-   <?php include "profile.php"; ?>    
-      <header id="header-style" >
-         <img class="logo-img" onclick="window.location.assign('index.php?theme=<?php echo $theme2;?>');" src=<?php echo $logo;?> alt="..">
-         <ul >
-            <li><a href="index.php?theme=<?php echo $theme2;?>" class="links">Home</a></li>
-            <?php if(isset($getuser)){ 
-                     if($getuser['position']!="Technical"){
-                          echo "<li><a href='booking.php' class='links'>Booking</a></li>";
-                     }
-                  }
-            ?>
-            <li><a href="broadcast.php?theme=<?php echo $theme2;?>" class="links">Broadcast</a></li>
-            <li><a href="about us.php?theme=<?php echo $theme2;?>" class="links">About</a> </li>
-
-
-       
-         </ul>
-          <div style='height: 12px;'><a href="index.php?theme=<?php echo $theme?>"><img src=<?php echo $theme_logo; ?> width='18px' alt=""></a></div>
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src=<?php echo $search;?> alt="..">
-         </div>
-         <div class="user-logo"><a 
-         <?php
-          if(isset($getuser)){
-            echo "onclick='logout_show();'";
-            }else{
-            echo "href='form.php'";
-              }
-         ?> id="login-logo" >
-         <?php 
-         if(isset($getuser)){
-         echo $getuser["fname"];
-         }else{
-         echo "login";
-           }
-          ?>
-         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
-         <?php
-          if(isset($getuser)){
-            if($getuser['image']!=NULL){
-                echo "src='photos\\".$getuser['image']."'";
-             } else{
-              echo "src=".$login." style='width:20px;'";
-              }
-         }else{
-          echo "src=".$login." style='width:20px;'";
-         }
-         ?> alt=".."></div></div>
-
-         
-      </header>
+   <?php include "profile.php"; 
+   include "header.php";
+   ?>    
       <div id="bage1" >
-
       <main style="display:flex;flex-direction:column;">
+      <div id='home_open' class='no-animation'>
+        <div class='home_open1 home_o no-animation'></div>
+        <div class='home_open2 home_o no-animation'></div>
+      </div>
+      <div id='building_img_2' class='no-animation' >
+    <img class='no-animation' src="techno tour website design pro/NCT building real.png" alt="">
+    </div>
          <div class="hero">
-         <font style="color:white;font-size:40px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
+         <font style="color:white;font-size:30px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
                 <?php
-                $hero='THE BEST BOOKING GUIDE FOR DOCTORS,ASSISTANTS,';
+                $hero='THE BEST BOOKING GUIDE FOR PROFESSORS,ASSISTANTS,';
                 $hero2='STUDENTS AND EXTERNAL USERS IN NCTU.';
                 for($i=0;$i<100;$i++){
                   if(isset($hero[$i])){
@@ -125,7 +62,16 @@ function getuser($user){
               
                 ?>
                      
-                     <br>
+                     <br> 
+                     <span id='head-home'>
+                     Welcome to our university room reservation system! We understand the importance of a <br>
+                      seamless and convenient booking process for students, external users, and professors alike. <br>
+                       Our user-friendly platform allows you to effortlessly reserve a rooms. <br>
+                        if you are external user attending a conference, our system caters to your diverse needs. With just a <br>
+                          few clicks, you can explore available options, select the perfect room,and finalize <br>
+                          your reservation. We are committed to providing an inclusive and efficient experience, <br>
+                           enabling you to focus on your professional engagements. <br>
+                           Join us and simplify room reservation process today!</span>
                      <?php
                      if(isset($getuser)){
                     echo "<button type='button' onclick='window.location.assign(`rooms.php?theme=".$theme2."`);' id='NCT-button' class='tour-button'>
@@ -185,10 +131,13 @@ function getuser($user){
                      </div>  
    <div id="bage2">
     <div id="techno-tour-notify">
-      <div>In relation to the technological orientation of the world in general and <br>
-         Egypt in particular, the Techno Tour team decided to start this project to make the New Cairo University <br>
-         technological room system more easy, flexible and fast to meet the requests of visitors outside and inside the university. <br>
-           This is basically a student project, nothing more, so do not expect it to simulate reality by 100%.</div> 
+      <div>Having university room reservations is of utmost importance for both students and academic institutions. <br>
+       It ensures a smooth and efficient utilization of available resources while providing students with a sense of security and comfort. <br>
+        With the ever-increasing number of students enrolling in universities, a streamlined reservation system becomes crucial to manage the limited <br>
+         campus accommodations effectively. By creating a dedicated system for room reservations, we aim to simplify the process for our users, enabling <br>
+          them to conveniently select and book their preferred rooms. <br>
+          This solution not only saves time and effort but also enhances the overall experience of students, <br>
+           allowing them to focus on their studies and personal growth without worrying about housing arrangements.</div> 
        <div><img src=<?php echo $photo1; ?> width='200px' alt=""></div>
 
     </div>
@@ -197,16 +146,18 @@ function getuser($user){
 <div id='out-links'>
       <img src="techno tour website design pro/NCT logo3.png" alt="">
       <img src="techno tour website design pro/useful-3.png" alt="">
-      <img src="techno tour website design pro/useful-4.png" alt="">
       <img src="techno tour website design pro/useful-2.png" alt="">
     </div>
     <br>
     <br>
-<div id="techno-tour-notify">
+<div id="techno-tour-notify2">
   <div><img src=<?php echo $photo2;?> width='150px' alt=""></div>
-          <div>This project was done during the second year of study at Cairo Technological University in Egypt,<br>
-         and it is basically a development of the principle of organizing university rooms and following up momentary changes in them <br>
-           Learn more about this project from <a style='text-decoration: none;font-weight: 700;color:rgb(0, 166, 255);' href='about us.php?theme=<?php echo $theme2;?>'>here</a>.
+          <div>In addition to catering to students, our system for university room reservations also extends its benefits to external users and professors. <br>
+           Recognizing the diverse needs of the academic community, we have designed the system to accommodate bookings from external users, such as guest speakers, <br>
+            conference attendees, and visiting scholars. This feature not only fosters collaboration and knowledge exchange but also generates additional revenue <br>
+             for the institution. Furthermore, the system enables professors and other faculty members to easily reserve rooms for their academic activities, <br>
+              including meetings, seminars, and research discussions. By offering a user-friendly interface accessible to both internal and external stakeholders, <br>
+               our system promotes inclusivity and efficient resource utilization across the university campus.
           </div> 
     </div>
     <br>

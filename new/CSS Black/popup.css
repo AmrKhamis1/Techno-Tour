@@ -56,7 +56,7 @@ tr:last-child td:last-child{
 }
 tr:first-child,tr:first-child td{
     font-size: medium;
-    background-color: #000635;
+    background-color: #202537;
     color: white;
     border-color: #0b0b0b;
     font-weight: 500;
@@ -64,7 +64,7 @@ tr:first-child,tr:first-child td{
 }
 tr td:first-child{
     font-size: medium;
-    background-color: #000635;
+    background-color: #202537;
     color: white;
     border-color: #0b0b0b;
     font-weight: 500;
@@ -96,11 +96,9 @@ tr td:first-child{
     height: 30px;
 }
 #number_of{
-    border-radius: 5px;
+    border: 0;
     outline: none;
-    border-style: solid;
-    border-color: #000635;
-    background-color: #00063561;
+    background-color: #202537;
     color: white;
 }
 #else{
@@ -110,13 +108,13 @@ tr td:first-child{
     height: 20px;
     width: 100px;
     margin-top: 1%;
-    border: 2px;
-    border-color: black;
-    border-style: solid;
+    border: 0;
+    border-style: none;
     border-radius: 20px;
     color: white;
     font-weight: 500;
-    background-color: #000635;
+    background-color: #17181c;
+    transition: all 300ms;
 }
 #report_button:hover{
     color: #0b0b0b;
@@ -125,17 +123,14 @@ tr td:first-child{
 
  select{
     margin: 10px 0px;
+    border: 0;
     margin-right: 10px;
-    background-color: #00063561;
+    background-color: #202537;
     color: #ffffff;
     font-weight: 500;
     cursor: pointer;
  height: 30px;
  outline: none;
- border: 1px;
- border-color: #0b0b0b;
- border-style: solid;
- border-radius: 5px;
  }
  select:hover{
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
