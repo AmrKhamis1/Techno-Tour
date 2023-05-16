@@ -18,18 +18,27 @@ include "session.php";
    <div id="loading-screen">
   <img id='logo-intro' src="techno tour website design pro\<?php echo $loading;?>" width='70px'>
       </div> 
-   <div id="particles-js"></div>
+   <div id="particles-js">
+   <div id='footer'>
+    <div id='footer_words'>
+   This project serves as a prototype for a comprehensive university room management system <br>
+     It  also include a copyright form to address intellectual property concerns and protect the rights of all users within the system.<br>
+    </div>
+    <div style='background-color:#c6c6c638;width:2px; height:70px;align-self: center;'></div>
+    <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php?theme=<?php echo $theme2;?>'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
+   </div>
+   </div>
    <?php include "profile.php"; 
    include "header.php";
    ?>    
       <div id="bage1" >
       <main style="display:flex;flex-direction:column;">
-      <div id='home_open' class='no-animation'>
-        <div class='home_open1 home_o no-animation'></div>
-        <div class='home_open2 home_o no-animation'></div>
+      <div id='home_open' class='no-animation animation_go'>
+        <div class='home_open1 home_o no-animation animation_go'></div>
+        <div class='home_open2 home_o no-animation animation_go'></div>
       </div>
-      <div id='building_img_2' class='no-animation' >
-    <img class='no-animation' src="techno tour website design pro/NCT building real.png" alt="">
+      <div id='building_img_2' class='no-animation animation_go' >
+    <img class='no-animation animation_go' src="techno tour website design pro/NCT building real.png" alt="">
     </div>
          <div class="hero">
          <font style="color:white;font-size:30px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
@@ -63,7 +72,7 @@ include "session.php";
                 ?>
                      
                      <br> 
-                     <span id='head-home'>
+                     <span id='head-home' class='no-animation animation_go'>
                      Welcome to our university room reservation system! We understand the importance of a <br>
                       seamless and convenient booking process for students, external users, and professors alike. <br>
                        Our user-friendly platform allows you to effortlessly reserve a rooms. <br>
@@ -169,11 +178,13 @@ include "session.php";
             in the faculties of the university.</p>
       <div id="u-contact"> 
          <a href="http://nctu.edu.eg" style="font-family: Impact;text-decoration: none;color:white;">NCTU</a>
+         
        <img onclick="window.location.assign('https://www.facebook.com/nctu.edu.eg/');" src="techno tour website design pro/facebook.png" style="cursor: pointer;" width="30px"> 
        <a href="mailto:info@nctu.edu.eg"><img src="techno tour website design pro/email.png" style="cursor: pointer;"  width="30px" alt=""></a>
       </div>
    </div>
    <div id="scrollup" onclick="scrollup();">Up</div>
+
    </body>
    <script src="JS/home js.js"></script>
       <script src="JS/header.js"></script>

@@ -38,7 +38,7 @@ background-color: #edeefa;
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
-	margin-bottom: 5%;
+	margin-bottom: 7%;
 	margin-right: 3%;
 
 }
@@ -245,7 +245,6 @@ width: 100%;
 }
 #particles-js{
 position: absolute;
-mix-blend-mode:color-dodge;
 z-index: -5;
 width: 100vw;
 height: 267vh;

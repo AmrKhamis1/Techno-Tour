@@ -307,3 +307,31 @@ animation-timing-function: ease-in-out
   animation: warp 500ms forwards;
   animation-timing-function: ease-in-out;
 }
+
+#footer{
+  position: absolute;
+  bottom: -0.5%;
+  background-color: #1d1f2c;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-direction: row;
+  height: 80px;
+  width: 100vw;
+  z-index: 3;
+  font-family: 'Calibri Light',Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+#footer_words{
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  text-align:center;
+  color: #555555;
+}
+#footer_copy{
+  color: #555555;
+  text-align:start;
+  width: fit-content;
+  align-self: center;
+}

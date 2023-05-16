@@ -13,7 +13,8 @@ function uni(){
 
 /************************ scroll up fun **************************** */
 window.onscroll = function () {
-   scrooling()
+   scrooling();
+   scrool_ani();
 };
 
 function scrooling() {
@@ -21,6 +22,19 @@ function scrooling() {
       up.style.display = "flex";
    } else {
       up.style.display = "none";
+   }
+
+}
+function scrool_ani() {
+   var elements = document.querySelectorAll(".animation_go");
+   if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.add("no-animation");
+      }
+   } else {
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("no-animation");
+      }
    }
 
 }
