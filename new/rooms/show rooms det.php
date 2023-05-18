@@ -155,6 +155,20 @@
             }
             ?>
       <div class='reports'>
+        <?php
+        include "../database/databasemysqli.php";
+        $sql=$connection->prepare("SELECT * FROM report where room_id='$room_id'");
+        $sql->execute();
+        $result=$sql->get_result();
+        while($getreport=$result->fetch_assoc())
+        {  
+          echo "<p>Reports:</p>";
+              echo $getreport['report'];
+              echo" <br>";
+               echo $getreport['note'];
+          }
+        
+        ?>
         
       </div>
       <script>
