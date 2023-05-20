@@ -23,6 +23,9 @@ if ($result3->num_rows > 0) {
 while($row=$result3->fetch_assoc()){
 $friend_name=$row['fname']." ".$row['lname'];
 $friend_img=$row['image'];
+if($friend_img==''||$friend_img==NULL){
+   $friend_img='unknown.png';
+}
 }}
 
 
