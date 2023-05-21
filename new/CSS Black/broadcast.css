@@ -134,7 +134,6 @@ body{
   justify-content: center;
   z-index: -3;
   background-color: #1d1f2c;
-  margin-top: 10vh;
   margin-right: 10vh;
   right: 0;
 }
@@ -200,7 +199,7 @@ input[id="post_image"]::file-selector-button:hover {
   z-index: -3;
   padding:0;
   background-color: #1d1f2c;
-  margin-top: 50vh;
+  margin-top: 40vh;
   margin-right: 10vh;
   right: 0;
 }
