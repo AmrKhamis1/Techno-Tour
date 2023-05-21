@@ -23,9 +23,10 @@ $user_id=$_SESSION["id"];
 
 
 if(isset($_POST['report_done'])){
-    
-$insert=$connection->prepare("INSERT INTO report(report,user_id,note,room_id)
-VALUES ('$report','$user_id','$report_det','$room_id')");
+    $date=date('y-m-d');
+    $time=date('h:i');
+$insert=$connection->prepare("INSERT INTO report(report,user_id,note,room_id,date,time)
+VALUES ('$report','$user_id','$report_det','$room_id','$date','$time')");
 $insert->execute();
 $sql="SELECT * FROM rooms WHERE id='$room_id'";
 $result=mysqli_query($connection,$sql);
@@ -44,7 +45,7 @@ $update=$connection->query("UPDATE rooms SET fixed_pc='$fixed' , broken_pc='$n_o
 
 if($update)
 {
-    header("location:index.php");
+    header("location:rooms.php?theme=b");
 }
 }
 

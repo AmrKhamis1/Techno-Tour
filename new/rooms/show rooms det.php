@@ -106,7 +106,7 @@
             $room_id=$getuser['id'];
 ?>
             <div class="detail">
-                <p style='font-weight: 600;'>Number of avilable PCs :
+                <p style='font-weight: 600;'>Number of PCs :
                 <?php
                  echo " "."<span style='font-weight: 700;font-size:large;'>".$getuser['fixed_pc']."</span>";
                  ?></p>
@@ -160,12 +160,13 @@
         $sql=$connection->prepare("SELECT * FROM report where room_id='$room_id'");
         $sql->execute();
         $result=$sql->get_result();
+        echo "<p>Reports:</p>";
         while($getreport=$result->fetch_assoc())
         {  
-          echo "<p>Reports:</p>";
+          
               echo $getreport['report'];
               echo" : ";
-               echo $getreport['note'];
+               echo $getreport['note']."<span style='color:#555555;'>  ".$getreport['date']."|".$getreport['time']."  </span> <br>";
           }
         
         ?>
