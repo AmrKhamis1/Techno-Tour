@@ -142,3 +142,8 @@ tr td:first-child{
     border-radius: 10px;
     background-color:black;
   }
+  .reports{
+    overflow: scroll;
+    height: 140px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
