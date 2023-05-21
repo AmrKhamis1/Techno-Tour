@@ -164,7 +164,7 @@
         {  
           echo "<p>Reports:</p>";
               echo $getreport['report'];
-              echo" <br>";
+              echo" : ";
                echo $getreport['note'];
           }
         

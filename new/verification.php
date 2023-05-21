@@ -10,10 +10,14 @@ if(empty($fname) || empty($lname)||empty($email)||empty($password) || empty($v))
     header("Location:index.php");
     exit;
 }
-
+$v2_password=NULL;
 if(isset($_POST['v-submit'])){
-
-   if( password_verify($_POST['v_number'],$v)){
+if(isset($_POST['vdr_number']) || $_POST['vdr_number']!=NULL){
+    $v2_password=$_POST['vdr_number'];
+}else{
+        $v2_password=3029342;
+}
+   if( password_verify($_POST['v_number'],$v) && $v2_password=3029342){
 include "database/databasemysqli.php";
 $insert=$connection->prepare("INSERT INTO members(fname,lname,email,password,position,image)
 VALUES ('$fname','$lname','$email','".$_GET['password']."','$position','".$email." photo.png"."')");
@@ -30,7 +34,7 @@ $insert->execute();
 header('Location:form.php');
 exit;
    }else{
-    $ema_pass='code not correct !';
+    $ema_pass='verification code or uni code is not correct !';
    }
 }
  ?>
