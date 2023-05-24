@@ -87,35 +87,42 @@ include "session.php";
                           Rooms
                          </button>";
                         }
+                        $count=4;
+                        include "broadcast show.php";
+                        for($i=0;$i<4;$i++){
+                            $f_caption=$caption[$i];
+                            $f_image=$image[$i];
+                          }
                          ?>
                      </font>
-                     <section class="scrollable-section">
-  <div class="photo-grid">
-    <?php
-      $count=4;
-      include "broadcast show.php";
-      for($i=0;$i<$count;$i++){
-        if(isset($caption[$i])){
+                     <div id='big_photo_container'>
+                            <div id='big_photo'>
+                                      <img src="posts/<?php echo $f_image;?>" alt="">
+                            </div>
+                            <p id='big_photo_text'><?php echo $f_caption;?></p>
+                            <section class="scrollable-section">
 
-        
-            echo "
-                <div class='photo-container'>
-      <img src='posts/".$image[$i]."' alt='Photo 1' class='photo'>
-      <div class='overlay'>
-        <p>".substr($caption[$i],0,150)."...</p>
-      </div>
-      <div class='read-here'>
-        <a href='broadcast.php?theme=".$theme2."'>Read Here</a>
-      </div>
-    </div> 
-            
-            ";
-          }
-      }
-    ?>
-  
-  </div>
+<div class="photo-grid">
+  <?php
+    for($i=0;$i<4;$i++){
+      if(isset($caption[$i])){
+
+      
+          echo "
+              <div class='photo-container' onclick='show_photo(`".$caption[$i]."`,`".$image[$i]."`);'>
+    <img src='posts/".$image[$i]."' alt='Photo 1' class='photo'>
+    <div class='overlay'>
+    </div>
+  </div> 
+          
+          ";
+        }
+    }
+  ?>
+
+</div>
 </section>
+                      </div>
          </div> 
          
          <br><br> 

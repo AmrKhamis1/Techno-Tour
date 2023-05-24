@@ -34,21 +34,25 @@ $row=mysqli_num_rows($resl);
 if (empty($fname) || empty($lname)){
     $flname="This field is require";
     $fl=0;
+    $not_succ="signup();";
 }else{
     $fl=1;
 }
 if(empty($email)){
     $email_error= "email field is require";
     $em=0;
+    $not_succ="signup();";
 }
 else if (! filter_var($email, FILTER_VALIDATE_EMAIL)){
       $email_error= "Invalid email format";
       $em=0;
+      $not_succ="signup();";
 }
 else if ($row>0)
 {
       $email_error= "This email already exists";
       $em=0;
+      $not_succ="signup();";
 
 }else{
     $em=1;
@@ -57,17 +61,20 @@ else if ($row>0)
 {
     $pass_error= "password field is require";
     $ps=0;
+    $not_succ="signup();";
 }
 else if (strlen($password)< 8)
 {
    $pass_error= "Password must be more then 8 char";
    $ps=0;
+   $not_succ="signup();";
 }
 
  else if(! preg_match("/[a-zA-Z]/",$password))
 {
    $pass_error= "Must conntain one letter";
    $ps=0;
+   $not_succ="signup();";
 }
 else{
     $ps=1;
@@ -76,11 +83,13 @@ if(empty($vpassword))
 {
     $vpass_error= "Verifcation field is require";
     $vps=0;
+    $not_succ="signup();";
 }
 else if ($password != $vpassword)
 {
     $vpass_error= "Must be match";
     $vps=0;
+    $not_succ="signup();";
 }else{
     $vps=1;
 }
@@ -95,9 +104,10 @@ include_once 'form/send email.php';
 header("Location:verification.php?fname=".$fname."&email=".$email."&lname=".$lname."&password=".$password_encrypt."&position=".$position."&v=".$v_encrypt);
 $myfile = fopen("photos/".$email." photo.png", "w");
 fwrite($myfile,$image);
+
+}
 if($fl==0 || $em==0 || $ps==0 || $vps==0){
     $not_succ="signup();";
-}
 }
 }
 ?>

@@ -1,5 +1,11 @@
 
 
+function show_photo(x,y){
+
+  document.getElementById('big_photo').innerHTML="<img src='posts/"+y+"'>";
+  document.getElementById('big_photo_text').innerHTML=x;
+
+}
 
 
 window.onload=function(){
@@ -29,6 +35,8 @@ window.scrollTo(0, 2500);
 ex.addEventListener('click',()=>{
     about.style.display='none';
  });
+
+
 
  
  }

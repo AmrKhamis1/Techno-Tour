@@ -15,7 +15,6 @@ if ($result->num_rows > 0) {
     while($row=$result->fetch_assoc()){
         $out=$row['end_date'];
         list($y1,$m1,$d1)= explode("-",$out);
-        echo $out;
         $end_date=($y1*360)+($m1*30)+$d1; 
             if($out_date > $end_date){
                 $sql2="DELETE FROM time_table WHERE end_date='$out';";

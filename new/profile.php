@@ -19,7 +19,16 @@
             <button type='submit' id='change_photo' name='c_photo'>change photo</button>
             <button type='submit' id='change_name' name='c_name'>change name</button>
             <form method='post' action='form/login.php' id='out_form'>            
-            <button name='logout' type='submit' style='margin:0;margin-left:10px;background-color:rgba(0,0,0,0);border:none;'>logout   <img src='techno tour website design pro\\".$logout."' id='logout' title='log out' style='margin-left:10px;' width='23px'></button>
+            <button id='out_form' name='logout' type='submit' style='   
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            margin: 0;
+            cursor: pointer;
+            margin-left: 10px;
+            background-color: rgba(0,0,0,0);
+            border: none;'>logout   <img src='techno tour website design pro\\".$logout."' id='logout' title='log out' style='margin-left:10px;' width='23px'></button>
             </form>
             </div>
             

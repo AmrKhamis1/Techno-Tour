@@ -43,7 +43,7 @@ background-color: #edeefa;
 
 }
 #bage1{
-  height: 90vh;
+  height: fit-content;
   width: 100vw;
   margin-top: 10vh;
 }
@@ -137,7 +137,7 @@ body{
     background-color: #00000000;
   }
   .hero{
-      height:65vh;
+      height:150vh;
       background-repeat: no-repeat;
       background-size: cover;
       background-position:center;
@@ -247,7 +247,7 @@ width: 100%;
 position: absolute;
 z-index: -5;
 width: 100vw;
-height: 267vh;
+height: 331vh;
 margin-top: 100vh;
 }
 .hero-header{

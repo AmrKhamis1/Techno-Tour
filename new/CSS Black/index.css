@@ -33,28 +33,25 @@
 .scrollable-section {
     background-color: rgba(0, 25, 49, 0);
     align-self: center;
-    width: 100%;
-    bottom: 28%;
-    position: absolute;
+    width: 40%;
+    height: fit-content;
     white-space: nowrap;
   }
   
   /* Style for the photo grid */
   .photo-grid {
-    background-color: #191823;
+    background-color: #19182300;
     display: flex;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 150px;
+    height: 50px;
   }
   
   /* Style for the photo container */
   .photo-container {
     display: flex;
-    width: 200px;
+    width: 50px;
     margin-right: 10px;
     margin-left: 10px;
     overflow: hidden;
@@ -62,7 +59,7 @@
     align-items: center;
     background-color: #1a1c27;
     justify-content: center;
-    height: 150px;
+    height: 50px;
   }
   
   /* Style for the photo */
@@ -80,7 +77,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(170, 170, 170, 0.5);
     color: #fff;
     text-align: center;
     transition: opacity 0.3s;
@@ -138,6 +135,54 @@
     .photo-container:hover img {
     filter: brightness(80%);
     }  
+
+
+    #big_photo_container{
+      background-color: #1a1c27;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      width: 100%;
+      white-space: nowrap;
+    }
+    #big_photo{
+      display: flex;
+      width: 400px;
+      margin-right: 10px;
+      margin-left: 10px;
+      overflow: hidden;
+      position: relative;
+      align-items: center;
+      background-color: #1a1c27;
+      justify-content: center;
+      height: 300px;
+    }
+    #big_photo_text{
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #00000000;
+      width: 500px;
+      white-space:pre-line;
+      animation: animeee 500ms;
+      padding-left: 30px;
+
+    }
+    @keyframes animeee {
+      0%{
+            opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+    }
+    #big_photo img{
+      width: 400px;
+      transition: all 400ms;
+      animation: animeee 500ms;
+    }
+
 
   #out-links{
     background-color: #1d1f2c;

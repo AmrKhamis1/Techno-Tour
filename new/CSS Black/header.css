@@ -253,6 +253,7 @@
     }
     #change_photo,#change_name,#out_form{
       font-size: 15px;
+      border: 0;
       font-family: 'Arial', sans-serif;
       background-color: #e1e1e5;
       transition: all 300ms;
