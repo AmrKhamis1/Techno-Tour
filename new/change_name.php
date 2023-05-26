@@ -5,18 +5,21 @@
     </head>
     <body>
         <form id='form1' action="" method="post">
-            <label for="">Add Your New Fname</label><br>
+            <label for="">New Fisrt Name</label><br>
             <input type="text" name="fname" required><br>
-            <label for="">Add Your New Lname</label><br>
+            <label for="">New Last Name</label><br>
             <input type="text" name="lname" required><br>
             <button type="submit" name="change">Change</button>
 </form>
     </body>
 <?php 
   include "database/databasemysqli.php";
+  session_start();
   include "session.php";
-    if(isset($getuser))
-    {
+  
+  if(!isset($getuser)){
+      header("location:index.php");
+  }
         if(isset($_POST['change']))
         {
             $id=$getuser['id'];
@@ -28,5 +31,4 @@
                 header("location:index.php");
             }
         }
-    }
     ?>

@@ -12,9 +12,13 @@
     </body>
     <?php 
   include "database/databasemysqli.php";
+  session_start();
   include "session.php";
-    if(isset($getuser))
+    if(!isset($getuser))
     {
+        header("location:index.php");
+    }
+
         if(isset($_POST['change']))
         {
             if(unlink("photos/".$getuser['image']))
@@ -28,5 +32,5 @@
                 header("location:index.php");
             }
         }
-    }
+    
     ?>
