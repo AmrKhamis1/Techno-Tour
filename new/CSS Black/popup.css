@@ -1,5 +1,6 @@
 
 .contain{
+    overflow: hidden;
     color: white;
     background-color: #313243;
     height: 80vh;

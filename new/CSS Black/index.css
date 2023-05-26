@@ -34,7 +34,7 @@
     background-color: rgba(0, 25, 49, 0);
     align-self: center;
     width: 40%;
-    height: fit-content;
+    height: 100%;
     white-space: nowrap;
   }
   
@@ -45,98 +45,34 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 100%;
   }
-  
   /* Style for the photo container */
   .photo-container {
+    cursor: pointer;
     display: flex;
-    width: 50px;
+    width: 100%;
     margin-right: 10px;
     margin-left: 10px;
     overflow: hidden;
     position: relative;
     align-items: center;
     background-color: #1a1c27;
+    background-image: linear-gradient(270deg,rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0));
     justify-content: center;
-    height: 50px;
+    height: 100%;
+    transition: all 500ms;
+  }
+  .photo-container:hover{
+    background-image: linear-gradient(270deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.0));
   }
   
   /* Style for the photo */
   .photo {
     display: block;
-    width: 100%;
+    width: 10%;
     height: auto;
   }
-  
-  /* Style for the overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(170, 170, 170, 0.5);
-    color: #fff;
-    text-align: center;
-    transition: opacity 0.3s;
-  }
-  
-  /* Style for the text overlay */
-  .overlay p {
-    white-space:pre-line;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    width:  100%;
-    margin-top: 30%;
-    transform: translateY(-50%);
-  }
-  
-  /* Style for the read here link */
-  .read-here {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s;
-    }
-    
-    /* Style for the read here link text */
-    .read-here a {
-    color: #fff;
-    font-weight: bold;
-    font-size: small;
-    text-decoration: none;
-    transition: all 200ms;
-    font-family: 'Maven Pro',Arial, Helvetica, sans-serif;
-    }
-    .read-here a:hover {
-      color: #006aff;
-      font-weight: bold;
-      text-decoration: none;
-      }
-    
-    /* Style for the photo container on hover */
-    .photo-container:hover .overlay {
-    opacity: 1;
-    }
-    
-    .photo-container:hover .read-here {
-    opacity: 1;
-    }
-    
-    .photo-container:hover img {
-    filter: brightness(80%);
-    }  
-
-
     #big_photo_container{
       background-color: #1a1c27;
       align-self: center;
@@ -159,7 +95,7 @@
       justify-content: center;
       height: 300px;
     }
-    #big_photo_text{
+    .big_photo_text{
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #00000000;
@@ -181,6 +117,19 @@
       width: 400px;
       transition: all 400ms;
       animation: animeee 500ms;
+    }
+    .broadcats_photos{
+      display: none;
+    }
+    .photo0{
+      display: block;
+    }
+    .big_photo_text{
+   display: none;
+    }
+    .text0{
+      display:block;
+
     }
 
 

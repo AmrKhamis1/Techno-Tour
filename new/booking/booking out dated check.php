@@ -1,5 +1,5 @@
 <?php
-include "./database/databasemysqli.php";
+include "../database/databasemysqli.php";
 $RoomNum=$_GET['Room_Num'];
 $rooms=substr($RoomNum,3);
 $date=date('Y-m-d');

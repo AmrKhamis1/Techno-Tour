@@ -33,35 +33,37 @@
 	margin-right: 3%;
 
 }
-
+@keyframes  ani_thebody {
+	0% {background-size: 123%;}
+	70% {background-size: 123%;}
+	100% {background-size: 250%;}
+   }
+   .no-animation{
+	animation: none !important;
+	transition: none !important;
+	opacity: 1 !important;
+   }
 body{
-    scroll-behavior: smooth;
 	background-size: 0%;
 	background-image:url('../techno tour website design pro/NCT building3 dark.png');
 	background-position: top;
     background-attachment: fixed;
 	background-repeat: no-repeat;
     background-color:#191823;
-    width: fit-content;
-    height: fit-content;
-    display:block;
+    width: 100vw;
+    height: 100vh;
     align-items: center;
     padding: 0;
     margin: 0;
-    flex-direction: column;
-    overflow: hidden;
+	overflow: hidden;
   }
-  @keyframes  ani_thebody {
-	 0% {background-size: 123%;}
-	 70% {background-size: 123%;}
-	 100% {background-size: 250%;}
-	}
+
   body{
-	opacity: 0;
-	display: block;
-	animation:ani_thebody 2000ms ;
-	background-size: 250%;
+	opacity: 1;
+	background-size: 123%;
 	transition: all 1000ms;
+	animation:ani_thebody 2400ms forwards;
+	display: block;
 }
 
   #add-event{
@@ -109,16 +111,20 @@ background-color: rgba(0, 0, 0, 0.533);
 	0%{height: 0px;}
 	40% {height: 0px;}
 	70% {height: 40vh;}
+	100%{
+		height: 40vh;
+	}
    }
   #f-btns {
 	position: fixed;
 	right: 0;
-	height: 40vh;
+	z-index: 1;
+	height: 0;
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: space-evenly;
 	overflow: hidden;
-    animation: ani_thebuttons 3000ms ;
+    animation: ani_thebuttons 3000ms forwards;
 }  
 
 .fbtn {
@@ -147,6 +153,11 @@ background-color: rgba(0, 0, 0, 0.533);
 	70% {opacity: 0;}
 	100% {opacity: 1;}
    }
+   .no-animation2{
+	animation: none !important;
+	transition: none !important;
+	opacity: 0 !important;
+   }
 #head{
 	font-size: medium;
 	font-family: Arial, Helvetica, sans-serif;
@@ -154,14 +165,16 @@ background-color: rgba(0, 0, 0, 0.533);
 	position: fixed;
 	z-index: -1;
 	top: 0;
+	opacity: 0;
 	color: white;
 	margin-top:12vh ;
 	width: 80vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	
 	animation: ani_thehead 2000ms;
-
+animation-fill-mode: forwards;
 }
 
 
@@ -173,15 +186,17 @@ background-color: rgba(0, 0, 0, 0.533);
 
   #cont-home {
 	margin: 0;
+    position: absolute;
     display: block;
 	margin-top: 35vh;
 	height:90vh;
 	width:100vw;
-	animation: ani_therooms 2400ms;
+	transform: scale(0);
+
+	animation: ani_therooms 2400ms forwards;
 }
 
 .container {
-	position: fixed;
 	margin-left: 10vw;
 	width: 990px;
 	height: 60%;

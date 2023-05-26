@@ -94,15 +94,22 @@ window.onload=function(){
   book_out_dated();
   setInterval(all,60000);
   all();
-setTimeout(()=>{
-document.getElementById('header-style').style.display='flex';
-document.getElementsByClassName('body')[0].style.opacity='1';
-
-},1000);
-  
+document.getElementById('header-style').style.display='flex';  
   floor1();
 }  
 
+window.addEventListener("load", function() {
+  var elements = document.querySelectorAll(".no-animation");
+  var elements2 = document.querySelectorAll(".no-animation2");
+  for (var i = 0; i < elements2.length; i++) {
+    elements2[i].classList.remove('no-animation2');
+
+  }
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.remove('no-animation');
+
+  }
+});
 
 function show_book(x){
   var book=document.getElementById('book_button'+x);

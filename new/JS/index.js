@@ -1,9 +1,21 @@
 
+var counter=0;
+function show_photo(){
+counter++;
+if(counter>3){
+counter=0;
+}
+for(i=0;i<4;i++){
+  if(i==counter){
+    document.getElementsByClassName('broadcats_photos')[i].style.display='block';
+    document.getElementsByClassName('big_photo_text')[i].style.display='block';
 
-function show_photo(x,y){
+  }else{
+  document.getElementsByClassName('broadcats_photos')[i].style.display='none';
+  document.getElementsByClassName('big_photo_text')[i].style.display='none';
 
-  document.getElementById('big_photo').innerHTML="<img src='posts/"+y+"'>";
-  document.getElementById('big_photo_text').innerHTML=x;
+}
+}
 
 }
 

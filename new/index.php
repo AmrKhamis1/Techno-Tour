@@ -87,39 +87,32 @@ include "session.php";
                           Rooms
                          </button>";
                         }
-                        $count=4;
-                        include "broadcast show.php";
-                        for($i=0;$i<4;$i++){
-                            $f_caption=$caption[$i];
-                            $f_image=$image[$i];
-                          }
                          ?>
                      </font>
                      <div id='big_photo_container'>
                             <div id='big_photo'>
-                                      <img src="posts/<?php echo $f_image;?>" alt="">
+                              <?php
+                                                      $count=4;
+                                                      include "broadcast show.php";
+                                                      for($i=0;$i<4;$i++){
+                                                        if(isset($caption[$i])){
+                                                                   echo "<img class='photo".$i." broadcats_photos' src='posts/".$image[$i]."' alt=''>";
+                                                        }}
+                              ?>     
                             </div>
-                            <p id='big_photo_text'><?php echo $f_caption;?></p>
+                            <?php
+                             for($i=0;$i<4;$i++){
+                              if(isset($caption[$i])){
+                                echo "<p class='big_photo_text text".$i."'>".$caption[$i]."</p>";
+                              }}
+                            ?>
+          
                             <section class="scrollable-section">
 
 <div class="photo-grid">
-  <?php
-    for($i=0;$i<4;$i++){
-      if(isset($caption[$i])){
-
-      
-          echo "
-              <div class='photo-container' onclick='show_photo(`".$caption[$i]."`,`".$image[$i]."`);'>
-    <img src='posts/".$image[$i]."' alt='Photo 1' class='photo'>
-    <div class='overlay'>
-    </div>
+   <div class='photo-container' onclick='show_photo();'>
+    <img src='techno tour website design pro/next.png' alt='Photo 1' class='photo'>
   </div> 
-          
-          ";
-        }
-    }
-  ?>
-
 </div>
 </section>
                       </div>

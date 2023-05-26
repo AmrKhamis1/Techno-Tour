@@ -13,7 +13,7 @@
     background-color:#1d1f2c;
     top: 0;
     box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
-    z-index:2 ;
+    z-index:3 ;
   }  
   ul,li{
     justify-content: space-between;
@@ -184,13 +184,14 @@
       align-items: center;
       justify-content:space-evenly;
       margin-top: -65vh;
-      z-index: 1;
+      z-index: 2;
       margin-right: 1vw;
       right: 0;
+      top: 0;
       border-radius: 10px;
       overflow: hidden;
       position: fixed;
-      width: 200px;
+      width: fit-content;
       height: 400px;
       background-color: #e1e1e5;
       transition: all 300ms;

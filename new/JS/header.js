@@ -1,9 +1,9 @@
 let logout=document.getElementById('profile');
 function logout_show2(){
-    if(logout.style.marginTop=="1vh"){
+    if(logout.style.marginTop=="11vh"){
         logout.style.marginTop="-60vh";
     }else{
-        logout.style.marginTop="1vh";
+        logout.style.marginTop="11vh";
     }
 }
 
