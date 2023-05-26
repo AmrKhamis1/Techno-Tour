@@ -7,7 +7,6 @@ function getuser($user){
     $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
     return $getuser;
  }
-   session_start();
     if(isset($_COOKIE['user']) && $_COOKIE['user']!=NULL){
     $_SESSION["id"]=$_COOKIE['user'];
     $getuser=getuser($_SESSION["id"]);

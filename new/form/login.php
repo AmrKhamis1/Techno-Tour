@@ -1,8 +1,10 @@
 <?php
-include "./database/databasemysqli.php";  
+include "database/databasemysqli.php";  
 $ema_pass=null;
 $error=null;
 $getuser=null;
+session_start();
+
 if(isset($_POST['login-submit']))
 {
 $email=$_POST['login-email'];
@@ -24,7 +26,6 @@ $cookie_value = $id;
     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 }
     
-    session_start();
     $_SESSION["id"]=$id;
     header("Location:./index.php"); 
      
@@ -46,7 +47,7 @@ if(isset($_POST['logout']))
     session_start();
     session_unset();
     session_destroy();
-    header("Location:../index.php"); 
+    header("Location:index.php"); 
 }
 
 ?>

@@ -13,25 +13,15 @@
             
            echo "
             <div style='font-size:20px; text-transform: capitalize;' id='profile_name'>".$getuser["fname"]." ".$getuser["lname"]."</div>
-            <p style='font-size:13px;'>".$getuser["email"]."</p>
-            <hr style='width:100%;'>
-            <form method='post'>
+            <p style='font-size:15px;'>".$getuser["email"]."</p>
+            <hr style='width: 80%;border-radius: 3pc;background-color:#00000029;height: 2px;border-color: #00000000;'>
+            <form action='' method='post'>
             <button type='submit' id='change_photo' name='c_photo'>change photo</button>
             <button type='submit' id='change_name' name='c_name'>change name</button>
             <form method='post' action='form/login.php' id='out_form'>            
-            <button id='out_form' name='logout' type='submit' style='   
-            justify-content: center;
-            width: 100%;
-            align-items: center;
-            display: flex;
-            margin: 0;
-            cursor: pointer;
-            margin-left: 10px;
-            background-color: rgba(0,0,0,0);
-            border: none;'>logout   <img src='techno tour website design pro\\".$logout."' id='logout' title='log out' style='margin-left:10px;' width='23px'></button>
+            <button id='out_form' name='logout' type='submit'>logout   <img src='techno tour website design pro\\".$logout."' id='logout' title='log out' style='margin-left:10px;' width='19px'></button>
             </form>
             </div>
-            
             ";
             if(isset($_POST['c_photo']))
             {

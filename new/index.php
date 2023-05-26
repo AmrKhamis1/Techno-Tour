@@ -1,4 +1,6 @@
 <?php 
+
+include "form/login.php";
 include "session.php";
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,9 @@ include "session.php";
     <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php?theme=<?php echo $theme2;?>'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
    </div>
    </div>
-   <?php include "profile.php"; 
+   <?php if($getuser!=NULL && isset($getuser)){
+include "profile.php";
+   }  
    include "header.php";
    ?>    
       <div id="bage1" >

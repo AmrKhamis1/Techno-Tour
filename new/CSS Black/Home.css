@@ -78,7 +78,7 @@ body{
     height: 530px;
     width: 1550px;
     transform: scale(1.6);
-    animation: home 9s ease-in-out;
+    animation: home 7s ease-in-out;
   }
   @keyframes home {
     0%{
@@ -92,7 +92,7 @@ body{
     overflow: hidden;
     display: flex;
     align-items: center;
-    height:80vh;
+    height:82vh;
     right: 0;
     left: 0;
     width: 100%;
