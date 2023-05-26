@@ -2,7 +2,6 @@
 
 include_once "database/databasemysqli.php";
 include 'form/login.php';
-session_start();
 if(isset($_SESSION["id"])){
    $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
    $result=mysqli_query($connection,$sql);
