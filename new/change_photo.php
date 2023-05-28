@@ -24,9 +24,9 @@
             if(unlink("photos/".$getuser['image']))
             {
             $id=$getuser['id'];
-            $email=$getuser['email'];
+            $image=$getuser['image'];
             $new=file_get_contents($_FILES["new_photo"]["tmp_name"]);
-            $myfile = fopen("photos/".$email." photo.png", "w");
+            $myfile = fopen("photos/".$image." photo.png", "w");
             fwrite($myfile,$new);
             $photo="$email photo.png";
                 header("location:index.php");

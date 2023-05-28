@@ -7,8 +7,10 @@ $date_post=date('Y-m-d');
 $time_post=date('H:i:s');
   if(isset($_POST['post'])){
         $caption_post=$_POST['caption'];
+        $caption_post=nl2br($caption_post);
         $image=file_get_contents($_FILES["post_image"]["tmp_name"]);
-        $image_post=$date_post.$caption_post.$getuser['id']." photo.png";
+        $image_name=rand(0,10000000000);
+        $image_post=$image_name." photo.png";
         $myfile = fopen("posts/".$image_post,'w');
         fwrite($myfile,$image);
         fclose($myfile);
