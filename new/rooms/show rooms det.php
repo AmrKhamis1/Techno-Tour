@@ -120,6 +120,14 @@
                  
                 </p>
             </div>
+            <?php
+            if($RoomNum=="A206"){
+                   echo "<button onclick='open_3d();' style='width:fit-content;border:0;background-color:rgba(0,0,0,0);cursor: pointer;'>
+                   <span style='font-size: xxx-large; color:#fff;'>&#10066;</span>
+                    <span style='font-size:large; color:rgb(68, 255, 0);'> new</span> 
+                   </button>";
+            }
+            ?>
             <hr>
             <?php
             session_start();

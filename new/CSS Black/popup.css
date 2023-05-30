@@ -145,6 +145,42 @@ tr td:first-child{
   }
   .reports{
     overflow: scroll;
-    height: 140px;
+    height: 120px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  #model_3d{
+    display: none;
+    position: fixed;
+    z-index: 4;
+    overflow: hidden;
+    color: white;
+    background-color: #313243;
+    height: 80vh;
+    margin-bottom: 70px;
+    width: 1050px;
+    border-radius: 20px;
+    padding: 10px;
+}
+#model{
+    width: 90%;
+    height: 90%;
+  }
+  #exit2{
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+#exit2:hover{
+background-color: rgba(0, 0, 0, 0.533);
+}

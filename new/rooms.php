@@ -30,6 +30,13 @@ if(isset($_SESSION["id"])){
    <div id='add-event'>
        <div id='exit' onclick="show();">×</div>
        <div id='show' style='color:white;'></div>
+       <div id='model_3d'>
+       <div id='exit2' onclick="open_3d();">×</div>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+   <div id="model">
+    <model-viewer style="width: 100%; height: 100%;" src="model perview/untitled.glb" camera-controls></model-viewer>
+  </div>
+</div>
    </div> 
 
     

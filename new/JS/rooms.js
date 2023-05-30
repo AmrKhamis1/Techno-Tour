@@ -1,4 +1,11 @@
-
+function open_3d(){
+  let add_event = document.getElementById('model_3d');
+  if(add_event.style.display=="flex"){
+    add_event.style.display="none";
+  }else{
+    add_event.style.display="flex";
+  }
+}
 
 function show(){
     let add_event = document.getElementById('add-event');
