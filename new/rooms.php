@@ -22,6 +22,7 @@ if(isset($_SESSION["id"])){
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
       <?php include "dark_light/dark_light rooms.php";?>
       <title>Rooms</title>
    </head>  
@@ -32,15 +33,9 @@ if(isset($_SESSION["id"])){
        <div id='show' style='color:white;'></div>
        <div id='model_3d'>
        <div id='exit2' onclick="open_3d();">×</div>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-   <div id="model">
-    <model-viewer style="width: 100%; height: 100%;" src="model perview/untitled.glb" camera-controls></model-viewer>
-  </div>
+<?php include 'model perview/model.php';?>
 </div>
-   </div> 
-
-    
-  
+   </div>   
       <div class="bage">
       <?php include "profile.php";
        include "header.php";

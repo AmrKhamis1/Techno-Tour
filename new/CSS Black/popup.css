@@ -155,22 +155,21 @@ tr td:first-child{
     overflow: hidden;
     color: white;
     background-color: #313243;
-    height: 80vh;
+    height: 91vh;
     margin-bottom: 70px;
-    width: 1050px;
-    border-radius: 20px;
-    padding: 10px;
+    width: 100vw;
+    border-radius: 10px;
 }
 #model{
-    width: 90%;
-    height: 90%;
+    width: 97%;
+    height: 100%;
   }
   #exit2{
     top: 0;
     right: 0;
     position: absolute;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 40px;
     color: white;
     display: flex;
     align-items: center;
@@ -184,3 +183,27 @@ tr td:first-child{
 #exit2:hover{
 background-color: rgba(0, 0, 0, 0.533);
 }
+
+#pc{
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+  }
+  #Default{
+    margin: 10px 0px;
+    position: absolute;
+    transform: translate(120px, 10px);
+    border-radius: 10px;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    background-color: #202537;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  #Default:hover{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
+ }

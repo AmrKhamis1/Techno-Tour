@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2023 at 08:02 PM
+-- Generation Time: Jun 11, 2023 at 08:06 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -181,6 +181,46 @@ INSERT INTO `message` (`id`, `chat_id`, `from_id`, `to_id`, `message`, `date_tim
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pcs`
+--
+
+CREATE TABLE `pcs` (
+  `id` int(11) NOT NULL,
+  `pc_num` int(11) NOT NULL,
+  `room_num` int(11) NOT NULL,
+  `state` int(11) NOT NULL,
+  `note` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pcs`
+--
+
+INSERT INTO `pcs` (`id`, `pc_num`, `room_num`, `state`, `note`) VALUES
+(1, 1, 54, 1, ''),
+(2, 2, 54, 1, ''),
+(3, 3, 54, 1, ''),
+(4, 4, 54, 1, ''),
+(5, 5, 54, 1, ''),
+(6, 6, 54, 1, ''),
+(7, 7, 54, 1, ''),
+(8, 8, 54, 1, ''),
+(9, 9, 54, 1, ''),
+(10, 10, 54, 1, ''),
+(11, 11, 54, 1, ''),
+(12, 12, 54, 1, ''),
+(13, 13, 54, 1, ''),
+(14, 14, 54, 1, ''),
+(15, 15, 54, 1, ''),
+(16, 16, 54, 1, ''),
+(17, 17, 54, 1, ''),
+(18, 18, 54, 1, ''),
+(19, 19, 54, 1, ''),
+(20, 20, 54, 1, '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `report`
 --
 
@@ -189,18 +229,10 @@ CREATE TABLE `report` (
   `report` varchar(200) NOT NULL,
   `user_id` int(11) NOT NULL,
   `note` varchar(500) NOT NULL,
-  `room_id` int(11) NOT NULL
+  `room_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `report`
---
-
-INSERT INTO `report` (`id`, `report`, `user_id`, `note`, `room_id`) VALUES
-(9, 'projector and pc', 23, 'projector and 4 PCs not working ', 41),
-(10, 'Pc not working', 23, '4', 49),
-(11, 'Pc not working', 24, '3', 72),
-(12, 'Pc not working', 23, '1', 45);
 
 -- --------------------------------------------------------
 
@@ -280,13 +312,6 @@ CREATE TABLE `time_table` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `time_table`
---
-
-INSERT INTO `time_table` (`id`, `room_id`, `start_time`, `end_time`, `weekday`, `user_id`, `sub_name`, `end_date`, `book`) VALUES
-(53, 46, 5, 7, 'Wed', 23, 'event test 2', '2023-05-10', 1);
-
---
 -- Indexes for dumped tables
 --
 
@@ -336,6 +361,13 @@ ALTER TABLE `message`
   ADD KEY `chat_id` (`chat_id`,`from_id`,`to_id`),
   ADD KEY `from_id` (`from_id`),
   ADD KEY `to_id` (`to_id`);
+
+--
+-- Indexes for table `pcs`
+--
+ALTER TABLE `pcs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `room_num` (`room_num`);
 
 --
 -- Indexes for table `report`
@@ -400,6 +432,12 @@ ALTER TABLE `message`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
+-- AUTO_INCREMENT for table `pcs`
+--
+ALTER TABLE `pcs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
@@ -454,6 +492,12 @@ ALTER TABLE `message`
   ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`chat_id`) REFERENCES `chat` (`id`),
   ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`from_id`) REFERENCES `members` (`id`),
   ADD CONSTRAINT `message_ibfk_3` FOREIGN KEY (`to_id`) REFERENCES `members` (`id`);
+
+--
+-- Constraints for table `pcs`
+--
+ALTER TABLE `pcs`
+  ADD CONSTRAINT `pcs_ibfk_1` FOREIGN KEY (`room_num`) REFERENCES `rooms` (`id`);
 
 --
 -- Constraints for table `report`

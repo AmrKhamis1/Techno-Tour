@@ -33,7 +33,7 @@ if(isset($getuser)){
 ";
   }
 }
-
+if(isset($getuser)){
 $sql="SELECT * FROM members WHERE position='Dr';";
 $result3 = $connection->query($sql);
 echo "<div id='DRs'>";
@@ -61,6 +61,7 @@ if($getuser){
 
 }}
 echo "</div>";
+}
 ?>  
 <div id='chat_container'>
 
@@ -68,7 +69,7 @@ echo "</div>";
 
 
   
-      <div id='posts'> 
+      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin:0;overflow:hidden;'";} ?>> 
            <?php
                       $count=10;
                       include "broadcast show.php";
