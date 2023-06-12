@@ -11,11 +11,11 @@
                 <table border=1>
                     <tr>
                         <td>Time</td>
-                        <td>9 - 9:50</td>
+                        <td>9:00 - 9:50</td>
                         <td>9:50 - 10:40</td>
                         <td>10:50 - 11:40</td>
                         <td>11:40 - 12:30</td>
-                        <td>1 - 1:50</td>
+                        <td>1:00 - 1:50</td>
                         <td>1:50 - 2:40</td>
                         <td>2:50 - 3:40</td>
                         <td>3:40 - 4:30</td>
@@ -108,13 +108,13 @@
             <div class="detail">
                 <p style='font-weight: 600;'>Number of PCs :
                 <?php
-                 echo " "."<span style='font-weight: 700;font-size:large;'>".$getuser['fixed_pc']."</span>";
+                 echo " "."<span style='font-weight: 700;'>".$getuser['fixed_pc']."</span>";
                  ?></p>
                 <p style='font-weight: 600;'>Projector's State : <?php 
                 if($getuser['projector']=='good'){
-                    echo " <span style='color:rgb(0,200,0);font-weight: 700;font-size:large;'>".$getuser['projector']."</span>";
+                    echo " <span style='color:rgb(0,200,0);font-weight: 700;'>".$getuser['projector']."</span>";
                 }else{
-                  echo " <span style='color:rgb(255,0,0);font-weight: 700;font-size:large;'>".$getuser['projector']."</span>";
+                  echo " <span style='color:rgb(255,0,0);font-weight: 700;'>".$getuser['projector']."</span>";
                 }
                  ?>
                  

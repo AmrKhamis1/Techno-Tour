@@ -14,6 +14,10 @@ include "session.php";
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <?php include 'dark_light/dark_light index.php';?>
+      <link rel="stylesheet" href="CSS 300/header.css">
+      <link rel="stylesheet" href="CSS 300/Home.css">
+      <link rel="stylesheet" href="CSS 300/index.css">
+
       <title>TecnoTour</title>
    </head>
    <body>  
@@ -45,7 +49,7 @@ include "profile.php";
     <img class='no-animation animation_go' src="techno tour website design pro/NCT building real.png" alt="">
     </div>
          <div class="hero">
-         <font style="color:white;font-size:30px; margin-top:0%;align-items:center;text-align:center;" class="hero-header">
+         <font class='hero-font'>
                 <?php
                 $hero='THE BEST BOOKING GUIDE FOR PROFESSORS,ASSISTANTS,';
                 $hero2='STUDENTS AND EXTERNAL USERS IN NCTU.';
@@ -77,7 +81,7 @@ include "profile.php";
                      
                      <br> 
                      <span id='head-home' class='no-animation animation_go'>
-                     Welcome to our university room reservation system! We understand the importance of a <br>
+                     Welcome to our university room reservation system! As we understand the importance of a <br>
                       seamless and convenient booking process for students, external users, and professors alike. <br>
                        Our user-friendly platform allows you to effortlessly reserve a rooms. <br>
                         if you are external user attending a conference, our system caters to your diverse needs. With just a <br>
@@ -144,14 +148,14 @@ include "profile.php";
                      </div>  
    <div id="bage2">
     <div id="techno-tour-notify">
-      <div>Having university room reservations is of utmost importance for both students and academic institutions. <br>
+      <div class='techno-tour-notify-1'>Having university room reservations is of utmost importance for both students and academic institutions. <br>
        It ensures a smooth and efficient utilization of available resources while providing students with a sense of security and comfort. <br>
         With the ever-increasing number of students enrolling in universities, a streamlined reservation system becomes crucial to manage the limited <br>
          campus accommodations effectively. By creating a dedicated system for room reservations, we aim to simplify the process for our users, enabling <br>
           them to conveniently select and book their preferred rooms. <br>
           This solution not only saves time and effort but also enhances the overall experience of students, <br>
            allowing them to focus on their studies and personal growth without worrying about housing arrangements.</div> 
-       <div><img src=<?php echo $photo1; ?> width='200px' alt=""></div>
+       <div class='techno-tour-notify-2'><img src=<?php echo $photo1; ?> width='200px' alt=""></div>
 
     </div>
 <br>
@@ -164,8 +168,8 @@ include "profile.php";
     <br>
     <br>
 <div id="techno-tour-notify2">
-  <div><img src=<?php echo $photo2;?> width='150px' alt=""></div>
-          <div>In addition to catering to students, our system for university room reservations also extends its benefits to external users and professors. <br>
+  <div class='techno-tour-notify2-1'><img src=<?php echo $photo2;?> width='150px' alt=""></div>
+          <div class='techno-tour-notify2-2'>In addition to catering to students, our system for university room reservations also extends its benefits to external users and professors. <br>
            Recognizing the diverse needs of the academic community, we have designed the system to accommodate bookings from external users, such as guest speakers, <br>
             conference attendees, and visiting scholars. This feature not only fosters collaboration and knowledge exchange but also generates additional revenue <br>
              for the institution. Furthermore, the system enables professors and other faculty members to easily reserve rooms for their academic activities, <br>

@@ -14,16 +14,17 @@ include "session.php";
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
   <title>About Us</title>
   <?php include 'dark_light/dark_light about.php';?>
+  <link rel="stylesheet" href="CSS 300/header.css">
 </head>
 <body>
-
+    <?php include "profile.php"; 
+           include "header.php";    
+    ?>   
 <section class="aboutus"><!---Start aBout Us Section--->
   <!--------------Start Page Container----------------->
   <div class="container" id="container">
     <!--------------Start Header----------------->
-    <?php include "profile.php"; 
-           include "header.php";    
-    ?>    
+ 
     
    <!--------------End Header----------------->
    <!--------------Start About us contain----------------->

@@ -24,6 +24,11 @@ if(isset($_SESSION["id"])){
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
       <?php include "dark_light/dark_light rooms.php";?>
+      <link rel="stylesheet" href="CSS 300/header.css">
+      <link rel="stylesheet" href="CSS 300/rooms.css">
+      <link rel="stylesheet" href="CSS 300/popup.css">
+
+
       <title>Rooms</title>
    </head>  
 
@@ -35,11 +40,12 @@ if(isset($_SESSION["id"])){
        <div id='exit2' onclick="open_3d();">×</div>
 <?php include 'model perview/model.php';?>
 </div>
-   </div>   
-      <div class="bage">
-      <?php include "profile.php";
+   </div> 
+         <?php include "profile.php";
        include "header.php";
- ?> 
+ ?>   
+      <div class="bage">
+
       <div id="f-btns" class='no-animation'>
          <div id="f-btn1" onclick="floor1();" class="fbtn">Floor 1</div>
          <div id="f-btn2" onclick="floor2();" class="fbtn">Floor 2</div>

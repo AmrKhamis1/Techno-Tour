@@ -1,0 +1,86 @@
+@media only screen and (max-width: 500px) {
+	body{
+		background-image:none;
+		background-size:100%;
+	}
+	#f-btns {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+	}
+	.fbtn {
+		text-align: center;
+		 border-bottom-left-radius: 0px;
+		 width: 40px;
+		 margin-left: 0;
+	}
+	.bage {
+		width: 100vw;
+		height: 100%;
+		margin-top: 0vh;
+	}
+	#cont-home {
+		margin: 0;
+		position: absolute;
+		display: block;
+		height: 100%;
+		margin-top: -25vh;
+		width: 100%;
+		transform: scale(0);
+		animation: ani_therooms 2400ms forwards;
+	}
+	.container {
+		width: 70%;
+		height: 60%;
+		bottom: 0;
+		position: relative;
+		margin-bottom: 0;
+	}
+	#cube {
+		transform-style: preserve-3d;
+		display: flex;
+		width: 100%;
+		height: 540px;
+		bottom: 0;
+		justify-content: center;
+		align-items: center;
+		transition: all 500ms;
+		transform: rotateX(360deg);
+		transform: rotateZ(90deg);
+	}
+	#f1, #f2, #f3, #f4 {
+		border-radius: 10px;
+		height: 540px;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: row;
+	}
+	#row1, #row2 {
+		width: 95%;
+		height: 560px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.rooms {
+		border-radius: 10px;
+
+		width: 95px;
+		height: 80px;
+	
+		font-size: 15px;
+	}
+	.available {
+		font-size: 10px;
+	}#head {
+		display: none;
+	}
+	#add-event {
+		z-index: 4;
+		width: 100%;
+    height: 100%;
+	margin: 0;
+	}
+}

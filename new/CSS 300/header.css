@@ -1,0 +1,96 @@
+@media only screen and (max-width: 500px) {
+
+  header{
+    width: 100%;
+    height:13vh;
+  }  
+  .logo-img{
+    width: 45vw;
+    margin-left: 4%;
+  }
+  .user-logo{
+    height: 60px;
+    font-size: large;
+    width: fit-content;
+    margin-left: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  #login-logo{
+    margin-right: 10px;
+  }
+  .login-logo-img{
+    width:40px ;
+  }
+  #login-div{
+    width: 40px;
+    height: 40px;
+  }
+  .search-logo{
+   display: none;
+  }
+  ul,li{
+    justify-content: space-around;
+    display: inline-block;
+    margin: 0%;
+  }
+  ul{
+    width: 100%;
+    background-color: #0f1016;
+    align-items: center;
+    height: 6vh;
+    margin: 0;
+    top: 12vh;
+    display: flex;
+    position: fixed;
+    padding: 0%;
+  }
+  .links{
+    font-size:3.5vw;
+  }
+  #profile{
+    height: 500px;
+    margin-top: -80vh;
+    margin-right: 3vw;
+  }
+  #profile_photo {
+    width: 100px;
+    height: 100px;
+  }
+  #profile_photo img {
+    width: 100px;
+}
+#profile_name{
+  font-size:20px;
+  font-weight: 800;
+ text-transform: capitalize;
+}
+#profile p{
+  padding-right: 20px;
+  width: fit-content;
+  font-size: 15px;
+  padding-left: 10px;
+}
+#profile form{
+  width: 100%;
+}
+#change_photo,#change_photo a{
+  font-size: 15px;
+  height: 30px;
+}
+#change_name, #change_name a{
+  font-size: 15px;
+  height: 30px;
+}
+#change_photo a,#change_name a{ 
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#out_form, #out_form button{
+  font-size: 15px;
+  height: 30px;
+}
+
+}

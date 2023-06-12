@@ -1,19 +1,12 @@
-
-
   header{
     justify-content:space-between;
-    width: 100vw;
-    color: #ffffff;
+    width: 90vw;
     height:10vh;
-    overflow: hidden;
+    color: #ffffff;
     align-items: center;
-    display:none;
+    display:flex;
     flex-direction: row;
-    position: fixed;
     background-color:#1d1f2c;
-    top: 0;
-    box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
-    z-index:3 ;
   }  
   ul,li{
     justify-content: space-between;
@@ -33,6 +26,7 @@
     color:#ffffff;
     font-size: 1.2vw;
     border-radius: 20px;
+    z-index: 1;
 	  cursor:pointer;
     border: 0;
     border-style: solid;
@@ -48,7 +42,7 @@
     border: 1px;
     border-radius: 20px;
       }
-       li a,a {
+li a, a {
   position: relative;
 }
  li a:after,
@@ -87,7 +81,7 @@
   .user-logo{
     user-select: none;
     cursor: pointer;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 100%;
     width: fit-content;
@@ -102,19 +96,10 @@
     align-items: center;
   }
   #login-logo{
-    color: white;    
+    color: #ffffff;
     text-decoration: none;
     margin-right: 5px;
     cursor: pointer;
-  }
-  #login-div{
-    width:30px;
-    border-radius: 50%;
-    height: 30px;
-    display: flex;
-    align-items:center;
-    overflow: hidden;
-    justify-content: center;
   }
   .login-logo-img{
     width:30px ;
@@ -125,7 +110,7 @@
     margin-right: 0;
     font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 700;
-    color: white;
+    color: #ffffff;
     letter-spacing: 1px;
     font-size: 1.2vw;
     width: fit-content;
@@ -138,10 +123,10 @@
     border: 0;
     border-bottom:1px ;
     border-style:groove;
-    border-color: rgb(255, 255, 255);
+    border-color: #ffffff;
     padding-bottom:3px ;
     width:5vw ;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     margin-left: 5vw;
     margin-right: 0px ;
     font-size: 0.8vmax;   
@@ -181,103 +166,88 @@
   .user-logo{
     width: fit-content; 
   }
-    /****************** profile */
+
+      /****************** profile */
 
 
-    #profile{
-      border-radius: 10px;
-      font-family: 'Maven Pro', sans-serif;
-      color: rgb(10, 4, 39);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content:space-evenly;
-      margin-top: -65vh;
-      z-index: 2;
-      margin-right: 1vw;
-      right: 0;
-      top: 0;
-      border-radius: 10px;
-      overflow: hidden;
-      position: fixed;
-      width: fit-content;
-      height: 400px;
-      background-color: #e1e1e5;
-      transition: all 300ms;
-      font-weight: 600;
-      animation: sll2 1s ;
-  
-    }
-    #profile_photo{
-      width: 100px;
-      height: 100px;
-      overflow: hidden;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      border-radius: 50%;
-    }
-
-    #profile_photo img{
-      width: 100px;
-    }
-    #profile_name{
-      font-size:20px;
-     text-transform: capitalize;
-    }
-    #profile p{
-      color: rgb(10, 4, 39);
-      font-size:15px;
-    }
-    #change_photo,#change_photo a{
-      width: 100%;
-      height: 30px;
-      text-align: center;
-      color: rgb(10, 4, 39);
-      text-decoration: none;
-  
-    }
-    #change_name, #change_name a{
-      width: 100%;
-      height: 30px;
-      text-align: center;
-      color: rgb(10, 4, 39);
-      text-decoration: none;
-    }
-    #change_photo a,#change_name a{  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #out_form, #out_form button{
-      width: 100%;
-      height: 30px;
-      text-align: center;
-      color: rgb(10, 4, 39);
-      text-decoration: none;
-  
-    }
-    #out_form{    
-      justify-content: center;
-      width: 100%;
-      align-items: center;
-      display: flex;
-      margin: 0;
-      cursor: pointer;
-      background-color: rgba(0,0,0,0);
-      border: none;
-    }
-    #out_form:hover{
-      background-color: rgb(255, 255, 255);
-    }
-    #change_photo,#change_name,#out_form{
-      font-size: 15px;
-      border: 0;
-      font-family: 'Maven Pro', sans-serif;
-      font-weight: 600;
-      background-color: #e1e1e5;
-      transition: all 300ms;
-    }
-    #change_photo:hover,#change_name:hover,#out_form:hover{
-      background-color: #ffffff;
-    }
+      #profile{
+        border-radius: 10px;
+        font-family: 'Arial', sans-serif;
+        color: rgb(10, 4, 39);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        margin-top: -60vh;
+        margin-right: 7vw;
+        right: 0;
+        z-index: -1;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        width: 200px;
+        height: 400px;
+        background-color: #e1e1e5;
+        transition: all 300ms;
+        font-weight: 600;
+    
+      }
+      #profile_photo{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 50%;
+      }
+      #profile_photo img{
+        width: 100px;
+      }
+      #change_photo,#change_photo a{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        color: rgb(10, 4, 39);
+        text-decoration: none;
+    
+      }
+      #change_name, #change_name a{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        color: rgb(10, 4, 39);
+        text-decoration: none;
+      }
+      #change_photo a,#change_name a{  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #out_form, #out_form button{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        color: rgb(10, 4, 39);
+        text-decoration: none;
+    
+      }
+      #out_form button{    
+        font-weight: 600;
+        font-family: 'Arial', sans-serif;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+      }
+      #change_photo,#change_name,#out_form{
+        font-size: 15px;
+        font-family: 'Arial', sans-serif;
+        background-color: #e1e1e5;
+        transition: all 300ms;
+      }
+      #change_photo:hover,#change_name:hover,#out_form:hover{
+        background-color: #ffffff;
+      }

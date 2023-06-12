@@ -14,7 +14,6 @@
 
        
          </ul>
-          <div style='height: 12px;'><a href="index.php?theme=<?php echo $theme?>"><img src=<?php echo $theme_logo; ?> width='18px' alt=""></a></div>
          <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src=<?php echo $search;?> alt="..">
          </div>
          <div class="user-logo"><a 
@@ -32,7 +31,7 @@
          echo "login";
            }
           ?>
-         </a><div id='login-div' style='width:30px;border-radius: 50%;height: 30px;display: flex;align-items:center;overflow: hidden;justify-content: center;'><img class="login-logo-img" onclick="logout_show();"          
+         </a><div id='login-div'><img class="login-logo-img" onclick="logout_show();"          
          <?php
           if(isset($getuser)){
             if($getuser['image']!=NULL){

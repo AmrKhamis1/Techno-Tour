@@ -1,0 +1,53 @@
+@media only screen and (max-width: 500px) {
+
+#show{
+    height: 100%;
+}
+.contain {
+    overflow: hidden;
+    color: white;
+    background-color: #313243;
+    height: 100%;
+     margin-bottom: 0px;
+     width: 100%;
+    border-radius: 0;
+    padding: 0px;
+}
+.contain .head {
+     padding-left: 0px;
+}
+td, tr {
+    font-size: small;
+}
+tr:first-child,tr:first-child td{
+    font-size: small;
+}
+tr td:first-child{
+    font-size: small;
+}
+#exit {
+    right: 0px;
+}
+
+.detail p {
+font-size: small;
+}
+.detail p span{
+    font-size: small;
+}
+.button form label {
+    font-size: small;
+}
+#lable_number {
+    font-size: small;
+}
+#Default {
+    margin: 10px 0px;
+    position: absolute;
+    transform: translate(10px, 60px);
+}
+#model_3d {
+    height: 100%;
+    margin-bottom: 0px;
+}
+}

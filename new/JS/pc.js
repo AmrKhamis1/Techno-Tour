@@ -1,10 +1,4 @@
 const MV=document.querySelector('model-viewer#mod');
-MV.addEventListener('load',ev=>{
-    let matrial=MV.model.getMaterialByName('PC_M1');
-    matrial.pbrMetallicRoughness.setBaseColorFactor([200,0,0,0]);
-});
-
-
 CO=[
     '180deg 90deg',
     '-90deg 90deg',
@@ -79,5 +73,6 @@ for (let i = 1; i <=20; i++) {
 
 start_check=setInterval(()=>{},10000);
 MV.addEventListener('load',()=>{
+  Pcs();
     start_check=setInterval(Pcs,10000);
 });

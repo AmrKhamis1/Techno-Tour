@@ -1,0 +1,69 @@
+@media only screen and (max-width: 500px) {
+  body{
+    display: inline-block;
+    width: 100%;
+  }
+  #bage1{
+    width: 100%;
+    margin-top: 15vh;
+  }
+  #building-div{
+    width:100%;
+    margin-top: 100px;
+    height: 100px;
+  }
+  #building{
+    width:80%;
+    }
+    #building:hover{
+      width:85%;
+      }
+      #head-home {
+        width: 80%;
+        font-size: 10px;
+        margin-bottom: 60px;
+    }
+    .hero-font{
+      color:white;
+      font-size:30px;
+       margin-top:0%;
+       align-items:center;
+       text-align:center;
+  display: flex;
+  flex-direction: column;
+    }
+    #building_img_2 {
+      justify-content: center;
+    }
+    #building_img_2 img {
+      height: 50%;
+      width: auto;
+    }
+    .home_open1{
+      animation: open1 2s;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+      animation-delay: 3s;
+    }
+    .home_open2{
+      animation: open2 2s;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+      animation-delay: 3s;
+
+    }
+    #particles-js {
+      height: 341vh;
+    }
+    #footer_words {
+      font-size: 10px;
+    }
+    #footer_copy {
+      text-align: center;
+    }
+    #about-uni {
+      margin-top: 40px;
+      width: 90%;
+      font-size: small;
+    }
+}

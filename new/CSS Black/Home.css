@@ -149,6 +149,14 @@ body{
       justify-content: space-evenly;
       
   }
+  .hero-font{
+    font-family: 'Maven Pro';
+    color:white;
+    font-size:30px;
+     margin-top:0%;
+     align-items:center;
+     text-align:center;
+  }
   .bg-img{
     position:absolute;
     width: 100vw;
@@ -251,7 +259,7 @@ width: 100vw;
 height: 331vh;
 margin-top: 100vh;
 }
-.hero-header{
+.hero-font{
   text-transform: uppercase;
   font-family: 'Roboto',"Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 600;

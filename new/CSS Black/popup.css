@@ -207,3 +207,7 @@ background-color: rgba(0, 0, 0, 0.533);
   #Default:hover{
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
  }
+ .detail p span{
+    font-size: large;
+
+}
