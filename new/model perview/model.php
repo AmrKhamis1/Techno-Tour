@@ -1,7 +1,7 @@
 
 
 <div id="model">
-    <model-viewer id='mod' disable-tap camera-orbit="0deg 90deg" style="width: 100%; height: 100%;" src="model perview/room A206.glb" camera-controls>
+    <model-viewer id='mod' ar ar-scale="fixed" disable-tap camera-orbit="0deg 90deg" style="width: 100%; height: 100%;" src="model perview/room A206.glb" camera-controls>
     <select id='pc' onchange='position(this.value)'>
         <?php 
         for($i=0;$i<20;$i++){

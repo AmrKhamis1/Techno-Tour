@@ -21,8 +21,13 @@
     }
 for($i=0;$i<6;$i++){
 list($h4[$i], $m4[$i]) = explode(":", $duration_out[$i]);
-    $out_time[$i]=($h4[$i]*60)+$m4[$i];  
-
+    $out_time[$i]=($h4[$i]*60)+$m4[$i];
+}
+for($i=0;$i<=4;$i+=2){
+    if($check_time >= $out_time[$i] && $check_time <= $out_time[$i+1]){
+       return 10;
+       break;
+    }
 }
 for($i = 0; $i < 9; $i++){
     list($h2[$i], $m2[$i]) = explode(":", $duration_start[$i]);
@@ -30,11 +35,7 @@ for($i = 0; $i < 9; $i++){
     $start_time[$i]=($h2[$i]*60)+$m2[$i]; 
     $end_time[$i]=($h3[$i]*60)+$m3[$i];   
 }
-for($i=0;$i<5;$i+=2){
-    if($check_time >= $out_time[$i] && $check_time <= $out_time[$i+1]){
-       return 10;
-    }
-}
+
  for ($i = 0; $i < 9; $i++) {    
          if ($check_time >= $start_time[$i] && $check_time <= $end_time[$i]) {
                 return $i+1;   

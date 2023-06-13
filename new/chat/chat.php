@@ -35,7 +35,7 @@ if($friend_img==''||$friend_img==NULL){
     <div id='chat_bar'>
        <div id='friend_img'><img src="photos/<?php echo $friend_img;?>" alt=""></div>
        <div id='friend_name'><?php echo $friend_name;?></div>
-       <div onclick='close_chat();' id='exit_chat'>X</div>
+       <div onclick='close_chat2();' id='exit_chat'>X</div>
     </div>
     <div id='messages_container'>
         

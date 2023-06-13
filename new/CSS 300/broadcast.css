@@ -1,0 +1,112 @@
+@media only screen and (max-width: 500px) {
+#container{
+    background-color:#191823;
+    width: 100%;
+    margin-top: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0px;
+    border-top-width: 0;
+}
+
+#posts{
+  justify-content:space-evenly;
+  margin-left: 0%;
+    justify-content: center;
+    align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: 0;
+
+}
+.post_div{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color:#1d1f2c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: fit-content;
+}
+.user_post{
+  margin-top: 10px;
+  width: 100%;
+}
+.user_photo{
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+}
+.user_photo img{
+  width: 30px;
+}
+.user_name{
+  width: 180px;
+  color: white;
+  font-family:  "Maven Pro", sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+  font-size: medium;
+}
+.div_cap{
+  padding: 15px;
+}
+.caption_post{
+  color: white;
+  word-break: break-word;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+}
+.date_time{
+  width: 100px;
+  font-size: 10px;
+  font-weight: 200;
+  margin-left: 0px;
+
+}
+#post{
+  width: 100%;
+  height: 30vh;
+  margin-top: 14vh;
+  margin-right: 0vh;
+  position: relative;
+  margin-left: 0;
+  overflow: hidden;
+}
+#post #caption{
+  width: 95%;
+  height: 50px;
+}
+input[id="post_image"]::file-selector-button{
+  height: 20px;
+  width: 100px;
+  background-color: #4f46ae;
+  border: 0;
+  color: white;
+  border-radius: 10px;
+}
+input[id="post_image"]::file-selector-button:hover {
+  background-color: #001745;
+  color: white;
+}
+#post_image{
+  color: rgb(255, 255, 255);
+
+}
+.post_image img{
+  height: 200px;
+}
+#post button{
+  margin-top: 5%;
+}
+#post button:hover{
+  color: white;
+  background-color: black;
+}
+
+}

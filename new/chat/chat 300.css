@@ -1,0 +1,88 @@
+@media only screen and (max-width: 500px) {
+    #chat_container1{
+        overflow: hidden;
+        width: 340px;
+        height: 501px;
+        margin-top: 10vh;
+        left: 5%;
+        background-color: rgb(0, 43, 80);
+        background-image: linear-gradient(180deg,rgb(4, 94, 173),rgb(0, 26, 49));
+        position: fixed;
+        z-index: 1;
+        border-radius: 20px;
+        transform: scale(0);
+        transition: all 300ms;
+    }
+    #chat_container{
+        overflow: hidden;
+        width: 340px;
+        height: 501px;
+        margin-top: 10vh;
+        left: 5%;
+        background-color: rgb(0, 43, 80);
+        background-image: linear-gradient(180deg,rgb(4, 94, 173),rgb(0, 26, 49));
+        position: fixed;
+        z-index: 2;
+        border-radius: 20px;
+        transform: scale(0);
+        transition: all 300ms;
+    }
+    #DRs {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -3;
+        padding: 0;
+        background-color: #1d1f2c00;
+         margin-top: 0vh; 
+         margin-right: 0vh;
+        right: 0;
+      }
+      .drs{
+        width: 95%;
+      }
+      .drs_img{
+        user-select: none;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-left:10px;
+      }
+      .drs_img img{
+        width: 30px;
+      }
+      .drs_name{
+      overflow: hidden;
+      font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      user-select: none;
+      font-weight: 600;
+      width: 70%;
+      margin-left: 10px;
+      }
+      .drs_chat{
+        padding: 0%;
+        font-family:  "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background-color: #fff;
+        font-weight: 600;
+        color: #001745;
+        width: 20%;
+        text-align: center;
+        border-radius: 20px;
+        transition: all 300ms;
+        cursor: pointer;
+      }
+      .drs_chat:hover{
+        background-color: #001745;
+        color: #fff;
+      }
+
+}

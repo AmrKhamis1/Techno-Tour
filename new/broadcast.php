@@ -7,20 +7,27 @@ include "session.php";
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="chat/chat.css">
-
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="chat/chat.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "dark_light/dark_light broadcast.php";?>
+    <link rel="stylesheet" href="chat/chat.css">
+    <link rel="stylesheet" href="CSS 300/header2.css">
+    <link rel="stylesheet" href="CSS 300/broadcast.css">
+    <link rel="stylesheet" href="chat/chat 300.css">
     <title>Broadcast</title>
 </head>
 <body>
-<div id='open_chat' onclick='open_chating();'>chat</div>
+  <?php
+  
+  if($getuser){
+    echo "<div id='open_chat' onclick='open_chating2();'>chat</div>";
+  }
+  ?>
 <div id='container'>
-<?php include "profile.php"; 
+<?php 
 include "broadcast_post.php";
+include "profile.php"; 
 include "header.php";
 if(isset($getuser)){ 
   if($getuser['position']=="Dr" ){
@@ -33,6 +40,7 @@ if(isset($getuser)){
 ";
   }
 }
+echo "<div id='chat_container1'><div onclick='close_chat();' id='exit_chat2'>X</div>";
 if(isset($getuser)){
 $sql="SELECT * FROM members WHERE position='Dr';";
 $result3 = $connection->query($sql);
@@ -63,13 +71,14 @@ if($getuser){
 echo "</div>";
 }
 ?>  
+</div>
 <div id='chat_container'>
 
 </div>
 
 
   
-      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin:0;overflow:hidden;'";} ?>> 
+      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin-left:0;overflow:hidden;'";} ?>> 
            <?php
                       $count=10;
                       include "broadcast show.php";
@@ -83,7 +92,7 @@ echo "</div>";
                              if($user_photo[$i]!=''){
                             echo "<img src='photos/".$user_photo[$i]."' width='50px'>";
                              }else{
-                              echo "<img src='techno tour website design pro\unknown.png' width='50px'>";
+                              echo "<img src='techno tour website design pro\unknown.png'>";
                              }
                            echo  "</div>
                              <div class='user_name'>
@@ -94,7 +103,7 @@ echo "</div>";
                              <div class='caption_post'>".$caption[$i]."</div>
                              
                              </div>
-                             <div class='post_image'><img src='posts/".$image[$i]."' height='400px'></div>
+                             <div class='post_image'><img src='posts/".$image[$i]."'></div>
                           </div>
                           ";
 
@@ -108,5 +117,5 @@ echo "</div>";
 </body>
 <script src="JS/chat.js"></script>
 <script src="chat/chat.js"></script>
-<script src="JS/header.js"></script>
+<script src="JS/header2.js"></script>
 </html>
