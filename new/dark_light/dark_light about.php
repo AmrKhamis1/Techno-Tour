@@ -13,7 +13,7 @@
             <link rel='stylesheet' href='CSS Black\header.css'>
             ";
             $search="'techno tour website design pro\search light.png'";
-            $login="'techno tour website design pro\login light.png'";
+            $login="'techno tour website design pro\login.png'";
             $logo="'techno tour website design pro\web site logo2 light.png'";
             $photo1="'techno tour website design pro\\techno tour pro copy light.png'";
             $photo2="'techno tour website design pro\\techno tour pro copy2 light.png'";
@@ -42,7 +42,7 @@
         <link rel='stylesheet' href='CSS Black\header.css'>
         ";
         $search="'techno tour website design pro\search light.png'";
-        $login="'techno tour website design pro\login light.png'";
+        $login="'techno tour website design pro\login.png'";
         $logo="'techno tour website design pro\web site logo2 light.png'";
         $photo1="'techno tour website design pro\\techno tour pro copy light.png'";
         $photo2="'techno tour website design pro\\techno tour pro copy2 light.png'";

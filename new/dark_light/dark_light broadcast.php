@@ -14,7 +14,7 @@
             <link rel='stylesheet' href='CSS Black\header2.css'>
             ";
             $search="'techno tour website design pro\search light.png'";
-            $login="'techno tour website design pro\login light.png'";
+            $login="'techno tour website design pro\login.png'";
             $logo="'techno tour website design pro\web site logo2 light.png'";
             $theme_logo="'techno tour website design pro\dark_light light.png'";
             $logout="logout.png";

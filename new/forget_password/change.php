@@ -3,8 +3,12 @@ include "../database/databasemysqli.php";
 $sucss=null;
 $faild=null;
 $email=null;
+
 if(isset($_POST['reset2']))
 {
+    if(empty($_POST['reset2'])){
+        $faild="can't be empty";
+    }else{
     session_start();
     $email=$_POST['reset'];
     $_SESSION['email2']=$email;
@@ -20,6 +24,7 @@ if(isset($_POST['reset2']))
     {
         $faild="Email doesn't exist";
     }
+}
 }
     //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function

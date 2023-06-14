@@ -6,7 +6,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon"> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/form.css"> 
+    <link rel="stylesheet" href="CSS 300/form.css">
+
     <script src="JS/form.js"></script>
     <title>Form</title>
 </head>
@@ -15,7 +22,7 @@
     <div id="container">
     </div>
     <form id="form11" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-        <img src="techno tour website design pro/login.png" width="50px" alt="login.png">
+        <img src="techno tour website design pro/login.png" alt="login.png">
         <h1>Login</h1>
        <p> <?php echo $ema_pass;?></p>
         <br>
