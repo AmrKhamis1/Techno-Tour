@@ -121,14 +121,21 @@ window.addEventListener("load", function() {
 function show_book(x){
   var book=document.getElementById('book_button'+x);
   if(book){
-    book.style.marginBottom='0px';
+    if(screen.width>500){
+     book.style.marginBottom='0px';
+    }else{
+      book.style.marginBottom='0px';
+     }
   }
-  
    }
 function hide_book(x){
   var book=document.getElementById('book_button'+x);
   if(book){
+    if(screen.width>500){
     book.style.marginBottom='-200px';
+  }else{
+    book.style.marginBottom='0px';
+   }
   }
 } 
 

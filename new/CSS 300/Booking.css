@@ -1,0 +1,32 @@
+@media only screen and (max-width: 700px) {
+    #Booking {
+        height: 70%;
+        width: 95%;
+    }
+    select {
+        width: 60%;
+    }
+    .form-left input {
+        width: 70%;
+    }
+    .form-left{
+            padding-left: 5%;
+            width: 45%;
+    }
+    h1{
+        font-size: 5vw;
+    }
+.form-right input {
+    width: 40%;
+}
+#done {
+    width: 50%;
+}
+.form-left label {
+    font-size: 4vw;
+}
+.form-right label {
+    font-size: 4vw;
+}
+
+}

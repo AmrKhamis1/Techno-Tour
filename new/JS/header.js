@@ -32,9 +32,3 @@ function logout_show(){
         }
     
 }
-let remove=document.getElementsByTagName('img');
-remove.forEach(function(element) {
-    if(element.alt=='www.000webhost.com'){
-        element.style.display='none';
-    }
-});
