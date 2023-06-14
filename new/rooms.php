@@ -2,12 +2,9 @@
 
 include_once "database/databasemysqli.php";
 include 'form/login.php';
-if(isset($_SESSION["id"])){
-   $sql="SELECT*FROM members WHERE id={$_SESSION["id"]}";
-   $result=mysqli_query($connection,$sql);
-   $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
+include "session.php";
 
-}else{
+if(!isset($getuser)){
    header("Location:index.php"); 
 }
  $rooms=["A106","A105","A104","A103","A108","A107","A101","A102","A207","A206","A205","A204","A203","A210","A209","A208","A201","A202","A307","A306","A305","A304","A303","A310","A309","A308","A301","A302","A407","A406","A405","A404","A403","A409","A408","A401","A402"];

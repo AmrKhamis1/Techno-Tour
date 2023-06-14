@@ -17,7 +17,7 @@
     $h1+=1;
     $check_time=($h1*60)+$m1;
     $am_pm_time =  date("a");
-    if(($am_pm_time == 'pm' && $check_time >320 &&$h1!=12)||( $am_pm_time == 'am' && $check_time < 540)){
+    if(($am_pm_time == 'pm' && $check_time <320 &&$h1)||( $am_pm_time == 'am' && $check_time < 1040)){
         return 0; 
     }
 for($i=0;$i<6;$i++){

@@ -307,7 +307,7 @@ animation-fill-mode: forwards;
 	position: relative;
 	transition: all 500ms;
 	transform: rotateX(360deg);
-	animation: ani_thecube 2400ms;
+	animation: ani_thecube 2800ms;
 }
 .available{
 	
