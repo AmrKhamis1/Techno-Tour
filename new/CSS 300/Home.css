@@ -1,4 +1,7 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
+  *:active{
+    -webkit-tap-highlight-color: transparent;
+ }
   body{
     display: inline-block;
     width: 100%;

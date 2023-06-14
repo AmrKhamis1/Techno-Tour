@@ -21,7 +21,7 @@ include "session.php";
   <?php
   
   if($getuser){
-    echo "<div id='open_chat' onclick='open_chating2();'>chat</div>";
+    echo "<div id='open_chat' ontouchstart='open_chating2'>chat</div>";
   }
   ?>
 <div id='container'>
@@ -42,7 +42,7 @@ if(isset($getuser)){
 }
 echo "<div id='chat_container1'><div onclick='close_chat();' id='exit_chat2'>X</div>";
 if(isset($getuser)){
-$sql="SELECT * FROM members WHERE position='Dr';";
+$sql="SELECT * FROM members WHERE position='Dr' AND id!=".$getuser['id'].";";
 $result3 = $connection->query($sql);
 echo "<div id='DRs'>";
 if ($result3->num_rows > 0) {
@@ -78,7 +78,7 @@ echo "</div>";
 
 
   
-      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin-left:0;overflow:hidden;'";} ?>> 
+      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin-top:13vh;margin-left:0;overflow:hidden;'";} ?>> 
            <?php
                       $count=10;
                       include "broadcast show.php";

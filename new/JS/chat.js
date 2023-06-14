@@ -1,5 +1,6 @@
 var exit_chat=document.getElementById('exit_chat');
 var chat_cont=document.getElementById('chat_container1');
+
 var chat_cont2=document.getElementById('chat_container');
 
 var open_chat=document.getElementById('open_chat');
@@ -19,3 +20,6 @@ function close_chat2(){
     chat_cont2.style.transform='scale(0)';
 
 }
+open_chat.addEventListener('touchend',open_chating2);
+
+open_chat.addEventListener('click',open_chating2);

@@ -1,5 +1,7 @@
 @media only screen and (max-width: 500px) {
-
+    *:active{
+        -webkit-tap-highlight-color: transparent;
+     }
 #show{
     height: 100%;
 }

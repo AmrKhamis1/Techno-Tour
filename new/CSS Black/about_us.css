@@ -3,9 +3,29 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+background-color: #edeefa;
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+  color: #000635;
+  width: 4px;
+
+}
+::-webkit-scrollbar-thumb {
+  background: #000635; 
+  border-radius: 10px;
+}
+.no-animation {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important; /* or any other initial state you desire */
+}
 body{
   scroll-behavior: smooth;
-  background-color:#edeefa;
+  background-color:#191823;
   background-attachment: fixed;
   width: 100vw;
   height: fit-content;
@@ -13,14 +33,14 @@ body{
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  height: 2000vh;
+
 }
 /*************---Start Bout Us Section***********/
 .aboutus{
   height: 725px;
 }
 .aboutus-p{
-  background-color: rgb(30, 17, 61);
+  background-color: #1d1f2c;
   position: absolute;
   color: white;
   width: 500px;
@@ -39,9 +59,10 @@ body{
 
 }
 .aboutus-p p{
-  font-family: "Open sans",'Courier New', Courier, monospace;
+  font-size: medium;
+  font-family:Arial, Helvetica, sans-serif;
     margin-left: 15px;
-    font-weight: 200;
+    font-weight: 100;
 }
 .aboutus-p button{
   margin:25px 0 0 50%;
@@ -60,6 +81,10 @@ body{
 .aboutus-p button a:hover,button:hover{
   color:#000635;
   background-color: rgb(255, 255, 255);}
+
+  #contactus{
+    margin-top: 10%;
+  }
 .team{
     margin-top: 6%;
     margin-left:55%;
@@ -68,22 +93,21 @@ body{
     text-align: center;
     position: absolute;
   }
+  #team_container{
+    width: 100%;
+    height: 100%;
+    }
 .team h1{
     margin: 0 0 30px 150px;
     background-color:transparent;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-align: center;
     animation-name: anime ;
     animation-duration: 2s;
     font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
 }
-.team img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-.team div{
+#team_container div {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -96,9 +120,9 @@ body{
     overflow: hidden;
     border: 2px;
     border-style: solid;
-    border-color: #000635;
-}
-.team div h2{
+    border-color: #2d3040;
+  }
+#team_container div h2{
   font-weight: 900;
   font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20px;
@@ -178,6 +202,18 @@ body{
   50%{opacity: 50%; }
   75%{opacity: 75%; }
   100%{opacity: 100%; }
+}
+.team_members{
+  overflow: hidden;
+  height: 190px;
+  width: 190px;
+  border-radius:50% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team_members img{
+  width: 190px;
 }
                           /*--------------------------pop up Pages------------------------------*/
 /*************The Main contain Popup******************/
@@ -312,85 +348,13 @@ section.show-shahd .container{  opacity: 50%; }
   cursor: pointer;
 }
 #close:hover{background-color: white;}
-/*------------Adel Popup----------*/
-#popup-adel-body{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color:rgba(138, 134, 134, 0.53);
-  opacity: 0;
-  pointer-events: none;
-  
-}
-section.show-adel #popup-adel-body{
-  opacity: 100%;
-  pointer-events: auto;
- }
-/*************Adel Skills*************/
-#popup-adel-skill1{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(51, 12, 224, 0.871) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-adel-skill2{
-  display: block;
-  margin-top: 5px;
-  width:80%;
-  background-color: rgb(197, 62, 62) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-adel-skill3{
-  display: block;
-  margin-top: 5px;
-  width: 90%;
-  background-color: orange ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-adel-skill4{
-  display: block;
-  margin-top: 5px;
-  width: 80%;
-  background-color: rgba(0, 215, 235, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-/*--------Adel Contact-----------*/
-#popup-adel-facebook{
-  color: rgb(0 ,0 ,255);
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-#popup-adel-gmail{
-  color: red;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-#popup-adel-linkedin{
-  color: rgb(0, 119, 255);
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
+
 /*------------Amr Popup----------*/
 #popup-amr-body{
   height: 100%;
   width: 100%;
   position: fixed;
+  z-index: 3;
   background-color:rgba(138, 134, 134, 0.53);
   opacity: 0;
   pointer-events: none;
@@ -450,297 +414,90 @@ section.show-amr #popup-amr-body{
   font-size: 25px;
   font-weight: 600;
 }
-/*------------Ahmed Popup----------*/
-#popup-ahmed-body{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color:rgba(138, 134, 134, 0.53);
-  opacity: 0;
-  pointer-events: none;
-}
-section.show-ahmed #popup-ahmed-body{
-  opacity: 100%;
-  pointer-events: auto;
- } 
- /*************Ahmed Skills ***************/
-#popup-ahmed-skill1{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(51, 12, 224, 0.871) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-ahmed-skill2{
-  display: block;
-  margin-top: 5px;
-  width:100%;
-  background-color: rgb(197, 62, 62) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-ahmed-skill3{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(0, 215, 235, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-ahmed-skill4{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: orange ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-ahmed-skill5{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(1, 209, 88, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-/*--------------Ahmed Contact-------------*/
-#popup-ahmed-facebook{
-  color: rgb(0, 0 ,255);
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-#popup-ahmed-gmail{
-  color: red;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-/*------------Sara Popup----------*/
-#popup-sara-body{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color:rgba(138, 134, 134, 0.53);
-  opacity: 0;
-  pointer-events: none;
-}
-section.show-sara #popup-sara-body{
-  opacity: 100%;
-  pointer-events: auto;
- } 
- /*************Sara Skills ***************/
-#popup-sara-skill1{
-  display: block;
-  margin-top: 5px;
-  width: 95%;
-  background-color: rgba(51, 12, 224, 0.871) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-sara-skill2{
-  display: block;
-  margin-top: 5px;
-  width:70%;
-  background-color: rgb(197, 62, 62) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-sara-skill3{
-  display: block;
-  margin-top: 5px;
-  width: 87%;
-  background-color: orange ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-sara-skill4{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(0, 215, 235, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-sara-skill5{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(1, 209, 88, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-/*--------------sara Contact-------------*/
-#popup-sara-facebook{
-  color: rgb(0 ,0 ,255);
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-#popup-sara-gmail{
-  color: red;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-/*------------Shahd Popup----------*/
-#popup-shahd-body{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color:rgba(138, 134, 134, 0.53);
-  opacity: 0;
-  pointer-events: none;
-}
-section.show-shahd #popup-shahd-body{
-  opacity: 100%;
-  pointer-events: auto;
- } 
- /*************shahd Skills ***************/
- #popup-shahd-skill1{
-  display: block;
-  margin-top: 5px;
-  width: 90%;
-  background-color: rgba(51, 12, 224, 0.871) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-shahd-skill2{
-  display: block;
-  margin-top: 5px;
-  width:70%;
-  background-color: rgb(197, 62, 62) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-shahd-skill3{
-  display: block;
-  margin-top: 5px;
-  width: 70%;
-  background-color: orange ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-shahd-skill4{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(0, 215, 235, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-#popup-shahd-skill5{
-  display: block;
-  margin-top: 5px;
-  width: 100%;
-  background-color: rgba(1, 209, 88, 0.704) ;
-  border-radius: 40px;
-  text-align: right;
-  height: 17px;
-  color: white;
-}
-/*--------------Shahd Contact-------------*/
-#popup-shahd-facebook{
-  color: rgb(0 ,0 ,255);
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-#popup-shahd-gmail{
-  color: red;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
-}
 /*************---End Bout Us Section***********/
 .about-project{
   height: 500px;
   width: 100%;
   display: flex;
   margin-top: 50px;
+  overflow: hidden;
 }
 .about-project h1{
   margin: 20px 0 20px 0;
   font-family: "Maven Pro",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .about-project-body-paragraph{
-  width: 60%;
+  width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .about-project .about-project-paragraph{
-  background-color: rgb(30, 17, 61);
+  background-color: #1d1f2c;
   color: white;
-  width: 400px;
-  height: 300px;
+  width: 100vw;
+  height: 400px;
   font-size: 20px;
-  border-radius: 2rem;
-  margin: 50px 50px 0 150px;
   text-align: center;
   animation-name: project;
   animation-duration: 2s;
+  overflow: hidden;
+
+}
+.about-project-paragraph p{
+  font-family: Arial, Helvetica, sans-serif;
 }
 .project-photos{
-  width: 50%;
-  height: 100%;
+  width: fit-content;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.project-photos .photo{
+.about-project-paragraph .photo{
   background-color: transparent;
-  border-radius: 50%;
   overflow: hidden;
-  height: 190px;
-  width: 190px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   animation-name: project;
   animation-duration: 2s;
 }
-.project-photos .photo:hover{
-  box-shadow: 0 0 5px black;
+.about-project-paragraph img{
+  width: 500px;
 }
-.project-photos img{
-  width: 100%;
-  height: 100%;
-}
-#photo2{
-  margin: 150px;
-}
-#photo3{
-  margin-left: 300px;
-}
-#photo4{
-  margin-top: 300px;
-}
-#photo5{
-  margin: 300px 300px;
-}
+
 @keyframes project {
   0%{transform:translateY(50px);opacity: 0%;}
+}
+#footer{
+
+  bottom: 0;
+  background-color: #1d1f2c;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-direction: row;
+  height: 80px;
+  width: 100vw;
+  z-index: 3;
+  font-family: 'Calibri Light',Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+#footer_words{
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  text-align:center;
+  color: #555555;
+}
+#footer_copy{
+  color: #555555;
+  text-align:start;
+  width: fit-content;
+  align-self: center;
 }

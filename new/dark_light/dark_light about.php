@@ -24,7 +24,7 @@
             $theme='b';
             $theme2=$_GET['theme'];
             echo "
-            <link rel='stylesheet' href='CSS\header.css'>
+            <link rel='stylesheet' href='CSS Black\header.css'>
             ";
             $search="'techno tour website design pro\search.png'";
             $login="'techno tour website design pro\login.png'";

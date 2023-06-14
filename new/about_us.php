@@ -1,4 +1,5 @@
 <?php 
+include "form/login.php";
 include "session.php";
 ?>
 <!DOCTYPE html>
@@ -7,7 +8,7 @@ include "session.php";
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/about_us.css">
+  <link rel="stylesheet" href="CSS Black/about_us.css">
   <link rel="stylesheet" href="CSS/header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,8 @@ include "session.php";
   <title>About Us</title>
   <?php include 'dark_light/dark_light about.php';?>
   <link rel="stylesheet" href="CSS 300/header.css">
+  <link rel="stylesheet" href="CSS 300/about_us.css">
+
 </head>
 <body>
     <?php include "profile.php"; 
@@ -40,6 +43,7 @@ include "session.php";
    <!--------------Start Team contain----------------->
     <div class="team">
       <h1>Techno-Tour Team</h1>
+      <div id='team_container'>
       <div class="adel team_members" id="adel">
         <img src="techno tour website design pro/adel.png" alt="">
         <h2 class="names">Adel Sherif</h2>
@@ -59,6 +63,7 @@ include "session.php";
       <div class="shahd team_members" id="shahd">
         <img  src="techno tour website design pro/shahd.png" alt="">
         <h2 class="names">Shahd Abo Elkaramat</h2>
+       </div>
       </div>
     </div>
        <!--------------END Team contain----------------->
