@@ -29,14 +29,12 @@ if(isset($_POST['done'])){
     $b_date=date('Y-m-d');
     $b_start=$now_duration+1;
     $b_end=$now_duration+$_POST['to'];
-    $b_atte=NULL;
-    $b_exte=NULL;
     $sql="SELECT * FROM rooms WHERE r_no='$Room_Name'";
     $result=mysqli_query($connection,$sql);
     $getroom=mysqli_fetch_array($result,MYSQLI_ASSOC);
     $room_num=$getroom['id'];
-    $insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,date,total_atten,total_external,no_room,room_id,user_id)
-    VALUES ('$b_tittle','$b_start','$b_end','$b_date','$b_atte','$b_exte','$room_num','".$room_num."','".$id."')");
+    $insert2=$connection->prepare("INSERT INTO booking(b_tittle,start_time,end_time,date,no_room,room_id,user_id)
+    VALUES ('$b_tittle','$b_start','$b_end','$b_date','$room_num','".$room_num."','".$id."')");
     $insert2->execute();
     $insert=$connection->prepare("INSERT INTO time_table(room_id,start_time,end_time,weekday,user_id,sub_name,end_date,book)
     VALUES ('".$room_num."','$b_start','$b_end','$dayOfWeek','".$id."','$b_tittle','$b_date','1')");
@@ -51,21 +49,23 @@ if(isset($_POST['done'])){
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/form.css"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon">  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="CSS Black/form.css"> 
     <script src="JS/check avalabile booking dr.js"></script>
-
     <title>Document</title>
 </head>
 <body>
     <div id='container'>
-    <h1>Book Quicly for a lecture</h1>
+    <h1>Book Quickly for a lecture</h1>
     <form action='' method="post">
         <label for="lucture_name" style='font-weight:600;'>Is There are a Name for Lecture ? </label>
        <div id="choose"> <label for="enable-input">Yes</label>
-        <input type="radio" id="enable-input" value="1">
+        <input name='radio' type="radio" id="enable-input" value="1">
         <label for="disable-input">No</label>
-        <input type="radio" id="disable-input" value="0"></div>
+        <input name='radio' type="radio" id="disable-input" value="0"></div>
         <input type="text" name="lucture_name" id="lucture_name" placeholder="Enter the name">
         <label for="lucture_name">From Now To ?</label>
         <select name="to" onchange='check(this.value,`<?php echo $Room_Name;?>`)' id="to">
@@ -74,7 +74,7 @@ if(isset($_POST['done'])){
             <option value='3'>three durations long</option>
         </select>
         <p id='message' style='font-size:11px;'></p>
-        <button id='done' type="submit" name='done'>Book</button>
+        <button id='done' class='buttons1' type="submit" name='done'>Book</button>
     </form>
 </div>
 </body>
@@ -96,16 +96,19 @@ disableInput.addEventListener('change', () => {
 <style>
 
     body{
-        width:100vw;
+        width:100%;
         height: 100vh;
         display: flex;
         align-items:center;
         justify-content: center;
         overflow: hidden;
-        background-image:radial-gradient(rgb(111, 111, 111),rgb(2, 0, 52));
+        background-color: #191823;
         background-size:150% 150%;
         background-attachment: fixed;
         background-position:center;
+    }
+    h1{
+        color:white;
     }
     #container{
         transform: scale(1.2);
@@ -114,14 +117,14 @@ disableInput.addEventListener('change', () => {
         display: flex;
         flex-direction:column;
         justify-content: space-around;
-        background-color:white;
-        background-image:radial-gradient(rgb(255, 255, 255),rgb(255, 255,255));
+        background-color:#3d3f4e;
         border-radius: 30px;
      	align-items: center;
     }
     form{
         height: 50vh;
         width:30vw;
+        color: #000;
         display: flex;
         flex-direction:column;
         justify-content: space-around;
@@ -141,7 +144,24 @@ disableInput.addEventListener('change', () => {
         border-style:groove;
         border-color:black;
     }
-
+    @media only screen and (max-width: 900px) {
+    
+        #container{
+        transform: scale(1);
+        height: 70vh;
+        width:90%;
+    }
+    form{
+        width: 95%;
+    }
+    h1{
+        font-size:25px;
+    }
+    input{
+        color:white;
+        border-color:white;
+    }
+    }
 
 </style>
 </html>

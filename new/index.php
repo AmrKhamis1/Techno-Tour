@@ -13,16 +13,20 @@ include "session.php";
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
-      <?php include 'dark_light/dark_light index.php';?>
+      <link rel='stylesheet' href='CSS Black\Home.css'>
+        <link rel='stylesheet' href='CSS Black\header.css'>
+        <link rel='stylesheet' href='CSS Black\index.css'>
       <link rel="stylesheet" href="CSS 300/header.css">
       <link rel="stylesheet" href="CSS 300/Home.css">
       <link rel="stylesheet" href="CSS 300/index.css">
+      <link rel="stylesheet" href="chat/chat.css">
+      <link rel="stylesheet" href="chat/chat 300.css">
 
       <title>TecnoTour</title>
    </head>
    <body>  
    <div id="loading-screen">
-  <img id='logo-intro' src="techno tour website design pro\<?php echo $loading;?>" width='70px'>
+  <img id='logo-intro' src="techno tour website design pro\inner logo.png" width='70px'>
       </div> 
    <div id="particles-js">
    <div id='footer'>
@@ -31,14 +35,16 @@ include "session.php";
      It  also include a copyright form to address intellectual property concerns and protect the rights of all users within the system.<br>
     </div>
     <div style='background-color:#c6c6c638;width:2px; height:70px;align-self: center;'></div>
-    <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php?theme=<?php echo $theme2;?>'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
+    <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
    </div>
    </div>
    <?php if($getuser!=NULL && isset($getuser)){
 include "profile.php";
    }  
    include "header.php";
-   ?>    
+   include "chat main.php";
+   ?>   
+    
       <div id="bage1" >
       <main style="display:flex;flex-direction:column;">
       <div id='home_open' class='no-animation animation_go'>
@@ -91,7 +97,7 @@ include "profile.php";
                            Join us and simplify room reservation process today!</span>
                      <?php
                      if(isset($getuser)){
-                    echo "<button type='button' onclick='window.location.assign(`rooms.php?theme=".$theme2."`);' id='NCT-button' class='tour-button'>
+                    echo "<button type='button' onclick='window.location.assign(`rooms.php`);' id='NCT-button' class='tour-button'>
                           Rooms
                          </button>";
                         }
@@ -104,7 +110,7 @@ include "profile.php";
                                                       include "broadcast show.php";
                                                       for($i=0;$i<4;$i++){
                                                         if(isset($caption[$i])){
-                                                                   echo "<img class='photo".$i." broadcats_photos' src='posts/".$image[$i]."' alt=''>";
+                                                                   echo "<img class='photo".$i." broadcats_photos' src='".$image[$i]."' alt=''>";
                                                         }}
                               ?>     
                             </div>
@@ -124,6 +130,34 @@ include "profile.php";
 </div>
 </section>
                       </div>
+
+                      <div id='big_photo_container'>
+                            <div id='big_photo'>
+                              <?php
+                                   for($i=1;$i<=4;$i++){
+                                    echo "<img class='photo".$i." broadcats_photos2' src='room/".$i.".png' alt=''>";
+                                 }
+                              ?>     
+                            </div>
+                            <?php
+                            $arr=['','Physics Room','ICT Lab','Electronic Lab1','Renewable Lab'];
+                             for($i=1;$i<=4;$i++){
+                              
+                                echo "<p class='big_photo_text2 text".$i."'><a href='rooms.php'>".$arr[$i]."</a></p>";
+                              }
+                            ?>
+          
+                            <section class="scrollable-section">
+
+<div class="photo-grid">
+   <div class='photo-container' onclick='show_photo2();'>
+    <img src='techno tour website design pro/next.png' alt='Photo 1' class='photo'>
+  </div> 
+</div>
+</section>
+                      </div>
+
+
          </div> 
          
          <br><br> 
@@ -155,7 +189,7 @@ include "profile.php";
           them to conveniently select and book their preferred rooms. <br>
           This solution not only saves time and effort but also enhances the overall experience of students, <br>
            allowing them to focus on their studies and personal growth without worrying about housing arrangements.</div> 
-       <div class='techno-tour-notify-2'><img src=<?php echo $photo1; ?> width='200px' alt=""></div>
+       <div class='techno-tour-notify-2'><img src='techno tour website design pro\techno tour pro copy light.png' width='200px' alt=""></div>
 
     </div>
 <br>
@@ -168,7 +202,7 @@ include "profile.php";
     <br>
     <br>
 <div id="techno-tour-notify2">
-  <div class='techno-tour-notify2-1'><img src=<?php echo $photo2;?> width='150px' alt=""></div>
+  <div class='techno-tour-notify2-1'><img src='techno tour website design pro\techno tour pro copy2 light.png' width='150px' alt=""></div>
           <div class='techno-tour-notify2-2'>In addition to catering to students, our system for university room reservations also extends its benefits to external users and professors. <br>
            Recognizing the diverse needs of the academic community, we have designed the system to accommodate bookings from external users, such as guest speakers, <br>
             conference attendees, and visiting scholars. This feature not only fosters collaboration and knowledge exchange but also generates additional revenue <br>
@@ -199,4 +233,6 @@ include "profile.php";
        <script src="JS/index.js"></script>
    <script type="text/javascript" src="JS/particles.js"></script>
     <script type="text/javascript" src="JS/app.js"></script>
+    <script src="JS/chat.js"></script>
+<script src="chat/chat.js"></script>
 </html>

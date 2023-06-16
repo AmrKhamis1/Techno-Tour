@@ -150,7 +150,10 @@
             <input type='text' name='room_id' style='display:none;' value='". $room_id."'>
             <lable for='number_of' id='lable_number'>Number Of PCs : </lable>
             <input type='number' name='number_of' id='number_of' value='1' min='1'>
-            <input type='text' name='else' id='else' placeholder='type your report'>
+            <br>
+            <lable for='pcs' id='lable_number2'>PCs Not Working</lable>
+            <input type='text' name='pcs' id='number_pc' placeholder='Ex: 1,2,5,6'>
+            <input type='text' name='else' id='else' placeholder='More Detailes'>
             </div>
                <button id='report_button' name='report_done' type='submit'>Send</button>
               </form>

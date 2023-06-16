@@ -10,7 +10,8 @@ include "session.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include "dark_light/dark_light broadcast.php";?>
+    <link rel='stylesheet' href='CSS Black\broadcast.css'>
+    <link rel='stylesheet' href='CSS Black\header2.css'>
     <link rel="stylesheet" href="chat/chat.css">
     <link rel="stylesheet" href="CSS 300/header2.css">
     <link rel="stylesheet" href="CSS 300/broadcast.css">
@@ -20,9 +21,8 @@ include "session.php";
 <body>
   <?php
   
-  if($getuser){
-    echo "<div id='open_chat' ontouchstart='open_chating2'>chat</div>";
-  }
+  include "chat main.php";
+
   ?>
 <div id='container'>
 <?php 
@@ -32,7 +32,7 @@ include "header.php";
 if(isset($getuser)){ 
   if($getuser['position']=="Dr" ){
     echo "
-    <form action='".$_SERVER['PHP_SELF']."?theme=".$theme2."' method='post' id='post' enctype='multipart/form-data'>
+    <form action='".$_SERVER['PHP_SELF']."' method='post' id='post' enctype='multipart/form-data'>
   <textarea  rows='10' cols='30' id='caption' name='caption' type='text' placeholder=\"What's new ?\" required></textarea>
 <input id='post_image' name='post_image' type='file'>
     <button type='submit' name='post'>Post</button>
@@ -40,42 +40,8 @@ if(isset($getuser)){
 ";
   }
 }
-echo "<div id='chat_container1'><div onclick='close_chat();' id='exit_chat2'>X</div>";
-if(isset($getuser)){
-$sql="SELECT * FROM members WHERE position='Dr' AND id!=".$getuser['id'].";";
-$result3 = $connection->query($sql);
-echo "<div id='DRs'>";
-if ($result3->num_rows > 0) {
-while($row=$result3->fetch_assoc()){
-echo "
-<div class='drs'>";
-if($row['image']==NULL || $row['image']==" "){
-  echo "<div class='drs_img'><img src='techno tour website design pro/unknown.png'></div>";
 
-}else{
-  echo "<div class='drs_img'><img src='photos/".$row['image']."'></div>";
-}
-if($getuser){
-  echo "<div class='drs_name'>Dr/ ".$row['fname']." ".$row['lname']."</div>
-<div class='drs_chat' onclick='open_chating();messages(".$getuser['id'].",".$row['id'].");chat_container(".$getuser['id'].",".$row['id'].");'>Chat</div>
-</div>
-";
-}else{
-  echo "<div class='drs_name'>Dr/ ".$row['fname']." ".$row['lname']."</div>
-  </div>
-  ";
-}
-
-
-}}
-echo "</div>";
-}
-?>  
-</div>
-<div id='chat_container'>
-
-</div>
-
+?>
 
   
       <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin-top:13vh;margin-left:0;overflow:hidden;'";} ?>> 
@@ -103,7 +69,7 @@ echo "</div>";
                              <div class='caption_post'>".$caption[$i]."</div>
                              
                              </div>
-                             <div class='post_image'><img src='posts/".$image[$i]."'></div>
+                             <div class='post_image'><img src='".$image[$i]."'></div>
                           </div>
                           ";
 

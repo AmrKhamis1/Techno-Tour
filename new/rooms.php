@@ -20,7 +20,9 @@ if(!isset($getuser)){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
       <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-      <?php include "dark_light/dark_light rooms.php";?>
+      <link rel='stylesheet' href='CSS Black\\rooms.css'>
+      <link rel='stylesheet' href='CSS Black\header.css'>
+      <link rel='stylesheet' href='CSS Black\popup.css'>
       <link rel="stylesheet" href="CSS 300/header.css">
       <link rel="stylesheet" href="CSS 300/rooms.css">
       <link rel="stylesheet" href="CSS 300/popup.css">

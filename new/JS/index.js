@@ -18,7 +18,24 @@ for(i=0;i<4;i++){
 }
 
 }
+function show_photo2(){
+counter++;
+if(counter>3){
+counter=0;
+}
+for(i=0;i<4;i++){
+  if(i==counter){
+    document.getElementsByClassName('broadcats_photos2')[i].style.display='block';
+    document.getElementsByClassName('big_photo_text2')[i].style.display='block';
 
+  }else{
+  document.getElementsByClassName('broadcats_photos2')[i].style.display='none';
+  document.getElementsByClassName('big_photo_text2')[i].style.display='none';
+
+}
+}
+
+}
 
 window.onload=function(){
    document.getElementById('loading-screen').style.display = 'block';
@@ -39,11 +56,11 @@ window.onload=function(){
 var about = document.getElementById('about-det');
 var building = document.getElementById('building');
 var ex = document.getElementById('about-ex');
-
+show_photo2();
 building.addEventListener('click',()=>{
   if(screen.width>1250){
 about.style.display='flex';
-window.scrollTo(0, 2500);
+window.scrollTo(0, 3500);
   }
 
 });

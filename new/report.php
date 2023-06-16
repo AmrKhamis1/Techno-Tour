@@ -3,18 +3,32 @@ include "database/databasemysqli.php";
 session_start();
 $n_o_pc=$_POST['number_of'];
 $room_id=$_POST['room_id'];
+$pcs=$_POST['pcs'];
 $report=$_POST['department'];
+$report_else=$_POST['else'];
+$pcsNumbers=explode(',',$pcs,20);
+$pcs_len=count($pcsNumbers);
 if($report=='1'){
     $report='Pc not working';
     $report_det=$n_o_pc;
+    for($i=0;$i<$pcs_len;$i++){
+ $insert=$connection->prepare("UPDATE technotour.pcs SET state='0' ,note='$report_else'
+WHERE pc_num='{$pcsNumbers[$i]}' AND room_num=$room_id 
+");
+$insert->execute();
+    }
 }else if($report=='2'){
     $report='projector';
     $report_det='projector not working !';
-    
-
 }else if($report=='3'){
 $report='projector and pc';
 $report_det="projector and ".$n_o_pc." PCs not working ";
+for($i=0;$i<$pcs_len;$i++){
+    $insert=$connection->prepare("UPDATE technotour.pcs SET state='0' , note='$report_else'
+   WHERE pc_num='{$pcsNumbers[$i]}' AND room_num=$room_id 
+   ");
+   $insert->execute();
+       }
 }else{
     $report='report';
     $report_det=$_POST['else'];

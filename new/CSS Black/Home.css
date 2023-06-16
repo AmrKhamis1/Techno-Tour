@@ -138,7 +138,7 @@ body{
     background-color: #00000000;
   }
   .hero{
-      height:150vh;
+      height:170vh;
       background-repeat: no-repeat;
       background-size: cover;
       background-position:center;
@@ -256,7 +256,7 @@ width: 100%;
 position: absolute;
 z-index: -5;
 width: 100vw;
-height: 331vh;
+height: 350vh;
 margin-top: 100vh;
 }
 .hero-font{

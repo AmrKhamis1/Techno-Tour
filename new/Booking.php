@@ -30,13 +30,13 @@ include_once "booking/validationBooking.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Booking.css">
+    <link rel="stylesheet" href="CSS 300/Booking.css">
     <title>Rooms Booking</title>
     <script src="JS/check avalabile booking.js"></script>
 
 </head>
 <body>
 <div id="container">
-    </div>
     <form  id="Booking" action="Booking.php" method="post" novalidate>
                 <div class="form-left">
                     <h1>Rooms Booking</h1>
@@ -85,5 +85,8 @@ include_once "booking/validationBooking.php";
                     <input type="submit" value="Done" id="done" name="done" class="done">
                     <p class="errors" style="color:green;font-size:10px;text-align:center;"><?php echo $done ;?></p>
         </div>
+    </form>
+        </div>
+
 </body>
 </html>

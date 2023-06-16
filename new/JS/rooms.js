@@ -16,28 +16,38 @@ function show(){
     }
   }
   function reports(){
-      if( document.getElementById("department").value=='1'){
+      if( document.getElementById("department").value=='2'){
         document.getElementById("report_det").style.display='inline-block';
-        document.getElementById("number_of").style.display='inline-block';
-        document.getElementById("else").style.display='none';
-        document.getElementById("lable_number").innerHTML='Number Of PCs : ';
-        document.getElementById("lable_number").style.display='inline-block';
+        document.getElementById("number_of").style.display='none';
+        document.getElementById("number_pc").style.display='none';
+        document.getElementById("lable_number").style.display='none';
+        document.getElementById("lable_number2").style.display='none';
        }
        else if(document.getElementById("department").value=='3'){
         document.getElementById("report_det").style.display='inline-block';
         document.getElementById("number_of").style.display='inline-block';
-        document.getElementById("else").style.display='none';
+        document.getElementById("number_pc").style.display='inline-block';
         document.getElementById("lable_number").innerHTML='Number Of PCs : ';
         document.getElementById("lable_number").style.display='inline-block';
+        document.getElementById("lable_number2").style.display='inline-block';
        }
        else if(document.getElementById("department").value=='4'){
         document.getElementById("report_det").style.display='inline-block';
         document.getElementById("number_of").style.display='none';
         document.getElementById("else").style.display='inline-block';
+        document.getElementById("number_pc").style.display='none';
         document.getElementById("lable_number").style.display='none';
+        document.getElementById("lable_number2").style.display='none';
+
        }
        else{
-        document.getElementById("report_det").style.display='none';
+        document.getElementById("report_det").style.display='inline-block';
+        document.getElementById("number_of").style.display='inline-block';
+        document.getElementById("lable_number").innerHTML='Number Of PCs : ';
+        document.getElementById("number_pc").style.display='inline-block';
+        document.getElementById("lable_number").style.display='inline-block';
+        document.getElementById("report_det").style.display='inline-block';
+        document.getElementById("lable_number2").style.display='inline-block';
        }
       }
 function event_display(x){
@@ -120,22 +130,21 @@ window.addEventListener("load", function() {
 
 function show_book(x){
   var book=document.getElementById('book_button'+x);
+
   if(book){
     if(screen.width>500){
-     book.style.marginBottom='0px';
-    }else{
       book.style.marginBottom='0px';
-     }
   }
+    
+  }
+  
    }
 function hide_book(x){
   var book=document.getElementById('book_button'+x);
   if(book){
     if(screen.width>500){
     book.style.marginBottom='-200px';
-  }else{
-    book.style.marginBottom='0px';
-   }
+  }
   }
 } 
 

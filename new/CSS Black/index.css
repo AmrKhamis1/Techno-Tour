@@ -105,6 +105,16 @@
       padding-left: 30px;
 
     }
+    .big_photo_text2{
+      text-align: center;
+      width: 500px;
+    }
+    .big_photo_text2 a{
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+    }
     @keyframes animeee {
       0%{
             opacity: 0;

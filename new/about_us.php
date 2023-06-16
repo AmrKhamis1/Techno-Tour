@@ -9,19 +9,22 @@ include "session.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS Black/about_us.css">
-  <link rel="stylesheet" href="CSS/header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&display=swap" rel="stylesheet">  
   <title>About Us</title>
-  <?php include 'dark_light/dark_light about.php';?>
+  <link rel='stylesheet' href='CSS Black\header.css'>
   <link rel="stylesheet" href="CSS 300/header.css">
   <link rel="stylesheet" href="CSS 300/about_us.css">
+  <link rel="stylesheet" href="chat/chat.css">
+      <link rel="stylesheet" href="chat/chat 300.css">
 
 </head>
 <body>
     <?php include "profile.php"; 
            include "header.php";    
+           include "chat main.php";
+
     ?>   
 <section class="aboutus"><!---Start aBout Us Section--->
   <!--------------Start Page Container----------------->
@@ -141,12 +144,14 @@ include "session.php";
      It  also include a copyright form to address intellectual property concerns and protect the rights of all users within the system.<br>
     </div>
     <div style='background-color:#c6c6c638;width:2px; height:70px;align-self: center;'></div>
-    <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php?theme=<?php echo $theme2;?>'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
+    <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
    </div>
    </div>
 <!---End aBout Project Section--->
 </body>
 <script src="JS/header.js"></script>
+<script src="JS/chat.js"></script>
+<script src="chat/chat.js"></script>
 <!-------------------------------Start  pop up pages Js----------------------------->
 <script>
   /*************Adel And cancelBtn Js********/
