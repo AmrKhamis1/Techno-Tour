@@ -1,11 +1,7 @@
 <?php
                 
   function getCurrentIndex() {
-    $month=date('m');
-    $day=date('d');
-    $year=date("y");
-    $today = mktime(0, 0, 0,$month ,$day,$year);
-    $dayOfWeek = date('D', $today);
+    $dayOfWeek = date('D');
     if($dayOfWeek=='Fri' || $dayOfWeek=='Sat'){
         return 0;
     }
@@ -17,7 +13,7 @@
     $h1+=1;
     $check_time=($h1*60)+$m1;
     $am_pm_time =  date("a");
-    if(($am_pm_time == 'pm' && $check_time <320 &&$h1)||( $am_pm_time == 'am' && $check_time < 1040)){
+    if(($am_pm_time == 'pm' && $check_time >1040)||( $am_pm_time == 'am' && $check_time < 540)){
         return 0; 
     }
 for($i=0;$i<6;$i++){
@@ -27,7 +23,6 @@ list($h4[$i], $m4[$i]) = explode(":", $duration_out[$i]);
 for($i=0;$i<=4;$i+=2){
     if($check_time >= $out_time[$i] && $check_time <= $out_time[$i+1]){
        return 10;
-       break;
     }
 }
 for($i = 0; $i < 9; $i++){

@@ -38,7 +38,7 @@ CREATE TABLE `booking` (
   KEY `room_id` (`room_id`),
   CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`),
   CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
-INSERT INTO `booking` VALUES (3,'event test',4,5,'2023-04-17',70,15,'A104',45,4),(4,'amr booking',4,5,'2023-04-19',100,15,'A105',41,4),(7,'event test 2',2,4,'2023-04-10',40,20,'A105',41,4),(11,'event test 2',1,3,'2023-04-16',60,10,'A106',46,4),(12,'sdfsdf',5,7,'2023-04-23',34,10,'A102',42,4),(16,'event test 2',5,7,'2023-05-10',100,15,'A106',46,23),(17,'event test 2',2,4,'2023-06-12',100,20,'A105',41,23),(18,'event test 2',1,2,'2023-06-13',50,10,'A105',41,23),(19,'fast booking',3,5,'2023-06-13',0,0,'41',41,23),(20,'Booking test ',5,6,'2023-06-14',NULL,NULL,'47',47,23);
+INSERT INTO `booking` VALUES (3,'event test',4,5,'2023-04-17',70,15,'A104',45,4),(4,'amr booking',4,5,'2023-04-19',100,15,'A105',41,4),(7,'event test 2',2,4,'2023-04-10',40,20,'A105',41,4),(11,'event test 2',1,3,'2023-04-16',60,10,'A106',46,4),(12,'sdfsdf',5,7,'2023-04-23',34,10,'A102',42,4),(16,'event test 2',5,7,'2023-05-10',100,15,'A106',46,23),(17,'event test 2',2,4,'2023-06-12',100,20,'A105',41,23),(18,'event test 2',1,2,'2023-06-13',50,10,'A105',41,23),(19,'fast booking',3,5,'2023-06-13',0,0,'41',41,23),(20,'Booking test ',5,6,'2023-06-14',NULL,NULL,'47',47,23),(21,'adasd',5,7,'2023-06-18',NULL,NULL,'41',41,23),(22,'fast booking',1,1,'2023-06-20',NULL,NULL,'42',42,23),(23,'fast booking',6,8,'2023-06-20',NULL,NULL,'42',42,23);
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -229,7 +229,7 @@ CREATE TABLE `pcs` (
 
 LOCK TABLES `pcs` WRITE;
 /*!40000 ALTER TABLE `pcs` DISABLE KEYS */;
-INSERT INTO `pcs` VALUES (1,1,54,1,''),(2,2,54,0,''),(3,3,54,0,''),(4,4,54,1,''),(5,5,54,0,''),(6,6,54,1,''),(7,7,54,0,''),(8,8,54,0,''),(9,9,54,0,''),(10,10,54,1,''),(11,11,54,1,''),(12,12,54,1,''),(13,13,54,1,''),(14,14,54,1,''),(15,15,54,1,''),(16,16,54,1,''),(17,17,54,1,''),(18,18,54,1,''),(19,19,54,1,''),(20,20,54,1,'');
+INSERT INTO `pcs` VALUES (1,1,54,1,''),(2,2,54,0,''),(3,3,54,0,''),(4,4,54,1,''),(5,5,54,0,''),(6,6,54,1,''),(7,7,54,0,''),(8,8,54,0,''),(9,9,54,0,''),(10,10,54,1,''),(11,11,54,0,''),(12,12,54,1,''),(13,13,54,0,''),(14,14,54,1,''),(15,15,54,1,''),(16,16,54,1,''),(17,17,54,1,''),(18,18,54,1,''),(19,19,54,1,''),(20,20,54,1,'');
 /*!40000 ALTER TABLE `pcs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -253,7 +253,7 @@ CREATE TABLE `report` (
   KEY `report2` (`user_id`),
   CONSTRAINT `report1` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`),
   CONSTRAINT `report2` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,7 +262,7 @@ CREATE TABLE `report` (
 
 LOCK TABLES `report` WRITE;
 /*!40000 ALTER TABLE `report` DISABLE KEYS */;
-INSERT INTO `report` VALUES (13,'Pc not working',23,'3',54,'2023-06-15','03:38:00'),(14,'Pc not working',23,'3',54,'2023-06-15','10:58:00'),(15,'projector',23,'projector not working !',54,'2023-06-16','06:54:00');
+INSERT INTO `report` VALUES (13,'Pc not working',23,'3',54,'2023-06-15','03:38:00'),(14,'Pc not working',23,'3',54,'2023-06-15','10:58:00'),(15,'projector',23,'projector not working !',54,'2023-06-16','06:54:00'),(16,'Pc not working',23,'2',54,'2023-06-17','10:29:00'),(17,'projector',23,'projector not working !',52,'2023-06-18','01:06:00');
 /*!40000 ALTER TABLE `report` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,7 +291,7 @@ CREATE TABLE `rooms` (
 
 LOCK TABLES `rooms` WRITE;
 /*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
-INSERT INTO `rooms` VALUES (41,'A105',25,'borken','broken',21,4),(42,'A102',0,'fix','good',0,0),(43,'A101',0,'good','good',0,0),(44,'A103',0,'good','good',0,0),(45,'A104',0,'good','good',-1,1),(46,'A106',0,'good','good',0,0),(47,'A107',0,'good','good',0,0),(48,'A108',0,'good','good',0,0),(49,'A201',10,'good','good',6,4),(50,'A202',10,'good','good',0,0),(51,'A203',10,'good','good',0,0),(52,'A204',0,'good','good',0,0),(53,'A205',0,'good','good',0,0),(54,'A206',0,'borken','good',-3,3),(55,'A207',0,'good','good',0,0),(56,'A208',0,'good','good',0,0),(57,'A209',0,'good','good',0,0),(58,'A210',0,'good','good',0,0),(59,'A301',10,'good','good',0,0),(60,'A302',10,'good','good',0,0),(61,'A303',10,'good','good',0,0),(62,'A304',0,'good','good',0,0),(63,'A305',0,'good','good',0,0),(64,'A306',0,'good','good',0,0),(65,'A307',0,'good','good',0,0),(66,'A308',0,'good','good',0,0),(67,'A309',0,'good','good',0,0),(68,'A310',0,'good','good',0,0),(69,'A401',10,'good','good',0,0),(70,'A402',10,'good','good',0,0),(71,'A403',10,'good','good',0,0),(72,'A404',0,'good','good',-3,3),(73,'A405',0,'good','good',0,0),(74,'A406',0,'good','good',0,0),(75,'A407',0,'good','good',0,0),(76,'A408',0,'good','good',0,0),(77,'A409',0,'good','good',0,0);
+INSERT INTO `rooms` VALUES (41,'A105',25,'borken','broken',21,4),(42,'A102',0,'fix','good',0,0),(43,'A101',0,'good','good',0,0),(44,'A103',0,'good','good',0,0),(45,'A104',0,'good','good',-1,1),(46,'A106',0,'good','good',0,0),(47,'A107',0,'good','good',0,0),(48,'A108',0,'good','good',0,0),(49,'A201',10,'good','good',6,4),(50,'A202',10,'good','good',0,0),(51,'A203',10,'good','good',0,0),(52,'A204',0,'borken','good',0,0),(53,'A205',0,'good','good',0,0),(54,'A206',0,'borken','good',-2,2),(55,'A207',0,'good','good',0,0),(56,'A208',0,'good','good',0,0),(57,'A209',0,'good','good',0,0),(58,'A210',0,'good','good',0,0),(59,'A301',10,'good','good',0,0),(60,'A302',10,'good','good',0,0),(61,'A303',10,'good','good',0,0),(62,'A304',0,'good','good',0,0),(63,'A305',0,'good','good',0,0),(64,'A306',0,'good','good',0,0),(65,'A307',0,'good','good',0,0),(66,'A308',0,'good','good',0,0),(67,'A309',0,'good','good',0,0),(68,'A310',0,'good','good',0,0),(69,'A401',10,'good','good',0,0),(70,'A402',10,'good','good',0,0),(71,'A403',10,'good','good',0,0),(72,'A404',0,'good','good',-3,3),(73,'A405',0,'good','good',0,0),(74,'A406',0,'good','good',0,0),(75,'A407',0,'good','good',0,0),(76,'A408',0,'good','good',0,0),(77,'A409',0,'good','good',0,0);
 /*!40000 ALTER TABLE `rooms` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -312,12 +312,14 @@ CREATE TABLE `time_table` (
   `sub_name` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `end_date` date DEFAULT NULL,
   `book` tinyint(1) DEFAULT NULL,
+  `year` int DEFAULT NULL,
+  `sec` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `room_id` (`room_id`,`user_id`,`sub_name`),
   KEY `dr_eng_dr_ass7` (`user_id`),
   CONSTRAINT `dr_eng_dr_ass7` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`),
   CONSTRAINT `time_table_ibfk_4` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,6 +328,7 @@ CREATE TABLE `time_table` (
 
 LOCK TABLES `time_table` WRITE;
 /*!40000 ALTER TABLE `time_table` DISABLE KEYS */;
+INSERT INTO `time_table` VALUES (71,42,5,7,'Sun',23,'test1',NULL,NULL,1,1),(73,44,5,7,'Sun',23,'test2',NULL,NULL,1,3),(74,45,7,9,'Sun',23,'test3',NULL,NULL,1,5),(78,42,6,8,'Tue',23,'fast booking','2023-06-20',1,NULL,NULL),(79,41,8,9,'Sun',23,'test 5',NULL,NULL,2,1),(80,46,6,7,'Sun',23,'test 6',NULL,NULL,2,4),(81,45,1,1,'Sun',23,'test9',NULL,NULL,1,0),(82,45,2,3,'Sun',23,'test10',NULL,NULL,1,0);
 /*!40000 ALTER TABLE `time_table` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -338,4 +341,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-16  8:08:33
+-- Dump completed on 2023-06-23 23:12:25

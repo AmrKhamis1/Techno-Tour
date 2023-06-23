@@ -6,10 +6,11 @@ $id=$_GET['id'];
 }else{
     header("Location:rooms.php?theme=b");
 }
-$duration_start=['09:00','09:50','10:50','11:40','01:00','01:50','02:50','03:40','04:30'];
-$duration_end=['09:50','10:40','11:40','12:30','01:50','02:40','03:40','04:30','05:20'];
-$now_time =  date("h:i");
+$duration_start=['09:00','09:50','10:50','11:40','13:00','13:50','14:50','15:40','16:30'];
+$duration_end=['09:50','10:50','11:40','13:00','13:50','14:50','15:40','16:30','17:20'];
+$now_time =  date("H:i");
 list($h1, $m1) = explode(":", $now_time);
+$h1+=1;
 $check_time=($h1*60)+$m1;
 for($i=0;$i<9;$i++){
 list($h2, $m2) = explode(":", $duration_start[$i]);
@@ -74,7 +75,7 @@ if(isset($_POST['done'])){
             <option value='3'>three durations long</option>
         </select>
         <p id='message' style='font-size:11px;'></p>
-        <button id='done' class='buttons1' type="submit" name='done'>Book</button>
+        <button id='done' style='display:none;' class='buttons1' type="submit" name='done'>Book</button>
     </form>
 </div>
 </body>
