@@ -18,7 +18,8 @@ $result2 = $connection->query($sql2);
  if ($result2->num_rows > 0) {
   $count=0;
      while($row=$result2->fetch_assoc()){
-       if(($start >$row['start_time']&&$start <$row['end_time']) || ($end >$row['start_time']&&$end <$row['end_time']) ||($start <$row['start_time']&&$end >$row['start_time']) || ($end ==$row['end_time'] || $start ==$row['start_time'])){
+       if(($start >$row['start_time']&&$start <$row['end_time']) || ($end >$row['start_time']&&$end <$row['end_time']) 
+       ||($start <$row['start_time']&&$end >$row['start_time']) || ($end ==$row['end_time'] || $start ==$row['start_time'])){
         $count+=1 ;
             }
     }

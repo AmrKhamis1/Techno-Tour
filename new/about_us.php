@@ -69,56 +69,8 @@ include "session.php";
        </div>
       </div>
     </div>
-       <!--------------END Team contain----------------->
-  </div>
-    <!--------------End Page Container----------------->
+       <!--------------END Team contain----------------->    <!--------------End Page Container----------------->
 
-                    <!-------------------------------pop up pages----------------------------->
-
-<!------------Start Adel popup---------->
-
-<!------------Start Amr popup---------->
-<div id="popup-amr-body">
-  <img id ="close" src="techno tour website design pro/exit.png" alt="">
-  <center><div class="popup-container">
-    <span id="image"><img src="techno tour website design pro/amr.png" alt="amr"></span>
-    <h2 id="popup-name">Amr Khames</h2>
-    <!-----------Skills----------->
-    <span id="popup-skills">
-      <span id="popup-title-Skills">Skills</span>
-      <span id="popup-subject-row">
-        <span id="popup-subject-name">Junior Full-stack web design: </span> 
-        <span id="popup-subject-body"><span id="popup-amr-skill1">70%</span></span>
-      </span>
-      <span id="popup-subject-row">
-        <span id="popup-subject-name">Senior Graphic :</span> 
-        <span id="popup-subject-body"><span id="popup-amr-skill2">95%</span></span>
-      </span>
-      <span id="popup-subject-row">
-        <span id="popup-subject-name">Junior 3d :</span> 
-        <span id="popup-subject-body"><span id="popup-amr-skill3">60%</span></span>
-      </span>
-    </span>
-    <!-----------Contact----------->
-    <span id="popup-contact">
-      <span id="popup-contact-title">Contact Me</span>
-      <span id="popup-contact-row">
-        <span id="popup-amr-facebook"><img src="techno tour website design pro/facebook.png" alt="">Facebook: </span>
-        <p><a href="https://www.facebook.com/amr.khamis.7127">Amr Khames</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-amr-gmail"><img src="techno tour website design pro/gmail.png" alt="">Gmail: </span>
-        <p><a href="khamisamr90@gmail.com">khamisamr90<br>@gmail.com</a> </p>
-      </span>
-      <span id="popup-contact-row">
-        <span id="popup-amr-linkedin"><img src="techno tour website design pro/linkedin.png" alt="">Linkedin: </span>
-        <p><a href="https://www.linkedin.com/in/amr-khamis-51041622a">amr-khamis</a> </p>
-      </span>
-    </span>
-  </div></center>
-</div>
-<!------------ End Amr popup---------->
-                <!-------------------------------End pop up pages----------------------------->
 
 </section>
 <!---Start aBout Project Section--->
@@ -149,77 +101,19 @@ include "session.php";
    </div>
 <!---End aBout Project Section--->
 </body>
+
+
+<?php
+if($getuser){
+echo "<script src='JS/chat.js'></script>
+<script src='chat/chat.js'></script>";
+}
+?>
 <script src="JS/header.js"></script>
-<script src="JS/chat.js"></script>
-<script src="chat/chat.js"></script>
-<!-------------------------------Start  pop up pages Js----------------------------->
 <script>
-  /*************Adel And cancelBtn Js********/
-    const  section1 = document.querySelector("section"),
-            adel = section1.querySelector("#adel"),
-           cancelBtn = document.querySelectorAll("#close");
+  window.onload=()=>{
+    document.getElementById('header-style').style.display='flex';
 
-
-        adel.addEventListener("click", ()=>{
-            section1.classList.add("show-adel");
-        });
-        cancelBtn.forEach(cBtn => {
-            cBtn.addEventListener("click", () =>{
-                section1.classList.remove("show-adel");
-            });
-        });
-    /*************Amr Js***************/
-        section2 = document.querySelector("section"),
-            amr = section2.querySelector("#amr"),
-
-        amr.addEventListener("click", ()=>{
-            section2.classList.add("show-amr");
-        });
-        cancelBtn.forEach(cBtn => {
-            cBtn.addEventListener("click", () =>{
-                section2.classList.remove("show-amr");
-            });
-        });
-    /*************Ahmed Js***************/
-        section3 = document.querySelector("section"),
-            ahmed = section3.querySelector("#ahmed"),
-
-        ahmed.addEventListener("click", ()=>{
-          section3.classList.add("show-ahmed");
-        });
-        cancelBtn.forEach(cBtn => {
-            cBtn.addEventListener("click", () =>{
-              section3.classList.remove("show-ahmed");
-            });
-        });
-            /*************Sara Js***************/
-            section4 = document.querySelector("section"),
-            sara = section4.querySelector("#sara"),
-
-            sara.addEventListener("click", ()=>{
-          section4.classList.add("show-sara");
-        });
-        cancelBtn.forEach(cBtn => {
-            cBtn.addEventListener("click", () =>{
-              section4.classList.remove("show-sara");
-            });
-        });
-            /*************Shahd Js***************/
-            section5 = document.querySelector("section"),
-            shahd = section5.querySelector("#shahd"),
-
-            shahd.addEventListener("click", ()=>{
-              section5.classList.add("show-shahd");
-        });
-        cancelBtn.forEach(cBtn => {
-            cBtn.addEventListener("click", () =>{
-              section5.classList.remove("show-shahd");
-            });
-        });
-        window.onload=()=>{
-          document.getElementById('header-style').style.display='flex';
-        }
+  }
 </script>
-<!-------------------------------End pop up pages Js----------------------------->
-
 </html>

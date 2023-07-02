@@ -23,5 +23,4 @@ $mail->AddAddress($to);
 $mail->Subject = $subject;
 $mail->Body = $message;
 $mail->Send();
-
 ?>

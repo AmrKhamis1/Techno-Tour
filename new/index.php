@@ -21,7 +21,6 @@ include "session.php";
       <link rel="stylesheet" href="CSS 300/index.css">
       <link rel="stylesheet" href="chat/chat.css">
       <link rel="stylesheet" href="chat/chat 300.css">
-
       <title>TecnoTour</title>
    </head>
    <body>  

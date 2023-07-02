@@ -42,6 +42,13 @@ if(!isset($getuser)){
    </div> 
          <?php include "profile.php";
        include "header.php";
+       if(isset($getuser)){ 
+         if($getuser['position']=="Technical"){
+              echo "<div id='open_rlist' onclick='reports_close_open();'>Reports</div>";
+
+              echo "<div id='report_list'></div>";
+         }
+      }
  ?>   
       <div class="bage">
 

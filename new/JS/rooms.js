@@ -15,6 +15,24 @@ function show(){
       add_event.style.display="flex";
     }
   }
+function reports_close_open(){
+  let list= document.getElementById('report_list');
+  let open= document.getElementById('open_rlist');
+
+  if(list.style.display=='none'){
+    reports_r();
+    list.style.display='flex';
+    open.style.display='none';
+
+  }else{
+    list.style.display='none';
+    open.style.display='flex';
+
+  }
+
+}
+
+
   function reports(){
       if( document.getElementById("department").value=='2'){
         document.getElementById("report_det").style.display='inline-block';
@@ -50,6 +68,30 @@ function show(){
         document.getElementById("lable_number2").style.display='inline-block';
        }
       }
+function reports_r(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        //check if the state of network is ok (200)....200 in network state means ok
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("report_list").innerHTML=this.responseText ;
+        }
+        };        
+        xmlhttp.open("GET", "reports/reports.php?", true);
+        xmlhttp.send();
+ }
+function delete_report(x,y,z){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+  //check if the state of network is ok (200)....200 in network state means ok
+  if (this.readyState == 4 && this.status == 200) {
+  reports_r();
+  }
+  };        
+  xmlhttp.open("GET", "reports/delete_report.php?r_id="+x+"&room="+y+"&report="+z, true);
+  xmlhttp.send();
+
+
+}
 function event_display(x){
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
