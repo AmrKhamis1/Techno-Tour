@@ -58,7 +58,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Reset password';
-    $mail->Body    = 'To reset your password click <a href="http://localhost/test/Techno-Tour-main/new/forget_password/new pass.php?code='.$rand.'">here
+    $mail->Body    = 'To reset your password click <a href="http://'.$_SERVER['HTTP_HOST'].'/test/Techno-Tour-main/new/forget_password/new pass.php?code='.$rand.'">here
     </a>';
     $sql="SELECT email FROM members WHERE email='$email'";
     $check=mysqli_query($connection,$sql);
