@@ -8,14 +8,20 @@
                      }
                   }
             ?>
-            <li><a href="broadcast.php" class="links">Broadcast</a></li>
-            <li><a href="about_us.php" class="links">About</a> </li>
+            <li><a href="broadcast.php" class="links">Broadcast</a></li>            
+            
+            <?php if(isset($getuser)){ 
+                     if($getuser['position']=="Dr"){
+                          echo "<li class='framework'><a href='framework/index.php' class='links'>Room's Managment Center</a></li>";
+                     }
+                  }
+    ?>
+      
+      <li><a href="about_us.php" class="links">About</a> </li>
 
 
        
          </ul>
-         <div class="search-logo"><input class="search" type="text">Search <img class="search-logo-img" src='techno tour website design pro\search light.png' alt="..">
-         </div>
          <div class="user-logo"><a 
          <?php
           if(isset($getuser)){

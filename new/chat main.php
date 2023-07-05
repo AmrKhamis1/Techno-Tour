@@ -2,10 +2,15 @@
 
 <?php
   if($getuser){
-    echo "<div id='open_chat' ontouchstart='open_chating2'>chat</div>";
+    if($getuser['position']=='Dr'){
+      echo "<div id='open_chat' ontouchstart='open_chating2'>chat</div>";
+}
   }
-echo "<div id='chat_container1'><div onclick='close_chat();' id='exit_chat2'>X</div>";
+
 if(isset($getuser)){
+  if($getuser['position']=='Dr'){
+    
+    echo "<div id='chat_container1'><div onclick='close_chat();' id='exit_chat2'>X</div>";
 $sql="SELECT * FROM members WHERE position='Dr' AND id!=".$getuser['id'].";";
 $result3 = $connection->query($sql);
 echo "<div id='DRs'>";
@@ -34,8 +39,18 @@ if($getuser){
 }}
 echo "</div>";
 }
+}
 ?>  
-</div>
-<div id='chat_container'>
+
+
+
+<?php
+if($getuser){
+    if($getuser['position']=='Dr'){
+      echo "</div>
+      <div id='chat_container'>
 
 </div>
+      ";
+}}
+?>

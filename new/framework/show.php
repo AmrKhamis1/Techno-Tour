@@ -8,10 +8,19 @@ $result2 = $connection->query($sql2);
 $start_lec[0]=NULL;
 $end_lec[0]=NULL;
 $sub_lec[0]=NULL;
+$room_lec[0]=NULL;
+$user_lec[0]=NULL;
 while($row=$result2->fetch_assoc()){
 $start_lec[$row['start_time']]=$row['start_time'];
 $end_lec[$row['start_time']]=$row['end_time'];
 $sub_lec[$row['start_time']]=$row['sub_name'];
+$sql3="SELECT r_no FROM rooms WHERE id='".$row['room_id']."';";
+$result3 = $connection->query($sql3);
+while($row2=$result3->fetch_assoc()){
+    $room_lec[$row['start_time']]=$row2['r_no'];
+}
+
+
 }
 
 ?>
@@ -49,7 +58,7 @@ if(isset($start_lec[$x])&&$start_lec[$x]==$x&&$start_lec[$x]!=NULL){
     $end[$x]=$end_lec[$x];
     $start[$x]=$start_lec[$x];
     $start_lec[$x]=NULL;
-    echo "<td colspan='$col' style='background-color:#a0ddff;' rowspan='5'>".$sub_lec[$x]."</td>";
+    echo "<td colspan='$col' style='background-color:#a0ddff; color:black;' rowspan='5'>".$sub_lec[$x]."<br>Room : ".$room_lec[$x]."</td>";
     $x+=$col-1;
     continue;
 }    
@@ -60,9 +69,14 @@ if(isset($start[$x])&&$start[$x]<=$x){
 if ($result->num_rows > 0) {
 
     while($row = mysqli_fetch_assoc($result)) {
-
+        $sql3="SELECT r_no FROM rooms WHERE id='".$row['room_id']."';";
+        $result3 = $connection->query($sql3);
+        while($row2=$result3->fetch_assoc()){
+            $room_lec2=$row2['r_no'];
+        }
+        
    $col=$row['end_time']-$row['start_time']+1;
-   echo "<td style='background-color:#ff0000;' colspan='$col'>".$row['sub_name']."</td>";
+   echo "<td style='background-color:#ff0000;' colspan='$col'>".$row['sub_name']."<br>Room : ".$room_lec2."</td>";
    $x+=$row['end_time']-$row['start_time'];
 }
 }else{

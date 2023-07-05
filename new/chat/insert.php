@@ -11,6 +11,7 @@ while($row=$result3->fetch_assoc()){
    $chat_id=$row['id'];
 
 }}
-$sql="INSERT INTO message(chat_id,from_id,to_id,message,date_time) VALUES($chat_id,$user,$friend,\"$message\",'');";
+$date= date("Y-m-d h:i:s");
+$sql="INSERT INTO message(chat_id,from_id,to_id,message,date_time) VALUES($chat_id,$user,$friend,'$message','$date');";
 $result3 = $connection->query($sql);
 ?>

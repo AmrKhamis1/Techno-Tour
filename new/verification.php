@@ -25,12 +25,11 @@ $insert->execute();
 $sql="SELECT * FROM members WHERE email='$email'";
 $result=mysqli_query($connection,$sql);
 $getuser=mysqli_fetch_array($result,MYSQLI_ASSOC);
-
+if($getuser['position']=='Dr'||$getuser['position']=='Assisstant'){
 $insert=$connection->prepare("INSERT INTO dr_ass(name,position,user_id)
-
-VALUES ('$fname','$position','".$getuser['id']."')");
+VALUES ('".$fname." ".$lname."','$position','".$getuser['id']."')");
 $insert->execute();
-
+}
 header('Location:form.php');
 exit;
    }else{

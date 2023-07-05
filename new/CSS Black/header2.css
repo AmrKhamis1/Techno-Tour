@@ -11,10 +11,10 @@
   ul,li{
     justify-content: space-between;
     display: inline-block;
-    margin-left: 5%;    
-  }
+    margin-left: 3%;
+    }
   ul{
-    width: 40%;
+    width: 80%;
     height: fit-content;
   }
   .links{

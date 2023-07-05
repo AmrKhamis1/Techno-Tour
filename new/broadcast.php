@@ -44,7 +44,11 @@ if(isset($getuser)){
 ?>
 
   
-      <div id='posts' <?php if(isset($getuser)){echo "style=''";}else{echo "style='width: 100%;align-items:center;margin-top:13vh;margin-left:0;overflow:hidden;'";} ?>> 
+      <div id='posts' <?php if(isset($getuser)){
+        if($getuser['position']!='Dr'){
+          echo "style='width: 100%;align-items:center;margin-top:13vh;margin-left:0;overflow:hidden;'";
+        }else{
+        echo "style=''";}}else{echo "style='width: 100%;align-items:center;margin-top:13vh;margin-left:0;overflow:hidden;'";} ?>> 
            <?php
                       $count=10;
                       include "broadcast show.php";

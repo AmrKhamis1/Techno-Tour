@@ -37,6 +37,7 @@ include "session.php";
     <span id='footer_copy'>2023 Copyright© | Design By : <a style='text-decoration: none;' href='about_us.php'><span style='color:#fff;font-size:13px;;font-weight: 100; font-family:"Maven Pro";'>TechoTour Team</span></a></span>
    </div>
    </div>
+
    <?php if($getuser!=NULL && isset($getuser)){
 include "profile.php";
    }  

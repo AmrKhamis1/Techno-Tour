@@ -6,7 +6,7 @@ $email=null;
 
 if(isset($_POST['reset2']))
 {
-    if(empty($_POST['reset2'])){
+    if(empty($_POST['reset'])){
         $faild="can't be empty";
     }else{
     session_start();

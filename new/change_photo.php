@@ -4,7 +4,7 @@
       <link rel="shortcut icon" href="techno tour website design pro\techno tour pro copy.png" type="image/x-icon"> 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="CSS/forget pass.css"> 
+    <link rel="stylesheet" href="CSS Black/forget pass.css"> 
     <title>new name</title>
     </head>
     <body>

@@ -12,7 +12,7 @@ while($row=$result3->fetch_assoc()){
     $sql2="INSERT INTO chat(user1_id,user2_id) VALUES('$friend','$user');";
     $result2 = $connection->query($sql2);
 }
-    $sql="SELECT * FROM message WHERE chat_id=$chat_id;";
+    $sql="SELECT * FROM message WHERE chat_id=$chat_id ORDER BY date_time;";
     $result3 = $connection->query($sql);
     if ($result3->num_rows > 0) {
     while($row=$result3->fetch_assoc()){

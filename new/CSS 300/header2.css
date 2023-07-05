@@ -54,6 +54,9 @@
     position: absolute;
     padding: 0%;
   }
+  .framework{
+    display: none;
+  }
   .links{
     font-size:3.5vw;
   }

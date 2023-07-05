@@ -44,4 +44,19 @@ function show() {
   }
 
  let interval= setInterval(show,1000);
+ function dr_asst(){
+  let x = document.getElementById('sec');
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+  //check if the state of network is ok (200)....200 in network state means ok
+  if (this.readyState == 4 && this.status == 200) {
+  document.getElementById("dr_ass").innerHTML=this.responseText ;
+  }
+  };        
+  xmlhttp.open("GET", "dr_asst.php?p="+x.value, true);
+  xmlhttp.send();
+}
+
 show();
+dr_asst();
+

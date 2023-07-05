@@ -15,7 +15,7 @@
             <?php include "change.php";?>
     <h1> Reset the password</h1>
     <br>
-    <span style='color:rgba(255,0,0,0.9);font-size:13px;'><?php 
+    <span style='<?php if(isset($sucss)){echo "color:rgba(0,255,0,0.9)";}else{echo 'color:rgba(255,0,0,0.9)';}?>;font-size:13px;'><?php 
     if(isset($faild) || isset($sucss)){
          echo $faild; echo $sucss;
     }
