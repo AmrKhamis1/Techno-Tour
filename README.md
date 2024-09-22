@@ -10,9 +10,13 @@
 
 -this project is prototype and it is the first eddition of it so be carfule when using it , dont get out of line with the instructions that given in the project documention
 
-- for more details contact with the project team leader : 
-Gmail: khamisamr90@gmail.com 
+- for more details contact with the project team leader :
+<br/>
+Gmail: khamisamr90@gmail.com
+<br/> 
 Phone Number: 01021477040
 - or co-leader :
-Gmail: shahdkaram18@gmail.com 
+<br/>
+Gmail: shahdkaram18@gmail.com
+<br/>
 Phone Number: 01025235093
