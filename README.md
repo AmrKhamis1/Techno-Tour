@@ -11,7 +11,10 @@
 -this project is prototype and it is the first eddition of it so be carfule when using it , dont get out of line with the instructions that given in the project documention
 <br/>
 <br/>
-for more details contact with the project team leader :
+for more details contact with the project <br/>
+<br/>
+
+team leader :
 <br/>
 Gmail: khamisamr90@gmail.com
 <br/> 
